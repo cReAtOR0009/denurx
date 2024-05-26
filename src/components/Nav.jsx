@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 import { styles } from "../styles";
 import { nav } from "../assets/text";
 import { menu, close } from "../assets/images";
-import { animateNavItems, animateFromTo } from "../assets/animation";
+import { animateNavItems, animateFromTo, animateButton } from "../assets/animation";
 
 const NavItem = ({ title, active, handleClick, mobile, index }) => {
   return (
@@ -35,6 +35,7 @@ const Nav = () => {
     animateNavItems(navItems);
     animateFromTo("#logo", "x", -150, 0);
     animateFromTo("#action_button1", "x", -150, 0, 1);
+    // animateButton('#action_button1');
   }, []);
 
   return (
@@ -84,7 +85,7 @@ const Nav = () => {
       </div>
 
       {activeMenu && (
-        <div className="lg:hidden absolute top-0 w-[50%] h-screen right-0 p-4 bg-primary">
+        <div className="lg:hidden absolute top-0 w-[50%] h-screen right-0 p-4 navSidebar shadow-featuresCardShadow hover:shadow-featuresCardHover">
           <div
             onClick={() => setActiveMenu(false)}
             class="group flex lg:hidden h-10 w-10 cursor-pointer items-center justify-center rounded-3xl bg-whit p-2"
@@ -106,10 +107,10 @@ const Nav = () => {
               />
             ))}
           </ul>
-          <Link to="/denurx/waitlist" rel="noopener noreferrer">
+          <Link   id="action_button1" to="/denurx/waitlist" rel="noopener noreferrer">
             <button
-              id="action_button1"
-              className={`rounded-[30px] bg-secondary px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150`}
+            
+              className="rounded-[30px] btn  px-4 py-2 sm:px-6 sm:py-4  text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150"
             >
               Join Waitlist
             </button>
