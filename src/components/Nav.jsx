@@ -16,7 +16,7 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
         mobile ? "mb-6" : "mr-4 md:mr-8"
       } inline-block mb-4 uppercase border-b-[red] py-2 px-4 cursor-pointer hover:border-b-4 hover:text-secondary_100`}
     >
-      <HashLink to={`/#${title.toLocaleLowerCase()}`}>{title}</HashLink>
+      <HashLink to={`/denurx/#${title.toLocaleLowerCase()}`}>{title}</HashLink>
     </li>
   );
 };
@@ -42,7 +42,7 @@ const Nav = () => {
       className={`${styles.nav} fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20 flex justify-between items-center "bg-[transparent]"`}
     >
       {/* <a id="logo" href="#home" rel="noopener noreferrer" className=""> */}
-      <HashLink to={"/#home"}>
+      <HashLink to={"/denurx/#home"}>
         <img
           src="./logo.png"
           alt="Logo here"
@@ -65,7 +65,7 @@ const Nav = () => {
         </ul>
       </div>
       {/* <a  id="action_button1" href="#join wait list" rel="noopener noreferrer"> */}
-      <Link to={"/waitlist"}>
+      <Link to={"/denurx/waitlist"}>
         <button
           className={`rounded-[30px] bg-primaryBt btn featuresCardShadow px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150`}
         >
@@ -106,14 +106,14 @@ const Nav = () => {
               />
             ))}
           </ul>
-          <a href="#join wait list" rel="noopener noreferrer">
+          <Link to="/denurx/waitlist" rel="noopener noreferrer">
             <button
               id="action_button1"
               className={`rounded-[30px] bg-secondary px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150`}
             >
               Join Waitlist
             </button>
-          </a>
+          </Link>
         </div>
       )}
     </nav>

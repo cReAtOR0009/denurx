@@ -7,9 +7,9 @@ import Waitlist from "./pages/Waitlist";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromChildren(
-      <Route path="/" element={<PageLayout />}>
+      <Route path="/denurx" element={<PageLayout />}>
         <Route index element={<Home />} />
-        <Route path="waitlist" element={<Waitlist />} />
+        <Route path="/denurx/waitlist" element={<Waitlist />} />
       </Route>
     )
   )
