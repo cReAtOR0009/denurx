@@ -6,7 +6,7 @@ import { revealDivOnScroll } from "../assets/animation";
 
 const FeaturesCard = ({ icon, text, title }) => {
   return (
-    <div className="relative min-w-[280px] flex-1 shadow-featuresCardShadow hover:shadow-featuresCardHover transition-all rounded-md sm:rounded-xl text-black cursor-pointer group">
+    <div className="relative min-w-[250px] flex-1 shadow-featuresCardShadow hover:shadow-featuresCardHover transition-all rounded-md sm:rounded-xl text-black cursor-pointer group">
       <div className="flex items-center border-l-8 border-r-8 border-b-2 bg-primar border-primary rounded-[10px] p-2 transition-all">
         <img
           src={icon}
@@ -67,9 +67,9 @@ revealDivOnScroll("features")
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="flex justify-between flex-wrap md:flex-nowrap flex-1 py-8 gap-6 sm:gap-10">
-        <div className="flex flex-col justify-center gap-6 sm:gap-10 order-2 sm:order-1">
+        <div className="flex flex-col justify-center my-4 gap-6 sm:gap-10 order-2 sm:order-1">
           <h2 className={`${styles.h2}`}>{benefits.title}</h2>
-          <p className={`${styles.p} text-sm md:text-lg lg:text-base xl:text-lg leading-relaxed text-secondary3`}>
+          <p className={`${styles.p} text-sm md:text-lg lg:text-base xl:text-lg leading-relaxed text-black`}>
             {readMore?benefits.paragraph:trimmedContent} <span onClick={() => setReadMore(!readMore)} className={`${readMore?"bg-secondary_100 group-hover:bg-primary":"bg-primary "} text-white inline-block text-xxs md:text-sm rounded-full cursor-pointer p-2`}>{readMore?"ReadLess":"ReadMore"}</span>
           </p>
         </div>

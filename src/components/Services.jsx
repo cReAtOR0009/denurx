@@ -8,7 +8,7 @@ const ServiceCard = ({icon, title, description, image}) => {
     const [readMore, setReadMore] = useState(false)
 
     return (
-        <div key={title} className='relative rounded-md sm:rounded-xl border border-white shadow-featuresCardShadow hover:shadow-featuresCardHover hover: hover:border-primary_100 cursor-pointer transition' onClick={() => setReadMore(!readMore)}>
+        <div key={title} className='relative rounded-md sm:rounded-xl border border-white shadow-featuresCardShadow hover:shadow-featuresCardHover  hover:border-primary_100 cursor-pointer transition' onClick={() => setReadMore(!readMore)}>
             <img src={image} alt=""  className='w-[100%] rounded-md sm:rounded-xl '/>
             <div className='p-4'>
                 <img src={icon} alt={`${title}`} className='mt-[-12%] w-8 lg:w-20 md:w-20 ' />
@@ -22,7 +22,7 @@ const ServiceCard = ({icon, title, description, image}) => {
 const Services = () => {
     revealDivOnScroll("services")
   return (
-    <section id='services' className={`${styles.container} flex flex-col gap-6 sm:gap-10`} >
+    <section id='services' className={`${styles.container} flex flex-col my-4 gap-6 sm:gap-10`} >
         <h2 className={`${styles.h2}`}>Our High Quality Service</h2>
         <div className='service_grid py-4 sm:py-6'>
             {services.map((service, index) => (

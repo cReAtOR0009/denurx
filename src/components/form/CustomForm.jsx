@@ -66,14 +66,14 @@ const CustomForm = ({ status, message, onValidated }) => {
   return (
     <form
       action="POST"
-      className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl shadow-featuresCardHover text-[#000000]"
+      className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl shadow-featuresCardShadow hover:shadow-featuresCardHover text-[#000000] transition"
       onSubmit={handleSubmit}
     >
       {response.display && (
         <div
           className={`${
             response.error ? "bg-secondary_100 text-white" : "bg-white text-black"
-          } relative border border-primary_100 p-4 sm:p-10 rounded-md`}
+          } relative p-4 sm:p-10 rounded-md `}
         >
           {response.message}
           <span

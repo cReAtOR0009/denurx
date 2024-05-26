@@ -6,7 +6,7 @@ import { revealDivOnScroll } from "../assets/animation";
 const TestimonialCard = ({ image, name, role, testament, gridPosition }) => {
  const color = role ==="Doctor"? "bg-primary_100":role==="Nurse"?"bg-primary":role==="Patient"?"bg-primary":"bg-primary"
   return (
-    <li className={`${gridPosition}  flex flex-col gap-4 text-sm leading-6 p-4 bg-primary_20  border-2 border-primary rounded-lg text-black "rounded-bl-[20px] rounded-tr-[20px]"`} style={{}}>
+    <li className={`${gridPosition}  flex flex-col gap-4 text-sm leading-6 p-4 bg-primary_20  rounded-lg text-black shadow-featuresCardShadow hover:shadow-featuresCardHover`}>
       <div className="flex items-center gap-2 md:gap-4">
         <img
           src={image}
@@ -14,7 +14,7 @@ const TestimonialCard = ({ image, name, role, testament, gridPosition }) => {
           className="w-12 h-12 bg-center bg-cover border rounded-full"
         />
         <div className="flex flex-col">
-          <span className={`${styles.h4} text-secondary2`}>{name}</span>
+          <h4 className={`${styles.h4} text-black`}>{name}</h4>
           <span>{role}</span>
         </div>
       </div>

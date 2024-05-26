@@ -10,7 +10,7 @@ const JoinWaitlist = () => {
   return (
     <section
       id="join wait list"
-      class={`${styles.container} flex flex-col justify-center items-center min-h-screen bg-waitList fullbgAuto `} //  bg-waitList fullbgAuto
+      class={`${styles.container} flex flex-col justify-center items-center min-h-screen bg-waitList fullbgAuto h-screen mt-20 `} //  bg-waitList fullbgAuto
     >
       <h1
         className={`${"styles.h1"} text-3xl md:text-4xl lg:4xl xl:text-5xl font-bold text-secondary2 leading-tight text-center`}
