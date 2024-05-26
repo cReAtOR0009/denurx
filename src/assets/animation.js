@@ -10,6 +10,17 @@ export const animateNavItems = (navItems) => {
   );
 };
 
+export const animateButton = (buttonId) => {
+  gsap.to(buttonId, {
+    scale: 1.1,
+    duration: 1,
+    repeat: -1,
+    yoyo: true,
+    ease: 'power1.inOut',
+    scrub:true
+  });
+};
+
 export const animateFromTo = (id, positon, from, to, delay= 0.5, duration=0.5) => {
     gsap.fromTo(
       id,

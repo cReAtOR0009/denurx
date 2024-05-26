@@ -106,6 +106,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         primaryBtn:"linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)",
+        navSidebar:"rgba(187, 190, 207, 0.2)",
         secondaryBtn:"linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)",
         heroImage: 'url("/src/assets/doctors.png")',
         heroMockup: 'url("/src/assets/mockup_hero.png")',

@@ -2,7 +2,7 @@ export const styles = {
   container:
     "px-4 py-6 sm:px-10 md:py-10  lg:p-20 xl:p-20 max-w-[1280px]",
     footer_container:"px-4 py-4 sm:px-10 md:py-8  lg:p-10 xl:p-20 max-w-[1280px]",
-  nav: "px-4  md:px-10   lg:px-20 xl:px-20",
+  nav: "px-4 md:px-10 lg:px-20 xl:px-20",
   contentPadding:"p-4 md:p-6 lg:-p-8",
   // Specific Heading Styles
   h1: "text-3xl md:text-4xl lg:4xl xl:text-5xl font-bold text-white leading-tight",
