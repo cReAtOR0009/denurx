@@ -54,7 +54,7 @@ module.exports = {
       primary_200: "#007bff80", //007bff80
 
       // Complementary Colors
-      secondary: "#b40105", //#dd4b4f
+      secondary: "#fe0000", //#dd4b4f
       secondary_100: "#dd4b4f", //#dd4b4f
       secondary2: "#310092", //007bff80
       secondary3: "#230438",
@@ -114,7 +114,7 @@ module.exports = {
         scrollmodern:
           "linear-gradient(0deg, rgb(20 20 17 / 60%), rgb(35 44 57 / 90%)), url('/src/assets/scrollmodern.jpg')",
         heroGradient:
-          "linear-gradient(91deg, rgba(0, 0, 173, 0.5), rgb(59, 43, 172)), url(/src/assets/doctor6.jpg)", 
+          "linear-gradient(91deg, rgb(162 162 184 / 50%), rgb(59, 43, 172)), url(/src/assets/doctor6.jpg)", 
           waitList:
           "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/mockup_hero.png)", //footerBg.jpg//footerBg.jpg
           footerBg: "url(/src/assets/footerBg.jpg)"},
