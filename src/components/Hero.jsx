@@ -24,7 +24,7 @@ const Hero = () => {
         </div>
         </div>
 
-        <div className='flex-1  bg-heroMockup fullbg  hidden lg:flex lg:items-end   md:w-[50%] h-[100%]'>
+        <div className='flex-1  bg-heroMockup fullbg  hidden lg:flex lg:items-end   md:w-[50%] h-[100%] mt-20'>
         <img src={HeroText.image} alt="Telemedicine App" className='' />
         </div>
     </section>
