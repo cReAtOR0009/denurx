@@ -59,11 +59,13 @@ background: rgba(187, 190, 207, 0.2);
 box-shadow: 0 4px 30px rgba(221, 10, 10, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
+
+filter: drop-shadow(0 0 20px rgb(56, 53, 53));
 /* border: 1px solid rgba(78, 107, 252, 0.3); */
 }
 .navSidebar {
   /* all: unset; */
-  background: rgb(143 147 174 / 38%);
+  background: hsla(231, 40%, 87%, 0.48);
   /* border-radius: 16px; */
   box-shadow: 0 4px 30px rgb(0 0 0 / 50%);
   backdrop-filter: blur(5px);

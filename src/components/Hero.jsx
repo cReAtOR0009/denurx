@@ -8,7 +8,7 @@ import { HashLink } from 'react-router-hash-link'
 const Hero = () => {
   revealDivOnScroll("home")
   return (
-    <section id='home' className={`${styles.container} flex justify-between items-end md:items-center flex-wrap h-screen `}> {/**mt-20 lg:mt-20  */}
+    <section id='home' className={`${styles.container} flex justify-between items-center md:items-center flex-wrap h-[80vh] sm:h-screen `}> {/**mt-20 lg:mt-20  */}
         <div className='flex flex-col justify-center flex-1 w-[50%]'>
         <h1 className={`${styles.h1}  py-4 md:py-2 lg:py-6 text-6xl sm:text-8xl md:text-8xl lg:text-6xl xl:text-8xl font-bold leading-tight text-white `}>{HeroText.h1}</h1> 
         <p className=' text-base sm:text-base md:text-lg lg:text-[20px] xl:text-xl leading-relaxed text-white'>{HeroText.tagLine}</p> 

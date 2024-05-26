@@ -85,7 +85,7 @@ const Nav = () => {
       </div>
 
       {activeMenu && (
-        <div className="lg:hidden absolute top-0 w-[50%] h-screen right-0 p-4 navSidebar shadow-featuresCardShadow hover:shadow-featuresCardHover">
+        <div className="lg:hidden absolute top-0 w-[50%] h-screen right-0 p-4 navSidebar bg-white shadow-featuresCardShadow hover:shadow-featuresCardHover">
           <div
             onClick={() => setActiveMenu(false)}
             class="group flex lg:hidden h-10 w-10 cursor-pointer items-center justify-center rounded-3xl bg-whit p-2"
