@@ -64,6 +64,15 @@ backdrop-filter: blur(5px);
 filter: drop-shadow(0 0 20px rgb(56, 53, 53));
 /* border: 1px solid rgba(78, 107, 252, 0.3); */
 }
+
+.footerOverlay {
+  background: rgba(187, 190, 207, 0.2);
+box-shadow: 0 4px 30px rgba(221, 10, 10, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+
+filter: drop-shadow(0 0 20px rgb(56, 53, 53));
+}
 .navSidebar {
   /* all: unset; */
   background: hsla(231, 40%, 87%, 0.48);
