@@ -10,7 +10,7 @@ const ServiceCard = ({icon, title, description, image}) => {
     const [readMore, setReadMore] = useState(false)
 
     return (
-        <div key={title} className='relative rounded-md sm:rounded-xl border border-white shadow-featuresCardShadow hover:shadow-featuresCardHover  hover:border-primary_100 cursor-pointer transition' onClick={() => setReadMore(!readMore)}>
+        <div key={title} className='relative rounded-md sm:rounded-xl border border-white shadow-featuresCardShadow hover:shadow-featuresCardHover  hover:border-primary_100 cursor-pointer hover:transition-colors transition:border hover:transition-shadows' onClick={() => setReadMore(!readMore)}>
             <img src={image} alt=""  className='w-[100%] rounded-md sm:rounded-xl '/>
             <div className='p-4'>
                 <img src={icon} alt={`${title}`} className='mt-[-12%] w-8 lg:w-20 md:w-20 ' />
