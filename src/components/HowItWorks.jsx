@@ -46,7 +46,7 @@ const CircularContainer = ({ active, setActive }) => {
               className={`${
                 active == step.step
                 ? "border-2 border-primary text-secondary2"
-                : "border-2 border-secondary_100"
+                : " transparentOverlay"
               } absolute flex flex-col justify-center items-center  w-[50px] h-[50px] lg:w-[150px] lg:h-[150px] md:w-[100px] md:h-[100px] bg-blue-500 rounded-full text-black text-center cursor-pointer`}
               style={{
                 top: `calc(50% + ${y}px)`,
@@ -64,7 +64,7 @@ const CircularContainer = ({ active, setActive }) => {
         })}
       </div>
       <div
-        className={`flex lg:hidden justify-between items-center h-4 w-[${progressWidth}%] mt-[30px] bg-primary rounded-md`}
+        className={`flex lg:hidden justify-between items-center `}
         style={{ width: `${progressWidth}%` }}
       >
         {howItWorks.map((step, index) => {
@@ -75,7 +75,7 @@ const CircularContainer = ({ active, setActive }) => {
               className={`${
                 active == step.step
                   ? "bg-primary text-white"
-                  : "footerOverlay text-white"
+                  : "transparentOverlay text-white"
               } relative flex flex-col justify-center items-center  w-[50px] h-[50px] rounded-full cursor-pointer`}
             >
               <img
