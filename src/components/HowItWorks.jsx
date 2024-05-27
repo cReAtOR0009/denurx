@@ -75,7 +75,7 @@ const CircularContainer = ({ active, setActive }) => {
               className={`${
                 active == step.step
                   ? "bg-primary text-white"
-                  : "bg-secondary"
+                  : "footerOverlay text-white"
               } relative flex flex-col justify-center items-center  w-[50px] h-[50px] rounded-full cursor-pointer`}
             >
               <img
@@ -110,7 +110,7 @@ const Steps = ({ description, tip, mockup, step, active, setHovered, hovered }) 
         alt="Denurx App"
         className="flex- object-cover h-[200px]  sm:h-[400px] sm:w-[auto] md:h-[530px] md:w-[auto] lg-h-[500px] lg:w-[] "
       />
-      <div className="flex-1 p-4 rounded bg-primary_200">
+      <div className="flex-1 p-4 rounded bg-primary_200 min-h-[180px]">
         <h4
           className={`text-base md:text-2xl lg:text-xl xl:text-xl font-medium  text-secondary2 leading-normal`}
         >
