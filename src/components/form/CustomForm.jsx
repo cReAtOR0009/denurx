@@ -92,7 +92,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           id="email"
           required
           placeholder="Enter your email address"
-          className="w-[100%] h-10 rounded-md sm:rounded-xl text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-primary_200 placeholder-white focus:border-white"
+          className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-primary_200 placeholder-white focus:border-white"
           value={form.email}
           onChange={handleFormChange}
         />
@@ -105,18 +105,18 @@ const CustomForm = ({ status, message, onValidated }) => {
           id="fullname"
           required
           placeholder="Enter your full name"
-          className="w-[100%] h-10 rounded-md sm:rounded-xl text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-primary_200 placeholder-white focus:border-white"
+          className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-primary_200 placeholder-white focus:border-white"
           value={form.fullname}
           onChange={handleFormChange}
         />
       </div>
       <input
         type="submit"
-        value={loading ? "Joining Waitlist..." : "Sign Up Now"}
+        value={loading ? "Joining Waitlist..." : "Join Wailtlist Now"}
         disabled={loading}
         className={`${
           loading ? "bg-secondary_100" : "bg-secondary"
-        } inline-block rounded-[30px] px-6 py-4 sm:px-6 sm:py-4 text-xxs sm:text-base font-medium uppercase leading-normal text-white border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150`}
+        } rounded-[30px] animate-pulse bg-primaryBtn  px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150 cursor-pointer`}
       />
     </form>
   );
