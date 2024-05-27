@@ -105,7 +105,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        primaryBtn:"linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)",
+        primaryBtn:"linear-gradient(to right, hsl(352deg 100% 61.66%) 30%, hsl(241.65deg 100% 50% / 61%) 100%)",
         navSidebar:"rgba(187, 190, 207, 0.2)",
         secondaryBtn:"linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)",
         heroImage: 'url("/src/assets/doctors.png")',
@@ -117,8 +117,11 @@ module.exports = {
         heroGradient:
           "linear-gradient(91deg, rgb(162 162 184 / 50%), rgb(59, 43, 172)), url(/src/assets/doctor6.jpg)", 
           waitList:
-          "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/mockup_hero.png)", //footerBg.jpg//footerBg.jpg
-          footerBg: "url(/src/assets/footerBg.jpg)"},
+          "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/mockup_hero.png)", 
+          notFoundbg:
+          "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/notfoundbg.jpg)",//footerBg.jpg//footerBg.jpg
+          footerBg: "url(/src/assets/footerBg.jpg)"
+        }, //notfoundbg.jpg
       
       
     gridTemplateColumns: {

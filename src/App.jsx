@@ -3,6 +3,7 @@ import PageLayout from "./Layout/PageLayout";
 
 import Home from "./pages/Home";
 import Waitlist from "./pages/Waitlist";
+import NotFound from "./pages/404";
 
 function App() {
   const router = createBrowserRouter(
@@ -10,6 +11,7 @@ function App() {
       <Route path="/denurx" element={<PageLayout />}>
         <Route index element={<Home />} />
         <Route path="/denurx/waitlist" element={<Waitlist />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   )
