@@ -46,6 +46,41 @@ export const animateFromTo = (
   );
 };
 
+
+export const animateChildrenFromTo = (
+  ref,
+  position,
+  from,
+  to,
+  delay = 0.5,
+  duration = 0.5,
+  trigger = false
+) => {
+  gsap.fromTo(
+    ref,
+    { opacity: 0, [position]: from },
+    {
+      opacity: 1,
+      [position]: to,
+      duration: duration,
+      stagger: 0.3,
+      ease: "power1.out",
+      delay: delay,
+      scrollTrigger: trigger
+        ? {
+            trigger: ref,
+            start: "top 90%",
+            end: "bottom 10%",
+            stagger: 0.25,
+            ease: "power1.out",
+            // markers:true
+            // scrub: true,
+          }
+        : null,
+    }
+  );
+};
+
 export const revealOnScroll = (ref) => {
   gsap.fromTo(
     ref.current,
