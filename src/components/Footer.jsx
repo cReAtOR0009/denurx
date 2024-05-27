@@ -15,20 +15,20 @@ const Footer = () => {
     revealDivOnScroll(containerRef)
   }, [])
   return (
-    <footer ref={containerRef} id="footer" className={`${styles.footer_container} px-4 py-4 sm:px-10 md:py-6  lg:p-6 xl:px-20 xl:py-10  max-w-[100%] text-black bg-footerBg fullbg flex flex-wrap justify-between items-center`}>
-      <div className=" flex justify-between items-center w-screen md:w-[auto]" >
+    <footer ref={containerRef} id="footer" className={`${styles.footer_container} px-4 py-4 sm:px-10 md:py-6  lg:p-6 xl:px-20 xl:py-10  max-w-[100%] text-white bg-footerBg fullbg flex flex-wrap justify-between items-center`}>
+      <div className=" footerOverlay flex justify-between items-center gap-6 w-screen md:w-[auto]" >
         <div id="logo_container">
-        <img src="./logo.png" alt="Logo here" className="w-6 md:w-12" />
+        <img src="./logo.png" alt="Logo here" className="w-12 h-12 md:w-16 md:h-16" />
       </div>
       <Link to={"/denurx/waitlist"}>
         <button
-          className={`rounded-[30px] animate-pulse bg-primaryBtn px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150`}
+          className={`rounded-[30px] animate-pulse bg-primaryBtn px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150`}
         >
           Join Waitlist
         </button>
       </Link>
       </div>
-        <div className="flex flex-col w-screen md:w-[auto] my-2">
+        <div className="footerOverlay flex flex-col w-screen md:w-[auto] my-2">
           <div className="flex justify-between  sm:flex-row gap-4 sm:gap-6">
             <a href="tel:+234 00000000" className="flex flex-col items-center p-2 sm:p-4 flex-1 text-center">
               <img src={telephone} alt="" className="w-6 md:w-12 rounded-full"  />  +234 00000000
