@@ -30,7 +30,7 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
         active === title ? "border-b-4 text-secondary" : "text-white"
       } ${
         mobile ? "mb-6" : "mr-4 md:mr-8"
-      } all-[unset] nav-item inline-block mb-4 uppercase border-b-secondary py-2 px-4 cursor-pointer hover:border-b-4 hover:border-b-secondary_100 hover:text-secondary_100`}
+      }  nav-item inline-block mb-4 uppercase border-b-secondary py-2 px-4 cursor-pointer hover:border-b-4 hover:border-b-secondary_100 hover:text-secondary_100`}
       to={`/denurx/#${title.toLocaleLowerCase()}`}
       onClick={() => handleClick(title)}
       onMouseEnter={handleMouseEnter}
@@ -80,7 +80,7 @@ const Nav = () => {
   return (
     <nav
       ref={containerRef}
-      className={`${styles.nav} fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20 flex justify-between items-center "bg-[transparent]"`}
+      className={`${styles.nav} fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20 flex justify-between items-center `}
     >
       {/* <a id="logo" href="#home" rel="noopener noreferrer" className=""> */}
       <HashLink to={"/denurx/#home"}>
@@ -158,7 +158,7 @@ const Nav = () => {
           to="/denurx/waitlist"
           rel="noopener noreferrer"
         >
-          <button className="rounded-[30px] animate-pulse bg-primaryBtn  px-4 py-2 sm:px-6 sm:py-4  text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150">
+          <button className="rounded-[30px] animate-pulse bg-primaryBtn  px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150">
             Join Waitlist
           </button>
         </Link>
