@@ -37,7 +37,7 @@ const Footer = () => {
               <img src={mail} alt="" className="w-6 md:w-12 rounded-full" />creator@gmail.com
             </a>
           </div>
-          <div className="flex justify-between gap-2 sm:gap-6 my-2">
+          <div className="flex justify-between flex-wrap gap-2 sm:gap-6 my-2">
             {socials.map((social, index) => (
               <a href={`${social.link}`} key={index} className="flex flex-col items-center cursor-pointer">
                 <img src={social.image} alt="" className="w-4 md:w-8 rounded-full"  />
@@ -50,7 +50,7 @@ const Footer = () => {
             <a href="#">Terms and Conditions &nbsp;</a> |
             <a href="#"> &nbsp; Privacy Policy</a>
             </div>
-            &copy; 2024 @ denurx
+            Copyright &copy; 2024 Denurx
           </div>
         </div>
       {/* <div></div> */}
