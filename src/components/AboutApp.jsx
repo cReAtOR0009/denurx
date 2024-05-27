@@ -7,8 +7,7 @@ import gsap from "gsap";
 
 const FeaturesCard = ({ text, icon }) => (
   <div
-    key={text}
-    className="flex flex-col flex-1 w-[100%] min-w-[40%] md:min-w-[150px] shadow-red_custom rounded gap-2 md:gap-4   p-2 md:p-2 text-center hover:scale-[1.1] transition"
+    className="flex flex-col flex-1 w-[100%] min-w-[40%] md:min-w-[150px] shadow-red_custom rounded gap-2 md:gap-4   p-2 md:p-2 text-center hover:scale-[1.1]"
   >
     <div className="w-[50px]">
       <img src={icon} alt={`${text} icon`} className="w-[64px] h-[auto]" />
@@ -34,27 +33,46 @@ const ImageCard = ({ image, position, index }) => (
 const AboutApp = () => {
   const containerRef = useRef(null);
   const keyFeaturesContainer = useRef(null);
+  const ImagesContainer = useRef(null);
 
   // console.log(containerRef)
 
   useGSAP(() => {
     revealDivOnScroll(containerRef);
     const children = gsap.utils.toArray(keyFeaturesContainer.current.children);
-
-    children.forEach((child) => {
+    const imgChildren = gsap.utils.toArray(ImagesContainer.current.children);
+    imgChildren.forEach((child, index) => {
       gsap.fromTo(
         child,
         { opacity: 0, y:50 },
         {
           opacity: 1,
           y:0,
+          delay:index * 0.2,
           scrollTrigger: {
             trigger: child,
-            start: "top 90%",
+            start: "top 95%",
             end: "bottom 10%",
-            // stagger:0.25,
+            stagger:0.25,
             ease: "power1.out",
-            // scrub: true,
+          },
+        }
+      );
+    });
+    children.forEach((child, index) => {
+      gsap.fromTo(
+        child,
+        { opacity: 0, y:50 },
+        {
+          opacity: 1,
+          y:0,
+          delay:index * 0.2,
+          scrollTrigger: {
+            trigger: child,
+            start: "top 95%",
+            end: "bottom 10%",
+            stagger:0.25,
+            ease: "power1.out",
           },
         }
       );
@@ -68,7 +86,7 @@ const AboutApp = () => {
       className={`${styles.container} px-4 py-4 md:px-10 md:py-10 lg:p-20 xl:p-20 text-black`} //bg-primary_200
     >
       <div className="flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-2   md:p-8 md:rounded-[50px] border-[5px] rounded  md:border-[10px] border-primary border-solid">
-        <div className="order-2 sm:order-1 static p-0 md:p-4 flex gap-2 md:gap-4 md:relative  md:grid place-items-center  flex-1 w-auto flex-wrap ">
+        <div ref={ImagesContainer} className="order-2 sm:order-1 static p-0 md:p-4 flex gap-2 md:gap-4 md:relative  md:grid place-items-center  flex-1 w-auto flex-wrap ">
           {aboutApp.images.map((image, index) => {
             let position =
               index === 0
