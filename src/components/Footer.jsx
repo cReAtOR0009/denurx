@@ -9,10 +9,6 @@ import { useGSAP } from "@gsap/react";
 const Footer = () => {
   const containerRef = useRef(null)
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    console.log("form submit bbtn triggered")
-  }
 
   useGSAP(() => {
 
