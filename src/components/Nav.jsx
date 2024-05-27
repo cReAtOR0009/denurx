@@ -6,7 +6,12 @@ import gsap from "gsap";
 import { styles } from "../styles";
 import { nav } from "../assets/text";
 import { menu, close } from "../assets/images";
-import { animateNavItems, animateFromTo, animateButton, revealDivOnScroll } from "../assets/animation";
+import {
+  animateNavItems,
+  animateFromTo,
+  animateButton,
+  revealDivOnScroll,
+} from "../assets/animation";
 
 const NavItem = ({ title, active, handleClick, mobile, index }) => {
   const handleMouseEnter = (event) => {
@@ -15,31 +20,33 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
   };
 
   const handleMouseLeave = (event) => {
-    const navItem = event.currentTarget
+    const navItem = event.currentTarget;
     gsap.to(navItem, { y: 0, duration: 0.3 });
   };
 
   return (
-    <li
-      onClick={() => handleClick(title)}
-      onMouseEnter={handleMouseEnter} 
-      onMouseLeave={handleMouseLeave}
+    <HashLink
       className={`${
         active === title ? "border-b-4 text-secondary" : "text-white"
       } ${
         mobile ? "mb-6" : "mr-4 md:mr-8"
-      } nav-item inline-block mb-4 uppercase border-b-secondary py-2 px-4 cursor-pointer hover:border-b-4 hover:border-b-secondary_100 hover:text-secondary_100`}
+      } all-[unset] nav-item inline-block mb-4 uppercase border-b-secondary py-2 px-4 cursor-pointer hover:border-b-4 hover:border-b-secondary_100 hover:text-secondary_100`}
+      to={`/denurx/#${title.toLocaleLowerCase()}`}
+      onClick={() => handleClick(title)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <HashLink to={`/denurx/#${title.toLocaleLowerCase()}`}>{title}</HashLink>
-    </li>
+      {title}
+      <li></li>
+    </HashLink>
   );
 };
 
 const Nav = () => {
-  const containerRef = useRef(null)
-  const aside = useRef(null)
-  const logoRef = useRef(null)
-  const buttonRef = useRef(null)
+  const containerRef = useRef(null);
+  const aside = useRef(null);
+  const logoRef = useRef(null);
+  const buttonRef = useRef(null);
   const [active, setActive] = useState(nav[0].title);
   const [activeMenu, setActiveMenu] = useState(false);
   const navRef = useRef(null);
@@ -49,34 +56,30 @@ const Nav = () => {
   };
 
   useGSAP(() => {
-    revealDivOnScroll(containerRef)
-    const navItems = navRef.current.querySelectorAll("li");
+    revealDivOnScroll(containerRef);
+    const navItems = navRef.current.querySelectorAll("a");
     animateNavItems(navItems);
     animateFromTo(logoRef, "x", -150, 0);
     animateFromTo(buttonRef, "x", -150, 0, 1);
     // animateButton('#action_button1');
   }, []);
-  
+
   useGSAP(() => {
     // const tl = gsap.timeline();
     if (activeMenu) {
-      animateFromTo(aside, "x", 250, 0, 0, 1 )
+      animateFromTo(aside, "x", 250, 0, 0, 1);
     } else {
-      animateFromTo(aside, "x", 0, 250, 0, .5 )
+      animateFromTo(aside, "x", 0, 250, 0, 0.5);
     }
     // animateFromTo(aside, "x", 250, 0, 0, .5 )
     // return () => {
     //   tl.kill(); // Clean up the timeline on component unmount
     // };
-
-  }, [activeMenu])
-
-  
-
+  }, [activeMenu]);
 
   return (
     <nav
-    ref={containerRef}
+      ref={containerRef}
       className={`${styles.nav} fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20 flex justify-between items-center "bg-[transparent]"`}
     >
       {/* <a id="logo" href="#home" rel="noopener noreferrer" className=""> */}
@@ -123,37 +126,43 @@ const Nav = () => {
       </div>
 
       {/* {activeMenu && ( */}
-        <aside ref={aside} className={`${activeMenu?"flex":"hidden"} lg:hidden absolute top-0 w-[50%] h-screen right-0 p-4 navSidebar bg-white shadow-featuresCardShadow hover:shadow-featuresCardHover`}>
-          <div
-            onClick={() => setActiveMenu(false)}
-            class="group flex lg:hidden h-10 w-10 cursor-pointer items-center justify-center rounded-3xl bg-whit p-2"
-          >
-            <div class="space-y-2 group-hover:scale-[1.1]">
-              <span class="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-white transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
-              <span class="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-white transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
-            </div>
+      <aside
+        ref={aside}
+        className={`${
+          activeMenu ? "flex" : "hidden"
+        } flex-col lg:hidden absolute top-0 w-[50%] h-screen right-0 p-4 navSidebar bg-white shadow-featuresCardShadow hover:shadow-featuresCardHover`}
+      >
+        <div
+          onClick={() => setActiveMenu(false)}
+          class="group flex lg:hidden h-10 w-10 cursor-pointer items-center justify-center rounded-3xl bg-whit p-2"
+        >
+          <div class="space-y-2 group-hover:scale-[1.1]">
+            <span class="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-white transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
+            <span class="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-white transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
           </div>
-          <ul className="flex flex-col mt-20">
-            {nav.map((nav, index) => (
-              <NavItem
-                key={index}
-                {...nav}
-                index={index}
-                active={active}
-                handleClick={handleClick}
-                mobile={true}
-              />
-            ))}
-          </ul>
-          <Link   id="action_button1" to="/denurx/waitlist" rel="noopener noreferrer">
-            <button
-            
-              className="rounded-[30px] animate-pulse bg-primaryBtn  px-4 py-2 sm:px-6 sm:py-4  text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150"
-            >
-              Join Waitlist
-            </button>
-          </Link>
-        </aside>
+        </div>
+        <ul className="flex flex-col mt-20">
+          {nav.map((nav, index) => (
+            <NavItem
+              key={index}
+              {...nav}
+              index={index}
+              active={active}
+              handleClick={handleClick}
+              mobile={true}
+            />
+          ))}
+        </ul>
+        <Link
+          id="action_button1"
+          to="/denurx/waitlist"
+          rel="noopener noreferrer"
+        >
+          <button className="rounded-[30px] animate-pulse bg-primaryBtn  px-4 py-2 sm:px-6 sm:py-4  text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150">
+            Join Waitlist
+          </button>
+        </Link>
+      </aside>
       {/* )} */}
     </nav>
   );
