@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { benefits } from "../assets/text";
 import { styles } from "../styles";
 import { DenurxLogo } from "../assets/images";
 import { revealDivOnScroll } from "../assets/animation";
-import { useGSAP } from "@gsap/react";
 
 const FeaturesCard = ({ icon, text, title }) => {
   return (
-    <div className="relative min-w-[250px] flex-1 shadow-featuresCardShadow hover:shadow-featuresCardHover transition-all rounded-md sm:rounded-xl text-black cursor-pointer group">
+    <div className="relative min-w-[200px] flex-1 shadow-featuresCardShadow hover:shadow-featuresCardHover transition-shadow rounded-md sm:rounded-xl text-black cursor-pointer group">
       <div className="flex items-center border-l-8 border-r-8 border-b-2 bg-primar border-primary rounded-[10px] p-2 transition-all">
         <img
           src={icon}
@@ -27,6 +28,7 @@ const FeaturesCard = ({ icon, text, title }) => {
 
 const Features = () => {
   const containerRef = useRef(null)
+  const featuresContainer = useRef(null)
   const items = benefits.benefits;
   const cardPerDisp = 3;
   const totalPages = Math.ceil(items.length / cardPerDisp);
@@ -63,6 +65,25 @@ const Features = () => {
 
   useGSAP(() => {
     revealDivOnScroll(containerRef)
+    const featureCard = gsap.utils.toArray(featuresContainer.current.children)
+    featureCard.forEach((feature, index) => {
+      gsap.fromTo(
+        feature,
+        { opacity: 0, y:50 },
+        {
+          opacity: 1,
+          y:0,
+          delay:index * 0.2,
+          scrollTrigger: {
+            trigger: feature,
+            start: "top 95%",
+            end: "bottom 10%",
+            stagger:0.25,
+            ease: "power1.out",
+          },
+        }
+      );
+    })
   }, [])
   
   return (
@@ -82,7 +103,7 @@ const Features = () => {
         </div>
         <img src={DenurxLogo} alt="Denurx logo" className="order-1 sm:order-2 lg:flex lg:items-end w-[100%] sm:w-[] md:w-[100%] h-[100%] rounded-lg"/>
       </div>
-      <div className="flex flex-wrap gap-4  animate-[slide-in-right_0.5s_ease-in-out]">
+      <div ref={featuresContainer} className="flex flex-wrap gap-4  animate-[slide-in-right_0.5s_ease-in-out]">
         {toDisplay.map((benefit, index) => (
           <FeaturesCard key={index} {...benefit} />
         ))}
