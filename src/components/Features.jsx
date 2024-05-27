@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { benefits } from "../assets/text";
 import { styles } from "../styles";
 import { DenurxLogo } from "../assets/images";
 import { revealDivOnScroll } from "../assets/animation";
+import { useGSAP } from "@gsap/react";
 
 const FeaturesCard = ({ icon, text, title }) => {
   return (
@@ -25,6 +26,7 @@ const FeaturesCard = ({ icon, text, title }) => {
 };
 
 const Features = () => {
+  const containerRef = useRef(null)
   const items = benefits.benefits;
   const cardPerDisp = 3;
   const totalPages = Math.ceil(items.length / cardPerDisp);
@@ -58,9 +60,14 @@ const Features = () => {
   const updateDisplayItem = (index) => {
     setCurrentIndex(index);
   };
-revealDivOnScroll("features")
+
+  useGSAP(() => {
+    revealDivOnScroll(containerRef)
+  }, [])
+  
   return (
     <section
+    ref={containerRef}
       id="features"
       className={`${styles.container} flex flex-col flex-wrap`}
       onClick={() => setIsHovered(!isHovered)}

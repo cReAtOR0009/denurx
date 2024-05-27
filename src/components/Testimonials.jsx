@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import { testimonials } from "../assets/text";
 import { styles } from "../styles";
 import { revealDivOnScroll } from "../assets/animation";
+import { useGSAP } from "@gsap/react";
 
 const TestimonialCard = ({ image, name, role, testament, gridPosition }) => {
  const color = role ==="Doctor"? "bg-primary_100":role==="Nurse"?"bg-primary":role==="Patient"?"bg-primary":"bg-primary"
@@ -24,9 +25,13 @@ const TestimonialCard = ({ image, name, role, testament, gridPosition }) => {
 };
 
 const Testimonials = () => {
-  revealDivOnScroll("testimonials")
+  const containerRef = useRef(null)
+  useGSAP(() => {
+    revealDivOnScroll(containerRef)
+
+  }, [])
   return (
-    <section id="testimonials" className={`${styles.container}`}>
+    <section ref={containerRef} id="testimonials" className={`${styles.container}`}>
       <div className={` `}>
         <div className="transition duration-500 ease-in-out transform scale-100 translate-x-0 translate-y-0 opacity-100">
           <div className="mb-6  md:mb-10">

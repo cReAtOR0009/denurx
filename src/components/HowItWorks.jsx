@@ -1,10 +1,11 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import { styles } from "../styles";
 import { mockup } from "../assets/images";
 import { howItWorks } from "../assets/text";
 import { tipIcon } from "../assets/images";
 import { light1, light2, light3, light4, light5 } from "../assets/images";
 import { revealDivOnScroll } from "../assets/animation";
+import { useGSAP } from "@gsap/react";
 
 const CircularContainer = ({ active, setActive }) => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -138,6 +139,7 @@ const Steps = ({ description, tip, mockup, step, active, setHovered, hovered }) 
 const HowItWorks = () => {
   const [active, setActive] = useState(howItWorks[0].step);
   const [hovered, setHovered] = useState(false)
+  const containerRef = useRef(null)
 
   useEffect(() => {
     let toggleActive
@@ -152,13 +154,15 @@ const HowItWorks = () => {
         });
       }, 5000);
     }
-
+    
     return () => clearInterval(toggleActive);
   }, [hovered]);
-
-  revealDivOnScroll("quick start")
+  
+  useGSAP(() => {
+    revealDivOnScroll(containerRef)
+  })
   return (
-    <section id="quick start" className={`${styles.container}  flex flex-col gap-6 sm:gap-10 `}>
+    <section ref={containerRef} id="quick start" className={`${styles.container}  flex flex-col gap-6 sm:gap-10 `}>
       <h2
         className={`${styles.h2} text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-semibold leading-snug`}
       >

@@ -4,7 +4,8 @@ import { HashLink } from "react-router-hash-link";
 import { styles } from "../styles";
 import { nav } from "../assets/text";
 import { menu, close } from "../assets/images";
-import { animateNavItems, animateFromTo, animateButton } from "../assets/animation";
+import { animateNavItems, animateFromTo, animateButton, revealDivOnScroll } from "../assets/animation";
+import { useGSAP } from "@gsap/react";
 
 const NavItem = ({ title, active, handleClick, mobile, index }) => {
   return (
@@ -14,7 +15,7 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
         active === title ? "border-b-4 text-secondary" : "text-white"
       } ${
         mobile ? "mb-6" : "mr-4 md:mr-8"
-      } inline-block mb-4 uppercase border-b-[red] py-2 px-4 cursor-pointer hover:border-b-4 hover:text-secondary_100`}
+      } inline-block mb-4 uppercase border-b-secondary py-2 px-4 cursor-pointer hover:border-b-4 hover:border-b-secondary_100 hover:text-secondary_100 hover:animate-fade-in-down`}
     >
       <HashLink to={`/denurx/#${title.toLocaleLowerCase()}`}>{title}</HashLink>
     </li>
@@ -22,6 +23,7 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
 };
 
 const Nav = () => {
+  const containerRef = useRef(null)
   const [active, setActive] = useState(nav[0].title);
   const [activeMenu, setActiveMenu] = useState(false);
   const navRef = useRef(null);
@@ -30,7 +32,8 @@ const Nav = () => {
     setActive(value);
   };
 
-  useEffect(() => {
+  useGSAP(() => {
+    revealDivOnScroll(containerRef)
     const navItems = navRef.current.querySelectorAll("li");
     animateNavItems(navItems);
     animateFromTo("#logo", "x", -150, 0);
@@ -38,8 +41,12 @@ const Nav = () => {
     // animateButton('#action_button1');
   }, []);
 
+  
+
+
   return (
     <nav
+    ref={containerRef}
       className={`${styles.nav} fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20 flex justify-between items-center "bg-[transparent]"`}
     >
       {/* <a id="logo" href="#home" rel="noopener noreferrer" className=""> */}
@@ -68,7 +75,7 @@ const Nav = () => {
       {/* <a  id="action_button1" href="#join wait list" rel="noopener noreferrer"> */}
       <Link to={"/denurx/waitlist"}>
         <button
-          className={`rounded-[30px] bg-primaryBt btn featuresCardShadow px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150`}
+          className={`rounded-[30px] animate-pulse bg-primaryBtn px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150`}
         >
           Join Waitlist
         </button>
@@ -110,7 +117,7 @@ const Nav = () => {
           <Link   id="action_button1" to="/denurx/waitlist" rel="noopener noreferrer">
             <button
             
-              className="rounded-[30px] btn  px-4 py-2 sm:px-6 sm:py-4  text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150"
+              className="rounded-[30px] animate-pulse bg-primaryBtn  px-4 py-2 sm:px-6 sm:py-4  text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150"
             >
               Join Waitlist
             </button>

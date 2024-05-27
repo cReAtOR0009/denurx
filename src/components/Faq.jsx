@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { faqs } from "../assets/text";
 import { plus,minus } from "../assets/images";
 import { styles } from "../styles";
 import { revealDivOnScroll } from "../assets/animation";
+import { useGSAP } from "@gsap/react";
 
 const FaqCard = ({ question, answer, index }) => {
   const [activeFaq, setActiveFaq] = useState(index===0);
@@ -16,9 +17,13 @@ const FaqCard = ({ question, answer, index }) => {
 };
 
 const Faq = () => {
-  revealDivOnScroll("faq")
+  const containerRef = useRef(null)
+  useGSAP(() => {
+
+    revealDivOnScroll(containerRef)
+  })
   return (
-    <section id="faq" className={`${styles.container} flex flex-col gap-6 sm:gap-10`}>
+    <section ref={containerRef} id="faq" className={`${styles.container} flex flex-col gap-6 sm:gap-10`}>
         <h2 className={`${styles.h2}`}>Frequently Asked Questions</h2>
         <div className="flex justify-between flex-wrap  gap- my-0 mx-[auto]">
       {faqs.map((faq, index) => (
