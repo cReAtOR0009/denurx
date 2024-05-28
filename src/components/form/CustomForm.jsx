@@ -33,7 +33,7 @@ const CustomForm = ({ status, message, onValidated }) => {
     } else if (status === "error") {
       // console.log("status:", status)
       // console.log("message:", message)
-      setResponse({ message: "Something went wrong while joining waitlist", error: true, display: true });
+      setResponse({ message: "Something went wrong while joining waitlist, kindly ensure you input the right information", error: true, display: true });
       setLoading(false);
     }
   }, [status, message]);
@@ -66,14 +66,14 @@ const CustomForm = ({ status, message, onValidated }) => {
   return (
     <form
       action="POST"
-      className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl shadow-featuresCardShadow hover:shadow-featuresCardHover text-[#000000] transition"
+      className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl text-[#000000] border-2 bg-white border-[#cacaca] transition"
       onSubmit={handleSubmit}
     >
       {response.display && (
         <div
           className={`${
-            response.error ? "bg-secondary_100 text-white" : "bg-white text-black"
-          } relative p-4 sm:p-10 rounded-md `}
+            response.error ? "bg-secondary_100 text-white" : "transparentOverlay text-black"
+          } relative p-4 sm:p-10 rounded-md animate-slide-in `}
         >
           {response.message}
           <span
@@ -92,7 +92,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           id="email"
           required
           placeholder="Enter your email address"
-          className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-primary_200 placeholder-white focus:border-white"
+          className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-[#939191] placeholder-white focus:border-white"
           value={form.email}
           onChange={handleFormChange}
         />
@@ -105,7 +105,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           id="fullname"
           required
           placeholder="Enter your full name"
-          className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-primary_200 placeholder-white focus:border-white"
+          className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-[#939191] placeholder-white focus:border-white"
           value={form.fullname}
           onChange={handleFormChange}
         />
