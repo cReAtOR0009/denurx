@@ -57,7 +57,7 @@ const AboutApp = () => {
         </div>
         <div className="order-1 sm:order-2 flex flex-col flex-1 gap-6 sm:gap-10">
           <h2 className={`${styles.h2} `}>{aboutApp.title}</h2>
-          <p className={`${styles.paragraph} `}>{aboutApp.text}</p>
+          <p className={`${styles.paragraph}  `}>{aboutApp.text}</p>
           <div className="">
             <h2 className={`${styles.h3} text-secondary2 `}>Key Features</h2>
             <div

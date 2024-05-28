@@ -1,6 +1,40 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin');
-const positions = ["0", "2", "3", "4", "5", "6", "7", "8", "9", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "200", "300", "400", "500", "600", "700", "800","900", "1000", "1100", "1200", "1300", "1400", "1500" ];
+const plugin = require("tailwindcss/plugin");
+const positions = [
+  "0",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "20",
+  "30",
+  "40",
+  "50",
+  "60",
+  "70",
+  "80",
+  "90",
+  "100",
+  "200",
+  "300",
+  "400",
+  "500",
+  "600",
+  "700",
+  "800",
+  "900",
+  "1000",
+  "1100",
+  "1200",
+  "1300",
+  "1400",
+  "1500",
+];
 const afterColor = [
   "#0242ff", // primary
   "#1e3e92", // primary_100
@@ -17,18 +51,18 @@ const afterColor = [
   "#ffffff", // white
   "#f0f0f0", // gray-100
   "#333333", // gray-200
-  "#000000" // black
+  "#000000", // black
 ];
 
 const safelist = [
-  ...positions.map(position => `right-[${position}]`),
-  ...positions.map(position => `right-[-${position}]`),
-  ...positions.map(position => `left-[${position}]`),
-  ...positions.map(position => `top-[${position}]`),
-  ...positions.map(position => `top-[-${position}]`),
-  ...positions.map(position => `bottom-[${position}]`),
-  ...positions.map(position => `w-[${position}%]`),
-  ...afterColor.map(color =>`after:border-r-color-[${color}]`),
+  ...positions.map((position) => `right-[${position}]`),
+  ...positions.map((position) => `right-[-${position}]`),
+  ...positions.map((position) => `left-[${position}]`),
+  ...positions.map((position) => `top-[${position}]`),
+  ...positions.map((position) => `top-[-${position}]`),
+  ...positions.map((position) => `bottom-[${position}]`),
+  ...positions.map((position) => `w-[${position}%]`),
+  ...afterColor.map((color) => `after:border-r-color-[${color}]`),
   // `after:border-r-color-[${primary}]`,
   "animate-[fade-in_1s_ease-in-out]",
   "animate-[fade-in-down_1s_ease-in-out]",
@@ -54,15 +88,14 @@ module.exports = {
       primary_200: "#007bff80", //007bff80
 
       // Complementary Colors
-      secondary: "#fe0000", //#dd4b4f
+      secondary: "#B90000", //#dd4b4f
       secondary_100: "#dd4b4f", //#dd4b4f
       secondary2: "#310092", //007bff80
       secondary3: "#230438",
       secondary4: "#7fffd4", //#29FF52 7fbdff //#7fbdff
-  
+
       //container Background
       aboutBg: "#c8d5f9",
-
 
       // Neutral Colors
       white: "#ffffff",
@@ -105,9 +138,11 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        primaryBtn:"linear-gradient(to right, hsl(352deg 100% 61.66%) 30%, hsl(241.65deg 100% 50% / 61%) 100%)",
-        navSidebar:"rgba(187, 190, 207, 0.2)",
-        secondaryBtn:"linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)",
+        primaryBtn:
+          "linear-gradient(to right, #B90000 50%, hsl(241.65deg 100% 50% / 100%) 0%)", //linear-gradient(to right, hsl(352deg 100% 61.66%) 30%, hsl(241.65deg 100% 50% / 61%) 100%)
+        navSidebar: "rgba(187, 190, 207, 0.2)",
+        secondaryBtn:
+          "linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)",
         heroImage: 'url("/src/assets/doctors.png")',
         heroMockup: 'url("/src/assets/mockup_hero.png")',
         stepBlob: 'url("/src/assets/magicpattern-blob.png")', //2493.jpg
@@ -115,30 +150,29 @@ module.exports = {
         scrollmodern:
           "linear-gradient(0deg, rgb(20 20 17 / 60%), rgb(35 44 57 / 90%)), url('/src/assets/scrollmodern.jpg')",
         heroGradient:
-          "linear-gradient(91deg, rgb(162 162 184 / 50%), rgb(59, 43, 172)), url(/src/assets/doctor6.jpg)", 
-          waitList:
-          "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/mockup_hero.png)", 
-          notFoundbg:
-          "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/notfoundbg.jpg)",//footerBg.jpg//footerBg.jpg
-          footerBg: "url(/src/assets/footerBg.jpg)"
-        }, //notfoundbg.jpg
-      
-      
-    gridTemplateColumns: {
-      grid1Mobile: "repeat(auto-fill, minmax(300px, auto))",
-      grid2: "repeat(auto-fill, minmax(auto, 2fr))",
-    },
-    gridTemplateRows: {
-      grid1RowMobile: "2fr min-content",
-      grid2: "repeat(auto, minmax(100px, 100px))",
-    },
-    boxShadow: {
-      red_custom: 'inset 5px 5px 10px 0px rgba(0, 0, 0, 0.3)',
-      green_custom: 'inset 5px 5px 10px 0px rgb(27 214 95 / 50%)',
-      featuresCardShadow:"5px 5px 10px #ababab, -5px -5px 10px #ffffff",
-      featuresCardHover:" 5px 5px 15px #7d7d7d, -5px -5px 15px #ffffff;",
-      testimonialCardShadow:"5px 5px 10px #ededed, -5px -5px 10px #ffffff;"
-    },
+          "linear-gradient(91deg, rgb(162 162 184 / 50%), rgb(59, 43, 172)), url(/src/assets/doctor6.jpg)",
+        waitList:
+          "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/mockup_hero.png)",
+        notFoundbg:
+          "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/notfoundbg.jpg)", //footerBg.jpg//footerBg.jpg
+        footerBg: "url(/src/assets/footerBg.jpg)",
+      }, //notfoundbg.jpg
+
+      gridTemplateColumns: {
+        grid1Mobile: "repeat(auto-fill, minmax(300px, auto))",
+        grid2: "repeat(auto-fill, minmax(auto, 2fr))",
+      },
+      gridTemplateRows: {
+        grid1RowMobile: "2fr min-content",
+        grid2: "repeat(auto, minmax(100px, 100px))",
+      },
+      boxShadow: {
+        red_custom: "inset 5px 5px 10px 0px rgba(0, 0, 0, 0.3)",
+        green_custom: "inset 5px 5px 10px 0px rgb(27 214 95 / 50%)",
+        featuresCardShadow: "5px 5px 10px #ababab, -5px -5px 10px #ffffff",
+        featuresCardHover: " 5px 5px 15px #7d7d7d, -5px -5px 15px #ffffff;",
+        testimonialCardShadow: "5px 5px 10px #ededed, -5px -5px 10px #ffffff;",
+      },
       keyframes: {
         "fade-in": {
           "0%": { opacity: "0" },
@@ -148,57 +182,62 @@ module.exports = {
           "0%": { opacity: "0", transform: "translateY(-10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        'slide-in': {
-          '0%': { transform: 'translateX(-100%)', opacity: 0 },
-          '100%': { transform: 'translateX(0)', opacity: 1 },
+        "slide-in": {
+          "0%": { transform: "translateX(-100%)", opacity: 0 },
+          "100%": { transform: "translateX(0)", opacity: 1 },
         },
-        'slide-in-right': {
-          '0%': { transform: 'translateX(100%)', opacity: 0 },
+        "slide-in-right": {
+          "0%": { transform: "translateX(100%)", opacity: 0 },
           // '50%': { transform: 'translateX(50%)', opacity: 0.5 },
-          '100%': { transform: 'translateX(0)', opacity: 1 },
+          "100%": { transform: "translateX(0)", opacity: 1 },
         },
-        'slide-in-up': {
-          '0%': { transform: 'translateY(100%)', opacity: 0 },
-          '100%': { transform: 'translateY(0)', opacity: 1 },
+        "slide-in-up": {
+          "0%": { transform: "translateY(100%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
         },
-        'slide-in-down': {
-          '0%': { transform: 'translateY(-100%)', opacity: 0 },
-          '100%': { transform: 'translateY(0)', opacity: 1 },
+        "slide-in-down": {
+          "0%": { transform: "translateY(-100%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
         },
-        'pop-up': {
-           '0%': { transform: 'scale(0.5)', opacity: 0 },
-          '80%': { transform: 'scale(1.1)', opacity: 1 },
-          '100%': { transform: 'scale(1)', opacity: 1 },
+        "pop-up": {
+          "0%": { transform: "scale(0.5)", opacity: 0 },
+          "80%": { transform: "scale(1.1)", opacity: 1 },
+          "100%": { transform: "scale(1)", opacity: 1 },
+        },
+        "shine-left": {
+          "0%": { backgroundPosition: "200% center" },
+          "100%": { backgroundPosition: "0% center" },
         },
       },
       animation: {
         "fade-in": "fade-in 1s ease-in-out",
         "fade-in-down": "fade-in-down 1s ease-in-out",
-        "slide-in": "slide-in 0.5s ease-in-out",
-        "slide-in-right": "slide-in-right 0.5s ease-in-out",
-        "slide-in-up": "slide-in-up 0.5s ease-in-out",
-        "slide-in-down": "slide-in-down 0.5s ease-in-out",
-        'pop-up': 'pop-up 0.3s ease-out forwards',
+        "slide-in": "slide-in 0.3s ease-in-out",
+        "slide-in-right": "slide-in-right 0.3s ease-in-out",
+        "slide-in-up": "slide-in-up 0.3s ease-in-out",
+        "slide-in-down": "slide-in-down 0.3s ease-in-out",
+        "pop-up": "pop-up 0.3s ease-out forwards",
+        "shine-left": "shine 2s ease-in-out infinite",
       },
     },
   },
   plugins: [
-    plugin(function({ addUtilities }) {
+    plugin(function ({ addUtilities }) {
       const newUtilities = {
-        '.absolute-content::before': {
-          content: 'hekko',
-          position: 'absolute',
-          zIndex:2,
-          fontSize:"40px"
+        ".absolute-content::before": {
+          content: "hekko",
+          position: "absolute",
+          zIndex: 2,
+          fontSize: "40px",
         },
-        '.absolute-content::after': {
-          content: 'hekko',
-          position: 'absolute',
-          fontSize:"40px"
+        ".absolute-content::after": {
+          content: "hekko",
+          position: "absolute",
+          fontSize: "40px",
         },
-      }
-      
-      addUtilities(newUtilities, ['responsive', 'hover']);
+      };
+
+      addUtilities(newUtilities, ["responsive", "hover"]);
     }),
   ],
 };

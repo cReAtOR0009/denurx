@@ -5,7 +5,7 @@ const JoinWaitlist = ({ setShowJoinwaitlist }) => {
   return (
     <section
       id="join wait list"
-      class={` h-screen px-4 py-6 sm:p-6  md:p-6 lg:p-20 xl:p-6  absolute z-50 top-0 left-0 bottom- right-0 flex flex-col justify-center items-center my-0 mx-[auto] w-[100%] transparentOverlay animate-pop-up`}
+      class={` h-screen px-4 py-6 sm:p-6  md:p-6 lg:p-20 xl:p-6  absolute z-50 top-0 left-0 bottom- right-0 flex flex-col justify-center items-center my-0 mx-[auto] w-[100%] bg-[#cacacaf0] animate-pop-up`}
     >
       <div
         onClick={() => setShowJoinwaitlist(false)}
@@ -25,7 +25,7 @@ const JoinWaitlist = ({ setShowJoinwaitlist }) => {
         "Your Clinic In Your Hands."
       </h2>
       <p
-        className={`${styles.paragraph} text-white text-center md:w-[50%]`}
+        className={`${styles.paragraph} text-black text-center md:w-[50%]`}
       >
         Be among the first to experience a revolutionary app that puts your
         health in your hands. Track your wellness, get personalized

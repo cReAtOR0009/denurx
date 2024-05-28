@@ -41,8 +41,8 @@ const CircularContainer = ({ active, setActive }) => {
               onClick={() => setActive(step.step)}
               className={`${
                 active == step.step  
-                ? "bg-[#61606059] text-black"
-                : "bg-[rgba(195,193,193,0.85)] "
+                ? " bg-[#616060] text-black"
+                : "bg-[#61606059] text-black"
               } absolute flex flex-col justify-center items-center  w-[50px] h-[50px] lg:w-[150px] lg:h-[150px] md:w-[100px] md:h-[100px] bg-blue-500 rounded-full text-black text-center cursor-pointer`}
               style={{
                 top: `calc(50% + ${y}px)`,

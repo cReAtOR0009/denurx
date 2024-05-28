@@ -8,14 +8,14 @@ import { useContext } from "react";
 const Footer = () => {
   const {showJoinwaitlist, setShowJoinwaitlist} = useContext(WaitlistContext)
   return (
-    <footer  id="footer" className={`${styles.footer_container} px-4 py-4 sm:px-10 md:py-6  lg:p-6 xl:px-20 xl:py-10  max-w-[100%] text-white bg-[#616060] flex flex-wrap justify-between items-center`}>
+    <footer  id="footer" className={`${styles.footer_container} px-4 py-4 sm:px-10 md:py-6  lg:p-6 xl:px-20 xl:py-10  max-w-[100%] text-black bg-[#cacaca] font-bold flex flex-wrap justify-between items-center`}>
       <div className="  flex justify-between items-center gap-6 w-screen md:w-[auto]" >
         <div id="logo_container">
         <img src="./logo.png" alt="Logo here" className="w-12 h-12 md:w-16 md:h-16" />
       </div>
         <button
         onClick={() => setShowJoinwaitlist(true)}
-          className={`rounded-[30px] animate-pulse bg-primaryBtn px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150`}
+          className={`rounded-[30px]  bg-primaryBtn px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700  border border-[transparent] animate-pulse hover:bg-secondary_100 focus:border-white transition duration-150`}
         >
           Join Waitlist
         </button>
