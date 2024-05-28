@@ -9,10 +9,10 @@ const JoinWaitlist = ({ setShowJoinwaitlist }) => {
     >
       <div
         onClick={() => setShowJoinwaitlist(false)}
-        class="absolute z-50 right-0 top-2 p-2  mr-4 space-y-2 group group-hover:scale-[1.1] cursor-pointer"
+        class="absolute z-50 right-0 top-2 p-2  mr-4 space-y-2 group group-hover:scale-[1.1] select-none cursor-pointer"
       >
-        <span class="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-white transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
-        <span class="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-white transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
+        <span class="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-black transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
+        <span class="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-black transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
       </div>
       <h1
         className={`${"styles.h1"} text-2xl md:text-2xl lg:4xl xl:text-3xl font-bold  leading-tight text-center`}

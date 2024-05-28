@@ -75,7 +75,7 @@ const Nav = () => {
         onClick={() => setActiveMenu(true)}
         class="group flex lg:hidden  cursor-pointer items-center justify-center rounded-3xl bg-whit p-2 hover:bg-slate-200"
       >
-        <div class="space-y-2">
+        <div class="space-y-2 group-hover:scale-[1.1] select-none">
           <span class="block  h-1 w-8 sm:h-1 sm:w-10 origin-center rounded-full bg-black transition-transform ease-in-out group-hover:bg-primary_100"></span>
           <span class="block h-1 w-6 sm:h-1 sm:w-8  origin-center rounded-full bg-black transition-transform ease-in-out group-hover:bg-primary_100"></span>
         </div>
@@ -91,7 +91,7 @@ const Nav = () => {
           onClick={() => setActiveMenu(false)}
           class="group flex lg:hidden h-10 w-10 cursor-pointer items-center justify-center rounded-3xl bg-whit p-2"
         >
-          <div class="space-y-2 group-hover:scale-[1.1]">
+          <div class="space-y-2 group-hover:scale-[1.1] select-none">
             <span class="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-black transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
             <span class="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-black transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
           </div>
