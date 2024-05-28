@@ -1,36 +1,38 @@
-import React, { useState } from "react";
 import { styles } from "../../styles";
-import { revealDivOnScroll } from "../../assets/animation";
-import CustomForm from "./CustomForm";
 import MailChimp from "./MailChimp";
 
-const JoinWaitlist = () => {
-
-  revealDivOnScroll("join wait list");
+const JoinWaitlist = ({ setShowJoinwaitlist }) => {
   return (
     <section
       id="join wait list"
-      class={`${styles.container} flex flex-col justify-center items-center min-h-screen bg-waitList fullbgAuto h-screen mt-20 `} //  bg-waitList fullbgAuto
+      class={` h-screen px-4 py-6 sm:p-6  md:p-6 lg:p-20 xl:p-6  absolute z-50 top-0 left-0 bottom- right-0 flex flex-col justify-center items-center my-0 mx-[auto] w-[100%] transparentOverlay animate-pop-up`}
     >
+      <div
+        onClick={() => setShowJoinwaitlist(false)}
+        class="absolute z-50 right-0 top-2 p-2  mr-4 space-y-2 group group-hover:scale-[1.1] cursor-pointer"
+      >
+        <span class="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-white transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
+        <span class="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-white transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
+      </div>
       <h1
-        className={`${"styles.h1"} text-3xl md:text-4xl lg:4xl xl:text-5xl font-bold text-secondary2 leading-tight text-center`}
+        className={`${"styles.h1"} text-2xl md:text-2xl lg:4xl xl:text-3xl font-bold text-secondary2 leading-tight text-center`}
       >
         Join the Future of Health Management Today!
       </h1>
       <h2
-        className={`${"styles.h2"} text-2xl md:text-3xl lg:text-4xl xl:text-4xl my-[20px] font-semibold leading-snug text-secondary text-center`}
+        className={`${"styles.h2"} text-lg md:text-2xl lg:text-3xl xl:text-3xl my-[10px] font-semibold leading-snug text-black text-center`}
       >
         "Your Clinic In Your Hands."
       </h2>
       <p
-        className={`${styles.paragraph} text-[#000000] text-center  px-[5%] md:px-[5%]`}
+        className={`${styles.paragraph} text-white text-center  px-[5%] md:px-[5%]`}
       >
         Be among the first to experience a revolutionary app that puts your
         health in your hands. Track your wellness, get personalized
         recommendations, and connect with healthcare professionals instantly.
         Sign up for our waitlist and be the first to know when we launch!
       </p>
-    <MailChimp />
+      <MailChimp />
     </section>
   );
 };
