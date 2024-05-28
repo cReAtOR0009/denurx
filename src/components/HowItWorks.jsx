@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, {useRef, useEffect, useState, useCallback } from "react";
 import { styles } from "../styles";
 import { howItWorks } from "../assets/text";
 import { tipIcon } from "../assets/images";
@@ -134,12 +134,35 @@ const Steps = ({ description, tip, mockup, step, active, setHovered, hovered }) 
 
 const HowItWorks = () => {
   const [active, setActive] = useState(howItWorks[0].step);
-  const [hovered, setHovered] = useState(false)
+  const [hovered, setHovered] = useState(false);
+  const containerRef = useRef(null);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    let toggleActive
-    if (!hovered) {  
-       toggleActive = setInterval(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          setInView(entry.isIntersecting);
+        });
+      },
+      { threshold: 0.1 } // Adjust threshold as needed
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, [containerRef]);
+
+  useEffect(() => {
+    let toggleActive;
+    if (!hovered && inView) {
+      toggleActive = setInterval(() => {
         setActive((prevActive) => {
           const currentIndex = howItWorks.findIndex(
             (step) => step.step === prevActive
@@ -149,13 +172,12 @@ const HowItWorks = () => {
         });
       }, 5000);
     }
-    
+
     return () => clearInterval(toggleActive);
-  }, [hovered]);
-  
+  }, [hovered, inView]);
 
   return (
-    <section  id="quick start" className={`${styles.container}  flex flex-col gap-6 sm:gap-10 `}>
+    <section ref={containerRef}  id="quick start" className={`${styles.container}  flex flex-col gap-6 sm:gap-10 `}>
       <h2
         className={`${styles.h2} text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-semibold leading-snug`}
       >
@@ -168,7 +190,7 @@ const HowItWorks = () => {
       </p>
       <section className="flex flex-col gap-6 py-8 lg:flex-row justify-between">
         <CircularContainer active={active} setActive={setActive} />
-        <div className=" lg:w-[50%] min-h-[70vh] md:min-h-[auto]">
+        <div className=" lg:w-[50%]">
           {howItWorks.map((step, index) => (
             <Steps key={index} {...step} active={active} hovered={hovered} setHovered={setHovered} />
           ))}
