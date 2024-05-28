@@ -164,7 +164,12 @@ module.exports = {
         'slide-in-down': {
           '0%': { transform: 'translateY(-100%)', opacity: 0 },
           '100%': { transform: 'translateY(0)', opacity: 1 },
-        }
+        },
+        'pop-up': {
+           '0%': { transform: 'scale(0.5)', opacity: 0 },
+          '80%': { transform: 'scale(1.1)', opacity: 1 },
+          '100%': { transform: 'scale(1)', opacity: 1 },
+        },
       },
       animation: {
         "fade-in": "fade-in 1s ease-in-out",
@@ -173,6 +178,7 @@ module.exports = {
         "slide-in-right": "slide-in-right 0.5s ease-in-out",
         "slide-in-up": "slide-in-up 0.5s ease-in-out",
         "slide-in-down": "slide-in-down 0.5s ease-in-out",
+        'pop-up': 'pop-up 0.3s ease-out forwards',
       },
     },
   },

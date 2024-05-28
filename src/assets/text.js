@@ -5,8 +5,8 @@ import { mockup, profileImage, doctors, doctors2, onlineConsult, chronicDisease,
 export const nav = [
    {title:"Home"}, 
    {title:"About"}, 
-   {title:"Features"}, //How It Works
-   {title:"Quick Start"}, //How It Works
+   {title:"Quick Start"},
+   {title:"Features"}, 
    {title:"Services"}, 
 ]
 

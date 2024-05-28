@@ -1,11 +1,7 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { styles } from "../styles";
-import { mockup } from "../assets/images";
 import { howItWorks } from "../assets/text";
 import { tipIcon } from "../assets/images";
-import { light1, light2, light3, light4, light5 } from "../assets/images";
-import { revealDivOnScroll } from "../assets/animation";
-import { useGSAP } from "@gsap/react";
 
 const CircularContainer = ({ active, setActive }) => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -31,8 +27,8 @@ const CircularContainer = ({ active, setActive }) => {
   const progressWidth = ((active - 1) / (totalSteps - 1)) * 100;
 
   return (
-    <div className="">
-      <div className="hidden lg:flex relative w-[250px] animate-spi h-[250px] lg:w-[500px] lg:h-[500px] md:w-[300px] md:h-[300px] rounded-full bg-footerBg">
+    <div className=""> 
+      <div className="hidden lg:flex relative w-[250px] animate-spi h-[250px] lg:w-[500px] lg:h-[500px] md:w-[300px]  rounded-full bg-footerBg"> {/*md:h-[300px]*/}
         {howItWorks.map((step, index) => {
           const angle = angleStep * index - 45; // Start from -45 degrees to leave a space at the bottom
           const x = radius * Math.cos((angle * Math.PI) / 180);
@@ -44,9 +40,9 @@ const CircularContainer = ({ active, setActive }) => {
               key={index}
               onClick={() => setActive(step.step)}
               className={`${
-                active == step.step
-                ? "border-2 border-primary text-secondary2"
-                : " transparentOverlay"
+                active == step.step  
+                ? "bg-[#61606059] text-black"
+                : "bg-[rgba(195,193,193,0.85)] "
               } absolute flex flex-col justify-center items-center  w-[50px] h-[50px] lg:w-[150px] lg:h-[150px] md:w-[100px] md:h-[100px] bg-blue-500 rounded-full text-black text-center cursor-pointer`}
               style={{
                 top: `calc(50% + ${y}px)`,
@@ -74,8 +70,8 @@ const CircularContainer = ({ active, setActive }) => {
               onClick={() => setActive(step.step)}
               className={`${
                 active == step.step
-                  ? "bg-primary text-white"
-                  : "transparentOverlay text-white"
+                  ? " bg-[#616060] text-black"
+                  : "bg-[#61606059] text-black"
               } relative flex flex-col justify-center items-center  w-[50px] h-[50px] rounded-full cursor-pointer`}
             >
               <img
@@ -139,7 +135,6 @@ const Steps = ({ description, tip, mockup, step, active, setHovered, hovered }) 
 const HowItWorks = () => {
   const [active, setActive] = useState(howItWorks[0].step);
   const [hovered, setHovered] = useState(false)
-  const containerRef = useRef(null)
 
   useEffect(() => {
     let toggleActive
@@ -158,11 +153,9 @@ const HowItWorks = () => {
     return () => clearInterval(toggleActive);
   }, [hovered]);
   
-  useGSAP(() => {
-    revealDivOnScroll(containerRef)
-  })
+
   return (
-    <section ref={containerRef} id="quick start" className={`${styles.container}  flex flex-col gap-6 sm:gap-10 `}>
+    <section  id="quick start" className={`${styles.container}  flex flex-col gap-6 sm:gap-10 `}>
       <h2
         className={`${styles.h2} text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-semibold leading-snug`}
       >
@@ -175,7 +168,7 @@ const HowItWorks = () => {
       </p>
       <section className="flex flex-col gap-6 py-8 lg:flex-row justify-between">
         <CircularContainer active={active} setActive={setActive} />
-        <div className=" lg:w-[50%]">
+        <div className=" lg:w-[50%] min-h-[70vh] md:min-h-[auto]">
           {howItWorks.map((step, index) => (
             <Steps key={index} {...step} active={active} hovered={hovered} setHovered={setHovered} />
           ))}
