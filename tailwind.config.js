@@ -204,6 +204,12 @@ module.exports = {
           "80%": { transform: "scale(1.1)", opacity: 1 },
           "100%": { transform: "scale(1)", opacity: 1 },
         },
+        "pop-up-infinite": {
+          // '0%, 100%': { transform: 'scale(0.7)', opacity: 0 },
+          '33%': { transform: 'scale(1.05)', opacity: 1 },
+          '66%': { transform: 'scale(0.9)', opacity: 1 },
+          '100%': { transform: 'scale(1)', opacity: 1 },
+        },
         "shine-left": {
           "0%": { backgroundPosition: "200% center" },
           "100%": { backgroundPosition: "0% center" },
@@ -217,6 +223,7 @@ module.exports = {
         "slide-in-up": "slide-in-up 0.3s ease-in-out",
         "slide-in-down": "slide-in-down 0.3s ease-in-out",
         "pop-up": "pop-up 0.3s ease-out forwards",
+        "pop-up-infinite": "pop-up-infinite 0.6s ease-out infinite",
         "shine-left": "shine 2s ease-in-out infinite",
       },
     },
