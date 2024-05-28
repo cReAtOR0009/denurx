@@ -15,7 +15,7 @@ const JoinWaitlist = ({ setShowJoinwaitlist }) => {
         <span class="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-white transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
       </div>
       <h1
-        className={`${"styles.h1"} text-2xl md:text-2xl lg:4xl xl:text-3xl font-bold text-secondary2 leading-tight text-center`}
+        className={`${"styles.h1"} text-2xl md:text-2xl lg:4xl xl:text-3xl font-bold  leading-tight text-center`}
       >
         Join the Future of Health Management Today!
       </h1>
@@ -25,7 +25,7 @@ const JoinWaitlist = ({ setShowJoinwaitlist }) => {
         "Your Clinic In Your Hands."
       </h2>
       <p
-        className={`${styles.paragraph} text-white text-center  px-[5%] md:px-[5%]`}
+        className={`${styles.paragraph} text-white text-center md:w-[50%]`}
       >
         Be among the first to experience a revolutionary app that puts your
         health in your hands. Track your wellness, get personalized
