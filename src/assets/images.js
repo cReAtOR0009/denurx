@@ -63,7 +63,7 @@ import linkedin from "./linkedin.png"
 import twitter from "./twitter.png"
 import whatsapp from "./whatsapp.png"
 
-import DenurxLogo from "./Denurxlogo.png"
+import DenurxLogo from "./DenurxLogoSvg.svg"
 
 
 import signupMock from "./signupMock.png" //signupMock.png //2493.jpg

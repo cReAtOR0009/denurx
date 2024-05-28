@@ -67,14 +67,14 @@ const Features = () => {
       onClick={() => setIsHovered(!isHovered)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="flex justify-between flex-wrap md:flex-nowrap flex-1 py-8 gap-6 sm:gap-10">
+      <div className="flex justify-center items-center flex-wrap md:flex-nowrap flex-1 py-8 gap-6 sm:gap-10">
         <div className="flex flex-col justify-center my-4 gap-6 sm:gap-10 order-2 sm:order-1">
           <h2 className={`${styles.h2}`}>{benefits.title}</h2>
           <p className={`${styles.p} text-sm md:text-lg lg:text-base xl:text-lg leading-relaxed text-black`}>
             {readMore?benefits.paragraph:trimmedContent} <span onClick={() => setReadMore(!readMore)} className={`${readMore?"bg-secondary_100 group-hover:bg-primary":"bg-primary "} text-white inline-block text-xxs md:text-sm rounded-full cursor-pointer p-2`}>{readMore?"ReadLess":"ReadMore"}</span>
           </p>
         </div>
-        <img src={DenurxLogo} alt="Denurx logo" className="order-1 sm:order-2 lg:flex lg:items-end w-[100%] sm:w-[] md:w-[100%] h-[100%] rounded-lg"/>
+        <img src={DenurxLogo} alt="Denurx logo" className="order-1 sm:order-2 lg:flex lg:items-end w-[70%] sm:w-[300px] md:w-[30vw] h-[]"/>
       </div>
       <div className="flex flex-wrap gap-4  animate-[slide-in-right_0.5s_ease-in-out]">
         {toDisplay.map((benefit, index) => (
