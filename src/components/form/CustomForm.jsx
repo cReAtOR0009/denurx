@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { styles } from "../../styles";
-import { revealDivOnScroll } from "../../assets/animation";
 
 const CustomForm = ({ status, message, onValidated }) => {
   const [loading, setLoading] = useState(false);
@@ -67,7 +65,6 @@ const CustomForm = ({ status, message, onValidated }) => {
     setResponse({ message: "", error: false, display: false });
   };
 
-  revealDivOnScroll("join wait list");
 
   return (
     <form
