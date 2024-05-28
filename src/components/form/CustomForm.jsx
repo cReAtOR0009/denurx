@@ -26,15 +26,21 @@ const CustomForm = ({ status, message, onValidated }) => {
     if (status === "success") {
       setForm({
         fullname: "",
-        email: "",  
+        email: "",
       });
-      setResponse({ message: `Thank you ${form.fullname} for Joining Our Waitlist`, error: false, display: true });
+      setResponse({ message: `Thank you ${form.fullname} for Joining the Revolution, We'd keep you Updated!`, error: false, display: true });
       setLoading(false);
+      setTimeout(() => {
+        closeResponse();
+        setResponse({ message: ``, error: false, display: false });    
+      }, 5000); 
     } else if (status === "error") {
-      // console.log("status:", status)
-      // console.log("message:", message)
-      setResponse({ message: "Something went wrong while joining waitlist, kindly ensure you input the right information", error: true, display: true });
+      setResponse({ message: "Something went wrong while joining waitlist, kindly ensure you input the right information!", error: true, display: true });
       setLoading(false);
+      setTimeout(() => {
+        closeResponse();
+        setResponse({ message: ``, error: false, display: false });
+      }, 5000); 
     }
   }, [status, message]);
 
@@ -112,8 +118,8 @@ const CustomForm = ({ status, message, onValidated }) => {
       </div>
       <input
         type="submit"
-        value={loading ? "Joining Waitlist..." : "Join Wailtlist Now"}
-        disabled={loading}
+        value={loading ? "Joining Waitlist..." : "Join Our Wailtlist Now"}
+        disabled={loading} 
         className={`${
           loading ? "bg-secondary_100" : "bg-secondary"
         } rounded-[30px] animate-pulse bg-primaryBtn  px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] hover:bg-secondary_100 focus:border-white transition duration-150 cursor-pointer`}
