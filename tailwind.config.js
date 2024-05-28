@@ -145,7 +145,7 @@ module.exports = {
           "linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)",
         heroImage: 'url("/src/assets/doctors.png")',
         heroMockup: 'url("/src/assets/mockup_hero.png")',
-        stepBlob: 'url("/src/assets/magicpattern-blob.png")', //2493.jpg
+        stepBlob: 'url("/src/assets/stepblob2.png")', //2493.jpg
         bg: 'url("/src/assets/2493.jpg")', //2493.jpg
         scrollmodern:
           "linear-gradient(0deg, rgb(20 20 17 / 60%), rgb(35 44 57 / 90%)), url('/src/assets/scrollmodern.jpg')",
