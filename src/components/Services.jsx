@@ -12,7 +12,7 @@ const ServiceCard = ({icon, title, description, image}) => {
             <div className='p-4'>
                 <img src={icon} alt={`${title}`} className='mt-[-12%] w-8 lg:w-20 md:w-20 ' />
                 <h3 className={`${styles.h3} text-primary`}>{title}</h3>
-                <p className={`${styles.paragraph} text-black`}>{readMore?description:trimmedContent}<span onClick={() => setReadMore(!readMore)} className={`${readMore?"bg-secondary_100 group-hover:bg-primary":"bg-primary "} text-white inline-block text-xxs md:text-sm  rounded-full cursor-pointer p-2`}>{readMore?"Read less":"Read more"}</span></p>
+                <p className={`${styles.paragraph} text-black`}>{readMore?description:trimmedContent}<button onClick={() => setReadMore(!readMore)} className={`${readMore?"bg-secondary_100 group-hover:bg-primary":"bg-primary "} text-white inline-block text-xxs md:text-sm  rounded-full cursor-pointer p-2`}>{readMore?"Read less":"Read more"}</button></p>
             </div>  
         </div>
     )
