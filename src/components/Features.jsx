@@ -70,7 +70,7 @@ const Features = () => {
       <div className="flex justify-center items-center flex-wrap md:flex-nowrap flex-1 py-8 gap-6 sm:gap-10">
         <div className="flex flex-col justify-center my-4 gap-6 sm:gap-10 order-2 sm:order-1">
           <h2 className={`${styles.h2}`}>{benefits.title}</h2>
-          <article className={`${styles.p} text-sm md:text-lg lg:text-base xl:text-lg leading-relaxed text-black`}>
+          <article className={`${styles.paragraph} text-sm md:text-lg lg:text-base xl:text-lg text-black`}>
             {readMore?benefits.paragraph:trimmedContent} <button onClick={() => setReadMore(!readMore)} className={`${readMore?"bg-secondary_100 group-hover:bg-primary":"bg-primary "} text-white inline-block text-xxs md:text-sm rounded-full cursor-pointer p-2`}>{readMore?"ReadLess":"ReadMore"}</button>
           </article>
         </div>
