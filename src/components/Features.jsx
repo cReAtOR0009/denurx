@@ -5,12 +5,12 @@ import { DenurxLogo } from "../assets/images";
 
 const FeaturesCard = ({ icon, text, title }) => {
   return (
-    <div className="relative min-w-[200px] flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xl border-2 pb-4 border-[#cacaca] text-black cursor-pointer group">
+    <div className="relative min-w-[200px] min-h-[200px] sm:min-h-[300px] flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xl border-2 pb-4 border-[#cacaca] text-black cursor-pointer group">
       <div className="flex items-center border-l-8 border-r-8 border-b-2  rounded-tl-[10px] rounded-tr-[10px]  border-[#cacaca] rounded-[10px] p-2 transition-all">
         <img
           src={icon}
           alt={`app name ${icon} icon`}
-          className="absolute bottom-2 right-2 w-8 md:w-12 p-2 border border-secondary2 rounded-full transition-all"
+          className="absolute bottom-2 right-2 w-8 md:w-12  border  rounded-lg transition-all"
         />
         <h3 className={`${styles.h3}  text-xl md:text-2xl lg:text-2xl xl:text-2xl font-medium leading-normal`}>
           {title}
@@ -70,9 +70,9 @@ const Features = () => {
       <div className="flex justify-center items-center flex-wrap md:flex-nowrap flex-1 py-8 gap-6 sm:gap-10">
         <div className="flex flex-col justify-center my-4 gap-6 sm:gap-10 order-2 sm:order-1">
           <h2 className={`${styles.h2}`}>{benefits.title}</h2>
-          <p className={`${styles.p} text-sm md:text-lg lg:text-base xl:text-lg leading-relaxed text-black`}>
-            {readMore?benefits.paragraph:trimmedContent} <span onClick={() => setReadMore(!readMore)} className={`${readMore?"bg-secondary_100 group-hover:bg-primary":"bg-primary "} text-white inline-block text-xxs md:text-sm rounded-full cursor-pointer p-2`}>{readMore?"ReadLess":"ReadMore"}</span>
-          </p>
+          <article className={`${styles.p} text-sm md:text-lg lg:text-base xl:text-lg leading-relaxed text-black`}>
+            {readMore?benefits.paragraph:trimmedContent} <button onClick={() => setReadMore(!readMore)} className={`${readMore?"bg-secondary_100 group-hover:bg-primary":"bg-primary "} text-white inline-block text-xxs md:text-sm rounded-full cursor-pointer p-2`}>{readMore?"ReadLess":"ReadMore"}</button>
+          </article>
         </div>
         <img src={DenurxLogo} alt="Denurx logo" className="order-1 sm:order-2 lg:flex lg:items-end w-[70%] sm:w-[300px] md:w-[30vw] h-[]"/>
       </div>
