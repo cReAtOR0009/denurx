@@ -112,11 +112,11 @@ const Steps = ({ description, tip, mockup, step, active, setHovered, hovered }) 
         >
           {step}
         </h4>
-        <p
+        <article
           className={`${""} text-sm md:text-lg lg:text-base xl:text-lg leading-relaxed text-secondary3  `}
         >
           {description}
-        </p>
+        </article>
         <p
           className={`flex flex-col  items- rounded  text-xs sm:text-sm md:text-sm lg:text-base font-medium  leading-normal  text-secondary_100 md:max-w-3rem`}
         >
