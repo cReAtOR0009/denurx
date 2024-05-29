@@ -1,4 +1,4 @@
-import { mockup, profileImage, doctors, doctors2, onlineConsult, chronicDisease, drugstore, gps_location, lab_equipment, medicalrecord,online_consult, online, online_service, patient_record, payment_wallet, signupMock, pills, pill_bottle, heart_disease, health_record, health_tips, calendar, lab_test, home_service, service_onlineConsultaions,service_chronic_disease, service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, mockup_check_profile, mockup_choose_use, mockup_choose_user, mockup_confirm_appointment, mockupe_search_service, mockupe_select_action, mockupe_signup, light1, light2, light3,light4,light5, facebook, linkedin, twitter, whatsapp
+import { mockup, profileImage,profileImage2, doctors, doctors2, onlineConsult, chronicDisease, drugstore, gps_location, lab_equipment, medicalrecord,online_consult, online, online_service, patient_record, payment_wallet, signupMock, pills, pill_bottle, heart_disease, health_record, health_tips, calendar, lab_test,feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified, home_service, service_onlineConsultaions,service_onlineCare,service_chronic_disease, service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, mockup_check_profile, mockup_choose_use, mockup_choose_user, mockup_confirm_appointment, mockupe_search_service, mockupe_select_action, mockupe_signup, light1, light2, light3,light4,light5, facebook, linkedin, twitter, whatsapp
  } from "./images"
 
 
@@ -60,7 +60,7 @@ export const services = [
       title: "Online Doctor Consultations",
       description: "Connect with licensed doctors for virtual consultations via video call or chat. Our network of experienced healthcare professionals is available to address your medical concerns, offer expert advice, and provide treatment plans tailored to your needs this allows you Get expert medical advice without leaving your home. With Denurx, you can access quality healthcare no matter where you are, reducing the need for travel and waiting times.",
       icon: online,  
-      image: service_onlineConsultaions      
+      image: service_onlineCare      
     },
     {
       title: "Appointment Booking",
@@ -169,7 +169,7 @@ export const services = [
     },
     {
       name: "Dr. Olivia Black",
-      image: profileImage,
+      image: profileImage2,
       testament: "Denurx's integrated lab test features allow me to quickly order and review results for my patients. It’s an invaluable tool for providing timely and accurate diagnoses.",
       role: "Doctor"
     },
@@ -187,7 +187,7 @@ export const services = [
     },
     {
       name: "Dr. Christopher Evans",
-      image: profileImage,
+      image: profileImage2,
       testament: "Denurx’s telemedicine platform has streamlined my workflow and improved patient care. The ability to access patient records and lab results on the go is fantastic.",
       role: "Doctor"
     },
@@ -246,37 +246,42 @@ export const howItWorks = [
 export const benefits = 
     {title:"Why You Need Us", paragraph:"Discover the unique advantages of our telemedicine app. Denurx provides comprehensive, convenient, and secure healthcare services to ensure you receive the best care possible.  With Denurx, you can connect with experienced healthcare professionals from the comfort of your home, saving time and avoiding the hassle of traveling to a clinic. Our app offers a wide range of services, including virtual doctor consultations, home health visits, lab test requests, and medication management. We prioritize your privacy and security, ensuring that your medical data is protected at all times. Whether you need ongoing support forchronic conditions or quick access to a healthcare provider for an acute issue, Denurx is here to make quality healthcare accessible and affordable. Join the many users who trust Denurx for their healthcare needs and experience the future of medicine today. Here are some reasons why you need us", benefits:[
         {
-          icon: patient_record,
+          icon: feature_comprehensive,
           title: "Comprehensive Healthcare Services",
-          text: "Our app provides an all-in-one solution for your healthcare needs. From consultations and prescription management to lab tests and chronic disease management, everything is available in one place. Users can save time and hassle by accessing a wide range of services without needing multiple apps or visits to different providers."
+          text: "Denurx provides an all-in-one solution for your healthcare needs. From consultations and prescription management to lab tests and chronic disease management, everything is available in one place. Users can save time and hassle by accessing a wide range of services without needing multiple apps or visits to different providers."
+        },
+        {
+          icon: online_consult,
+          title: "Convenient Access to Healthcare",
+          text: "With Denurx, access top-notch healthcare from the comfort of your home. Connect with healthcare professionals anytime via your phone. Book appointments, consult doctors, order lab tests, and get medications delivered to your door through our user-friendly app. Perfect for those with mobility issues or busy schedules, Denurx ensures you receive the best care without the hassle of commutes or waiting rooms."
         },
         {
           icon: online,
           title: "Convenience and Accessibility",
-          text: "Access healthcare services anytime and anywhere. Book appointments, consult with doctors, order lab tests, and get medications delivered to your door, all through a user-friendly app. Users can manage their health from the comfort of their home, making healthcare more accessible, especially for those with mobility issues or busy schedules."
+          text: "Access healthcare services anytime and anywhere. Book appointments, consult with doctors, order lab tests, and get medications delivered to your door, all through a user-friendly app. using Denurx, Users can manage their health from the comfort of their home, making healthcare more accessible, especially for those with mobility issues or busy schedules."
         },
         {
-          icon: payment_wallet,
+          icon: feature_verified,
           title: "Verified and Qualified Professionals",
           text: "All doctors, nurses, and healthcare providers on our platform are thoroughly verified, ensuring that you receive care from qualified and trusted professionals. Users can have peace of mind knowing they are in good hands and receiving quality healthcare services."
         },
         {
-          icon: patient_record,
+          icon: feature_advanced,
           title: "Advanced Features for Better Health Management",
           text: "Our app includes features like electronic medical history management, drug reminders, GPS locators for nearby services, and more to help you stay on top of your health. Users can efficiently manage their health, track their medical history, and never miss a medication or appointment."
         },
         {
-          icon: patient_record,
+          icon: feature_security,
           title: "Secure and Private",
-          text: "We prioritize your privacy and security. All your medical data and consultations are securely stored and encrypted, ensuring your personal information remains confidential. Users can trust that their sensitive health information is safe and secure."
+          text: "We prioritize your privacy and security. with Denurx,  All your medical data and consultations are securely stored and encrypted, ensuring your personal information remains confidential. Users can trust that their sensitive health information is safe and secure."
         },
         {
-          icon: patient_record,
+          icon: feature_user,
           title: "User-Friendly Interface",
           text: "The app is designed with a focus on ease of use. Whether you are tech-savvy or not, you will find the app intuitive and easy to navigate. Users of all ages and technical abilities can easily use the app to access healthcare services."
         },
         {
-          icon: patient_record,
+          icon: feature_cost,
           title: "Cost-Effective Solutions",
           text: "Our app offers competitive pricing for consultations and other services, with subscription models available for regular users. Save on travel costs and time off work by using telemedicine services. Users can access affordable healthcare services, making it easier to stay healthy without breaking the bank."
         }
