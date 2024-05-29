@@ -22,7 +22,7 @@ const ImageCard = ({ image, position, index }) => (
     <img
       src={image}
       alt={`Denurx Service preview image ${index}`}
-      className={`${position} w-[100%] sm:w-[300px] lg:w-[400px] md:w-[300px]  h-[auto] rounded hover:z-10 transition`}
+      className={`${position} w-[100%] sm:w-[300px] lg:w-[400px] md:w-[300px]  h-[auto] rounded hover:z-10 transition-all`}
     />
   </div>
 );
@@ -57,7 +57,7 @@ const AboutApp = () => {
         </div>
         <div className="order-1 sm:order-2 flex flex-col flex-1 gap-6 sm:gap-10">
           <h2 className={`${styles.h2} `}>{aboutApp.title}</h2>
-          <p className={`${styles.paragraph}  `}>{aboutApp.text}</p>
+          <article className={`${styles.paragraph}  `}>{aboutApp.text}</article>
           <div className="">
             <h2 className={`${styles.h3} text-secondary2 `}>Key Features</h2>
             <div
