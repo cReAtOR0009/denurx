@@ -28,8 +28,8 @@ const JoinWaitlist = ({ setShowJoinwaitlist }) => {
         className={`${styles.paragraph} text-black text-center md:w-[50%]`}
       >
         Be among the first to experience a revolutionary app that puts your
-        health in your hands. Track your wellness, get personalized
-        recommendations, and connect with healthcare professionals instantly.
+        health in your hands. Track your wellness, connect with healthcare professionals instantly and get personalized
+        recommendations.
         Sign up for our waitlist and be the first to know when we launch!
       </p>
       <MailChimp />
