@@ -13,6 +13,39 @@
   /* color: white; */
 }
 
+.about::after {
+  position: absolute;
+  content: "Key Features";
+  top: -0%;
+  color: rgba(190, 184, 184, 0.255);
+  z-index: -1;
+  /* right: 50%; */
+  /* text-align: center; */
+  font-size: 100px;
+  /* font-size: clamp(12px, 40vw, 100px); */
+}
+
+.steps::after {
+  position: absolute;
+  content: "Steps To Better Health";
+  top: -0%;
+  color: rgba(190, 184, 184, 0.255);
+  z-index: -1;
+  /* right: 50%; */
+  /* text-align: left; */
+  font-size: 100px;
+}
+.why::after {
+  position: absolute;
+  content: "Why Denurx?";
+  top: -1%;
+  color: rgba(190, 184, 184, 0.255);
+  z-index: -1;
+  /* right: 50%; */
+  font-size: 100px;
+}
+
+
 /* Scrollbar Handle */
 ::-webkit-scrollbar-thumb {
   background: #0242ff;
@@ -45,7 +78,7 @@ body {
   margin: 0;
   height: 100%;
   box-sizing: border-box;
-  font-family: "Public Sans", sans-serif;
+  /* font-family: "Public Sans", sans-serif; */
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -131,7 +164,6 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   position: relative;
 }
 
-
 /* Tablet Layout */
 @media (min-width: 768px) and (max-width: 1023px) {
   .testimonial_card {
@@ -167,6 +199,45 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
     gap: 20px;
   }
 }
+
+.features_card {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+  /* grid-template-rows: repeat(auto-fill, minmax(auto, auto)); */
+  gap: 30px;
+  grid-template-areas:
+    "feature1  feature1 feature1 feature2"
+    "feature3 feature3 feature3 feature2"
+    "feature4 feature4 feature4 feature4";
+  /* grid-template-columns: ; */
+}
+
+.feature1 {
+  grid-area: feature1;
+  /* position: relative; */
+}
+
+.feature2 {
+  grid-area: feature2;
+  /* display: flex; */
+  /* background: #000; */
+  /* flex-direction: column; */
+  /* position: relative; */
+}
+
+.feature3 {
+  grid-area: feature3;
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+  /* position: relative; */
+}
+
+.feature4 {
+  grid-area: feature4;
+  /* position: relative; */
+}
 .fullbg {
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -196,3 +267,62 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   height: 10px;
 }
 
+/* Tablet Layout */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .features_card {
+
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+  /* grid-template-rows: repeat(auto-fill, minmax(auto, auto)); */
+  /* background: #000; */
+  gap: 30px;
+  grid-template-areas:
+    "feature1  feature1 feature1 feature1"
+    "feature2 feature2  feature2 feature3"
+    /* "feature2 feature2  feature2 feature3" */
+    "feature4 feature4 feature4 feature3";
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 767px) {
+  .features_card {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+    /* grid-template-rows: repeat(auto-fill, minmax(auto, auto)); */
+    /* background: red; */
+    gap: 30px;
+    grid-template-areas:
+      "feature1  feature1 feature1 feature1"
+      "feature2 feature2 feature2 feature2"
+      "feature3 feature3 feature3 feature3"
+      "feature4 feature4 feature4 feature4";
+  }
+}
+
+/* Tablet Layout */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about::after {
+    font-size: 72px;
+  }
+  .steps::after{
+    font-size: 72px;
+  }
+  .why::after{
+    font-size: 72px;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 767px) {
+ .about::after {
+  font-size: 70px;
+  }
+  .steps::after{
+    font-size: 70px;
+  }
+  .why::after{
+    font-size: 70px;
+  }
+}

@@ -156,6 +156,7 @@ module.exports = {
         notFoundbg:
           "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/notfoundbg.jpg)", //footerBg.jpg//footerBg.jpg
         footerBg: "url(/src/assets/footerBg.jpg)",
+        mockupBg:"url(/src/assets/Mockups/magicpattern-starry-night-1717534673666.png)"
       }, //notfoundbg.jpg
 
       gridTemplateColumns: {
