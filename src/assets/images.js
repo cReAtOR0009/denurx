@@ -25,6 +25,13 @@ import feature_security from "./feature_security.png"
 import feature_user from "./feature_user-friendly.png"
 import feature_verified from "./feature_verified.png"
 
+//features2
+import mockup1 from "./Mockups/bookAppointments-portrait2.png" //bookAppointments-portrait2 //labreport2
+import mockup2 from "./Mockups/onlineconsultation3.png" //onlineconsultation3
+import mockup3 from "./Mockups/labreport2.png"
+import mockup4 from "./Mockups/gpslocator.png" //up-right.png
+import arrow from "./up-right.png" //
+
 //services icons
 
 import pills from "./pills.png"
@@ -61,6 +68,10 @@ import light3 from "./lightbulb3.png"
 import light4 from "./lightbulb2.png"
 import light5 from "./lightbulb.png"
 
+import stepDoctor from "./stepsdoctor.png" //import stepDoctor from "./whyDenurx.png"
+import whyDenurx from "./whyDenurx.png" //import stepDoctor from "./whyDenurx.png"
+
+
 import plus from "./plus.png"
 import minus from "./minus.png"
 import close from "./close.png"
@@ -79,4 +90,4 @@ import DenurxLogo from "./DenurxLogoSvg.svg"
 import signupMock from "./signupMock.png" //signupMock.png //2493.jpg
 import bg from "./2493.jpg" //signupMock.png //2493.jpg
 
-export  {menu, mockup, profileImage,profileImage2, doctors, doctors2, onlineConsult, chronicDisease, drugstore, gps_location, lab_equipment, medicalrecord,online_consult, online, online_service, patient_record, payment_wallet, pills, signupMock, pill_bottle, heart_disease, health_record, health_tips, calendar, feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified, lab_test, home_service, service_onlineConsultaions, service_chronic_disease, service_onlineCare,service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, mockup_check_profile, mockup_choose_use, mockup_choose_user, mockup_confirm_appointment, mockupe_search_service, mockupe_select_action, mockupe_signup,tipIcon, light1, light2, light3,light4,light5, plus, minus, telephone, mail, facebook, linkedin, twitter, whatsapp, close, DenurxLogo}
+export  {menu, mockup, profileImage,profileImage2, doctors, doctors2, onlineConsult, chronicDisease, drugstore, gps_location, lab_equipment, medicalrecord,online_consult, online, online_service, patient_record, payment_wallet, pills, signupMock, pill_bottle, heart_disease, health_record, health_tips, calendar, feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified,mockup1,mockup2,mockup3,mockup4,arrow, lab_test, home_service, service_onlineConsultaions, service_chronic_disease, service_onlineCare,service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, mockup_check_profile, mockup_choose_use, mockup_choose_user, mockup_confirm_appointment, mockupe_search_service, mockupe_select_action, mockupe_signup,tipIcon, light1, light2, light3,light4,light5,stepDoctor, plus, minus, telephone, mail, facebook, linkedin, twitter, whatsapp, close, DenurxLogo, whyDenurx}
