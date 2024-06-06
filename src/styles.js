@@ -3,7 +3,7 @@ export const styles = {
   container: "px-4 py-6 sm:px-10 md:py-10  lg:p-20 lg:py-24 xl:p-20 xl:py-28", //
   footer_container: "px-4 py-4 sm:px-10 md:py-8  lg:p-10 xl:p-20 ",
   waitlist_container: "px-4 py-6 sm:p-6  md:p-6 lg:p-20 xl:p-6",
-  introTextContainer:"px-4 sm:px-8 md:px-20",
+  introTextContainer:"px-4 py-6 sm:py-10 sm:px-16 lg:px-20  xl:px-28 md:py-20 gap-6",
   nav: "px-4 md:px-10 lg:px-20 xl:px-20",
   contentPadding: "p-4 md:p-6 lg:-p-8",
   // Specific Heading Styles

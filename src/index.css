@@ -216,11 +216,18 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
 
 .feature1 {
   grid-area: feature1;
+  /* Mobile Layout */
+@media (max-width: 767px) {
+  justify-content: center;
+}
   /* position: relative; */
 }
 
 .feature2 {
   grid-area: feature2;
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
   /* display: flex; */
   /* background: #000; */
   /* flex-direction: column; */
@@ -229,6 +236,12 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
 
 .feature3 {
   grid-area: feature3;
+  /* display: inline-flex; */
+  align-items: center;
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+  /* background: #000; */
   /* flex-wrap: wrap; */
   /* width: 100%; */
   /* position: relative; */
@@ -236,6 +249,9 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
 
 .feature4 {
   grid-area: feature4;
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
   /* position: relative; */
 }
 .fullbg {

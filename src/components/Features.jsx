@@ -16,7 +16,7 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
   return (
     <div 
       
-      className="flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xl border-2 p-2 sm:p-4 md:p-6 pl-0 border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada]  text-black  group animate-slide-in"
+      className="flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xl border-2 p-2 sm:p-4 md:p-6 pl-0 min-w-[250px] border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada]  text-black  group animate-slide-in"
     >
       <div className="flex justify-between items-center p-2 w-[100%] transition-all">
         <h3 className={`${styles.h4} lg:whitespace-nowrap `}>
@@ -87,9 +87,9 @@ const Features = () => {
     >
       {/* <div className="flex justify-center items-center flex-wrap md:flex-nowrap flex-1 py-8 gap-6 sm:gap-10"> */}
       <div
-        className={`${styles.introTextContainer} flex flex-row items-center flex-wrap lg:flex-nowrap px-4 py-6 sm:py-10 sm:px-20 md:px-28 md:py-20 gap-6`}
+        className={`${styles.introTextContainer} flex flex-row items-center flex-wrap lg:flex-nowrap px-4 py-6 sm:py-10 sm:px-16 lg:px-20  xl:px-28 md:py-20 gap-6`}
       >
-        <h2 className={`${styles.h3} w-[100%]`}>
+        <h2 className={`${styles.h3} w-[100%] whitespace-nowrap`}>
           {benefits.title}
         </h2>
         <article
@@ -111,7 +111,7 @@ const Features = () => {
      
       <div className=" flex justify-between items-center flex-wrap md:flex-nowrap gap-[10%]  md:pt-16">
         <div className="w-[100%] h-[100%] md:w-[auto] bg-primary rounded-2xl sm:rounded-[50px]">
-         <img src={whyDenurx} alt="Denurx logo" className="w-[100%] h-auto mt-[-20px] sm:mt-[-20%] "/>
+         <img src={whyDenurx} alt="Denurx logo" className="w-[100%] h-auto mt-[-20px] sm:mt-[-30px] md:mt-[-50px] "/>
         </div>
         <div className="flex flex-col justify-between relative w-[100%] py-6 ">
           <div className="flex flex-col flex-wrap gap-4  animate-[slide-in-right_0.5s_ease-in-out]">

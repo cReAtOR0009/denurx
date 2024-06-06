@@ -54,8 +54,8 @@ const HowItWorks = () => {
           return <StepsCard key={index} {...step} displayContent={displayContent} setDisplayContent={setDisplayContent} displayDescription={displayDescription} setDisplayDescription={setDisplayDescription} displayTipContent={displayTipContent} setDisplayTipContent={setDisplayTipContent} />;
         })}
       </div>
-      <div className="sm:relative flex- flex rounded-2xl sm:rounded-[50px] bg-primary w-[100%] md:w-[50%]">
-        <img src={stepDoctor} alt="" className="mt-[-30px] sm:mt-[-20%] w-[100%] h-auto  " />
+      <div className="sm:relative flex- flex rounded-2xl sm:rounded-[50px] bg-primary w-[100%] md:w-[50%] ">
+        <img src={stepDoctor} alt="" className="mt-[-20px] sm:mt-[-30px] md:mt-[-50px] w-[100%] h-auto  " />
         
      {displayDescription && (
         <div className="absolute hidden sm:flex flex-col justify-center gap-2 p-4 h-[100%] w-[100%]  inset-0 rounded-2xl sm:rounded-[50px] bg-black bg-opacity-80 animate-slide-in-up text-left">

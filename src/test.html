@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+}
+
+.phone-mockup {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.phone-mockup img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.phone-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    color: white;
+}
+
+.upcoming-schedule, .select-date, .video-call {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.schedule, .select-date p, .video-call {
+    margin: 0;
+}
+
+.video-call img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>Finding your preferred specialist doctor</h2>
+            <p>You can find the specialist you want according to what you need to consult your health.</p>
+        </div>
+        <div class="section">
+            <div class="phone-mockup">
+                <img src="your-image-url" alt="Phone screen">
+                <div class="phone-content">
+                    <p>Good Morning<br>Gwen Stacy</p>
+                    <p>How are you feeling today?</p>
+                    <div class="upcoming-schedule">
+                        <div class="schedule">
+                            <p>Dr. Jennifer Kourtney<br>Cardiology consultation</p>
+                            <p>Monday, 26 July | 09:00 - 10:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Make an appointment with your doctor</h2>
+            <p>You will have to make an appointment for an online consultation or a meeting with the doctor of your choice.</p>
+            <div class="phone-mockup">
+                <img src="your-image-url" alt="Phone screen">
+                <div class="phone-content">
+                    <p>Dr. Jennifer Kourtney</p>
+                    <p>Cardiology consultation</p>
+                    <p>2100+ patients | 10 yrs experience | California</p>
+                    <div class="select-date">
+                        <p>Select Date</p>
+                        <p>Fri 23 | Sat 24 | Sun 25 | Mon 26 | Tue 27 | Wed 28</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Consult online with your doctor</h2>
+            <p>We make it easy for you to consult with your doctor who has made an online appointment through the video call that we provide.</p>
+            <div class="phone-mockup">
+                <img src="your-image-url" alt="Phone screen">
+                <div class="phone-content">
+                    <p>Video call with Dr. Jennifer Kourtney</p>
+                    <div class="video-call">
+                        <img src="your-doctor-image-url" alt="Doctor">
+                        <p>01:30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+import { styles } from "../styles";
+import { aboutApp } from "../assets/text";
+
+const FeaturesCard = ({ text, icon }) => (
+  <div className="flex flex-col flex-1 w-[100%] min-w-[40%] md:min-w-[150px] rounded gap-2 md:gap-4   p-2 md:p-2 text-center">
+    <div className="w-[50px]">
+      <img src={icon} alt={`${text} icon`} className="w-[64px] h-[auto]" />
+    </div>
+    <span
+      className={`${styles.p}  text-secondary2 font-semibold text-left inline-block `}
+    >
+      {text}
+    </span>
+  </div>
+);
+
+const FeaturesCard2 = ({ text, mockup, description, index }) => {
+  return (
+    <div
+      className={`feature${
+        index + 1
+      } relative flex flex-wra justify-between items-center ${
+        index + 1 == 2 ? "width flex-col " : "flex-row"
+      } justify-between p-10 pb-0 rounded-[50px] gap-4  h-[100%] w-[100%]  overflow-hidde bg-mockupBg`}
+    >
+      <div
+        className={`${index + 1 == 2 ? "w-[auto]" : ""} ${
+          index + 1 == 3 ? "order-2" : ""
+        } w-[50%]  flex flex-col justify-betwee gap-2 h-[]   overflow-hidden`}
+      >
+        <h2 className={`${styles.h2} `}>{text}</h2>
+        <p
+          className={`${styles.paragraph}  ${index + 1 == 3 ? "order-1" : ""}`}
+        >
+          {description}
+        </p>
+      </div>
+      <div
+        className={`${index + 1 == 2 ? "" : ""} w-[auto] overflow-hidden flex-`}
+      >
+        <img
+          src={mockup}
+          alt=""
+          className={`${
+            index + 1 == 2 ? "h-[auto]" : ""
+          } w-[auto] h-[350px]  max-w-[auto] max-h-[] object-cove`}
+        />
+      </div>
+    </div>
+  );
+};
+
+const ImageCard = ({ image, position, index }) => (
+  <div>
+    <img
+      src={image}
+      alt={`Denurx Service preview image ${index}`}
+      className={`${position} w-[100%] sm:w-[300px] lg:w-[400px] md:w-[300px]  h-[auto] rounded hover:z-10 transition-all`}
+    />
+  </div>
+);
+
+const AboutApp = () => {
+  return (
+    <section
+      id="about"
+      className={`${styles.container} relative about  z-1 bg px-4 py-4 md:px-10 md:py-10 lg:p-20 xl:p-20 text-black`} //bg-primary_200
+    >
+      <div className="flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-2   md:p-8 md:pt-16 md:rounded-[50px] border rounded  border-[#cacaca]">
+        <div className="flex flex-col gap-6 sm:gap-10">
+          <div className="">
+            {/* <h2 className={`${styles.h3} `}>Key Features</h2> */}
+            <div className="features_card  py-4 ">
+              {aboutApp.keyFeatures.map((feature, index) => (
+                <FeaturesCard2 key={index} index={index} {...feature} />
+              ))}
+            </div>
+          </div>
+          <div className="flex gap-6">
+            <h2 className={`${styles.h2}`}>Denurx</h2>
+            <div className="text-left">
+              <h3 className={`${styles.h3} `}>{aboutApp.title}</h3>
+              <article className={`${styles.paragraph}`}>
+                {aboutApp.text}
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutApp;

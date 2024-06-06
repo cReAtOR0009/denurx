@@ -7,8 +7,8 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
     <div
       className={`feature${
         index + 1
-      } relative  ${
-        index + 1 == 2 ? "width flex-col " : "flex  justify-between items-center flex-wrap sm:flex-nowrap"
+      } relative flex  justify-between items-center flex-wrap sm:flex-nowrap   ${
+        index + 1 == 2 ? "flex-col justify-center" : "flex-row"
       } 
       ${
         index + 1 == 3 ? "flex-wrap md:flex-wrap lg:flex-nowrap" : ""
@@ -17,27 +17,27 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
     >
       <div
         className={`${index + 1 == 2 ? "w-[auto] sm:w-[100%]" : "  w-[100%] sm:w-[50%]"} ${
-          index + 1 == 3 ? "order-2" : ""
+          index + 1 == 3 ? "order-1 sm:order-2 w-[100%]" : ""
         }  
        
         flex flex-col justify-betwee gap-2 h-[]   overflow-hidden`}
       >
-        <h2 className={`${styles.h2} `}>{text}</h2>
+        <h2 className={`${styles.h3} `}>{text}</h2>
         <p
-          className={`${styles.paragraph}  ${index + 1 == 3 ? "order-1" : ""}`}
+          className={`${styles.paragraph}`}
         >
           {description}
         </p>
       </div>
       <div
-        className={` w-[auto] overflow-hidden flex-`}
+        className={` ${index + 1 == 3 ? "order-2 sm:order-1" : ""} w-[auto] overflow-hidden`}
       >
         <img
           src={mockup}
           alt=""
           className={`${
-            index + 1 == 2 ? "h-[200px] sm:h-[auto]" : "a"
-          } w-[auto] h-[200px] sm:h-[350px]  max-w-[auto] max-h-[] object-cove`}
+            index + 1 == 2 ? "h-[200px] sm:h-[auto]" : ""
+          } w-[auto] h-[200px] lg:h-[200px] xl:h-[350px]  max-w-[auto] `}
         />
       </div>
     </div>
