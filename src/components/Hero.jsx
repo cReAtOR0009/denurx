@@ -11,7 +11,7 @@ const Hero = () => {
   const {showJoinwaitlist,setShowJoinwaitlist} = useContext(WaitlistContext)
 
   return (
-    <section id='home' className={`${styles.container} flex justify-between items-center md:items-center flex-wrap h-[100vh] md:h-[auto] lg:h-[100vh]  `}>
+    <section id='home' className={`${styles.headerContainer} flex justify-between items-center md:items-center flex-wrap h-[100vh] md:h-[auto] lg:h-[auto]  `}>
         <div className='flex flex-col justify-center flex-1 w-[50%]'>
         <h1 className={`${styles.h1}  py-4 md:py-2 lg:py-6 text-7xl sm:text-8xl md:text-8xl lg:text-6xl xl:text-8xl font-bold leading-tight text-white mt-20 `}>{HeroText.h1}</h1> 
         <p className=' text-base sm:text-base md:text-lg lg:text-[20px] xl:text-xl leading-relaxed text-white'>{HeroText.tagLine}</p> 
