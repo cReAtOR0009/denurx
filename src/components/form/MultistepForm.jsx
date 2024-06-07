@@ -5,6 +5,13 @@ import { styles } from '../../styles';
 const MultiStepForm = () => {
   const [step, setStep] = useState(1);
   const [isProvider, setIsProvider] = useState(null);
+  const [close, setClose] = useState(false);
+
+  
+  const handleClose = (e) => {
+    e.stopPropagation();
+    setClose(true);
+  };
 
   const handleProviderSelection = (selection) => {
     setIsProvider(selection);
@@ -16,7 +23,7 @@ const MultiStepForm = () => {
   };
 
   return (
-    <div className={`fixed bottom-0 z-50 right-0 w-[auto] inline  bg-black bg-opacity-50 md:rounded-[50px]`}>
+    <div className={`${close?"hidden":"flex"} fixed bottom-0 z-50 right-0 w-[auto] inline  bg-black bg-opacity-50 md:rounded-[50px]`}>
       <div className="bg-black bg-opacity-50 p-8 md:rounded-[50px] shadow-md w-full max-w-md">
         {step === 1 && (
           <StepOne onProviderSelection={handleProviderSelection} />
@@ -28,6 +35,13 @@ const MultiStepForm = () => {
           <UserRegistrationForm onBack={handleBack} />
         )}
       </div>
+
+      <span
+            className="font-semibold absolute top-0 right-0 z-20 w-5 h-5 sm:w-10 sm:h-10 p-1 sm:p-2 rounded-full m-1 cursor-pointer text-white text-center text-[20px] sm:text-[30px] transition"
+            onClick={handleClose}
+          >
+            X
+          </span>
     </div>
   );
 };
