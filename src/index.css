@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,6 +47,16 @@
   font-size: 100px;
 }
 
+.services::after {
+  position: absolute;
+  content: "Our Quality Services";
+  top: -1%;
+  color: rgba(190, 184, 184, 0.255);
+  z-index: -1;
+  /* right: 50%; */
+  font-size: 100px;
+}
+
 
 /* Scrollbar Handle */
 ::-webkit-scrollbar-thumb {
@@ -79,6 +91,8 @@ body {
   height: 100%;
   box-sizing: border-box;
   /* font-family: "Public Sans", sans-serif; */
+  font-family: "Mulish", sans-serif; 
+  /* font-family: "Poppins", sans-serif;  */
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -123,8 +137,44 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
 .service_grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-template-rows: minmax(auto, 1fr);
+  /* grid-template-rows: minmax(auto, 1fr); */
   gap: 20px;
+  /* place-items: center;
+  place-self: center;
+  place-content: center;
+  align-content: center; */
+  align-items: center;
+  justify-items: baseline;
+  justify-content: center;
+  grid-auto-columns: auto;
+  /* margin: 0 auto; */
+}
+
+.serciveCard::after{
+  content: "";
+  background: white;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 40px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 0px;
+  /* border-bottom-left-radius: 0px; */
+  top: -10px;
+  right: -10px;
+  /* Mobile Layout */
+}
+@media (max-width: 640px) {
+  .serciveCard::after {
+    /* background: #000; */
+    width: 50px;
+    height: 50px; 
+    border-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    top: 0;
+    right: 0;
+  }
 }
 
 .testimonial_card {
@@ -328,6 +378,9 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   .why::after{
     font-size: 72px;
   }
+  .services::after{
+    font-size: 72px;
+  }
 }
 
 /* Mobile Layout */
@@ -339,6 +392,9 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
     font-size: 70px;
   }
   .why::after{
+    font-size: 70px;
+  }
+  .services::after{
     font-size: 70px;
   }
 }

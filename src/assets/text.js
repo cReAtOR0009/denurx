@@ -80,37 +80,58 @@ export const services = [
       icon: home_service,         
       image: service_home_service      
     },
-    {
-      title: "Lab Test Requests",
-      description: "Order lab tests and receive results directly through the app. Choose between visiting a lab or requesting a home test. Our partnered labs ensure accurate and timely results for your peace of mind. Easy access to diagnostic services without long waits. Stay informed about your health status with our efficient lab test services, helping you and your doctor make informed decisions about your care.",
-      icon: lab_test,    
-      image: service_lab_test      
-    },
-    {
-      title: "Medication Management",
-      description: "Have doctors prescribe medications and order them from nearby pharmacies for home delivery. Keep track of your prescriptions, receive reminders to take your medication, and get your drugs delivered promptly. Manage your medications efficiently and get them delivered to your doorstep. With Denurx, you can avoid trips to the pharmacy and ensure you never miss a dose.",
-      icon: pill_bottle,  
-      image: service_medic_management      
-    },
-    {
-      title: "Chronic Disease Management",
-      description: "Specialized care and continuous monitoring for chronic conditions like diabetes, hypertension, and more. Our comprehensive management plans include regular check-ins, personalized treatment plans, and support from a dedicated care team. ngoing support to manage chronic illnesses effectively. Improve your quality of life with continuous monitoring and proactive management of your health.",
-      icon: heart_disease,        
-      image: service_chronic_disease      
-    },
-    {
-      title: "Health Records Management",
-      description: "Securely store and access your medical history, lab results, prescriptions, and more. Easily share your records with healthcare providers and keep track of your health journey. Keep all your health information in one place for easy access and sharing with healthcare providers. Stay organized and ensure your medical history is always available when you need it.",
-      icon: health_record,       
-      image: service_record      
-    },
-    {
-      title: "Health Tips & Education",
-      description: "Access a wealth of health-related articles, tips, and resources contributed by medical professionals. Stay up-to-date with the latest health information and learn how to maintain a healthy lifestyle. Stay informed and make better health decisions with expert advice. Empower yourself with knowledge and take charge of your health with Denurx.",
-      icon: health_tips,         
-      image: service_health_tip      
-    }
   ];
+
+export const servicesComplete =[
+  {
+    title: "Online Doctor Consultations",
+    description: "Connect with licensed doctors for virtual consultations via video call or chat. Our network of experienced healthcare professionals is available to address your medical concerns, offer expert advice, and provide treatment plans tailored to your needs this allows you Get expert medical advice without leaving your home. With Denurx, you can access quality healthcare no matter where you are, reducing the need for travel and waiting times.",
+    icon: online,  
+    image: service_onlineCare      
+  },
+  {
+    title: "Appointment Booking",
+    description: "Schedule appointments for both in-person and virtual visits with doctors, nurses, and specialists. Our easy-to-use interface allows you to book, reschedule, or cancel appointments at your convenience. Conveniently book appointments at times that suit your schedule. With flexible booking options, you can find the right time for your healthcare needs without disrupting your daily routine.",
+    icon: calendar,     
+    image: service_onlineConsultaions      
+  },
+  {
+    title: "Home Health Services",
+    description: "Request home visits from nurses for treatments and chronic disease management. Our professional nursing team provides a range of services, including wound care, injections, and ongoing support for chronic conditions.  Receive medical care at home, perfect for those with mobility issues or chronic conditions. Enjoy the comfort and privacy of your home while receiving high-quality medical care.",
+    icon: home_service,         
+    image: service_home_service      
+  },
+  {
+    title: "Lab Test Requests",
+    description: "Order lab tests and receive results directly through the app. Choose between visiting a lab or requesting a home test. Our partnered labs ensure accurate and timely results for your peace of mind. Easy access to diagnostic services without long waits. Stay informed about your health status with our efficient lab test services, helping you and your doctor make informed decisions about your care.",
+    icon: lab_test,    
+    image: service_lab_test      
+  },
+  {
+    title: "Medication Management",
+    description: "Have doctors prescribe medications and order them from nearby pharmacies for home delivery. Keep track of your prescriptions, receive reminders to take your medication, and get your drugs delivered promptly. Manage your medications efficiently and get them delivered to your doorstep. With Denurx, you can avoid trips to the pharmacy and ensure you never miss a dose.",
+    icon: pill_bottle,  
+    image: service_medic_management      
+  },
+  {
+    title: "Chronic Disease Management",
+    description: "Specialized care and continuous monitoring for chronic conditions like diabetes, hypertension, and more. Our comprehensive management plans include regular check-ins, personalized treatment plans, and support from a dedicated care team. ngoing support to manage chronic illnesses effectively. Improve your quality of life with continuous monitoring and proactive management of your health.",
+    icon: heart_disease,        
+    image: service_chronic_disease      
+  },
+  {
+    title: "Health Records Management",
+    description: "Securely store and access your medical history, lab results, prescriptions, and more. Easily share your records with healthcare providers and keep track of your health journey. Keep all your health information in one place for easy access and sharing with healthcare providers. Stay organized and ensure your medical history is always available when you need it.",
+    icon: health_record,       
+    image: service_record      
+  },
+  {
+    title: "Health Tips & Education",
+    description: "Access a wealth of health-related articles, tips, and resources contributed by medical professionals. Stay up-to-date with the latest health information and learn how to maintain a healthy lifestyle. Stay informed and make better health decisions with expert advice. Empower yourself with knowledge and take charge of your health with Denurx.",
+    icon: health_tips,         
+    image: service_health_tip      
+  }
+]
   
   export const testimonials = [
     // {
