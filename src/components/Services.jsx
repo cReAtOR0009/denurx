@@ -3,13 +3,14 @@ import { HashLink } from "react-router-hash-link";
 import { services } from "../assets/text";
 import { arrow } from "../assets/images";
 import { styles } from "../styles";
+import { baseUrl } from "../../config";
 
 export const ServiceCard = ({ icon, title, description, image }) => {
   const trimmedContent = `${description.slice(0, 200)}...`;
   const [readMore, setReadMore] = useState(false);
 
   return (
-    <HashLink to={`/denurx/services/#${title}`}>
+    <HashLink to={`${baseUrl}/services/#${title}`}>
       <div
         key={title}
         id="title"
@@ -48,7 +49,10 @@ const Services = ({ services }) => {
       <div className="services flex flex-col my-4 gap-6 sm:gap-10">
         <div className="flex items-center justify-between flex-wrap">
           <h2 className={`${styles.h2}`}>Our High Quality Service</h2>
-          <HashLink to={`/denurx/services`} className="underline decoration-primary hover:scale-[1.1] transition">
+          <HashLink
+            to={`${baseUrl}/services`}
+            className="underline decoration-primary hover:scale-[1.1] transition"
+          >
             <h4 className={`${styles.h3}`}>All Services</h4>
           </HashLink>
         </div>
