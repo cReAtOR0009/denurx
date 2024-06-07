@@ -18,7 +18,7 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
       } ${
         mobile ? `mb-6 border-b-4 border-b-[transparent] ${active === title ?"border-b-secondary":"border-b-[transparent]"}` : "mr-4 md:mr-8"
       }   inline-block mb-4 uppercase  py-2 px-4 cursor-pointer hover:border-b-4 hover:border-b-secondary_100 hover:text-secondary_100`}
-      to={`/denurx/#${title.toLocaleLowerCase()}`}
+      to={title.toLowerCase()==='services'?`/denurx/services`:`/denurx/#${title.toLowerCase()}`}
       onClick={() => handleClick(title)}
 
     >
