@@ -5,6 +5,7 @@ import Features from "../components/Features";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import Faq from "../components/Faq";
+import { services } from "../assets/text";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
       <AboutApp />
       <HowItWorks />
       <Features />
-      <Services />
+      <Services services={services} />
       <Testimonials />
       <Faq />
     </div>
