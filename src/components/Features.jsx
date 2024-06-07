@@ -15,14 +15,14 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
   };
   return (
     <div 
-      
-      className="flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xl border-2 p-2 sm:p-4 md:p-6 pl-0 min-w-[250px] border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada]  text-black  group animate-slide-in"
+    onClick={handleShowMore}
+      className={`flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xl border-2 p-2 sm:p-4 md:p-6 pl-0 min-w-[250px] border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada]  text-black  group animate-slide-in  ${!showMore? "hover:scale-[1.1] transition":""} `}
     >
       <div className="flex justify-between items-center p-2 w-[100%] transition-all">
         <h3 className={`${styles.h4} lg:whitespace-nowrap `}>
           {title}
         </h3>
-        <img onClick={handleShowMore}  src={arrow} alt="" className="inline-block w-[30px] sm:w-[40px] lg:w-[40px] xl:w-[50px] cursor-pointer rounded-full hover:scale-[1.1] transition" />
+        <img   src={arrow} alt="" className="inline-block w-[30px] sm:w-[40px] lg:w-[40px] xl:w-[50px] cursor-pointer rounded-full hover:scale-[1.1] transition" />
       </div>
       {showMore === text ? (
         <div className="absolute z-10 flex flex-col items-center justify-center p-4 h-[100%] rounded-2xl inset-0 bg-black bg-opacity-80 animate-slide-in-up">
@@ -48,27 +48,12 @@ const Features = () => {
   const totalPages = Math.ceil(items.length / cardPerDisp);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const trimmedContent = `${benefits.paragraph.slice(0, 400)}...`;
   const [readMore, setReadMore] = useState(false);
   const [showMore, setShowMore] = useState(null)
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
-  useEffect(() => {
-    let interval;
-    if (!isHovered && !isMobile) {
-      interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPages);
-      }, 50000); // Change every 5 seconds
-    }
-    return () => clearInterval(interval); // Cleanup on component unmount or hover
-  }, [isHovered, isMobile, totalPages]);
+ 
 
   const startIndex = currentIndex * cardPerDisp;
   const endIndex = Math.min(startIndex + cardPerDisp - 1, items.length - 1);
@@ -82,8 +67,7 @@ const Features = () => {
     <section
       id="features"
       className={`why relative ${styles.container} flex flex-col flex-wrap`}
-      onClick={() => setIsHovered(!isHovered)}
-      onMouseLeave={() => setIsHovered(false)}
+
     >
       {/* <div className="flex justify-center items-center flex-wrap md:flex-nowrap flex-1 py-8 gap-6 sm:gap-10"> */}
       <div

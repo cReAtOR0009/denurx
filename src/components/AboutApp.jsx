@@ -7,7 +7,7 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
     <div
       className={`feature${
         index + 1
-      } relative flex  justify-between items-center flex-wrap sm:flex-nowrap   ${
+      } relative flex  justify-between items-center flex-wrap sm:flex-nowrap border border-[#eaeaea]  ${
         index + 1 == 2 ? "flex-col justify-center" : "flex-row"
       } 
       ${
@@ -52,7 +52,7 @@ const AboutApp = () => {
       id="about"
       className={`${styles.container} relative about  z-1 text-black`} //bg-primary_200
     >
-      <div className="flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-2  md:p-8 md:pt-16 md:rounded-[50px] border rounded  border-[#cacaca]">
+      <div className="flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-2  md:p-8 md:pt-16 md:rounded-[50px] ">
         <div className="flex flex-col gap-6 sm:gap-10">
           <div className="">
             <div className="features_card  py-4 ">
