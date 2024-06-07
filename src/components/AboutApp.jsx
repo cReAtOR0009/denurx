@@ -13,7 +13,7 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
       ${
         index + 1 == 3 ? "flex-wrap md:flex-wrap lg:flex-nowrap" : ""
       }
-      justify-between p-10 pb-0 rounded-[50px] gap-4  h-[100%] w-[100%]  overflow-hidde bg-mockupB bg-[#eaecf0a7]`}
+      justify-between p-4 md:p-10 pb-0 sm:pb-0 md:pb-0 rounded-[50px] gap-4  h-[100%] w-[100%]  overflow-hidde bg-mockupB bg-[#eaecf0a7]`}
     >
       <div
         className={`${index + 1 == 2 ? "w-[auto] sm:w-[100%]" : "  w-[100%] sm:w-[50%]"} ${
@@ -35,9 +35,12 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
         <img
           src={mockup}
           alt=""
+          // className={`${
+          //   index + 1 == 2 ? "h-[150px] sm:h-[auto]" : ""
+          // } w-[auto] h-[100px] lg:h-[200px] xl:h-[200px]  max-w-[auto] `}
           className={`${
-            index + 1 == 2 ? "h-[200px] sm:h-[auto]" : ""
-          } w-[auto] h-[200px] lg:h-[200px] xl:h-[350px]  max-w-[auto] `}
+            index + 1 == 2 ? "h-[200px] sm:h-[200px]  xl:h-[350px]" : "w-[auto] h-[200px] lg:h-[200px] xl:h-[250px]  max-w-[auto]"
+          }  `}
         />
       </div>
     </div>
@@ -50,9 +53,9 @@ const AboutApp = () => {
   return (
     <section
       id="about"
-      className={`${styles.container} relative about  z-1 text-black`} //bg-primary_200
+      className={`${styles.container} relative about  z-1 text-black bg lg:h-[100vh overflow-hidden`} //bg-primary_200
     >
-      <div className="flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-2  md:p-8 md:pt-16 md:rounded-[50px] ">
+      <div className="flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-2  md:p-8 md:pt-16  ">
         <div className="flex flex-col gap-6 sm:gap-10">
           <div className="">
             <div className="features_card  py-4 ">
