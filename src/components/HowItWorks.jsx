@@ -20,7 +20,7 @@ const StepsCard = ({ icon, step, description, tip, displayContent, displayDescri
   // console.log("displayDescription:", displayDescription)
 
   return (
-    <div onMouseEnter={() => handleMouseEnter()} onMouseLeave={() => handleMouseLeave()} className=" flex-1 flex flex-col justify-between items-center border-2 border-[#87898c] rounded-2xl w-[100%] min-w-[150px] max-w-[auto] sm-max-w-[auto] p-2 sm:p-6 h-[auto] bg-[EAECF0] text-left">
+    <div onMouseEnter={() => handleMouseEnter()} onMouseLeave={() => handleMouseLeave()} className={` flex-1 flex flex-col justify-between items-center border-2 border-[#87898c] rounded-2xl w-[100%] min-w-[150px] max-w-[auto] sm-max-w-[auto] p-2 sm:p-6 h-[auto] bg-[EAECF0] text-left hover:scale-[1.1] transition`}>
       <img src={icon} alt="" className=" w-[50px] sm:w-[50px] h-[auto]" />
       <h4 className={`${styles.h4}`}>{step}</h4>
 
