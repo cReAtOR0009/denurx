@@ -6,6 +6,7 @@ import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import Faq from "../components/Faq";
 import { services } from "../assets/text";
+import MultiStepForm from "../components/form/MultistepForm";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Hero />
       </div>
       <AboutApp />
+        <MultiStepForm />
       <HowItWorks />
       <Features />
       <Services services={services} />

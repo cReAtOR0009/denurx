@@ -3,6 +3,7 @@ import Service from '../components/Services'
 import { arrow } from '../assets/images'
 import { styles } from '../styles'
 import { servicesComplete } from '../assets/text'
+import MultiStepForm from '../components/form/MultistepForm'
 
 const Services = () => {
 
@@ -38,6 +39,7 @@ const Services = () => {
             return <ServiceCard {...service} />
         })}
         </div>
+        <MultiStepForm/>
     </div>
   )
 }
