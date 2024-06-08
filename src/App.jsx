@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import {
   createBrowserRouter,
   Route,
   RouterProvider,
   createRoutesFromChildren,
 } from "react-router-dom";
+import OneSignal from 'react-onesignal';
 import PageLayout from "./Layout/PageLayout";
 import { baseUrl } from "../config";
 
@@ -12,7 +14,11 @@ import NotFound from "./pages/404";
 import Services from "./pages/Services";
 
 function App() {
-  // const url =
+  useEffect(() => {
+    OneSignal.init({
+      appId: "3091448a-311f-4769-89f9-2b8842405645"
+    });
+  }, []);
   const router = createBrowserRouter(
     createRoutesFromChildren(
       <Route path={`${baseUrl}`} element={<PageLayout />}>

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "buildForNetlify":"VITE_APP_MODE=PROD vite build",
+    "buildForNetlify": "VITE_APP_MODE=PROD vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -20,6 +20,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-mailchimp-subscribe": "^2.1.3",
+    "react-onesignal": "^3.0.1",
     "react-router-dom": "^6.23.1",
     "react-router-hash-link": "^2.4.3"
   },
