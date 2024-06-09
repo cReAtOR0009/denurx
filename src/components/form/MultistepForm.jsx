@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 
 const MultiStepForm = () => {
   const [step, setStep] = useState(1);
@@ -40,10 +41,16 @@ const MultiStepForm = () => {
           <StepOne onProviderSelection={handleProviderSelection} />
         )}
         {step === 2 && isProvider === true && (
-          <ProviderRegistrationForm onBack={handleBack} onSubmit={handleProviderSubmit} />
+          <ProviderRegistrationForm
+            onBack={handleBack}
+            onSubmit={handleProviderSubmit}
+          />
         )}
         {step === 2 && isProvider === false && (
-          <UserRegistrationForm onBack={handleBack} onSubmit={handleUserSubmit} />
+          <UserRegistrationForm
+            onBack={handleBack}
+            onSubmit={handleUserSubmit}
+          />
         )}
       </div>
 
@@ -82,12 +89,21 @@ const ProviderRegistrationForm = ({ onBack, onSubmit }) => {
     name: "",
     professionalTitle: "",
     affiliations: "",
-    email: ""
+    email: "",
   });
+  const [isOtherSelected, setIsOtherSelected] = useState(false);
 
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProviderData({ ...providerData, [name]: value });
+
+    if (name === 'professionalTitle' && value === 'other') {
+      setIsOtherSelected(true);
+      setProviderData({ ...providerData, professionalTitle: '' });
+    } else if (name === 'professionalTitle' && value === '') {
+      setIsOtherSelected(false);
+    }
   };
 
   const handleSubmit = (e) => {
@@ -96,46 +112,102 @@ const ProviderRegistrationForm = ({ onBack, onSubmit }) => {
   };
 
   return (
-    <div className={`animate-slide-in text-white`}>
+    <div className="animate-slide-in text-white">
       <h2 className="text-2xl font-bold mb-4">Provider Registration</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-gray-700">Name</label>
-          <input type="text" name="name" value={providerData.name} onChange={handleChange} className="w-full p-2 border rounded text-black " />
+          <label className="block text-gray-700" htmlFor="name">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="input your name here"
+            value={providerData.name}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-black"
+          />
         </div>
+
         <div className="mb-4">
-          <label className="block text-gray-700">Professional Title</label>
-          <select name="professionalTitle" value={providerData.professionalTitle} onChange={handleChange} className="w-full p-2 border rounded text-black">
-            <option value="doctor">Doctor</option>
-            <option value="nurse">Nurse</option>
-            <option value="therapist">Therapist</option>
-            <option value="pharmacist">Pharmacist</option>
-            <option value="dentist">Dentist</option>
-            <option value="optometrist">Optometrist</option>
-            <option value="physicianAssistant">Physician Assistant</option>
-            <option value="chiropractor">Chiropractor</option>
-            <option value="other">Other</option>
-          </select>
+          <label className="block text-gray-700" htmlFor="professionalTitle">
+            Professional Title
+          </label>
+          {!isOtherSelected && (
+            <select
+              id="professionalTitle"
+              name="professionalTitle"
+              value={providerData.professionalTitle}
+              onChange={handleChange}
+              className="w-full p-2 border rounded text-black"
+            >
+              <option value="">Select your professional title</option>
+              <option value="doctor">Doctor</option>
+              <option value="nurse">Nurse</option>
+              <option value="therapist">Therapist</option>
+              <option value="pharmacist">Pharmacist</option>
+              <option value="dentist">Dentist</option>
+              <option value="optometrist">Optometrist</option>
+              <option value="physicianAssistant">Physician Assistant</option>
+              <option value="chiropractor">Chiropractor</option>
+              <option value="other">Other</option>
+            </select>
+          )}
+          {isOtherSelected && (
+            <input
+              type="text"
+              id="professionalTitle"
+              name="professionalTitle"
+              value={providerData.professionalTitle}
+              placeholder="Please input your professional title"
+              onChange={handleChange}
+              className="w-full my-4 p-2 border rounded text-black"
+            />
+          )}
         </div>
+
         <div className="mb-4">
-          <label className="block text-gray-700">Professional Affiliations</label>
-          <input type="text" name="affiliations" value={providerData.affiliations} onChange={handleChange} className="w-full p-2 border rounded text-black" />
+          <label className="block text-gray-700" htmlFor="affiliations">
+            Professional Affiliations
+          </label>
+          <input
+            type="text"
+            id="affiliations"
+            name="affiliations"
+            placeholder="Medical Facility you work with"
+            value={providerData.affiliations}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-black"
+          />
         </div>
+
         <div className="mb-4">
-          <label className="block text-gray-700">Email</label>
-          <input type="email" name="email" value={providerData.email} onChange={handleChange} className="w-full p-2 border rounded text-black" />
+          <label className="block text-gray-700" htmlFor="email">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="input your email here"
+            value={providerData.email}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-black"
+          />
         </div>
+
         <div className="flex justify-center items-center gap-6">
           <button
             type="button"
-            className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-secondary_100 outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border border-[transparent] focus:border-white`}
+            className="inline-block rounded-full cursor-pointer p-2 bg-secondary_100 outline-none px-4 py-2 text-white text-sm font-medium border border-transparent focus:border-white"
             onClick={onBack}
           >
             Back
           </button>
           <button
             type="submit"
-            className="inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border border-[transparent] focus:border-white"
+            className="inline-block rounded-full cursor-pointer p-2 bg-primary outline-none px-4 py-2 text-white text-sm font-medium border border-transparent focus:border-white"
           >
             Register
           </button>
@@ -148,9 +220,8 @@ const ProviderRegistrationForm = ({ onBack, onSubmit }) => {
 const UserRegistrationForm = ({ onBack, onSubmit }) => {
   const [userData, setUserData] = useState({
     name: "",
-    email: ""
+    email: "",
   });
-  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -168,11 +239,25 @@ const UserRegistrationForm = ({ onBack, onSubmit }) => {
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-gray-700">Name</label>
-          <input type="text" name="name" value={userData.name} onChange={handleChange} className="w-full p-2 border rounded text-black" />
+          <input
+            type="text"
+            name="name"
+            placeholder="input your name here"
+            value={userData.name}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-black"
+          />
         </div>
         <div className="mb-4">
           <label className="block text-gray-700">Email</label>
-          <input type="email" name="email" value={userData.email} onChange={handleChange} className="w-full p-2 border rounded text-black" />
+          <input
+            type="email"
+            name="email"
+            placeholder="input your email here"
+            value={userData.email}
+            onChange={handleChange}
+            className="w-full p-2 border rounded text-black"
+          />
         </div>
         <div className="flex justify-center items-center gap-6">
           <button
