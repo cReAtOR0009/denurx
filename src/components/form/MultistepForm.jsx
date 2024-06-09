@@ -62,13 +62,13 @@ const StepOne = ({ onProviderSelection }) => (
     <h2 className="text-2xl font-bold mb-2">Are you a healthcare provider?</h2>
     <div className="flex justify-center items-center gap-6 text-center">
       <button
-        className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border focus:border-white`}
+        className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white border border-[transparent] sm:text-base font-medium  focus:border-white`}
         onClick={() => onProviderSelection(true)}
       >
         Yes
       </button>
       <button
-        className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-secondary_100 outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border focus:border-white`}
+        className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-secondary_100 outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white border border-[transparent] sm:text-base font-medium  focus:border-white`}
         onClick={() => onProviderSelection(false)}
       >
         No
@@ -101,7 +101,7 @@ const ProviderRegistrationForm = ({ onBack, onSubmit }) => {
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-gray-700">Name</label>
-          <input type="text" name="name" value={providerData.name} onChange={handleChange} className="w-full p-2 border rounded text-black" />
+          <input type="text" name="name" value={providerData.name} onChange={handleChange} className="w-full p-2 border rounded text-black " />
         </div>
         <div className="mb-4">
           <label className="block text-gray-700">Professional Title</label>
@@ -128,14 +128,14 @@ const ProviderRegistrationForm = ({ onBack, onSubmit }) => {
         <div className="flex justify-center items-center gap-6">
           <button
             type="button"
-            className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-secondary_100 outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border focus:border-white`}
+            className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-secondary_100 outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border border-[transparent] focus:border-white`}
             onClick={onBack}
           >
             Back
           </button>
           <button
             type="submit"
-            className="inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border focus:border-white"
+            className="inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border border-[transparent] focus:border-white"
           >
             Register
           </button>
@@ -177,14 +177,14 @@ const UserRegistrationForm = ({ onBack, onSubmit }) => {
         <div className="flex justify-center items-center gap-6">
           <button
             type="button"
-            className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-secondary_100 outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border focus:border-white`}
+            className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-secondary_100 outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border border-[transparent] focus:border-white`}
             onClick={onBack}
           >
             Back
           </button>
           <button
             type="submit"
-            className="inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border focus:border-white"
+            className="inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border border-[transparent] focus:border-white"
           >
             Register
           </button>
