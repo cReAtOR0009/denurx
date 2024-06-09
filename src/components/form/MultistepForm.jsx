@@ -25,9 +25,9 @@ const MultiStepForm = () => {
     <div
       className={`${
         close ? "hidden" : "flex"
-      } fixed bottom-0  right-0 z-50 w-full sm:w-[auto] inline  bg-black bg-opacity-50 md:rounded-[30px] md:rounded-b-[0px]`}
+      } justify-center items-center fixed bottom-0  right-0 top-0 left-0 z-50 w-full sm:w-full inline  bg-black bg-opacity-90`}
     >
-      <div className="bg-black bg-opacity-50 p-8 md:rounded-[30px] md:rounded-b-[0px] shadow-md w-full sm:w-[auto] max-w-m">
+      <div className="bg-black bg-opacity-50 p-8 md:rounded-0 shadow-md w-[fit-content]">
         {step === 1 && (
           <StepOne onProviderSelection={handleProviderSelection} />
         )}
