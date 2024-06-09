@@ -89,7 +89,7 @@ const Nav = () => {
       <aside
         className={`${
           activeMenu ? "flex" : "hidden"
-        } flex-col lg:hidden absolute top-0 w-[50%] h-screen right-0 p-4 bg-[#cacaca] animate-slide-in-right`}
+        } flex-col lg:hidden absolute top-0 w-[50%] h-screen right-0 p-4 bg-[#eaecf0] animate-slide-in-right`}
       >
         <div
           onClick={() => setActiveMenu(false)}
@@ -115,7 +115,7 @@ const Nav = () => {
 
         <button
           onClick={() => setShowJoinwaitlist(true)}
-          className="rounded-[30px] bg-primaryBtn  px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] cursor-pointer animate-pulse hover:animate-pop-up-infinite hover:bg-secondary_100 focus:border-white transition duration-150"
+          className="rounded-[30px] bg-primaryBtn w-[fit-content]  px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] cursor-pointer animate-pulse hover:animate-pop-up-infinite hover:bg-secondary_100 focus:border-white transition duration-150"
         >
           Join Waitlist
         </button>
