@@ -48,8 +48,8 @@ const Nav = () => {
     >
       <HashLink to={`${baseUrl}`}>
         <img
-          src="./logo.png"
-          alt="Logo here"
+          src={`/logo.png`}
+          alt="Denurx Logo"
           className="w-12 h-12 md:w-16 md:h-16"
         />
       </HashLink>
