@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 
-const MultiStepForm = () => {
+const MultiStepForm = ({displayForm, setDisplayForm}) => {
   const [step, setStep] = useState(1);
   const [isProvider, setIsProvider] = useState(null);
-  const [close, setClose] = useState(false);
+  // const [close, setClose] = useState(false);
 
   const handleClose = (e) => {
     e.stopPropagation();
-    setClose(true);
+    setDisplayForm(false);
   };
 
   const handleProviderSelection = (selection) => {
@@ -33,7 +33,7 @@ const MultiStepForm = () => {
   return (
     <div
       className={`${
-        close ? "hidden" : "flex"
+        displayForm ? "flex" : "hidden"
       } justify-center items-center fixed bottom-0  right-0 top-0 left-0 z-50 w-full sm:w-full inline  bg-black bg-opacity-90`}
     >
       <div className="bg-black bg-opacity-50 p-8 md:rounded-0 shadow-md w-[fit-content]">
