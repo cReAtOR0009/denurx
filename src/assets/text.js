@@ -14,15 +14,17 @@ export const nav = [
 
 export const HeroText = {
     h1:"Your Clinic In Your Hands.",
-    tagLine:"Connect with doctors, book appointments, order medications, and manage your health effortlessly from one Place.",
+    tagLine:"Schedule Virtual appointments, track your Health, and connect with Healthcare providers on the go",
     image:doctors
 
 
 }
 
 export const aboutApp = {
-    title:"Comprehensive Healthcare at Your Fingertips",
-    text:"Experience the future of healthcare with Denurx, a telemedicine app designed to provide you with comprehensive, convenient, and secure healthcare services right at your fingertips. Our app offers a range of features to ensure you receive the best care possible, no matter where you are. Here are the key features that make Denurx an essential tool for your health and well-being:",
+    titleProviders:"text describing benefit specifically for healthcare providers",
+    titlePatients:"text describing benefit specifically for  patients user",
+    textProviders:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam fuga earum fugit nostrum aliquam quod reiciendis animi asperiores quis aliquid quam laborum saepe modi corporis sunt id nulla laudantium. modi corporis sunt id nulla laudantium. modi corporis sunt id nulla laudantium. modi corporis sunt id nulla laudantium.modi corporis sunt id nulla laudantium. :",
+    textPatients:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam fuga earum fugit nostrum aliquam quod reiciendis animi asperiores quis aliquid quam laborum saepe modi corporis sunt id nulla laudantium.",
     images:[service_home_service, service_lab_test, service_onlineConsultaions, ],
     keyFeatures:[{
       mockup:mockup1,
