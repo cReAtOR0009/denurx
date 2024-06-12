@@ -59,7 +59,7 @@ const AboutApp = () => {
       >
         {/* <h2 className={`${styles.h2} text-secondary2 `}>Denurx</h2> */}
         <div className="flex flex-wrap md:flex-nowrap">
-          <div className="w-[fit-content] flex flex-col text-left px-4 py-6 sm:py-10 sm:px-20 md:px-16 md:py-20 gap-6">
+          <div className="w-[fit-content] flex flex-col gap-2 text-left px-4 py-6 sm:py-10 sm:px-20 md:px-16 md:py-20 sm:gap-6">
             <h3 className={`${styles.h3} `}>Are you an healthcare Provider?</h3>
             {/* <h3 className={`${styles.h4}  `}>{aboutApp.titleProviders}</h3> */}
             <article className={`${styles.paragraph}`}>
@@ -78,7 +78,7 @@ const AboutApp = () => {
               </h4>
             </div>
           </div>
-          <div className="w-[fit-content] flex flex-col text-left px-4 py-6 sm:py-10 sm:px-20 md:px-16 md:py-20 gap-6">
+          <div className="w-[fit-content] flex flex-col gap-2 text-left px-4 py-6 sm:py-10 sm:px-20 md:px-16 md:py-20 sm:gap-6">
             <h3 className={`${styles.h3} `}>
               would you like to Manage your Health from your Phone?
             </h3>
