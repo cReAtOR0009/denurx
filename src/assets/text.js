@@ -23,7 +23,7 @@ export const HeroText = {
 export const aboutApp = {
     titleProviders:"text describing benefit specifically for healthcare providers",
     titlePatients:"text describing benefit specifically for  patients user",
-    textProviders:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam fuga earum fugit nostrum aliquam quod reiciendis animi asperiores quis aliquid quam laborum saepe modi corporis sunt id nulla laudantium. modi corporis sunt id nulla laudantium. modi corporis sunt id nulla laudantium. modi corporis sunt id nulla laudantium.modi corporis sunt id nulla laudantium. :",
+    textProviders:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam fuga earum fugit nostrum aliquam quod reiciendis animi asperiores quis aliquid quam laborum saepe modi corporis sunt id nulla laudantium. modi corporis sunt id nulla laudantium. modi corporis animi asperiores quis aliquid quam laborum saeped nulla laudantium.modi corporis sunt id nulla laudantium.",
     textPatients:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam fuga earum fugit nostrum aliquam quod reiciendis animi asperiores quis aliquid quam laborum saepe modi corporis sunt id nulla laudantium.",
     images:[service_home_service, service_lab_test, service_onlineConsultaions, ],
     keyFeatures:[{

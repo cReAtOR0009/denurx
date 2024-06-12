@@ -45,7 +45,7 @@ body {
 .about::after {
   position: absolute;
   content: "Key Features";
-  top: -0%;
+  top: 0%;
   color: rgba(190, 184, 184, 0.255);
   z-index: -1;
   /* right: 50%; */

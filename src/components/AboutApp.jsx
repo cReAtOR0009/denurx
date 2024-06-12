@@ -61,7 +61,7 @@ const AboutApp = () => {
         <div className="flex flex-wrap md:flex-nowrap">
           <div className="w-[fit-content] flex flex-col text-left px-4 py-6 sm:py-10 sm:px-20 md:px-16 md:py-20 gap-6">
             <h3 className={`${styles.h3} `}>Are you an healthcare Provider?</h3>
-            <h3 className={`${styles.h4}  `}>{aboutApp.titleProviders}</h3>
+            {/* <h3 className={`${styles.h4}  `}>{aboutApp.titleProviders}</h3> */}
             <article className={`${styles.paragraph}`}>
               {aboutApp.textProviders}
             </article>
@@ -82,7 +82,7 @@ const AboutApp = () => {
             <h3 className={`${styles.h3} `}>
               would you like to Manage your Health from your Phone?
             </h3>
-            <h3 className={`${styles.h4}  `}>{aboutApp.titlePatients}</h3>
+            {/* <h3 className={`${styles.h4}  `}>{aboutApp.titlePatients}</h3> */}
             <article className={`${styles.paragraph} `}>
               {aboutApp.textPatients}
             </article>
