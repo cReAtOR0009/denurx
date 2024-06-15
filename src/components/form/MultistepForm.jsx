@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { ProviderRegistrationForm } from "./ProviderForm";
+import { UserRegistrationForm } from "./UserRegistrationForm";
 
 const MultiStepForm = ({displayForm, setDisplayForm}) => {
   const [step, setStep] = useState(1);
   const [isProvider, setIsProvider] = useState(null);
   // const [close, setClose] = useState(false);
 
-  const handleClose = (e) => {
-    e.stopPropagation();
-    setDisplayForm(false);
-  };
 
   const handleProviderSelection = (selection) => {
     setIsProvider(selection);
@@ -33,10 +31,10 @@ const MultiStepForm = ({displayForm, setDisplayForm}) => {
   return (
     <div
       className={`${
-        displayForm ? "flex" : "hidden"
-      } justify-center items-center fixed bottom-0  right-0 top-0 left-0 z-50 w-full sm:w-full inline  bg-black bg-opacity-90`}
+        displayForm ? "flex" : "flex"
+      } justify-center items-center  z-50 w-full sm:w-full inline  min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl text-[#000000] border-2 bg-white border-[#cacaca] transition`}
     >
-      <div className="bg-black bg-opacity-50 p-8 md:rounded-0 shadow-md w-[fit-content]">
+      <div className=" sm:p-8 w-[100%] sm:min-w-[30vw] sm:max-w-[600px]">
         {step === 1 && (
           <StepOne onProviderSelection={handleProviderSelection} />
         )}
@@ -44,32 +42,29 @@ const MultiStepForm = ({displayForm, setDisplayForm}) => {
           <ProviderRegistrationForm
             onBack={handleBack}
             onSubmit={handleProviderSubmit}
+            showback={true}
           />
         )}
         {step === 2 && isProvider === false && (
           <UserRegistrationForm
             onBack={handleBack}
             onSubmit={handleUserSubmit}
+            showback={true}
+              text={true}
           />
         )}
       </div>
 
-      <span
-        className="font-semibold absolute top-0 right-0 z-20 w-5 h-5 sm:w-10 sm:h-10 p-1 sm:p-2 rounded-full m-1 cursor-pointer text-white text-center text-[20px] sm:text-[30px] transition"
-        onClick={handleClose}
-      >
-        X
-      </span>
     </div>
   );
 };
 
 const StepOne = ({ onProviderSelection }) => (
-  <div className={`animate-slide-in text-white text-center`}>
+  <div className={`animate-slide-in text-black text-center`}>
     <h2 className="text-2xl font-bold mb-2">Are you a healthcare provider?</h2>
     <div className="flex justify-center items-center gap-6 text-center">
       <button
-        className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white border border-[transparent] sm:text-base font-medium  focus:border-white`}
+        className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-black border border-[transparent] sm:text-base font-medium  focus:border-white`}
         onClick={() => onProviderSelection(true)}
       >
         Yes
@@ -84,199 +79,5 @@ const StepOne = ({ onProviderSelection }) => (
   </div>
 );
 
-const ProviderRegistrationForm = ({ onBack, onSubmit }) => {
-  const [providerData, setProviderData] = useState({
-    name: "",
-    professionalTitle: "",
-    affiliations: "",
-    email: "",
-  });
-  const [isOtherSelected, setIsOtherSelected] = useState(false);
-
- 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setProviderData({ ...providerData, [name]: value });
-
-    if (name === 'professionalTitle' && value === 'other') {
-      setIsOtherSelected(true);
-      setProviderData({ ...providerData, professionalTitle: '' });
-    } else if (name === 'professionalTitle' && value === '') {
-      setIsOtherSelected(false);
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit(providerData);
-  };
-
-  return (
-    <div className="animate-slide-in text-white">
-      <h2 className="text-2xl font-bold mb-4">Provider Registration</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block text-gray-700" htmlFor="name">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="input your name here"
-            value={providerData.name}
-            onChange={handleChange}
-            className="w-full p-2 border rounded text-black"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label className="block text-gray-700" htmlFor="professionalTitle">
-            Professional Title
-          </label>
-          {!isOtherSelected && (
-            <select
-              id="professionalTitle"
-              name="professionalTitle"
-              value={providerData.professionalTitle}
-              onChange={handleChange}
-              className="w-full p-2 border rounded text-black"
-            >
-              <option value="">Select your professional title</option>
-              <option value="doctor">Doctor</option>
-              <option value="nurse">Nurse</option>
-              <option value="therapist">Therapist</option>
-              <option value="pharmacist">Pharmacist</option>
-              <option value="dentist">Dentist</option>
-              <option value="optometrist">Optometrist</option>
-              <option value="physicianAssistant">Physician Assistant</option>
-              <option value="chiropractor">Chiropractor</option>
-              <option value="other">Other</option>
-            </select>
-          )}
-          {isOtherSelected && (
-            <input
-              type="text"
-              id="professionalTitle"
-              name="professionalTitle"
-              value={providerData.professionalTitle}
-              placeholder="Please input your professional title"
-              onChange={handleChange}
-              className="w-full my-4 p-2 border rounded text-black"
-            />
-          )}
-        </div>
-
-        <div className="mb-4">
-          <label className="block text-gray-700" htmlFor="affiliations">
-            Professional Affiliations
-          </label>
-          <input
-            type="text"
-            id="affiliations"
-            name="affiliations"
-            placeholder="Medical Facility you work with"
-            value={providerData.affiliations}
-            onChange={handleChange}
-            className="w-full p-2 border rounded text-black"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label className="block text-gray-700" htmlFor="email">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="input your email here"
-            value={providerData.email}
-            onChange={handleChange}
-            className="w-full p-2 border rounded text-black"
-          />
-        </div>
-
-        <div className="flex justify-center items-center gap-6">
-          <button
-            type="button"
-            className="inline-block rounded-full cursor-pointer p-2 bg-secondary_100 outline-none px-4 py-2 text-white text-sm font-medium border border-transparent focus:border-white"
-            onClick={onBack}
-          >
-            Back
-          </button>
-          <button
-            type="submit"
-            className="inline-block rounded-full cursor-pointer p-2 bg-primary outline-none px-4 py-2 text-white text-sm font-medium border border-transparent focus:border-white"
-          >
-            Register
-          </button>
-        </div>
-      </form>
-    </div>
-  );
-};
-
-const UserRegistrationForm = ({ onBack, onSubmit }) => {
-  const [userData, setUserData] = useState({
-    name: "",
-    email: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit(userData);
-  };
-
-  return (
-    <div className={`animate-slide-in text-white`}>
-      <h2 className="text-2xl font-bold mb-4">User Registration</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block text-gray-700">Name</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="input your name here"
-            value={userData.name}
-            onChange={handleChange}
-            className="w-full p-2 border rounded text-black"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="input your email here"
-            value={userData.email}
-            onChange={handleChange}
-            className="w-full p-2 border rounded text-black"
-          />
-        </div>
-        <div className="flex justify-center items-center gap-6">
-          <button
-            type="button"
-            className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-secondary_100 outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border border-[transparent] focus:border-white`}
-            onClick={onBack}
-          >
-            Back
-          </button>
-          <button
-            type="submit"
-            className="inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white sm:text-base font-medium border border-[transparent] focus:border-white"
-          >
-            Register
-          </button>
-        </div>
-      </form>
-    </div>
-  );
-};
 
 export default MultiStepForm;
