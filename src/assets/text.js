@@ -5,9 +5,9 @@ import { mockup, profileImage,profileImage2, doctors, doctors2, onlineConsult, c
 
 export const nav = [
    {title:"Home"}, 
-   {title:"About"}, 
+   {title:"Key Features"}, 
    {title:"Quick Start"},
-   {title:"Features"}, 
+   {title:"About"}, 
    {title:"Services"}, 
 ]
 
