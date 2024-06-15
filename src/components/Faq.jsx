@@ -32,7 +32,7 @@ const FaqCard = ({ question, answer, index }) => {
 const Faq = () => {
   return (
     <section
-      className={`${styles.container} relative flex flex-col gap-6 sm:gap-10 `}
+      className={`${""} flex flex-col gap-6 sm:gap-10 `}
     >
       <h2 className={`${styles.h2}`}>We Have Answers</h2>
       <div className="flex items-center">
