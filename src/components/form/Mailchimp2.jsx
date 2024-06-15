@@ -1,8 +1,8 @@
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import CustomForm from "./CustomForm";
-import { UserRegistrationForm } from "./UserRegistrationForm";
+import { ProviderRegistrationForm } from "./ProviderForm";
+// import CustomForm from "./CustomForm";
 
-const MailChimp = ({ onBack, onSubmit, showBack }) => {
+const MailChimp2 = () => {
   const postUrl = `https://dotcirclelabs.us8.list-manage.com/subscribe/post?u=${
     import.meta.env.VITE_APP_MAILCHIMP
   }&id=${import.meta.env.VITE_APP_MAILCHIMP_ID}`;
@@ -14,21 +14,16 @@ const MailChimp = ({ onBack, onSubmit, showBack }) => {
         render={({ subscribe, status, message, ...props }) => {
           // {console.log("props:", props)}
           // {console.log("subscribe:", subscribe)}
-          return (
-            <UserRegistrationForm
-            onBack={handleBack}
-            onSubmit={handleUserSubmit}
-            showBack={true}
-              text={true}
+          return  <ProviderRegistrationForm
               status={status}
               message={message}
               onValidated={(formData) => subscribe(formData)}
             />
-          );
+           
         }}
       />
     </div>
   );
 };
 
-export default MailChimp;
+export default MailChimp2;

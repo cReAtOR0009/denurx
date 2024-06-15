@@ -43,6 +43,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
               type="text"
               id="name"
               name="name"
+              required
               placeholder="input your name here"
               value={providerData.name}
               onChange={handleChange}
@@ -56,6 +57,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
             <select
               id="gender"
               name="gender"
+              required
               value={providerData.gender}
               onChange={handleChange}
               className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af]  sm:text-base p-2 outline-none border border-[transparent] bg-[#eaecf0a7]  focus:border-white"
@@ -74,6 +76,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
               <select
                 id="professionalTitle"
                 name="professionalTitle"
+                required
                 value={providerData.professionalTitle}
                 onChange={handleChange}
                 className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] sm:text-base p-2 outline-none border border-[transparent] bg-[#eaecf0a7]  focus:border-white"
@@ -95,6 +98,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
                 type="text"
                 id="professionalTitle"
                 name="professionalTitle"
+                required
                 value={providerData.professionalTitle}
                 placeholder="Please input your professional title"
                 onChange={handleChange}
@@ -111,6 +115,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
               type="text"
               id="affiliations"
               name="affiliations"
+              required
               placeholder="Medical Facility you work with"
               value={providerData.affiliations}
               onChange={handleChange}
@@ -126,6 +131,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
               type="email"
               id="email"
               name="email"
+              required
               placeholder="input your email here"
               value={providerData.email}
               onChange={handleChange}
@@ -136,7 +142,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
           <div className="flex justify-center items-center gap-6">
           {  showBack && <button
               type="button"
-              className="inline-block flex-1 rounded-full cursor-pointer p-2 bg-secondary_100 outline-none px-4 py-2 text-white text-sm font-medium border border-transparent focus:border-white hover:bg-[transparent] hover:text-black transition"
+              className="inline-block flex-1 rounded-full cursor-pointer p-2 bg-secondary_100 outline-none px-4 py-2 text-xxs text-white sm:text-base font-medium border border-transparent focus:border-white hover:bg-[transparent] hover:text-black transition"
               onClick={onBack}
             >
               Back
