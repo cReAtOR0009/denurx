@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className={`${styles.headerContainer} flex justify-between items-center md:items-center flex-wrap h-[100vh] md:h-[auto] lg:h-[auto]  `}
+      className={`${styles.headerContainer} flex justify-between items-center md:items-center flex-wrap h-[auto] md:h-[auto] lg:h-[auto]  `}
     >
       <div className="flex flex-col justify-center flex-1 w-[50%]">
         <h1
@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex-1  bg-heroMockup fullbg  hidden lg:flex lg:items-end   md:w-[50%] h-[100%] mt-20">
+      <div className="flex-1  bg-heroMockup fullbg  hidden lg:flex lg:items-end w-full   md:w-full h-[100%] mt-2">
         <img src={HeroText.image} alt="Telemedicine App" className="" />
       </div>
     </section>
