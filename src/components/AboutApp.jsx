@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { styles } from "../styles";
 import { aboutApp } from "../assets/text";
-import MultiStepForm from "./form/MultistepForm";
-import { useState } from "react";
+
+
+
 
 const FeaturesCard = ({ text, mockup, description, index }) => {
   return (
@@ -52,56 +54,10 @@ const AboutApp = () => {
   return (
     <section
       id="about"
-      className={`${styles.container}  z-1 text-black bg lg:h-[100vh overflow-hidden`} //bg-primary_200
+      className={`${styles.container} relative  z-1 text-black bg lg:h-[100vh overflow-hidden`} //bg-[#939191]_200
     >
-      <div
-        className={`${styles} flex flex-row items-center flex-wrap lg:flex-nowrap `}
-      >
-        {/* <h2 className={`${styles.h2} text-secondary2 `}>Denurx</h2> */}
-        <div className="flex flex-wrap md:flex-nowrap">
-          <div className="w-[fit-content] flex flex-col gap-2 text-left px-4 py-6 sm:py-10 sm:px-20 md:px-16 md:py-20 sm:gap-6">
-            <h3 className={`${styles.h3} `}>Are you an healthcare Provider?</h3>
-            {/* <h3 className={`${styles.h4}  `}>{aboutApp.titleProviders}</h3> */}
-            <article className={`${styles.paragraph}`}>
-              {aboutApp.textProviders}
-            </article>
-            <div className="flex items-center justify-between">
-              <h4 className={`${styles.h4}`}>
-                {" "}
-                <button
-                  onClick={() => setDisplayForm(true)}
-                  className={`rounded-[30px] bg-primary outline-none  px-4 py-2 sm:px-6 sm:py-2 min-w-[fit-content] text-xxs text-white sm:text-sm font-medium uppercase leading-normal  text-primary-700 border border-[transparent] focus:border-white transition duration-150`}
-                >
-                  Click Here
-                </button>{" "}
-                to Join the Healthcare Providers Waiting list
-              </h4>
-            </div>
-          </div>
-          <div className="w-[fit-content] flex flex-col gap-2 text-left px-4 py-6 sm:py-10 sm:px-20 md:px-16 md:py-20 sm:gap-6">
-            <h3 className={`${styles.h3} `}>
-              would you like to Manage your Health from your Phone?
-            </h3>
-            {/* <h3 className={`${styles.h4}  `}>{aboutApp.titlePatients}</h3> */}
-            <article className={`${styles.paragraph} `}>
-              {aboutApp.textPatients}
-            </article>
-            <div className="flex items-center justify-between">
-              <h4 className={`${styles.h4}`}>
-                {" "}
-                <button
-                  onClick={() => setDisplayForm(true)}
-                  className={`rounded-[30px] bg-primary outline-none  px-4 py-2 sm:px-6 sm:py-2 min-w-[fit-content] text-xxs text-white sm:text-sm font-medium uppercase leading-normal  text-primary-700 border border-[transparent] focus:border-white transition duration-150`}
-                >
-                  Click Here
-                </button>{" "}
-                to Join Our Patient Waiting list
-              </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="relative about flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-2  md:p-8 md:pt-16  ">
+     
+      <div className=" about flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-   ">
         <div className="flex flex-col gap-6 sm:gap-10">
           <div className="">
             <div className="features_card  py-4 ">
@@ -112,7 +68,6 @@ const AboutApp = () => {
           </div>
         </div>
       </div>
-     { displayForm && <MultiStepForm setDisplayForm={setDisplayForm} displayForm={displayForm} />}
     </section>
   );
 };
