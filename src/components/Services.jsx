@@ -14,7 +14,7 @@ export const ServiceCard = ({ icon, title, description, image }) => {
       <div
         key={title}
         id="title"
-        className="serciveCard relative rounded-[20px] sm:rounded-[50px] border-1 border-[#cacaca]  cursor-pointer hover:transition-colors transition:border max-w-[500px] hover:scale-[1.1] transition"
+        className="serciveCard relative rounded-[20px] sm:rounded-[50px] border-1 border-[#cacaca]  cursor-pointer hover:transition-colors transition:border max-w-[500px] hover:scale-[1.1] group transition"
         onClick={() => setReadMore(!readMore)}
       >
         <img
@@ -33,7 +33,7 @@ export const ServiceCard = ({ icon, title, description, image }) => {
             alt={`${title}`}
             className="mt-[-12%] w-10 lg:w-20 md:w-20"
           />
-          <h3 className={`${styles.h3} text-white`}>{title}</h3>
+          <h3 className={`${styles.h3} text-white group-hover:underline`}>{title}</h3>
           {/* <p className={`${styles.paragraph} text-black`}>{readMore?description:trimmedContent}
                     <button onClick={() => setReadMore(!readMore)} className={`${readMore?"bg-secondary_100 group-hover:bg-primary":"bg-primary "} text-white inline-block text-xxs md:text-sm  rounded-full cursor-pointer p-2`}>{readMore?"Read less":"Read more"}</button>
                     </p> */}
@@ -56,7 +56,7 @@ const Services = ({ services }) => {
             <h4 className={`${styles.h3}`}>All Services</h4>
           </HashLink>
         </div>
-        <div className="flex  gap-4 sm:gap-6 flex-wrap xl:flex-nowrap py-4 sm:py-6">
+        <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3 py-4 sm:py-6">
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}
