@@ -42,14 +42,14 @@ const MultiStepForm = ({displayForm, setDisplayForm}) => {
           <ProviderRegistrationForm
             onBack={handleBack}
             onSubmit={handleProviderSubmit}
-            showback={true}
+            showBack={true}
           />
         )}
         {step === 2 && isProvider === false && (
           <UserRegistrationForm
             onBack={handleBack}
             onSubmit={handleUserSubmit}
-            showback={true}
+            showBack={true}
               text={true}
           />
         )}

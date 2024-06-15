@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { styles } from "../../styles";
 
-export const ProviderRegistrationForm = ({ onBack, onSubmit, showback=false }) => {
+export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false }) => {
     const [providerData, setProviderData] = useState({
       name: "",
       gender: "",
@@ -134,7 +134,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showback=false }) =
           </div>
   
           <div className="flex justify-center items-center gap-6">
-          {  showback && <button
+          {  showBack && <button
               type="button"
               className="inline-block flex-1 rounded-full cursor-pointer p-2 bg-secondary_100 outline-none px-4 py-2 text-white text-sm font-medium border border-transparent focus:border-white hover:bg-[transparent] hover:text-black transition"
               onClick={onBack}

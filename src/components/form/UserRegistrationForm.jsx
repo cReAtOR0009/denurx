@@ -141,7 +141,7 @@ export const UserRegistrationForm = ({
         </div>
        
         <div className="flex justify-around gap-4">
-          {!showBack && (
+          {showBack && (
             <button
               type="button"
               className="inline-block flex-1 rounded-full cursor-pointer p-2 bg-secondary_100 outline-none px-4 py-2 text-white text-sm font-medium border border-transparent focus:border-white hover:bg-[transparent] hover:text-black transition"
