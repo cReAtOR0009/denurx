@@ -44,8 +44,8 @@ const Registration = () => {
         </div>
       </div>
       <div className="w-full h-1 bg-[#eaecf0a7] rounded my-10"></div>
-      <div className="flex  justify-between items-center  flex-wrap md:flex-nowrap">
-        <div className="relative magicpattern fullbg">
+      <div className="  flex  justify-between items-center  flex-wrap md:flex-nowrap">
+        <div className="order-2 sm:order-1  relative magicpattern fullbg">
           <div
             className={`${styles.h2} absolute rounded-full right-2 top-1/3 sm:top-1/4 md:-right-[20%] p-2 bg-primary text-white`}
           >
