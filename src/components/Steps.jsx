@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { styles } from "../styles";
 import { howItWorks } from "../assets/text";
-import { tipIcon, stepDoctor } from "../assets/images";
+import { tipIcon, doctor3 } from "../assets/images";
 
 const StepsCard = ({ icon, step, description, tip, displayContent, displayDescription, setDisplayContent, setDisplayDescription, setDisplayTipContent }) => {
 
@@ -20,7 +20,7 @@ const StepsCard = ({ icon, step, description, tip, displayContent, displayDescri
   // console.log("displayDescription:", displayDescription)
 
   return (
-    <div onMouseEnter={() => handleMouseEnter()} onMouseLeave={() => handleMouseLeave()} className={` flex-1 flex flex-col justify-between items-center border-2 border-[#87898c] rounded-2xl w-[100%] min-w-[150px] max-w-[auto] sm-max-w-[auto] p-2 sm:p-6 h-[auto] bg-[EAECF0] text-left sm:hover:scale-[1.1] transition`}>
+    <div onMouseEnter={() => handleMouseEnter()} onMouseLeave={() => handleMouseLeave()} className={` flex-1 flex flex-col justify-between items-center border-2 border-[#87898c] rounded-2xl w-[100%] min-w-[100px] xl:min-w-[150px] max-w-[auto] sm-max-w-[auto] p-2 sm:p-2 lg:p-6 h-[auto] bg-[#eaecf0a7] text-left sm:hover:scale-[1.1] transition`}>
       <img src={icon} alt="" className=" w-[50px] sm:w-[50px] h-[auto]" />
       <h4 className={`${styles.h4}`}>{step}</h4>
 
@@ -47,15 +47,16 @@ const HowItWorks = () => {
   return (
     <section
       id="quick start"
-      className={`${styles.container} relative steps flex justify-center flex-wrap  items-center gap-10 md:pt-20`}
+      className={`${styles.container} relative`}
     >
+      <div className="steps flex  flex-wrap  items-center gap-10 md:pt-20">
       <div className=" relative flex-1 flex justify-between flex-wrap gap-2 sm:gap-6 p-0 sm:p-2  md:p-8 md:pt-16">
         {howItWorks.map((step, index) => {
           return <StepsCard key={index} {...step} displayContent={displayContent} setDisplayContent={setDisplayContent} displayDescription={displayDescription} setDisplayDescription={setDisplayDescription} displayTipContent={displayTipContent} setDisplayTipContent={setDisplayTipContent} />;
         })}
       </div>
-      <div className="sm:relative flex- flex rounded-2xl sm:rounded-[50px] bg-primary w-[100%] md:w-[50%] ">
-        <img src={stepDoctor} alt="" className="mt-[-20px] sm:mt-[-30px] md:mt-[-50px] w-[100%] h-auto  " />
+      <div className="sm:relative flex- flex rounded-2xl sm:rounded-[50px] magicpattern2 w-[100%] md:w-[50%] ">
+        <img src={doctor3} alt="" className="mt-[-20px] sm:mt-[-30px] md:mt-[-50px] w-[100%] h-auto  " />
         
      {displayDescription && (
         <div className="absolute hidden sm:flex flex-col justify-center gap-2 p-4 h-[100%] w-[100%]  inset-0 rounded-2xl sm:rounded-[50px] bg-black bg-opacity-80 animate-slide-in-up text-left">
@@ -63,6 +64,8 @@ const HowItWorks = () => {
           <p className={`${styles.tip} text-left text-secondary`}>{displayTipContent}</p>
         </div>
       )}
+      </div>
+
       </div>
     </section>
   );
