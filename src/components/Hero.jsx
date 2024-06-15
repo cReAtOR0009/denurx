@@ -20,6 +20,7 @@ const Hero = () => {
         >
           {HeroText.h1}
         </h1>
+        <h2 className={`capitalize text-base sm:text-base md:text-lg lg:text-[20px] xl:text-xl leading-relaxed text-white`}>Access quality healtcare anywhere, anytime</h2>
         <p className=" capitalize text-base sm:text-base md:text-lg lg:text-[20px] xl:text-xl leading-relaxed text-white">
           {HeroText.tagLine}
         </p>
