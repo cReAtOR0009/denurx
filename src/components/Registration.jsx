@@ -79,7 +79,7 @@ const Registration = () => {
           <img
             src={patient}
             alt=""
-            className="order-2 sm:order-1   h-[100%] w-[full] md:w-[500px]"
+            className="order-1 sm:order-2   h-[100%] w-[full] md:w-[500px]"
           />
         </div>
         <div className="order-1 sm:order-2 flex flex-col gap-2 md:w-1/2 text-left px-4 py-0  sm:px-20 md:px-16">
