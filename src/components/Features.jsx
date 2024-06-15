@@ -16,7 +16,7 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
   return (
     <div 
     onClick={handleShowMore}
-      className={`flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xl border-2 p-2 sm:p-4 md:p-6 pl-0 min-w-[250px] border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada]  text-black  group animate-slide-in  ${!showMore? "hover:scale-[1.1] transition":""} `}
+      className={`flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xln border-2 p-2 sm:p-4 lg:p-6 pl-0 min-w-[250px] border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada]  text-black  group animate-slide-in  ${!showMore? "hover:scale-[1.1] transition":""} `}
     >
       <div className="flex justify-between items-center p-2 w-[100%] transition-all">
         <h3 className={`${styles.h4} lg:whitespace-nowrap `}>
@@ -51,6 +51,8 @@ const Features = () => {
   const trimmedContent = `${benefits.paragraph.slice(0, 400)}...`;
   const [readMore, setReadMore] = useState(false);
   const [showMore, setShowMore] = useState(null)
+  const [animationKey, setAnimationKey] = useState(0);
+
 
 
  
@@ -58,10 +60,12 @@ const Features = () => {
   const startIndex = currentIndex * cardPerDisp;
   const endIndex = Math.min(startIndex + cardPerDisp - 1, items.length - 1);
   const toDisplay = items.slice(startIndex, endIndex + 1);
-
+  
   const updateDisplayItem = (index) => {
     setCurrentIndex(index);
+    setAnimationKey(prevKey => prevKey + 1);  // Update the animation key to force re-render
   };
+  
 
   return (
     <section
@@ -94,11 +98,11 @@ const Features = () => {
       </div>
      
       <div className=" flex justify-between items-center flex-wrap md:flex-nowrap gap-[10%]  md:pt-16">
-        <div className="w-[100%] h-[100%] md:w-[auto] bg-primary rounded-2xl sm:rounded-[50px]">
+        <div className="w-[100%] h-[100%] md:w-[auto] magicpattern rounded-2xl sm:rounded-[50px]">
          <img src={whyDenurx} alt="Denurx logo" className="w-[100%] h-auto mt-[-20px] sm:mt-[-30px] md:mt-[-50px] "/>
         </div>
-        <div className="flex flex-col justify-between relative w-[100%] py-6 ">
-          <div className="flex flex-col flex-wrap gap-4  animate-[slide-in-right_0.5s_ease-in-out]">
+        <div key={animationKey} className={`flex flex-col justify-between relative w-[100%] py-6 `}>
+          <div className="flex flex-col flex-wrap gap-4  animate-slide-in">
             {toDisplay.map((benefit, index) => (
               <FeaturesCard key={index} index={index} {...benefit} showMore={showMore} setShowMore={setShowMore} />
             ))}
