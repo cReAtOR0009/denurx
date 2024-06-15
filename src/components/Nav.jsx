@@ -20,11 +20,12 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
             }`
           : "mr-4 md:mr-8"
       }   inline-block mb-4 uppercase  py-2 px-4 cursor-pointer hover:border-b-4 hover:border-b-secondary_100 hover:text-secondary_100`}
-      to={
-        title.toLowerCase() === "services"
-          ? `${baseUrl}/services`
-          : `${baseUrl}/#${title.toLowerCase()}`
-      }
+      to={`${baseUrl}/#${title.toLowerCase()}`}
+      // to={
+      //   title.toLowerCase() === "services"
+      //     ? `${baseUrl}/services`
+      //     : `${baseUrl}/#${title.toLowerCase()}`
+      // }
       onClick={() => handleClick(title)}
     >
       {title}
@@ -70,7 +71,7 @@ const Nav = () => {
       </div>
       <button
         onClick={() => setShowJoinwaitlist(true)}
-        className={`rounded-[30px]  bg-primaryBtn px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 animate-pulse hover:animate-pop-up-infinite focus:border-white transition duration-150`}
+        className={`rounded-[30px] hidden md:inline-block  bg-primaryBtn px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 animate-pulse hover:animate-pop-up-infinite focus:border-white transition duration-150`}
       >
         Join Waitlist
       </button>

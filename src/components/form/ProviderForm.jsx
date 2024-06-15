@@ -30,7 +30,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
     };
   
     return (
-      <div className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white border-[#cacaca] transition">
+      <div id="" className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white border-[#cacaca] transition">
         <h2 className={`${styles.h4} font-semibold  text-center`}>
           Provider Registration
         </h2>

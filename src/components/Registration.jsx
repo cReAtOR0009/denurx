@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { HashLink } from "react-router-hash-link";
+import { Sectionwrapper } from "./hoc";
 import { styles } from "../styles";
 import { aboutApp } from "../assets/text";
 import { doctor2, patient } from "../assets/images";
-import { UserRegistrationForm } from "./form/UserRegistrationForm";
-import { ProviderRegistrationForm } from "./form/ProviderForm";
+import { WaitlistContext } from "../context/waitlistContext";
+import { NavLink } from "react-router-dom";
+import { baseUrl } from "../../config";
 
 const Registration = () => {
+  const {showJoinwaitlist, setShowJoinwaitlist} = useContext(WaitlistContext)
+
   return (
-    <div className={`${styles.container} relative`}>
-      <div className="register flex  justify-between items-center flex-wrap md:flex-nowrap ">
-        <div className=" flex  flex-col gap-2 md:w-1/2 text-left px-4 py-0 sm:px-20 md:px-16">
+    <div className={`${""} register`}>
+      <div className=" flex  justify-between items-center flex-wrap md:flex-nowrap ">
+        <div  className=" flex  flex-col gap-2 md:w-1/2 text-left px-4 py-0 sm:px-20 md:px-16">
           <h3 className={`${styles.h3} `}>{aboutApp.titleProviders}</h3>
           <article className={`${styles.paragraph}`}>
             {aboutApp.textProviders}
@@ -17,7 +22,22 @@ const Registration = () => {
           <p className={`${styles.paragraph}`}>
             Join Our Healthcare Providers Waiting list below
           </p>
-          <ProviderRegistrationForm />
+          <article>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque illo
+            laborum doloribus necessitatibus magni autem fugit amet! Vero quas
+            ad sit totam temporibus eveniet iste provident, labore ducimus non
+            et accusantium facere delectus voluptate, nam qui, dolorem expedita
+            excepturi quae repellat quod repellendus tempore officiis quidem!
+            Eum minima et ut.
+          </article>
+          <HashLink to={`${baseUrl}/#providerform`}>
+
+          <button
+         
+            className={`${"bg-primary"
+            } rounded-[30px]  p-2  px-4 py-2 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] self-start  hover:bg-primary_100 focus:border-white cursor-pointer`}
+          >Join Us Now</button>
+          </HashLink>
         </div>
         <div className="relative magicpattern2 fullbgAuto">
           <div
@@ -39,7 +59,7 @@ const Registration = () => {
           <img
             src={doctor2}
             alt=""
-            className=" h-[100%] w-[full] md:w-[500px]"
+            className=" h-[500px] w-[full] md:w-[auto]"
           />
         </div>
       </div>
@@ -70,11 +90,24 @@ const Registration = () => {
           <p className={`${styles.paragraph}`}>
             Join Our Patient Waiting list below
           </p>
-          <UserRegistrationForm />
+          <article>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque illo
+            laborum doloribus necessitatibus magni autem fugit amet! Vero quas
+            ad sit totam temporibus eveniet iste provident, labore ducimus non
+            et accusantium facere delectus voluptate, nam qui, dolorem expedita
+            excepturi quae repellat quod repellendus tempore officiis quidem!
+            Eum minima et ut.
+          </article>
+          <HashLink to={`${baseUrl}/#userform`}>
+          <button
+            className={`${"bg-primary"
+            } rounded-[30px]  p-2  px-4 py-2 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] self-start  hover:bg-primary_100 focus:border-white cursor-pointer`}
+          >Join Us Now</button>
+          </HashLink>
         </div>
       </div>
     </div>
   );
 };
 
-export default Registration;
+export default Sectionwrapper(Registration, "start");

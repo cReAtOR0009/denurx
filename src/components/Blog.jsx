@@ -1,4 +1,5 @@
 import React from "react";
+import { Sectionwrapper } from "./hoc";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { blogs } from "../assets/text";
@@ -22,7 +23,7 @@ const Blog = () => {
     );
   };
   return (
-    <div className={`${styles.container} relative mx-auto px-4`}>
+    <div className={`${""} relative mx-auto px-4`}>
       <h2 className={`${styles.h2}`}>Our Blog</h2>
       <div className={`blog grid gap-8 lg:grid-cols-2 xl:grid-cols-3`}>
         {blogs.map((blog, index) => (
@@ -33,4 +34,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Sectionwrapper(Blog, "blog");

@@ -1,6 +1,10 @@
 import { useState } from "react";
+import { Sectionwrapper } from "./hoc";
+import Registration from "./Registration";
 import { styles } from "../styles";
 import { aboutApp } from "../assets/text";
+import { doctor2, patient } from "../assets/images";
+
 
 
 
@@ -48,16 +52,16 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
   );
 };
 
-const AboutApp = () => {
+const KeyFeatures = () => {
   const [displayForm, setDisplayForm] = useState(true);
 
   return (
     <section
-      id="about"
-      className={`${styles.container} relative  z-1 text-black bg lg:h-[100vh overflow-hidden`} //bg-[#939191]_200
+      className={`${""}about    z-1 text-black bg lg:h-[100vh overflow-hidden`} //bg-[#939191]_200
     >
+      {/* <Registration /> */}
      
-      <div className=" about flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-   ">
+      <div className=" flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-   ">
         <div className="flex flex-col gap-6 sm:gap-10">
           <div className="">
             <div className="features_card  py-4 ">
@@ -72,4 +76,4 @@ const AboutApp = () => {
   );
 };
 
-export default AboutApp;
+export default Sectionwrapper(KeyFeatures, "key features");

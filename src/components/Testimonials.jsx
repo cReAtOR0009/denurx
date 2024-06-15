@@ -1,5 +1,6 @@
 import { testimonials } from "../assets/text";
 import { styles } from "../styles";
+import { Sectionwrapper } from "./hoc";
 
 
 const TestimonialCard = ({ image, name, role, testament, gridPosition }) => {
@@ -25,7 +26,7 @@ const TestimonialCard = ({ image, name, role, testament, gridPosition }) => {
 const Testimonials = () => {
 
   return (
-    <section  id="testimonials" className={`${styles.container}  relative border-[#eaeaea] bg-[#eaecf0a7]`}>
+    <section  id="testimonials" className={`${""}  relative border-[#eaeaea] bg-[#eaecf0a7]`}>
       <div className={` testimonials `}>
         <div className="transition duration-500 ease-in-out transform scale-100 translate-x-0 translate-y-0 opacity-100">
           <div className="mb-6  md:mb-10">
@@ -50,4 +51,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Sectionwrapper(Testimonials, "testimonials");

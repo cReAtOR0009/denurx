@@ -2,6 +2,7 @@ import { useState } from "react";
 import { faqs } from "../assets/text";
 import { doctors } from "../assets/images";
 import { styles } from "../styles";
+import { Sectionwrapper } from "./hoc";
 
 const FaqCard = ({ question, answer, index }) => {
   const [activeFaq, setActiveFaq] = useState(index === 0);
@@ -31,7 +32,6 @@ const FaqCard = ({ question, answer, index }) => {
 const Faq = () => {
   return (
     <section
-      id="faq"
       className={`${styles.container} relative flex flex-col gap-6 sm:gap-10 `}
     >
       <h2 className={`${styles.h2}`}>We Have Answers</h2>
@@ -50,4 +50,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default Sectionwrapper(Faq, "faq");

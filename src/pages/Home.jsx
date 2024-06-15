@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
-import AboutApp from "../components/AboutApp";
-import HowItWorks from "../components/Steps";
-import Features from "../components/Features";
+import KeyFeatures from "../components/KeyFeatures";
+import Steps from "../components/Steps";
+import About from "../components/About";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import Faq from "../components/Faq";
@@ -9,6 +9,9 @@ import { services } from "../assets/text";
 import MultiStepForm from "../components/form/MultistepForm";
 import Blog from "../components/Blog";
 import Registration from "../components/Registration";
+import { ProviderRegistrationForm } from "../components/form/ProviderForm";
+import { UserRegistrationForm } from "../components/form/UserRegistrationForm";
+import Form from "../components/Form";
 
 const Home = () => {
   return (
@@ -17,13 +20,14 @@ const Home = () => {
         <Hero />
       </div>
       <Registration />
-      <AboutApp />
+      <KeyFeatures />
         {/* <MultiStepForm /> */}
-      <HowItWorks />
-      <Features />
+      <Steps />
+      <About />
       <Services services={services} />
       <Blog />
       <Testimonials />
+     <Form />
       <Faq />
     </div>
   );

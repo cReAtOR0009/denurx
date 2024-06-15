@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import { styles } from "../styles";
 import { howItWorks } from "../assets/text";
 import { tipIcon, doctor3 } from "../assets/images";
+import { Sectionwrapper } from "./hoc";
 
 const StepsCard = ({ icon, step, description, tip, displayContent, displayDescription, setDisplayContent, setDisplayDescription, setDisplayTipContent }) => {
 
@@ -39,17 +40,16 @@ const StepsCard = ({ icon, step, description, tip, displayContent, displayDescri
     </div>
   );
 };
-const HowItWorks = () => {
+const Steps = () => {
   const [displayDescription, setDisplayDescription] = useState(false)
   const [displayContent, setDisplayContent] = useState(null)
   const [displayTipContent, setDisplayTipContent] = useState(null)
 
   return (
     <section
-      id="quick start"
-      className={`${styles.container} relative`}
+      className={`${""} steps`}
     >
-      <div className="steps flex  flex-wrap  items-center gap-10 md:pt-20">
+      <div className=" flex  flex-wrap  items-center gap-10 md:pt-20">
       <div className=" relative flex-1 flex justify-between flex-wrap gap-2 sm:gap-6 p-0 sm:p-2  md:p-8 md:pt-16">
         {howItWorks.map((step, index) => {
           return <StepsCard key={index} {...step} displayContent={displayContent} setDisplayContent={setDisplayContent} displayDescription={displayDescription} setDisplayDescription={setDisplayDescription} displayTipContent={displayTipContent} setDisplayTipContent={setDisplayTipContent} />;
@@ -71,4 +71,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default Sectionwrapper(Steps, "quick start");
