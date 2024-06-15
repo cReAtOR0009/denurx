@@ -1,6 +1,5 @@
 import { mockup, profileImage,profileImage2, doctors, doctors2, onlineConsult, chronicDisease, drugstore, gps_location, lab_equipment, medicalrecord,online_consult, online, online_service, patient_record, payment_wallet, signupMock, pills, pill_bottle, heart_disease, health_record, health_tips, calendar, lab_test,feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified, home_service, service_onlineConsultaions,service_onlineCare,service_chronic_disease, service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, mockup_check_profile, mockup_choose_use, mockup_choose_user, mockup_confirm_appointment, mockupe_search_service, mockupe_select_action, mockupe_signup, light1, light2, light3,light4,light5, facebook, linkedin, twitter, whatsapp,
-
-  mockup1,mockup2,mockup3,mockup4
+ mockup1,mockup2,mockup3,mockup4, signup, findDoctor, prescription,consultations, managehealth
  } from "./images"
 
 
@@ -21,10 +20,10 @@ export const HeroText = {
 }
 
 export const aboutApp = {
-    titleProviders:"text describing benefit specifically for healthcare providers",
-    titlePatients:"text describing benefit specifically for  patients user",
-    textProviders:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam fuga earum fugit nostrum aliquam quod reiciendis animi asperiores quis aliquid quam laborum saepe modi corporis sunt id nulla laudantium. modi corporis sunt id nulla laudantium. modi corporis animi asperiores quis aliquid quam laborum saeped nulla laudantium.modi corporis sunt id nulla laudantium.",
-    textPatients:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam fuga earum fugit nostrum aliquam quod reiciendis animi asperiores quis aliquid quam laborum saepe modi corporis sunt id nulla laudantium.",
+    titleProviders:" Deliver Virtual care and grow your practice",
+    titlePatients:"Access quality healtcare anywhere, anytime",
+    textProviders:"Manage your schedule, engage with patients and access resources at your fingertips",
+    textPatients:"Schedule virtual appointments, track your health, and connect with healthcare providers on the go",
     images:[service_home_service, service_lab_test, service_onlineConsultaions, ],
     keyFeatures:[{
       mockup:mockup1,
@@ -231,7 +230,7 @@ export const servicesComplete =[
 export const howItWorks = [
     {
         mockup: mockupe_signup,
-        icon:pills,
+        icon:signup,
         step: "Sign Up",
         illustration: mockup,
         description: "Create an account by providing your basic information and completing your profile.",
@@ -239,7 +238,7 @@ export const howItWorks = [
       },
       {
         mockup: mockupe_search_service,
-        icon:calendar,
+        icon:findDoctor,
         step: "Find a Doctor or Service",
         illustration: mockup,
         description: "Use the app's search and GPS locator to find doctors, labs, or pharmacies near your location.",
@@ -247,7 +246,7 @@ export const howItWorks = [
       },
       {
         mockup: mockup_confirm_appointment,
-        icon:pill_bottle,
+        icon:consultations,
         step: "Consult & Book",
         illustration: mockup,
         description: "Schedule a consultation or home visit with the healthcare provider of your choice. Choose between video call, chat, or in-person appointments.",
@@ -255,7 +254,7 @@ export const howItWorks = [
       },
       {
         mockup: mockup_confirm_appointment,
-        icon:lab_test,
+        icon:prescription,
         step: "Get Prescriptions & Lab Tests",
         illustration: mockup,
         description: "During the consultation, doctors can prescribe medications and order lab tests. Receive your prescriptions and test orders directly in the app.",
@@ -263,7 +262,7 @@ export const howItWorks = [
       },
       {
         mockup: mockupe_select_action,
-        icon:health_record,
+        icon:managehealth,
         step: "Manage Your Health",
         illustration: mockup,
         description: "Track your medical history, set drug reminders, and manage chronic conditions. View lab results, treatment plans, and more in one place.",
@@ -273,7 +272,7 @@ export const howItWorks = [
 ]
 
 export const benefits = 
-    {title:"Why You Need Denurx", paragraph:"Discover the unique advantages of our telemedicine app. Denurx provides comprehensive, convenient, and secure healthcare services to ensure you receive the best care possible.  With Denurx, you can connect with experienced healthcare professionals from the comfort of your home, saving time and avoiding the hassle of traveling to a clinic. Our app offers a wide range of services, including virtual doctor consultations, home health visits, lab test requests, and medication management. We prioritize your privacy and security, ensuring that your medical data is protected at all times. Whether you need ongoing support forchronic conditions or quick access to a healthcare provider for an acute issue, Denurx is here to make quality healthcare accessible and affordable. Join the many users who trust Denurx for their healthcare needs and experience the future of medicine today. Here are some reasons why you need us", benefits:[
+    {title:"About Denurx", paragraph:"Discover the unique advantages of our telemedicine app. Denurx provides comprehensive, convenient, and secure healthcare services to ensure you receive the best care possible.  With Denurx, you can connect with experienced healthcare professionals from the comfort of your home, saving time and avoiding the hassle of traveling to a clinic. Our app offers a wide range of services, including virtual doctor consultations, home health visits, lab test requests, and medication management. We prioritize your privacy and security, ensuring that your medical data is protected at all times. Whether you need ongoing support forchronic conditions or quick access to a healthcare provider for an acute issue, Denurx is here to make quality healthcare accessible and affordable. Join the many users who trust Denurx for their healthcare needs and experience the future of medicine today. Here are some reasons why you need us", benefits:[
         {
           icon: feature_comprehensive,
           title: "Comprehensive Healthcare Services",
@@ -367,3 +366,40 @@ export const faqs = [
     answer: "If you need assistance, you can contact Denurx customer support through the app. Go to the 'Support' section and choose your preferred method of contact, such as email or live chat."
   }
 ];
+
+export const blogs = [
+  {
+    title: "The Future of Telemedicine in Africa",
+    image: service_health_tip,
+    summary: "Explore how telemedicine is transforming healthcare across Africa, providing greater access to medical services and improving patient outcomes.",
+    date: "June 14, 2024",
+    author: "Dr. Chaz",
+    content: "Telemedicine is rapidly gaining ground in Africa, offering a viable solution to bridge the gap in healthcare access. With advancements in technology, patients can now connect with healthcare providers from remote areas, receive consultations, and even get prescriptions without traveling long distances..."
+  },
+  {
+    title: "Top 5 Benefits of Using Telemedicine",
+    image: service_lab_test, 
+    summary: "Discover the top benefits of telemedicine and how it can enhance your healthcare experience by providing convenient and timely access to medical services.",
+    date: "June 10, 2024",
+    author: "Dr. Chaz",
+    content: "Telemedicine offers numerous benefits, including increased access to healthcare, convenience, cost savings, and improved patient engagement. By utilizing telemedicine platforms like Denurx, patients can receive medical consultations, book appointments, and manage their health more effectively..."
+  },
+  {
+    title: "How to Book a Virtual Doctor Appointment with Denux",
+    image: service_record, 
+    summary: "Step-by-step guide on how to book a virtual doctor appointment using the Denurx app. Ensure you get timely medical consultations from the comfort of your home.",
+    date: "June 5, 2024",
+    author: "Dr. Freedom",
+    content: "Booking a virtual doctor appointment with Denurx is easy and straightforward. In this blog, we walk you through the steps to schedule your consultation, from selecting a doctor to confirming your appointment. Follow these simple instructions to get started with your virtual healthcare journey..."
+  },
+  {
+    title: "The Role of Telemedicine in Emergency Situations",
+    image: profileImage2, 
+    summary: "Understand the critical role telemedicine plays in emergency situations, providing immediate medical attention and advice when it is needed the most.",
+    date: "June 1, 2024",
+    author: "Dr. Freedom",
+    content: "In emergency situations, time is of the essence. Telemedicine offers a lifeline by providing quick access to medical professionals who can offer immediate advice and support. Whether it's a minor injury or a serious health concern, telemedicine ensures patients receive prompt attention, potentially saving lives..."
+  },
+];
+
+
