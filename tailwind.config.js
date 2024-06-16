@@ -150,7 +150,7 @@ module.exports = {
         scrollmodern:
           "linear-gradient(0deg, rgb(20 20 17 / 60%), rgb(35 44 57 / 90%)), url('/src/assets/scrollmodern.jpg')",
         heroGradient:
-          "linear-gradient(91deg, rgb(162 162 184 / 50%), rgb(59, 43, 172)), url(/src/assets/doctor6.jpg)",
+          "linear-gradient(340deg, rgb(27 39 106), rgb(29 0 233 / 0%)), url(/src/assets/doctor6.jpg)",
         waitList:
           "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/mockup_hero.png)",
         notFoundbg:
