@@ -157,7 +157,7 @@ export const UserRegistrationForm = ({
             disabled={loading}
             className={`${
               loading ? "bg-secondary_100" : "bg-primary"
-            } rounded-[30px]  p-2  px-4 py-2 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent]  hover:bg-primary_100 focus:border-white cursor-pointer`}
+            } rounded-[30px]   px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent]  hover:bg-primary_100 focus:border-white cursor-pointer`}
           />
         </div>
       </form>
