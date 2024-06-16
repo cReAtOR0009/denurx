@@ -56,7 +56,7 @@ const Hero = () => {
         
       <div className="flex flex-col justify-center flex-1 w-[50%]">
         <h1
-          className={`${styles.h1}  text-white mt-20`}
+          className={`${styles.h1} py-4 md:py-2 lg:py-6 text-7xl sm:text-8xl md:text-6xl lg:text-6xl xl:text-8xl font-bold leading-tight  text-white mt-20`}
         >
           {HeroText[currentSlide].h1}
         </h1>
