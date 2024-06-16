@@ -23,10 +23,10 @@ const Home = () => {
       <KeyFeatures />
         {/* <MultiStepForm /> */}
       <Steps />
+      <Testimonials />
       <About />
       <Services services={services} />
       <Blog />
-      <Testimonials />
      <Form />
       <Faq />
     </div>
