@@ -13,7 +13,7 @@ export const ServiceCard = ({ icon, title, description, image }) => {
         <div
           key={title}
           id="title"
-          className="serciveCard relative rounded-[20px] sm:rounded-[50px] border-1 border-[#cacaca]  cursor-pointer hover:transition-colors transition:border max-w-[500px] hover:scale-[1.1] group transition"
+          className="serciveCard relative rounded-[20px] sm:rounded-[50px] border-1 border-[#cacaca]  cursor-pointer max-w-[500px] hover:scale-[1.1] group transition"
           onClick={() => setReadMore(!readMore)}
         >
           <img
