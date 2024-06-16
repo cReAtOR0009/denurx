@@ -19,9 +19,9 @@ const Registration = () => {
           <article className={`${styles.paragraph}`}>
             {aboutApp.textProviders}
           </article>
-          <p className={`${styles.paragraph}`}>
+          {/* <p className={`${styles.paragraph}`}>
             Join Our Healthcare Providers Waiting list below
-          </p>
+          </p> */}
           <article>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque illo
             laborum doloribus necessitatibus magni autem fugit amet! Vero quas
@@ -35,23 +35,23 @@ const Registration = () => {
           <button
          
             className={`${"bg-primary"
-            } rounded-[30px]  p-2  px-4 py-2 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] self-start  hover:bg-primary_100 focus:border-white cursor-pointer`}
+            } rounded-[30px]  p-2  px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] self-start  hover:bg-primary_100 focus:border-white cursor-pointer`}
           >Join Us Now</button>
           </HashLink>
         </div>
         <div className="relative magicpattern2 fullbgAuto">
           <div
-            className={`${styles.h2} absolute  top-2 right-2 rounded-full p-2 bg-[#939191] text-white`}
+            className={`${styles.h4} absolute  top-2 right-2 rounded-full p-[2px] sm:p-2  bg-[#939191] text-white`}
           >
             24/7
           </div>
           <div
-            className={`${styles.h2} absolute rounded-full left-2 top-1/3 md:-left-[20%] p-2 bg-primary text-white`}
+            className={`${styles.h4} absolute rounded-full left-2 top-1/3 md:-left-[20%] p-[2px] sm:p-2  bg-primary_100 text-white`}
           >
             Convinience
           </div>
           <div
-            className={`${styles.h2} absolute top-1/2 right-2 rounded-full p-2 bg-[#939191] text-white`}
+            className={`${styles.h4} absolute top-1/2 right-2 rounded-full p-[2px] sm:p-2  bg-[#939191] text-white`}
           >
             Comfort
           </div>
@@ -67,12 +67,12 @@ const Registration = () => {
       <div className="  flex  justify-between items-center  flex-wrap md:flex-nowrap">
         <div className="order-2 sm:order-1  relative magicpattern fullbg">
           <div
-            className={`${styles.h2} absolute rounded-full right-2 top-1/3 sm:top-1/4 md:-right-[20%] p-2 bg-primary text-white`}
+            className={`${styles.h4} absolute rounded-full right-2 top-1/3 sm:top-1/4 md:-right-[10%] p-[2px] sm:p-2 bg-primary_100 text-white`}
           >
             Anywhere
           </div>
           <div
-            className={`${styles.h2} absolute top-1/2 left-2 rounded-full p-2 bg-[#939191] text-white`}
+            className={`${styles.h4} absolute top-1/2 left-2 rounded-full p-[2px] sm:p-2  bg-[#939191] text-white`}
           >
             Anytime
           </div>
@@ -87,9 +87,9 @@ const Registration = () => {
           <article className={`${styles.paragraph}`}>
             {aboutApp.textPatients}
           </article>
-          <p className={`${styles.paragraph}`}>
+          {/* <p className={`${styles.paragraph}`}>
             Join Our Patient Waiting list below
-          </p>
+          </p> */}
           <article>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque illo
             laborum doloribus necessitatibus magni autem fugit amet! Vero quas
@@ -101,7 +101,7 @@ const Registration = () => {
           <HashLink to={`${baseUrl}/#userform`}>
           <button
             className={`${"bg-primary"
-            } rounded-[30px]  p-2  px-4 py-2 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] self-start  hover:bg-primary_100 focus:border-white cursor-pointer`}
+            } rounded-[30px]  p-2  px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] self-start  hover:bg-primary_100 focus:border-white cursor-pointer`}
           >Join Us Now</button>
           </HashLink>
         </div>
