@@ -66,7 +66,7 @@ const Services = () => {
           return <ServiceCard {...service} />;
         })}
       </div>
-      <MultiStepForm />
+      {/* <MultiStepForm /> */}
     </div>
   );
 };
