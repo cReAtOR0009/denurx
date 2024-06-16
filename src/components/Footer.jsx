@@ -1,12 +1,21 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { WaitlistContext } from "../context/waitlistContext";
 import { socials } from "../assets/text";
 import { telephone, mail } from "../assets/images";
 import { styles } from "../styles";
-import { useContext } from "react";
+import Privacy from "./Privacy";
+import TermAndCondition from "./TermAndCondition";
 
 const Footer = () => {
   const {showJoinwaitlist, setShowJoinwaitlist} = useContext(WaitlistContext)
+  const [showPrivacy, setShowPrivacy] = useState(false)
+  const [showTerms, setShowTerms] = useState(false)
+
+  const handleShowPrivacy = (e) => {
+    // e.preventDefault()
+    setShowPrivacy(true)
+  }
   return (
     <footer  id="footer" className={`${styles.footer_container} px-4 py-4 sm:px-10 md:py-6  lg:p-6 xl:px-20 xl:py-10  max-w-[100%] text-black border-t-2 border-[#eaeaea] bg-[#eaecf0a7] font-bold flex flex-wrap justify-between items-center`}>
       <div className="  flex justify-between items-center gap-6 w-screen md:w-[auto]" >
@@ -15,7 +24,7 @@ const Footer = () => {
       </div>
         <button
         onClick={() => setShowJoinwaitlist(true)}
-          className={`rounded-[30px]  bg-primaryBtn px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700  border border-[transparent] animate-pulse hover:animate-pop-up-infinite hover:bg-secondary_100 focus:border-white transition duration-150`}
+          className={`rounded-[30px]  bg-primary px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700  border border-[transparent] animate-pulse hover:animate-pop-up-infinite hover:bg-secondary_100 focus:border-white transition duration-150`}
         >
           Join Waitlist
         </button>
@@ -26,7 +35,7 @@ const Footer = () => {
               <img src={telephone} alt="" className="w-6 md:w-12 rounded-full"  />  +234 00000000
             </a>
             <a  href="mailto:creator@gmail.com" className="flex flex-col items-center p-2 sm:p-4 flex-1 text-center">
-              <img src={mail} alt="" className="w-6 md:w-12 rounded-full" />creator@gmail.com
+              <img src={mail} alt="" className="w-6 md:w-12 rounded-full" />Denurx@gmail.com
             </a>
           </div>
           <div className="flex justify-between flex-wrap gap-2 sm:gap-6 my-2">
@@ -39,13 +48,14 @@ const Footer = () => {
           </div>
           <div>
             <div className="flex">
-            <a href="#">Terms and Conditions &nbsp;</a> |
-            <a href="#"> &nbsp; Privacy Policy</a>
+            <p onClick={() =>setShowTerms(true)} className={`hover:underline transition`}>Terms and Conditions &nbsp;</p> |
+            <p onClick={() => setShowPrivacy(true)} className={`hover:underline transition`}> &nbsp; Privacy Policy</p>
             </div>
             Copyright &copy; 2024 Denurx
           </div>
         </div>
-      {/* <div></div> */}
+    { showPrivacy && <Privacy showPrivacy={showPrivacy} setShowPrivacy={setShowPrivacy}/>}
+    { showTerms && <TermAndCondition showTerms={showTerms} setShowTerms={setShowTerms}/>} 
     </footer>
   );
 };
