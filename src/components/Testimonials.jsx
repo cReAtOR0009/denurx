@@ -6,16 +6,12 @@ import { Sectionwrapper } from "./hoc";
 const TestimonialCard = ({ image, name, role, testament, gridPosition }) => {
 
   return (
-    <li className={`${gridPosition} testimonialsContainer relative flex flex-col gap-4 text-sm leading-6 p-4 bg-primary_20  rounded-lg text-black border-2 border-[#cacaca] hover:bg-primary hover:text-white`}>
+    <li className={`${gridPosition} testimonialsContainer relative flex flex-col gap-4 text-sm leading-6 p-4 bg-primary_20  rounded-lg text-white bg-primary opacity0 border-2 border-[#cacaca] hover:bg-primary hover:text-white`}>
       <div className="fle items-center gap-2 md:gap-4">
-        {/* <img
-          src={image}
-          alt=""
-          className="absolute -top-10 right-1/2 w-20 h-20 bg-center bg-cover border rounded-full"
-        /> */}
+       
         <div className="flex flex-col">
           <h4 className={`${styles.h4} `}>{name}</h4>
-          <span>{role}</span>
+          <span className="text-[#8b8989]">{role}</span>
         </div>
       </div>
       <p>{testament}</p>
@@ -26,7 +22,7 @@ const TestimonialCard = ({ image, name, role, testament, gridPosition }) => {
 const Testimonials = () => {
 
   return (
-    <section  id="testimonials" className={`${""}  border-[#eaeaea] bg-[#eaecf0a7]`}>
+    <section  id="testimonials" className={`${""}   `}>
       <div className={` testimonials `}>
         <div className="transition duration-500 ease-in-out transform scale-100 translate-x-0 translate-y-0 opacity-100">
           <div className="mb-6  md:mb-10">
