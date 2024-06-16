@@ -15,7 +15,7 @@ const Registration = () => {
     <div className={`${""} register`}>
       <div className=" flex  justify-between items-center flex-wrap md:flex-nowrap ">
         <div  className=" flex  flex-col gap-2 md:w-1/2 text-left px-4 py-0 sm:px-20 md:px-16">
-          <h3 className={`${styles.h3} `}>{aboutApp.titleProviders}</h3>
+          <h3 className={`${styles.h2} `}>{aboutApp.titleProviders}</h3>
           <article className={`${styles.paragraph}`}>
             {aboutApp.textProviders}
           </article>
@@ -83,7 +83,7 @@ const Registration = () => {
           />
         </div>
         <div className="order-1 sm:order-2 flex flex-col gap-2 md:w-1/2 text-left px-4 py-0  sm:px-20 md:px-16">
-          <h3 className={`${styles.h3} `}>{aboutApp.titlePatients}</h3>
+          <h3 className={`${styles.h2} `}>{aboutApp.titlePatients}</h3>
           <article className={`${styles.paragraph}`}>
             {aboutApp.textPatients}
           </article>
