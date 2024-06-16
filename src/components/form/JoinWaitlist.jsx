@@ -21,7 +21,7 @@ const JoinWaitlist = ({ setShowJoinwaitlist, showJoinwaitlist }) => {
   return (
     <section
       id="join wait list"
-      class={` h-screen px-4 py-6 sm:p-6  md:p-6 lg:p-20 xl:p-6 pt-[20%] sm:pt-[20%] md:pt-[20%] xl:pt-[0%]  absolute z-50 top-0 left-0 bottom-0 right-0 flex flex-col justify-center items-center my-0 mx-[auto]  w-[100%]  bg-[#cacacaf0] animate-pop-up overflow-y-auto`}
+      class={` h-screen px-4 py-6 sm:p-6  md:p-6 lg:p-20 xl:p-6 pt-[20%] sm:pt-[20%] md:pt-[20%] xl:pt-[0%]  fixed z-50 top-0 left-0 bottom-0 right-0 flex flex-col justify-center items-center my-0 mx-[auto]  w-[100%]  bg-[#cacacaf0] animate-pop-up overflow-y-auto`}
     >
       <div
         onClick={() => setShowJoinwaitlist(false)}
