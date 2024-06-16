@@ -71,7 +71,7 @@ const Nav = () => {
       </div>
       <button
         onClick={() => setShowJoinwaitlist(true)}
-        className={`rounded-[30px] hidden md:inline-block  bg-primaryBtn px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 animate-pulse hover:animate-pop-up-infinite focus:border-white transition duration-150`}
+        className={`rounded-[30px] hidden md:inline-block  bg-primary px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 animate-pulse hover:animate-pop-up-infinite focus:border-white transition duration-150`}
       >
         Join Waitlist
       </button>
@@ -116,13 +116,13 @@ const Nav = () => {
 
         <button
           onClick={() => setShowJoinwaitlist(true)}
-          className="rounded-[30px] bg-primaryBtn w-[fit-content]  px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] cursor-pointer animate-pulse hover:animate-pop-up-infinite hover:bg-secondary_100 focus:border-white transition duration-150"
+          className="rounded-[30px] bg-primary w-[fit-content]  px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] cursor-pointer animate-pulse hover:animate-pop-up-infinite hover:bg-secondary_100 focus:border-white transition duration-150"
         >
           Join Waitlist
         </button>
       </aside>
       {showJoinwaitlist && (
-        <JoinWaitlist setShowJoinwaitlist={setShowJoinwaitlist} />
+        <JoinWaitlist setShowJoinwaitlist={setShowJoinwaitlist} showJoinwaitlist={showJoinwaitlist} />
       )}
     </nav>
   );
