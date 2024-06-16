@@ -23,7 +23,7 @@ const TermAndCondition = ({showTerms, setShowTerms}) => {
       <div>
       <div className="w-full   overflow-y-auto max-h-[100vh] min-h-[100vh] p-4">
       <h1
-        className={`${"styles.h1"} text-2xl md:text-2xl lg:4xl xl:text-3xl font-bold  leading-tight text-center`}
+        className={`${styles.h2}  font-bold  leading-tight text-center`}
       >
        Terms and Conditions
       </h1>
