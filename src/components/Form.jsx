@@ -8,13 +8,13 @@ import { styles } from "../styles";
 const Form = () => {
   return (
     <div className={`${""}  flex-wrap justify-between`}>
-      <div id="providerform"  className="flex justify-between items-center flex-wrap lg:flex-nowrap">
+      <div id="providerform"  className="flex py-6 justify-between items-center flex-wrap lg:flex-nowrap">
         <ProviderRegistrationForm />
         <div className="w-1/2 hidden lg:flex">
           <img src={doctor7} alt="" className="h-auto rounded-[20px] sm:rounded-[50px]" />
         </div>
       </div>
-      <div id="userform" className="flex justify-between flex-wrap lg:flex-nowrap">
+      <div id="userform" className="flex py-6 justify-between flex-wrap lg:flex-nowrap">
         <div className="w-1/2 hidden lg:flex">
         <img src={patient2} alt="" className="h-auto  rounded-[20px] sm:rounded-[50px]" />
         </div>
