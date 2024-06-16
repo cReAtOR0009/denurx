@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState,useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { WaitlistContext } from "../context/waitlistContext";
@@ -38,6 +38,34 @@ const Nav = () => {
   const [active, setActive] = useState(nav[0].title);
   const [activeMenu, setActiveMenu] = useState(false);
   const { showJoinwaitlist, setShowJoinwaitlist } = useContext(WaitlistContext);
+  const [isVisible, setIsVisible] = useState(true);
+  let timeoutId = null;
+  let time = activeMenu? 5000:2000
+  
+
+  const handleScroll = () => {
+    setIsVisible(true);
+
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    timeoutId = setTimeout(() => {
+      setIsVisible(false);
+    }, time); 
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [ activeMenu]);
+
 
   const handleClick = (value) => {
     setActive(value);
@@ -45,7 +73,9 @@ const Nav = () => {
 
   return (
     <nav
-      className={`${styles.nav} fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20 flex justify-between items-center bg-white text-black font-bold animate-slide-in`}
+      className={`${styles.nav} ${
+        isVisible ? "transform translate-y-0 flex" : "transform -translate-y-full hidden"
+      } fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white text-black font-bold animate-slide-in`}
     >
       <HashLink to={`${baseUrl}`}>
         <img
