@@ -20,12 +20,12 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
             }`
           : "mr-4 md:mr-8"
       }   inline-block mb-4 uppercase  py-2 px-4 cursor-pointer hover:border-b-4 hover:border-b-secondary_100 hover:text-secondary_100`}
-      to={`${baseUrl}/#${title.toLowerCase()}`}
-      // to={
-      //   title.toLowerCase() === "services"
-      //     ? `${baseUrl}/services`
-      //     : `${baseUrl}/#${title.toLowerCase()}`
-      // }
+      // to={`${baseUrl}/#${title.toLowerCase()}`}
+      to={
+        title.toLowerCase() === "services"
+          ? `${baseUrl}/services`
+          : `${baseUrl}/#${title.toLowerCase()}`
+      }
       onClick={() => handleClick(title)}
     >
       {title}
@@ -72,9 +72,10 @@ const Nav = () => {
   };
 
   return (
+    <>
     <nav
       className={`${styles.nav} ${
-        isVisible ? "transform translate-y-0 flex" : "transform -translate-y-full hidden"
+        isVisible ? "flex" : " hidden"
       } fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white text-black font-bold animate-slide-in`}
     >
       <HashLink to={`${baseUrl}`}>
@@ -151,10 +152,11 @@ const Nav = () => {
           Join Waitlist
         </button>
       </aside>
+    </nav>
       {showJoinwaitlist && (
         <JoinWaitlist setShowJoinwaitlist={setShowJoinwaitlist} showJoinwaitlist={showJoinwaitlist} />
       )}
-    </nav>
+    </>
   );
 };
 
