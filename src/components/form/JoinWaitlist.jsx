@@ -1,8 +1,23 @@
+import { useEffect } from "react";
 import { styles } from "../../styles";
 import MailChimp from "./MailChimp";
 import MultiStepForm from "./MultistepForm";
 
-const JoinWaitlist = ({ setShowJoinwaitlist }) => {
+const JoinWaitlist = ({ setShowJoinwaitlist, showJoinwaitlist }) => {
+
+  useEffect(() => {
+    if (showJoinwaitlist) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [showJoinwaitlist]);
+
+  
   return (
     <section
       id="join wait list"
