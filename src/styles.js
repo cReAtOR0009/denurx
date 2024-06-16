@@ -7,8 +7,8 @@ export const styles = {
   nav: "px-4 md:px-10 lg:px-20 xl:px-20",
   contentPadding: "p-4 md:p-6 lg:-p-8",
   // Specific Heading Styles
-  h1: "py-4 md:py-2 lg:py-6 text-7xl sm:text-8xl md:text-8xl lg:text-6xl xl:text-8xl font-bold leading-tight",
-  h2: "text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-semibold leading-snug",
+  h1: "py-4 md:py-2 lg:py-6 text-7xl sm:text-8xl md:text-6xl lg:text-6xl xl:text-8xl font-bold leading-tight",
+  h2: "text-2xl md:text-3xl lg:text-2xl xl:text-2xl font-semibold leading-snug",
   h3: "text-xl md:text-2xl lg:text-2xl xl:text-3xl font-semibold leading-normal",
   h4: "text-base md:text-lg lg:text-lg xl:text-xl font-medium leading-normal",
 

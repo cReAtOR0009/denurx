@@ -1,5 +1,9 @@
 import { mockup, profileImage,profileImage2, doctors, doctors2, onlineConsult, chronicDisease, drugstore, gps_location, lab_equipment, medicalrecord,online_consult, online, online_service, patient_record, payment_wallet, signupMock, pills, pill_bottle, heart_disease, health_record, health_tips, calendar, lab_test,feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified, home_service, service_onlineConsultaions,service_onlineCare,service_chronic_disease, service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, mockup_check_profile, mockup_choose_use, mockup_choose_user, mockup_confirm_appointment, mockupe_search_service, mockupe_select_action, mockupe_signup, light1, light2, light3,light4,light5, facebook, linkedin, twitter, whatsapp,
- mockup1,mockup2,mockup3,mockup4, signup, findDoctor, prescription,consultations, managehealth
+ mockup1,mockup2,mockup3,mockup4, signup, findDoctor, prescription,consultations, managehealth,
+ doctor4,
+ headerDenurx,
+ patient,
+ patientcare2
  } from "./images"
 
 
@@ -11,13 +15,18 @@ export const nav = [
    {title:"Services"}, 
 ]
 
-export const HeroText = {
+export const HeroText = [{
     h1:"Your Clinic In Your Hands.",
-    tagLine:"Schedule Virtual appointments, track your Health, and connect with Healthcare providers on the go",
-    image:doctors
+    tagLine:"Access Quality Healthcare anywhere, anytime",
+    description:"Schedule Virtual appointments, track your health and connect with healthcare providers on the go",
+    image:patientcare2
 
-
-}
+}, {
+  h1: "Your Clinic In Your Hands.",
+  tagLine: "Deliver Virtual care, Grow your Practice and Earn More",
+  description:"manage your schedule, engage with patients, and access resources at your fingertips",
+  image: doctors,
+},]
 
 export const aboutApp = {
     titleProviders:" Deliver Virtual care and grow your practice",
@@ -27,19 +36,19 @@ export const aboutApp = {
     images:[service_home_service, service_lab_test, service_onlineConsultaions, ],
     keyFeatures:[{
       mockup:mockup1,
-        text:"Book Appointments & Home Services.",
+        text:"Virtual Appointment Scheduling",
         description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora sit, voluptatum quibusdam nobis dolores unde."
     },{
       mockup:  mockup2,
-      text:"Online Doctor Consultations.",
+      text:"Secure Messaging and Video Consultations",
       description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora sit, voluptatum quibusdam nobis dolores unde."
   }, {
       mockup:mockup3,
-        text:"Lab Investigations & Results.",
+        text:"Electronic health Records Access",
         description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora sit, voluptatum quibusdam nobis dolores unde."
     },{
       mockup:mockup4,
-        text:"GPS Locator.",
+        text:"Personalized patient engagement tools",
         description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora sit, voluptatum quibusdam nobis dolores unde."
     }
     //  , {
