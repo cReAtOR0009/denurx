@@ -46,10 +46,9 @@ import { baseUrl } from "../../config";
 // };
 
 const Services = ({ services }) => {
-  console.log("services:", services)
   return (
-    <section id="services" className={`${""} relative`}>
-      <div className="services flex flex-col my-4 gap-6 sm:gap-10">
+    <section id="services" className={`${""} services`}>
+      <div className=" flex flex-col my-4 gap-6 sm:gap-10">
         <div className="flex items-center justify-between flex-wrap">
           <h2 className={`${styles.h2}`}>Our High Quality Service</h2>
           <HashLink
