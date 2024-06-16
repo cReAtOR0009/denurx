@@ -1,7 +1,7 @@
 import React from "react";
 import { ProviderRegistrationForm } from "./form/ProviderForm";
 import { UserRegistrationForm } from "./form/UserRegistrationForm";
-import { doctor4 } from "../assets/images";
+import { doctor4, doctor7, patient2 } from "../assets/images";
 import { Sectionwrapper } from "./hoc";
 import { styles } from "../styles";
 
@@ -10,12 +10,14 @@ const Form = () => {
     <div className={`${""}  flex-wrap justify-between`}>
       <div id="providerform"  className="flex justify-between items-center flex-wrap lg:flex-nowrap">
         <ProviderRegistrationForm />
-        <div className="w-1/2">
-          <img src={doctor4} alt="" className="hidden lg:flex w-1/ h-auto" />
+        <div className="w-1/2 hidden lg:flex">
+          <img src={doctor7} alt="" className="h-auto rounded-[20px] sm:rounded-[50px]" />
         </div>
       </div>
       <div id="userform" className="flex justify-between flex-wrap lg:flex-nowrap">
-        <img src={doctor4} alt="" className="hidden lg:flex md:w-1/2" />
+        <div className="w-1/2 hidden lg:flex">
+        <img src={patient2} alt="" className="h-auto  rounded-[20px] sm:rounded-[50px]" />
+        </div>
         <UserRegistrationForm />
       </div>
     </div>
