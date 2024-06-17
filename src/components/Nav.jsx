@@ -12,14 +12,14 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
   return (
     <HashLink
       className={`${
-        active === title ? "border-b-4 text-secondary" : "text-black"
+        active === title ? " text-secondary" : "text-black" 
       } ${
         mobile
-          ? `mb-6 border-b-4 border-b-[transparent] ${
-              active === title ? "border-b-secondary" : "border-b-[transparent]"
+          ? `mb-6  ${
+              active === title ? "" : ""
             }`
           : "mr-4 md:mr-8"
-      }   inline-block mb-4 uppercase  py-2 px-4 cursor-pointer hover:border-b-4 hover:border-b-secondary_100 hover:text-secondary_100`}
+      }   inline-block uppercase  py-2 px-4 cursor-pointer   hover:text-secondary_100`}
       // to={`${baseUrl}/#${title.toLowerCase()}`}
       to={
         title.toLowerCase() === "services"
@@ -39,8 +39,9 @@ const Nav = () => {
   const [activeMenu, setActiveMenu] = useState(false);
   const { showJoinwaitlist, setShowJoinwaitlist } = useContext(WaitlistContext);
   const [isVisible, setIsVisible] = useState(true);
+  const [time, setTime] = useState(activeMenu? 5000:2000)
   let timeoutId = null;
-  let time = activeMenu? 5000:2000
+  // let time = activeMenu? 5000:2000
   
 
   const handleScroll = () => {
@@ -64,30 +65,45 @@ const Nav = () => {
       }
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [ activeMenu]);
+  }, [ activeMenu, time]);
 
 
   const handleClick = (value) => {
     setActive(value);
+    
   };
+  
+  const handleMouseEnter = () => {
+    setIsVisible(true)
+    setTime(100000)
+    // console.log("mouse entered")
+  }
+
+  const handleMouseLeave = () => {
+    // setIsVisible(true)
+    setTime(2000)
+    // console.log("mouse leave")
+  }
 
   return (
     <>
     <nav
+    onMouseEnter={() => handleMouseEnter()}
+    onMouseLeave={() => handleMouseLeave()}
       className={`${styles.nav} ${
         isVisible ? "flex" : " hidden"
-      } fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white text-black font-bold animate-slide-in`}
+      } fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white text-black font-bold  shadow-featuresCardShadow animate-slide-in`}
     >
       <HashLink to={`${baseUrl}`}>
         <img
           src={`/logo.png`}
           alt="Denurx Logo"
-          className="w-12 h-12 md:w-16 md:h-16"
+          className="w-12 h-12 md:w-16 md:h-16 sm:p-2"
         />
       </HashLink>
       {/* </a> */}
-      <div>
-        <ul className="hidden lg:flex">
+      <div className="flex flex-col items-center justify-center mb-">
+        <ul className="hidden lg:flex items-center ">
           {nav.map((nav, index) => (
             <NavItem
               key={index}
@@ -102,7 +118,7 @@ const Nav = () => {
       </div>
       <button
         onClick={() => setShowJoinwaitlist(true)}
-        className={`rounded-[30px] hidden md:inline-block  bg-primary px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 animate-pulse hover:animate-pop-up-infinite focus:border-white transition duration-150`}
+        className={`${styles.button_primary} hidden md:inline-block`}
       >
         Join Waitlist
       </button>
@@ -147,7 +163,7 @@ const Nav = () => {
 
         <button
           onClick={() => setShowJoinwaitlist(true)}
-          className="rounded-[30px] bg-primary w-[fit-content]  px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] cursor-pointer animate-pulse hover:animate-pop-up-infinite hover:bg-secondary_100 focus:border-white transition duration-150"
+          className={`${styles.button_primary}`}
         >
           Join Waitlist
         </button>
