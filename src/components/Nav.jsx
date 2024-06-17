@@ -75,7 +75,7 @@ const Nav = () => {
   
   const handleMouseEnter = () => {
     setIsVisible(true)
-    setTime(100000)
+    setTime(10000)
     // console.log("mouse entered")
   }
 
