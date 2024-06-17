@@ -1,4 +1,5 @@
-import React from "react";
+import {useContext} from "react";
+import { WaitlistContext } from "../context/waitlistContext";
 import { ProviderRegistrationForm } from "./form/ProviderForm";
 import { UserRegistrationForm } from "./form/UserRegistrationForm";
 import { doctor4, doctor7, patient2 } from "../assets/images";
@@ -6,6 +7,7 @@ import { Sectionwrapper } from "./hoc";
 import { styles } from "../styles";
 
 const Form = () => {
+  const {showJoinwaitlist, setShowJoinwaitlist} = useContext(WaitlistContext)
   return (
     <div className={`${""}  flex-wrap justify-between`}>
       <div id="providerform"  className="flex py-6 justify-between items-center flex-wrap lg:flex-nowrap">
@@ -28,7 +30,7 @@ const Form = () => {
             excepturi quae repellat quod repellendus tempore officiis quidem!
             Eum minima et ut.
           </article>
-          <button className={`${styles.button_primary2} self-start`}>Join Us Now</button>
+          <button  onClick={() => setShowJoinwaitlist(true)} className={`${styles.button_primary2} self-start`}>Join Us Now</button>
 
         
         </div>
@@ -58,7 +60,7 @@ const Form = () => {
             excepturi quae repellat quod repellendus tempore officiis quidem!
             Eum minima et ut.
           </article>
-          <button className={`${styles.button_primary2} self-start`}>Join Us Now</button>
+          <button  onClick={() => setShowJoinwaitlist(true)} className={`${styles.button_primary2} self-start`}>Join Us Now</button>
 
         
         </div>
