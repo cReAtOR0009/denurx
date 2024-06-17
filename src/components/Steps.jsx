@@ -75,12 +75,12 @@ const Steps = () => {
           <img
             src={doctor3}
             alt=""
-            className="hidden md:block mt-[-20px] sm:mt-[-30px] md:mt-[-50px] w-[100%] h-auto"
+            className="hidden md:block  w-[100%] h-auto"
           />
           <img
             src={doctor5}
             alt=""
-            className="block md:hidden mt-[-20px] sm:mt-[-30px] md:mt-[-50px] w-[100%] h-auto"
+            className="block md:hidden  w-[100%] h-auto"
           />
           {displayDescription && (
             <div className="absolute hidden sm:flex flex-col justify-center gap-2 p-4 h-[100%] w-[100%] inset-0 rounded-2xl sm:rounded-[50px] bg-black bg-opacity-80 animate-slide-in-up text-left">
