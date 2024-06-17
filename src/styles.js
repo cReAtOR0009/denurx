@@ -1,5 +1,6 @@
 export const styles = {
   headerContainer:"px-4 py-6 pb-0 sm:px-10 md:py-10  lg:p-20 xl:p-20 pb-0 sm:pb-0 xl:pb-2 lg:pb-2 md:pb-0",
+  serviceContainer:"px-4 py-6 pb-0 sm:px-10 md:py-10  lg:p-20 xl:p-20 pb-0 sm:pb-0 xl:pb-2 lg:pb-2 md:pb-0",
   container: "px-4 py-6 sm:px-10 md:py-10  lg:p-20 lg:py-24 xl:p-20 xl:py-28", //
   footer_container: "px-4 py-4 sm:px-10 md:py-8  lg:p-10 xl:p-20 ",
   waitlist_container: "px-4 py-6 sm:p-6  md:p-6 lg:p-20 xl:p-6",
@@ -8,6 +9,7 @@ export const styles = {
   contentPadding: "p-4 md:p-6 lg:-p-8",
   // Specific Heading Styles
   h1: "py-4 md:py-2 lg:py-6 text-7xl sm:text-8xl md:text-6xl lg:text-6xl xl:text-8xl  font-bold leading-tight",
+  h2: "py-4 md:py-2 lg:py-6 text-2xl sm:text-8xl md:text-6xl lg:text-6xl xl:text-8xl  font-bold leading-tight",
   h2: "text-2xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold leading-snug",
   h3: "text-xl md:text-2xl lg:text-2xl xl:text-2xl font-semibold leading-normal",
   h4: "text-base md:text-lg lg:text-lg xl:text-xl font-medium leading-normal",
