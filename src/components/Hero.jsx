@@ -39,7 +39,8 @@ const Hero = () => {
   return (
     <section
       key={animationKey}
-      className={`${styles.headerContainer} relative  flex justify-between items-center md:items-center flex-wrap h-[auto] md:h-[auto] lg:h-[100vh] min-h-[100vh] animate-slide-in`}
+      id="home"
+      className={`${styles.headerContainer} relative  flex justify-between items-center md:items-center flex-wrap h-[auto] md:h-[auto] lg:h-[100vh] min-h-[100vh] bg-heroGradient fullbg animate-slide-in`}
     >
       <img
         src={nextArrow}
@@ -68,13 +69,13 @@ const Hero = () => {
         </p>
         <div className="flex gap-6 sm:gap-8 sm:py-4 md:py-4 my-4">
           <HashLink to={`${baseUrl}/#start`}>
-            <button className="rounded-[30px] bg-secondary_100 opacity-90 px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:bg-[transparent] hover:border-white focus:border-white transition duration-150">
+            <button className={`${styles.button_secondary} hover:bg-[transparent] hover:border-white`}>
               Learn More
             </button>
           </HashLink>
           <button
             onClick={() => setShowJoinwaitlist(true)}
-            className="rounded-[30px] animate-pulse bg-primary outline-none px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:animate-pop-up-infinite focus:border-white transition duration-150"
+            className={`${styles.button_primary2} hover:bg-primary_100`}
           >
             Join Waitlist
           </button>
@@ -85,7 +86,7 @@ const Hero = () => {
         <img
           src={HeroText[currentSlide].image}
           alt="Telemedicine App"
-          className="h-[full] max-h-[90vh] min-h-] "
+          className="max-h-[90vh] "
         />
       </div>
     </section>
