@@ -23,6 +23,7 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
       <div
         className={`${
           index + 1 == 2 ? "w-[auto] sm:w-[100%]" : "  w-[100%] sm:w-[50%]"
+          //index + 1 == 2 ? "w-[auto] sm:w-[100%]" : ` ${index + 1 == 3 ?"w-[100%] sm:w-[100%]":"w-[100%] sm:w-[50%]"}`
         } ${index + 1 == 3 ? "order-1 sm:order-2 w-[100%]" : ""}  
        
         flex flex-col justify-betwee gap-2 h-[]   overflow-hidden`}

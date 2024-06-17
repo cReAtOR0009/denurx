@@ -479,15 +479,15 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Mullish;
-    color: #0800ff3b;
+    color: #0048ff44;
     z-index: -1;
     font-size: 400px;
 
   }
   .blog::after {
-    font-size: 70px;
+    font-size: 50px;
   }
   .register::after {
-    font-size: 70px;
+    font-size: 50px;
   }
 }

@@ -119,7 +119,7 @@ const Nav = () => {
       </div>
       <button
         onClick={() => setShowJoinwaitlist(true)}
-        className={`${styles.button_primary} hidden md:inline-block rounded-[15px]`}
+        className={`${styles.button_primar}  rounded-[15px] bg-primary px-4 py-2 sm:px-4 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-none  text-primary-700 animate-pulse hover:animate-pop-up-infinite focus:border-white transition duration-150 hidden md:inline-block `}
       >
         Join Waitlist
       </button>
@@ -164,7 +164,7 @@ const Nav = () => {
 
         <button
           onClick={() => setShowJoinwaitlist(true)}
-          className={`${styles.button_primary}`}
+          className={`${styles.button_primary} self-start`}
         >
           Join Waitlist
         </button>
