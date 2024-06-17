@@ -16,9 +16,13 @@ export const styles = {
   paragraph: "text-sm md:text-base lg:text-lg xl:text-lg",
   tip:"text-xs md:text-sm lg:text-base xl:text-base leading-tight",
   button_primary:
-    "inline-block rounded bg-primary px-6 py-4 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong",
+    "rounded-[30px]   bg-primary px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 animate-pulse hover:animate-pop-up-infinite focus:border-white transition duration-150",
+    button_primary2:
+    "rounded-[30px]  bg-primary px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700  hover:bg-primary_100 focus:border-white transition duration-150",
   button_secondary:
-    "rounded-[30px] bg-secondary_100 px-6 py-4 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150",
+    "rounded-[30px] bg-secondary_100 opacity-90 px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:bg-[transparent] hover:border-white focus:border-white transition duration-150",
+    button_secondary2:
+    "rounded-[30px] bg-secondary_100 opacity-90 px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border hover:bg-[transparent] hover:border-black hover:text-black focus:border-white transition duration-150",
 };
 
 // export {styles}
