@@ -123,12 +123,12 @@ export const servicesComplete =[
     icon: pill_bottle,  
     image: service_medic_management      
   },
-  {
-    title: "Chronic Disease Management",
-    description: "Specialized care and continuous monitoring for chronic conditions like diabetes, hypertension, and more. Our comprehensive management plans include regular check-ins, personalized treatment plans, and support from a dedicated care team. ngoing support to manage chronic illnesses effectively. Improve your quality of life with continuous monitoring and proactive management of your health.",
-    icon: heart_disease,        
-    image: service_chronic_disease      
-  },
+  // {
+  //   title: "Chronic Disease Management",
+  //   description: "Specialized care and continuous monitoring for chronic conditions like diabetes, hypertension, and more. Our comprehensive management plans include regular check-ins, personalized treatment plans, and support from a dedicated care team. ngoing support to manage chronic illnesses effectively. Improve your quality of life with continuous monitoring and proactive management of your health.",
+  //   icon: heart_disease,        
+  //   image: service_chronic_disease      
+  // },
   {
     title: "Health Records Management",
     description: "Securely store and access your medical history, lab results, prescriptions, and more. Easily share your records with healthcare providers and keep track of your health journey. Keep all your health information in one place for easy access and sharing with healthcare providers. Stay organized and ensure your medical history is always available when you need it.",
