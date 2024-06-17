@@ -88,9 +88,9 @@ const About = () => {
             onClick={() => setReadMore(!readMore)}
             className={`${
               readMore
-                ? "bg-secondary_100 group-hover:bg-primary"
-                : "bg-primary "
-            } text-white inline-block text-xxs md:text-sm rounded-full cursor-pointer p-2`}
+                ? "text-secondary_100 group-hover:underline"
+                : "text-primary "
+            } text-black underline inline-block text-xxs md:text-sm  cursor-pointer p-2 underline-offset-2 sm:underline-offset-4`}
           >
             {readMore ? "ReadLess" : "ReadMore"}
           </button>

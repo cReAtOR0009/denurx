@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Service from "../components/Services";
 import { arrow } from "../assets/images";
 import { styles } from "../styles";
@@ -39,9 +39,10 @@ const ServiceCard = ({ icon, title, description, image }) => {
             onClick={() => setReadMore(!readMore)}
             className={`${
               readMore
-                ? "bg-secondary_100 group-hover:bg-primary"
-                : "bg-primary "
-            } text-white inline-block text-xxs md:text-sm  rounded-full cursor-pointer p-2`}
+                ? "text-secondary_100 group-hover:underline"
+                : "text-primary "
+            } text-black underline inline-block text-xxs md:text-sm  cursor-pointer p-2 underline-offset-2 sm:underline-offset-4`}
+          
           >
             {readMore ? "Read less" : "Read more"}
           </button>
@@ -53,15 +54,17 @@ const ServiceCard = ({ icon, title, description, image }) => {
 };
 
 const Services = () => {
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
 
   return (
     <div
-      className={`${styles.container} mt-[100px] flex flex-col my-4 gap-6 sm:gap-10`}
+      className={`${styles.container}  flex flex-col my-4 gap-6 sm:gap-10`}
     >
       <h2 className={`${styles.h2}`}>Our High Quality Service</h2>
-      <div className="service_grid">
+      <div className="service_grid services">
         {servicesComplete.map((service) => {
           return <ServiceCard {...service} />;
         })}
