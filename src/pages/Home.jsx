@@ -16,14 +16,14 @@ import Form from "../components/Form";
 const Home = () => {
   return (
     <div>
-      <div className="bg-heroGradient fullbg">
+      {/* <div className="bg-heroGradient fullbg "> */}
         <Hero />
-      </div>
+      {/* </div> */}
       <Registration />
       <KeyFeatures />
         {/* <MultiStepForm /> */}
       <Steps />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <About />
       {/* <Services services={services} /> */}
       {/* <Blog /> */}
