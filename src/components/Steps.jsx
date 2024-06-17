@@ -57,8 +57,8 @@ const Steps = () => {
 
   return (
     <section className={`${""} steps`}>
-      <div className="flex flex-col md:flex-row flex-wrap  items-center gap-10 md:pt-20">
-        <div className="relative flex-1 flex justify-between flex-wrap gap-2 sm:gap-6 ">
+      <div className="flex flex-wrap items-center gap-10 md:pt-20">
+        <div className="relative flex-1 flex justify-between flex-wrap gap-2 sm:gap-6 p-0 sm:p-2 md:p-8 md:pt-16">
           {howItWorks.map((step, index) => (
             <StepsCard
               key={index}
@@ -75,9 +75,13 @@ const Steps = () => {
           <img
             src={doctor3}
             alt=""
-            className="hidden md:block  w-[100%] h-auto"
+            className="hidden sm:block  w-[100%] h-auto"
           />
-          
+          {/* <img
+            src={doctor5}
+            alt=""
+            className="block md:hidden mt-[-20px] sm:mt-[-30px] md:mt-[-50px] w-[100%] h-auto"
+          /> */}
           {displayDescription && (
             <div className="absolute hidden sm:flex flex-col justify-center gap-2 p-4 h-[100%] w-[100%] inset-0 rounded-2xl sm:rounded-[50px] bg-black bg-opacity-80 animate-slide-in-up text-left">
               <p className={`text-white ${styles.tip} text-left`}>
