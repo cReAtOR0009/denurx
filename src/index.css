@@ -381,21 +381,7 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   }
   /* position: relative; */
 }
-.fullbg {
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  /* background-origin: content-box; */
-  background-position: cover;
-}
 
-.fullbgAuto {
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  /* background-origin: content-box; */
-  background-position: cover;
-}
 
 .aboutGrid {
   display: grid;
