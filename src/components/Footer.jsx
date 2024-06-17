@@ -24,7 +24,7 @@ const Footer = () => {
       </div>
         <button
         onClick={() => setShowJoinwaitlist(true)}
-          className={`rounded-[30px]  bg-primary px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700  border border-[transparent] animate-pulse hover:animate-pop-up-infinite hover:bg-secondary_100 focus:border-white transition duration-150`}
+          className={`${styles.button_primary}`}
         >
           Join Waitlist
         </button>

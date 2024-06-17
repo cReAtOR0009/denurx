@@ -142,7 +142,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
           <div className="flex justify-center items-center gap-6">
           {  showBack && <button
               type="button"
-              className="inline-block flex-1 rounded-full cursor-pointer p-2 bg-secondary_100 outline-none px-4 py-2 text-xxs text-white sm:text-base font-medium border border-transparent focus:border-white hover:bg-[transparent] hover:text-black transition"
+              className={`${styles.button_secondary2} hover:border-black hover:text-black`}
               onClick={onBack}
             >
               Back
@@ -151,9 +151,9 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
           type="submit"
           value={loading ? "Joining Waitlist..." : "Join Our Wailtlist Now"}
           disabled={loading}
-          className={`${
-            loading ? "bg-secondary_100" : "bg-primary"
-          } rounded-[30px]   px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent]  hover:bg-primary_100 focus:border-white cursor-pointer`}
+          className={`${styles.button_primary2} ${
+            loading ? "bg-secondary_100" : "bg-primary" 
+          } `}
         />
           </div>
         </form>
