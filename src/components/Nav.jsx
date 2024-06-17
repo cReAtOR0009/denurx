@@ -92,7 +92,7 @@ const Nav = () => {
     onMouseLeave={() => handleMouseLeave()}
       className={`${styles.nav} ${
         isVisible ? "flex" : " hidden"
-      } fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white text-black font-bold  shadow-featuresCardShadow animate-slide-in`}
+      } fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white text-black font-bold border-b-2 border-[#0048ff44] animate-slide-in`}
     >
       <HashLink to={`${baseUrl}`}>
         <img
