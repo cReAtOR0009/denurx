@@ -53,6 +53,7 @@ const Nav = () => {
 
     timeoutId = setTimeout(() => {
       setIsVisible(false);
+      setTime(2000)
     }, time); 
   };
 
