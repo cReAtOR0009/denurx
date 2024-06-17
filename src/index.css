@@ -48,7 +48,7 @@ body {
   position: absolute;
   content: "Key Features";
   top: 0%;
-  color: rgba(190, 184, 184, 0.255);
+  color: #0048ff44;
   z-index: -1;
   /* right: 50%; */
   /* text-align: center; */
@@ -59,8 +59,9 @@ body {
 .steps::after {
   position: absolute;
   content: "Steps To Better Health";
+  /* line-height: 1; */
   top: -0%;
-  color: rgba(190, 184, 184, 0.255);
+  color: #0048ff44;
   z-index: -1;
   /* right: 50%; */
   /* text-align: left; */
@@ -69,8 +70,9 @@ body {
 .why::after {
   position: absolute;
   content: "About Denurx";
+  /* line-height: 1; */
   top: -1%;
-  color: rgba(190, 184, 184, 0.255);
+  color: #0048ff44;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -79,8 +81,9 @@ body {
 .services::after {
   position: absolute;
   content: "Our Quality Services";
+  /* line-height: 1; */
   top: -1%;
-  color: rgba(190, 184, 184, 0.255);
+  color: #0048ff44;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -89,7 +92,7 @@ body {
   position: absolute;
   content: "Blog";
   top: -1%;
-  color: rgba(190, 184, 184, 0.255);
+  color: #0048ff44;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -97,8 +100,19 @@ body {
 .register::after {
   position: absolute;
   content: "Join Us Now";
+  /* line-height: 1; */
   top: -1%;
-  color: rgba(190, 184, 184, 0.255);
+  color: #0048ff44;
+  z-index: -1;
+  /* right: 50%; */
+  font-size: 100px;
+}
+.faq::after {
+  position: absolute;
+  content: "Frequent Questions";
+  /* line-height: 1; */
+  top: -1%;
+  color: #0048ff44;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -240,7 +254,7 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   position: absolute;
   content: "Words From Others";
   top: -1%;
-  color: rgba(190, 184, 184, 0.255);
+  color: #0048ff44;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -450,23 +464,29 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   .register::after {
     font-size: 72px;
   }
+  .faq::after {
+    font-size: 72px;
+  }
 }
 
 /* Mobile Layout */
 @media (max-width: 767px) {
  .about::after {
-  font-size: 70px;
+  font-size: 50px;
   }
   .steps::after{
-    font-size: 70px;
+    font-size: 50px;
   }
   .why::after{
-    font-size: 70px;
+    font-size: 50px;
   }
   .services::after{
-    font-size: 70px;
+    font-size: 50px;
   }
-  #faq::before {
+  .faq::after {
+    font-size: 50px;
+  }
+  .faq::before {
     position: absolute;
     content: "?";
     top: 50%;
