@@ -61,10 +61,10 @@ const Services = () => {
 
   return (
     <div
-      className={`${styles.container}  flex flex-col my-4 gap-6 sm:gap-10`}
+      className={`  flex flex-col  gap-6 sm:gap-10 mt-10`}
     >
-      <h2 className={`${styles.h2}`}>Our High Quality Service</h2>
-      <div className="service_grid services">
+      <h2 className={`${"styles.h2"} text-3xl sm:text-4xl md:text-4xl lg:text-6xl  leading-tight font-semibold`}>Our High Quality Service</h2>
+      <div className="service_grid  ">
         {servicesComplete.map((service) => {
           return <ServiceCard {...service} />;
         })}
