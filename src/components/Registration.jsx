@@ -38,7 +38,7 @@ const Registration = () => {
           >Join Us Now</button>
           {/* </HashLink> */}
         </div>
-        <div className="relative magicpattern2 fullbgAuto">
+        <div className="relative magicpattern2">
           <div
             className={`${styles.h4} absolute  top-2 right-2 rounded-full p-[2px] sm:p-2  bg-[#939191] text-white`}
           >
@@ -64,7 +64,7 @@ const Registration = () => {
       </div>
       <div className="w-full h-1 bg-[#eaecf0a7] rounded my-10"></div>
       <div className="  flex  justify-between items-center  flex-wrap md:flex-nowrap">
-        <div className="order-2 sm:order-1  relative magicpattern fullbg">
+        <div className="order-2 sm:order-1  relative magicpattern">
           <div
             className={`${styles.h4} absolute rounded-full right-2 top-1/3 sm:top-1/4 md:-right-[10%] p-[2px] sm:p-2 bg-primary_100 text-white`}
           >

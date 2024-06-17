@@ -26,7 +26,7 @@ const Hero = () => {
     }, 7000);
 
     return () => clearInterval(interval);
-  }, [HeroText.length]);
+  }, [currentSlide]);
 
   const handleNext = () => {
     updateDisplayItem((currentSlide + 1) % HeroText.length);
@@ -46,13 +46,13 @@ const Hero = () => {
         src={nextArrow}
         alt="prev arrow"
         onClick={handlePrev}
-        className="absolute top-1/2 left-0 rounded-[30px]  p-2 rotate-180 text-white"
+        className="absolute animate-pulse top-1/2 left-0 rounded-[30px]  p-2 rotate-180 text-white"
       />
       <img
       src={nextArrow}
         alt="next arrow"
         onClick={handleNext}
-        className="absolute top-1/2 right-0 rounded-[30px]  p-2 text-white"
+        className="absolute animate-pulse top-1/2 right-0 rounded-[30px]  p-2 text-white"
       />
         
       <div className="flex flex-col justify-center flex-1 w-[50%]">
@@ -82,7 +82,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className=" flex-1  bg-heroMockup fullbg hidden md:flex lg:items-end w-full md:w-full h-[100%] mt-2">
+      <div className=" flex-1  bg-heroMockup bg-full  bg-no-repeat bg-center-center  hidden md:flex lg:items-end w-full md:w-full h-[100%] mt-2">
         <img
           src={HeroText[currentSlide].image}
           alt="Telemedicine App"

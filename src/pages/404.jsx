@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <div
       id="notfound"
-      className={`${styles.container} flex flex-col justify-center items-center bg-notFoundbg fullbg sm:fullbgAuto h-screen mt-20`}
+      className={`${styles.container} flex flex-col justify-center items-center bg-notFoundbg bg-cover  bg-no-repeat bg-center-center h-screen mt-20`}
     >
       <h1
         className={`text-5xl md:text-6xl lg:7xl xl:text-7xl font-bold leading-tight  text-secondary_100`}
