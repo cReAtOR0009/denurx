@@ -118,7 +118,7 @@ const Nav = () => {
       </div>
       <button
         onClick={() => setShowJoinwaitlist(true)}
-        className={`${styles.button_primary} hidden md:inline-block`}
+        className={`${styles.button_primary} hidden md:inline-block rounded-[15px]`}
       >
         Join Waitlist
       </button>
