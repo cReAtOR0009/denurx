@@ -46,13 +46,13 @@ const Hero = () => {
         src={nextArrow}
         alt="prev arrow"
         onClick={handlePrev}
-        className="absolute animate-pulse top-1/2 left-0 rounded-[30px]  p-2 rotate-180 text-white"
+        className="absolute animate-pulse top-1/2 left-0 rounded-[30px] border bg-primary border-primary  p-2 rotate-180 text-white"
       />
       <img
       src={nextArrow}
         alt="next arrow"
         onClick={handleNext}
-        className="absolute animate-pulse top-1/2 right-0 rounded-[30px]  p-2 text-white"
+        className="absolute animate-pulse top-1/2 right-0 rounded-[30px] border bg-primary border-primary  p-2 text-white"
       />
         
       <div className="flex flex-col justify-center flex-1 w-[50%]">
