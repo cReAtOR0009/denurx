@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import { HashLink } from "react-router-hash-link";
+import { WaitlistContext } from "../context/waitlistContext";
 import { Sectionwrapper } from "./hoc";
 import { styles } from "../styles";
 import { aboutApp } from "../assets/text";
 import { doctor2, patient } from "../assets/images";
-import { WaitlistContext } from "../context/waitlistContext";
-import { NavLink } from "react-router-dom";
 import { baseUrl } from "../../config";
 
 const Registration = () => {
@@ -30,14 +29,14 @@ const Registration = () => {
             excepturi quae repellat quod repellendus tempore officiis quidem!
             Eum minima et ut.
           </article>
-          <HashLink to={`${baseUrl}/#providerform`}>
+          {/* <HashLink to={`${baseUrl}/#providerform`}> */}
 
           <button
-         
-            className={`${"bg-primary"
-            } rounded-[30px]  p-2  px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] self-start  hover:bg-primary_100 focus:border-white cursor-pointer`}
+          onClick={() => setShowJoinwaitlist(true)}
+          className={`${styles.button_primary2
+          } self-start `}
           >Join Us Now</button>
-          </HashLink>
+          {/* </HashLink> */}
         </div>
         <div className="relative magicpattern2 fullbgAuto">
           <div
@@ -98,12 +97,13 @@ const Registration = () => {
             excepturi quae repellat quod repellendus tempore officiis quidem!
             Eum minima et ut.
           </article>
-          <HashLink to={`${baseUrl}/#userform`}>
+          {/* <HashLink to={`${baseUrl}/#userform`}> */}
           <button
-            className={`${"bg-primary"
-            } rounded-[30px]  p-2  px-4 py-2 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal  text-primary-700 border border-[transparent] self-start  hover:bg-primary_100 focus:border-white cursor-pointer`}
+          onClick={() => setShowJoinwaitlist(true)}
+            className={`${styles.button_primary2
+            } self-start `}
           >Join Us Now</button>
-          </HashLink>
+          {/* </HashLink> */}
         </div>
       </div>
     </div>
