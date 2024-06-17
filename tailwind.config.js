@@ -158,6 +158,13 @@ module.exports = {
         footerBg: "url(/src/assets/footerBg.jpg)",
         mockupBg:"url(/src/assets/Mockups/magicpattern-starry-night-1717534673666.png)"
       }, //notfoundbg.jpg
+      backgroundSize: {
+        'full': '100% 100%',
+        'fullAuto':'auto 100%'
+      },
+      backgroundPosition: {
+        'center-center': 'center center',
+      },
 
       gridTemplateColumns: {
         grid1Mobile: "repeat(auto-fill, minmax(300px, auto))",
@@ -230,22 +237,15 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ addUtilities }) {
-      const newUtilities = {
-        ".absolute-content::before": {
-          content: "hekko",
-          position: "absolute",
-          zIndex: 2,
-          fontSize: "40px",
+    function ({ addUtilities }) {
+      addUtilities({
+        '.bg-no-repeat': {
+          'background-repeat': 'no-repeat',
         },
-        ".absolute-content::after": {
-          content: "hekko",
-          position: "absolute",
-          fontSize: "40px",
+        '.bg-cover': {
+          'background-size': 'cover',
         },
-      };
-
-      addUtilities(newUtilities, ["responsive", "hover"]);
-    }),
+      })
+    }
   ],
 };

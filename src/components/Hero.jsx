@@ -40,7 +40,7 @@ const Hero = () => {
     <section
       key={animationKey}
       id="home"
-      className={`${styles.headerContainer} relative  flex justify-between items-center md:items-center flex-wrap h-[auto] md:h-[auto] lg:h-[100vh] min-h-[100vh] bg-heroGradient fullbg animate-slide-in`}
+      className={`${styles.headerContainer} relative  flex justify-between items-center md:items-center flex-wrap h-[auto] md:h-[auto] lg:h-[100vh] min-h-[100vh] bg-heroGradient  bg-cover  bg-no-repeat bg-center-center sm:bg-full animate-slide-in`}
     >
       <img
         src={nextArrow}
