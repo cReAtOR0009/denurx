@@ -40,7 +40,7 @@ const Hero = () => {
     <section
       key={animationKey}
       id="home"
-      className={`${styles.headerContainer} relative  flex justify-between items-center md:items-center flex-wrap h-[auto] md:h-[auto] lg:h-[100vh] min-h-[100vh] bg-heroGradient  bg-cover  bg-no-repeat bg-center-center sm:bg-full animate-slide-in`}
+      className={`${styles.headerContainer} flex justify-between items-center md:items-center flex-wrap h-[auto] lg:h-[100vh] min-h-[100vh] bg-heroGradient  bg-cover  bg-no-repeat bg-center-center sm:bg-full animate-slide-in`}
     >
       <img
         src={nextArrow}
@@ -55,9 +55,9 @@ const Hero = () => {
         className="absolute animate-pulse top-1/2 right-0 rounded-[30px] border bg-primary border-primary  p-2 text-white"
       />
         
-      <div className="flex flex-col justify-center flex-1 w-[50%]">
+      <div className="flex flex-col justify-center flex-1 w-[50%] xl:pb-20 lg:pb-10 md:pb-8 ">
         <h1
-          className={`${styles.h1} py-4 md:py-2 lg:py-6 text-7xl sm:text-8xl md:text-6xl lg:text-6xl xl:text-8xl font-bold leading-tight  text-white mt-20`}
+          className={`${styles.h1}  text-white mt-10 sm:mt-0`}
         >
           {HeroText[currentSlide].h1}
         </h1>
