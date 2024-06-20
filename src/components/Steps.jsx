@@ -30,10 +30,10 @@ const StepsCard = ({
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`flex-1 flex flex-col justify-between items-center border-2 border-[#87898c] rounded-2xl w-[100%] min-w-[100px] xl:min-w-[150px] max-w-[auto] p-2 sm:p-2 lg:p-6 h-[auto] bg-[#eaecf0a7] text-left sm:hover:scale-[1.1] transition`}
+      className={`flex-1 flex flex-col gap-2 justify-between items-center border-2 border-[#87898c] rounded-2xl   p-2 sm:p-2 lg:p-4 h-[auto] min-w-[150px bg-[#eaecf0a7] text-left sm:hover:scale-[1.1] transition`}
     >
-      <img src={icon} alt="" className="w-[50px] sm:w-[50px] h-[auto]" />
-      <h4 className={`${styles.h4}`}>{step}</h4>
+      <img src={icon} alt="" className="w-[40px] lg:w-[50px] h-[auto]" />
+      <h4 className={`${styles.h4} leading-[0]`}>{step}</h4>
       {displayContent === description && (
         <div className="absolute flex sm:hidden flex-col items-center justify-center gap-2 p-4 h-[100%] rounded-2xl w-[100%] inset-0 bg-black bg-opacity-80 animate-slide-in-up text-left">
           <span
@@ -57,8 +57,8 @@ const Steps = () => {
 
   return (
     <section className={`${""} steps`}>
-      <div className="flex flex-wrap items-center gap-10 md:pt-20">
-        <div className="relative flex-1 flex justify-between flex-wrap gap-2 sm:gap-6 p-0 sm:p-2 md:p-8 md:pt-16">
+      <div className="flex flex-wrap md:flex-nowrap items-center  ">
+        <div className=" relative flex- grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 w-[100%] md:w-[50%] gap-2 sm:gap-6 p-0 sm:p-2 ">
           {howItWorks.map((step, index) => (
             <StepsCard
               key={index}
@@ -71,11 +71,11 @@ const Steps = () => {
             />
           ))}
         </div>
-        <div className="relative flex rounded-2xl sm:rounded-[50px] magicpattern2 w-[100%] md:w-[50%]">
+        <div className="order- sm:order-[-1] lg:order-2 hidden sm:block relative flex- rounded-2xl sm:rounded-[50px] magicpattern2 bg-100 w-[100%] md:w-[50%]">
           <img
-            src={doctor3}
+            src={doctor5}
             alt=""
-            className="hidden sm:block  w-[100%] h-auto"
+            className="w-[100%] h-auto"
           />
           {/* <img
             src={doctor5}

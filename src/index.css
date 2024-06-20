@@ -143,19 +143,20 @@ body {
 .magicpattern { 
   width: auto;
   height: 100%;
-  background-size: cover;
+  /* background-size: 200%; */
   background-position: center center;
-  background-repeat: repeat;
-  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22b%22%3E%3Cstop offset=%220%25%22 stop-color=%22%230047FF%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23eaecf0%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M625 716.5Q250 933 250 500t375-216.5q375 216.5 0 433Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22url(%23b)%22 d=%22M625 716.5Q250 933 250 500t375-216.5q375 216.5 0 433Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-image: url("./pattern.svg");
 }
 .magicpattern2 { 
   width: auto;
   height: 100%;
-  background-size: cover;
+  /* background-size: 100%; */
   background-position: center center;
-  background-repeat: repeat;
-  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M625 716.5Q250 933 250 500t375-216.5q375 216.5 0 433Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22none%22 stroke=%22%23444cf7%22 stroke-width=%2240%22 d=%22M625 716.5Q250 933 250 500t375-216.5q375 216.5 0 433Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-image: url("pattern2.svg");;
 }
+
 
 
 

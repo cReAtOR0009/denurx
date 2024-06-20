@@ -13,7 +13,7 @@ const FaqCard = ({ question, answer, index }) => {
       onClick={() => setActiveFaq(!activeFaq)}
     >
       <div
-        className={`${styles.h4} p-2 md:p-2 text-primary_10 flex justify-between items-center`}
+        className={`${styles.h4}  p-2 md:p-2 text-primary_10 flex justify-between items-center`}
       >
         <p>{question}</p>{" "}
         <span className="p-1 text-xl md:text-2xl lg:text-2xl xl:text-2xl font-medium leading-normal rounded-full">

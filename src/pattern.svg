@@ -1,0 +1,14 @@
+<svg viewBox="0 0 4000 4000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="b">
+      <stop offset="0%" stop-color="#0047FF"/>
+      <stop offset="100%" stop-color="#eaecf0"/>
+    </linearGradient>
+    <clipPath id="a">
+      <path fill="currentColor" d="M2500 2866Q1000 3732 1000 2000t1500-866q1500 866 0 1732Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)">
+    <path fill="url(#b)" d="M2500 2866Q1000 3732 1000 2000t1500-866q1500 866 0 1732Z"/>
+  </g>
+</svg>

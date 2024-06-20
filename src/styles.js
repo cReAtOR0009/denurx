@@ -20,9 +20,9 @@ export const styles = {
   button_primary:
     "rounded-[15px] bg-primary px-4 py-4 sm:px-4 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-none  text-primary-700 animate-pulse hover:animate-pop-up-infinite focus:border-white transition duration-150",
     button_primary2:
-    "rounded-[15px] bg-primary px-4 py-4 sm:px-6 sm:py-[10px] text-xxs text-white sm:text-base font-medium uppercase leading-none  text-primary-700  hover:bg-primary_100 focus:border-white transition duration-150",
+    "rounded-[15px] bg-primary px-4 py-4 sm:px-6 sm:py-[15px] text-xxs text-white sm:text-sm font-medium uppercase leading-none  text-primary-700  hover:bg-primary_100 focus:border-white transition duration-150",
   button_secondary:
-    "rounded-[15px] bg-secondary_100 opacity-90 px-4 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-sm font-medium uppercase leading-none text-primary-700 border border-[transparent] hover:bg-[transparent] hover:border-white focus:border-white transition duration-150",
+    "rounded-[15px] bg-secondary_100 opacity-90 px-4 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-none text-primary-700 border border-[transparent] hover:bg-[transparent] hover:border-white focus:border-white transition duration-150",
     button_secondary2:
     "rounded-[15px] bg-secondary_100 opacity-90 px-4 py-4 sm:px-6 sm:py-[10px] text-xxs text-white sm:text-sm font-medium uppercase leading-none text-primary-700 border hover:bg-[transparent] hover:border-black hover:text-black focus:border-white transition duration-150",
 };

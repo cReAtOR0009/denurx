@@ -21,7 +21,7 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
       } `}
     >
       <div className="flex justify-between items-center p-2 w-[100%] transition-all">
-        <h3 className={`${styles.h4} lg:whitespace-nowrap `}>{title}</h3>
+        <h3 className={`${styles.h4}  lg:whitespace-nowrap `}>{title}</h3>
         <img
           src={arrow}
           alt=""
@@ -74,6 +74,13 @@ const About = () => {
       className={`why  ${""} flex flex-col flex-wrap`}
     >
       {/* <div className="flex justify-center items-center flex-wrap md:flex-nowrap flex-1 py-8 gap-6 sm:gap-10"> */}
+      <div className="block sm:hidden w-[100%] h-[100%] md:w-[auto] magicpattern bg-100 rounded-2xl sm:rounded-[50px]">
+          <img
+            src={whyDenurx}
+            alt="Denurx logo"
+            className="w-[100%] h-auto"
+          />
+        </div>
       <div
         className={`${styles.introTextContainer} flex flex-row items-center flex-wrap lg:flex-nowrap px-4 py-6 sm:py-10 sm:px-16 lg:px-20  xl:px-28 md:py-20 gap-6`}
       >
@@ -98,12 +105,12 @@ const About = () => {
         </article>
       </div>
 
-      <div className=" flex justify-between items-center flex-wrap md:flex-nowrap gap-[10%]  md:pt-16">
-        <div className="w-[100%] h-[100%] md:w-[auto] magicpattern rounded-2xl sm:rounded-[50px]">
+      <div className=" flex justify-between items-center flex-wrap md:flex-nowrap gap-[5%]  md:pt-16">
+        <div className="hidden sm:block w-[100%] h-[100%] md:w-[auto] magicpattern bg-100 rounded-2xl sm:rounded-[50px]">
           <img
             src={whyDenurx}
             alt="Denurx logo"
-            className="w-[100%] h-auto mt-[-20px] sm:mt-[-30px] md:mt-[-50px] "
+            className="w-[100%] h-auto"
           />
         </div>
         <div

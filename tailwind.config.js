@@ -160,7 +160,10 @@ module.exports = {
       }, //notfoundbg.jpg
       backgroundSize: {
         'full': '100% 100%',
-        'fullAuto':'auto 100%'
+        'fullAuto':'auto 100%',
+        '100':'100%',
+        '150':'150%',
+        '200':'200%'
       },
       backgroundPosition: {
         'center-center': 'center center',

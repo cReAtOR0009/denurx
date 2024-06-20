@@ -16,13 +16,13 @@ const Form = () => {
           <h3 className={`${styles.h2} `}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt iste quasi assumenda.
           </h3>
-          <p className={`${styles.paragraph}`}>
+          {/* <p className={`${styles.paragraph}`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+          </p> */}
           {/* <p className={`${styles.paragraph}`}>
             Join Our Healthcare Providers Waiting list below
           </p> */}
-          <article>
+          <article className={`${styles.paragraph}`}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque illo
             laborum doloribus necessitatibus magni autem fugit amet! Vero quas
             ad sit totam temporibus eveniet iste provident, labore ducimus non
@@ -46,13 +46,13 @@ const Form = () => {
           <h3 className={`${styles.h2} `}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt iste quasi assumenda.
           </h3>
-          <p className={`${styles.paragraph}`}>
+          {/* <p className={`${styles.paragraph}`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+          </p> */}
           {/* <p className={`${styles.paragraph}`}>
             Join Our Healthcare Providers Waiting list below
           </p> */}
-          <article>
+          <article className={`${styles.paragraph}`}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque illo
             laborum doloribus necessitatibus magni autem fugit amet! Vero quas
             ad sit totam temporibus eveniet iste provident, labore ducimus non
@@ -60,7 +60,7 @@ const Form = () => {
             excepturi quae repellat quod repellendus tempore officiis quidem!
             Eum minima et ut.
           </article>
-          <button  onClick={() => setShowJoinwaitlist(true)} className={`${styles.button_primary2} self-start`}>Join Us Now</button>
+          <button  onClick={() => setShowJoinwaitlist(true)} className={`${styles.button_primary2}  self-start`}>Join Us Now</button>
 
         
         </div>
