@@ -58,7 +58,7 @@ const Steps = () => {
   return (
     <section className={`${""} steps`}>
       <div className="flex flex-wrap md:flex-nowrap items-center  ">
-        <div className=" relative flex- grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 w-[100%] md:w-[50%] gap-2 sm:gap-6 p-0 sm:p-2 ">
+        <div className=" relative flex- grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 w-[100%] md:w-[50%] gap-2 sm:gap-6 p-0 sm:p-2 mt-4 sm:mt-0 ">
           {howItWorks.map((step, index) => (
             <StepsCard
               key={index}
