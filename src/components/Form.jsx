@@ -12,7 +12,7 @@ const Form = () => {
     <div className={`${""}  flex-wrap justify-between`}>
       <div id="providerform"  className="flex py-6 justify-between items-center flex-wrap lg:flex-nowrap">
         {/* <ProviderRegistrationForm /> */}
-        <div  className=" flex  flex-col gap-2 lg:w-1/2 text-left px-4 py-0 sm:px-20 md:px-16">
+        <div  className=" flex  flex-col gap-2 lg:w-1/2 text-left px-4 py-0 sm:px-6 md:px-6 lg:px-10 xl:px-16">
           <h3 className={`${styles.h2} `}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt iste quasi assumenda.
           </h3>
@@ -42,7 +42,7 @@ const Form = () => {
         <div className="w-1/2 hidden lg:flex">
         <img src={patient2} alt="" className="h-auto  rounded-[20px] sm:rounded-[50px]" />
         </div>
-        <div  className=" flex  flex-col gap-2 lg:w-1/2 text-left px-4 py-0 sm:px-20 md:px-16">
+        <div  className=" flex  flex-col gap-2 lg:w-1/2 text-left px-4 py-0 sm:px-6 md:px-6 lg:px-10 xl:px-16">
           <h3 className={`${styles.h2} `}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt iste quasi assumenda.
           </h3>
