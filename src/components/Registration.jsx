@@ -64,7 +64,7 @@ const Registration = () => {
       </div>
       <div className="w-full h-1 bg-[#eaecf0a7] rounded my-10"></div>
       <div className="register2 flex justify-center  md:justify-between items-center  flex-wrap sm:flex-nowrap">
-        <div className="order-2 sm:order-1   relative magicpattern bg-150">
+        <div className="  relative magicpattern bg-150">
           <div
             className={`${styles.h4} absolute rounded-full right-2 top-1/3 sm:top-1/4 md:-right-[10%] p-[2px] sm:p-2 bg-primary_100 text-white`}
           >
@@ -78,7 +78,7 @@ const Registration = () => {
           <img
             src={patient}
             alt=""
-            className="order-1 sm:order-2 sm:h-[300px] md:h-[400px]  lg:h-[500px] w-[full] md:w-[auto]"
+            className=" sm:h-[300px] md:h-[400px]  lg:h-[500px] w-[full] md:w-[auto]"
           />
         </div>
         <div className="order-1 sm:order-2 flex flex-col gap-2 sm:w-1/2 text-left px-4 py-0  lg:px-10">
