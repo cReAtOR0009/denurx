@@ -50,7 +50,7 @@ const Hero = () => {
         onClick={handleNext}
         className="absolute animate-pulse top-1/2 right-0 rounded-[30px] border bg-primary border-primary p-2 text-white cursor-pointer"
       />
-      <div key={animationKey} className="flex justify-between items-center flex-wrap px-4 py-6 pb-0 sm:px-10 md:py-10  lg:p-20 xl:p-20 sm:pb-0 xl:pb-2 lg:pb-2 md:pb-0 h-auto lg:h-[100vh] min-[100vh] md:min-h-[auto] xl:min-h-[100vh] animate-slide-in">
+      <div key={animationKey} className="flex justify-between items-center flex-wrap px-4 py-6 pb-0 sm:px-10 md:py-10  lg:p-20 xl:p-20 sm:pb-0 xl:pb-2 lg:pb-2 md:pb-0 h-[100vh] md:h-auto lg:h-[100vh] min-[100vh] md:min-h-[90vh] lg:min-h-[100vh] animate-slide-in">
 
       <div className="flex flex-col justify-center flex-1 w-full xl:pb-0 lg:pb-10 md:pb-8">
         <h1
