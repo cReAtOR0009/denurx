@@ -411,4 +411,109 @@ export const blogs = [
   },
 ];
 
+export const privacyPolicy = {
+  introduction: "Denurx Healthcare Private Limited ('Denurx', 'we', 'us') values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and disclose personal information from our users.",
+  
+  informationWeCollect: [
+    "Personal information (name, email, phone number, password)",
+    "Health information (medical history, conditions, medications)",
+    "Location data (GPS location, IP address)",
+    "Usage data (health history, search queries)",
+    "Payment information (credit card details, payment history)"
+  ],
+  
+  howWeUseYourInformation: [
+    "Provide and improve our services",
+    "Communicate with you about your account and services",
+    "Comply with legal and regulatory requirements",
+    "Protect the rights, property, and safety of our users and others",
+    "Personalize your experience (recommendations, offers)"
+  ],
+  
+  informationSharing: [
+    "With healthcare providers and professionals (for virtual consultations and services)",
+    "With third-party service providers (payment processing, data analysis)",
+    "In response to legal requests and subpoenas",
+    "In the event of a merger, acquisition, or asset sale"
+  ],
+  
+  dataSecurity: [
+    "We use encryption and secure servers to protect your data",
+    "We implement appropriate security measures to prevent unauthorized access"
+  ],
+  
+  yourRights: [
+    "Access and correct your personal information",
+    "Request deletion of your personal information",
+    "Object to processing of your personal information",
+    "Lodge a complaint with a supervisory authority"
+  ],
+  
+  changesToThisPolicy: "We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting a notice on our website or sending an email.",
+  
+  contactUs: "If you have questions or concerns about this Privacy Policy, please contact us at",
+  
+  acknowledgment: "By using our services, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy."
+};
 
+
+
+export const termsAndConditions = {
+  effectiveDate: "24/06/2024",
+  
+  definitions: [
+    `"Denurx" means Denurx Technology Private Limited, a company incorporated under the Companies and Allied Matters Act (CAMA) with RC number: 2010172.`,
+    `"Platform" means the Denurx website and mobile app.`,
+    `"Services" means the healthcare services provided through the Platform.`,
+    `"Users" means patients, healthcare providers, and other individuals who use the Services.`
+  ],
+
+  useOfServices: [
+    "Users must be at least 18 years old to use the Services.",
+    "Users must provide accurate and complete information.",
+    "Users are responsible for maintaining the confidentiality of their accounts."
+  ],
+
+  healthcareServices: [
+    "Healthcare providers are independent contractors and not employees of Denurx.",
+    "Denurx does not provide medical advice or diagnosis.",
+    "Users must consult a qualified healthcare professional for medical advice."
+  ],
+
+  paymentTerms: [
+    "Payment for Services is due at the time of booking.",
+    "Denurx may offer payment plans or insurance coverage."
+  ],
+
+  intellectualProperty: [
+    "Denurx owns all intellectual property rights to the Platform and Services.",
+    "Users may not reproduce, modify, or distribute our content without permission."
+  ],
+
+  disclaimerOfWarranties: [
+    "Our Services are provided 'as is' and 'as available'.",
+    "Denurx disclaims all warranties, express or implied."
+  ],
+
+  limitationOfLiability: [
+    "Denurx is not liable for damages or losses resulting from our Services.",
+    "Our liability is limited to the amount paid for Services."
+  ],
+
+  disputeResolution: [
+    "Any dispute or claim arising out of or related to these Terms and Conditions shall be resolved through arbitration in accordance with the rules of the Nigerian Arbitration and Conciliation Act (ACA).",
+    "The arbitration shall be conducted by a single arbitrator appointed by the Nigerian Arbitration and Conciliation Act (ACA).",
+    "The arbitration shall take place in Lagos, Nigeria, and the language of the arbitration shall be English.",
+    "The arbitrator's decision shall be final and binding, and may be enforced in any court of competent jurisdiction."
+  ],
+
+  governingLaw: "These Terms and Conditions are governed by the Companies and Allied Matters Act (CAMA) and the laws of the Federal Republic of Nigeria.",
+
+  changesToTermsAndConditions: [
+    "Denurx may update these Terms and Conditions at any time.",
+    "Users will be notified of significant changes.",
+    "Continued use of the Services after changes take effect will constitute acceptance of the updated Terms and Conditions."
+  ],
+
+  acknowledgment: "By using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions."
+};

@@ -1,43 +1,111 @@
-import {useEffect} from 'react'
-import { styles } from '../styles'
+import { useEffect } from "react";
+import { termsAndConditions } from "../assets/text";
+import { styles } from "../styles";
 
-const TermAndCondition = ({showTerms, setShowTerms}) => {
+const TermAndCondition = ({ showTerms, setShowTerms  }) => {
+  useEffect(() => {
+    if (showTerms) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
 
-    useEffect(() => {
-        if (showTerms) {
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = 'auto';
-        }
-    
-        return () => {
-          document.body.style.overflow = 'auto';
-        };
-      }, [showTerms]);
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showTerms]);
+
   return (
-    <div className={`h-screen fixed top-0 left-0 bottom-0 right-0 z-[100] flex flex-col justify-center items-center my-0 mx-[auto]  w-[100%]  bg-[#cacacaf0] animate-pop-up overflow-y-auto`}>
-      <div onClick={() => setShowTerms(false)} class="fixed z-50 right-0 top-2 p-2  mr-4 space-y-2 group group-hover:scale-[1.1] select-none cursor-pointer">
-        <span class="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-black transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
-        <span class="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-black transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
-      </div>
-      <div>
-      <div className="w-full   overflow-y-auto max-h-[100vh] min-h-[100vh] p-4">
-      <h1
-        className={`${styles.h2}  font-bold  leading-tight text-center`}
+    <div
+      className={`mb-10 h-[100vh] fixed top-0 left-0 bottom-0 right-0 z-[100] pt-[2% flex flex-col justify-center items-center my-0 mx-[auto]  w-[100%]  bg-[#cacacaf0] animate-pop-up `}
+    >
+      <div
+        onClick={() => setShowTerms(false)}
+        className="fixed z-50 right-0 top-2 p-2  mr-0 sm:mr-4 space-y-2 group group-hover:scale-[1.1] select-none cursor-pointer"
       >
-       Terms and Conditions
+        <span className="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-black transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
+        <span className="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-black transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
+      </div>
+      <div className="pt-20 ">
+
+      <h1
+        className={`${styles.h2}  font-bold  leading-tight text-center px-2 sm:px-0`}
+      >
+        TERMS AND CONDITIONS
       </h1>
-        <p className={`${styles.paragraph} text-black text-center`}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit consequatur maiores sit! Itaque deserunt quo in animi repudiandae officiis dolore quia esse voluptates illo ducimus deleniti sint, a ipsum eius incidunt consequuntur dignissimos aperiam quaerat obcaecati eligendi unde libero? Dolore vel porro quidem vitae delectus possimus dicta officiis veritatis itaque temporibus ullam, dolorem recusandae, veniam omnis dolores eos dolorum eius unde sunt. Rerum dolor illo corrupti sed itaque, perspiciatis non at neque sint mollitia quasi quaerat quis pariatur fugiat optio fugit, aspernatur consequatur culpa sequi. Saepe quidem a numquam enim ut quasi, mollitia modi odit harum. Ex, quasi. Odit ipsam asperiores voluptatibus consectetur, temporibus praesentium velit? Architecto sunt, ratione molestias iure aspernatur esse ex magnam sapiente consequuntur asperiores ea, cupiditate fugit ducimus autem, excepturi facere velit repellat similique ad. Blanditiis, libero ut minima delectus eveniet illum repudiandae ipsa perspiciatis, nemo amet tempore ad eos quibusdam explicabo, nobis iste voluptas consequatur rerum. Nemo, id. Blanditiis quis est error dicta provident eos, iste, minus recusandae ab culpa cum nam esse! Fugit, perspiciatis mollitia! Amet blanditiis, suscipit provident assumenda id quisquam nesciunt esse, ut fuga quas iste nobis cupiditate odit corporis totam aliquam qui aspernatur veniam dignissimos voluptatum, iusto eligendi cum enim aliquid. Placeat soluta molestias accusamus fugit ab similique natus libero quos, quisquam cum ipsam dolor velit cupiditate recusandae sapiente porro necessitatibus doloribus aspernatur? Aliquid culpa id suscipit asperiores nemo obcaecati exercitationem officiis. Voluptates odio praesentium explicabo laudantium quae, at velit nisi qui eum doloribus aliquid a? Cum obcaecati quaerat suscipit minima debitis eos iusto magnam similique rem nam, et sapiente magni expedita? Aut earum delectus, saepe alias amet, fuga quisquam debitis dignissimos molestias repudiandae quis voluptatibus repellendus quod non veritatis cumque. Voluptatibus iste excepturi debitis repellat, dolorum molestias quos aliquid facilis, nisi, adipisci fugit vel. Dolore deserunt omnis minus minima. Aperiam quod ducimus iusto eum distinctio, odio quas dicta sed similique, perferendis facere ea unde maxime saepe magnam voluptate dignissimos totam laudantium mollitia! Mollitia voluptates ut, optio perferendis officiis magnam veritatis architecto aut, provident fugiat dolores nulla rerum exercitationem excepturi. Id aperiam iste corrupti cumque, alias rerum, hic commodi quam ut porro nesciunt est temporibus. Eveniet natus possimus reiciendis maxime odit ullam eum similique! Quis, quas blanditiis nostrum sed in necessitatibus quibusdam quos ipsa dicta nesciunt dolor consectetur error vel? Ratione, nihil similique! Vitae tenetur ipsam unde est distinctio quod non id ut sit esse, suscipit vero tempora, iure earum amet dolores atque consectetur iste minima perspiciatis voluptatibus veritatis rem! Error incidunt magni ullam nam molestiae soluta fugiat alias quasi distinctio voluptatum quae cupiditate labore aperiam ipsa eaque hic cumque ea commodi molestias aliquid illum, quaerat nisi. Autem sequi obcaecati beatae laudantium incidunt odio magnam reprehenderit distinctio quaerat libero quasi quas ab minima, similique earum magni natus impedit repellat accusantium perferendis. Perspiciatis, tempore sapiente adipisci nisi voluptatum dolor quas rem! Corporis, consectetur nihil! Voluptas impedit, veritatis quam amet sequi nisi quos unde nam est. Odit, eaque ab. Facilis non earum voluptates? Quod odio harum sit, maiores quaerat ipsa sed laboriosam iste?
-      </p> 
+      <div className="w-full h-1 bg-[#eaecf0a7] rounded my-1"></div>
+      </div>
+      <div
+        className={`${styles.container}  w-full   overflow-y-auto max-h-[100vh] min-h-[100vh] py-10 `}
+      >
+        {/* <div></div */}
+        <div>
+          <h3 className={`${styles.h3}`}>Definitions</h3>
+          {termsAndConditions.definitions.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </div>
+        <div>
+          <h3 className={`${styles.h3}`}>Use of Services</h3>
+          {termsAndConditions.useOfServices.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </div>
+        <div>
+          <h3 className={`${styles.h3}`}>Healthcare Services</h3>
+          {termsAndConditions.healthcareServices.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </div>
+        <div>
+          <h3 className={`${styles.h3}`}>Payment Terms</h3>
+          {termsAndConditions.paymentTerms.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </div>
+        <div>
+          <h3 className={`${styles.h3}`}>Intellectual Property</h3>
+          {termsAndConditions.intellectualProperty.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </div>
+        <div>
+          <h3 className={`${styles.h3}`}>Disclaimer of Warranties</h3>
+          {termsAndConditions.disclaimerOfWarranties.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </div>
+        <div>
+          <h3 className={`${styles.h3}`}>Limitation of Liability</h3>
+          {termsAndConditions.limitationOfLiability.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}{" "}
+        </div>
+        <div>
+          <h3 className={`${styles.h3}`}>Dispute Resolution</h3>
+          {termsAndConditions.disputeResolution.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}{" "}
+        </div>
+        <div>
+          <h3 className={`${styles.h3}`}>Governing Law</h3>
+          {termsAndConditions.governingLaw}
+        </div>
+        <div>
+          <h3 className={`${styles.h3}`}>Changes to Terms and Conditions</h3>
+          {termsAndConditions.changesToTermsAndConditions.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}{" "}
+        </div>
+        <div className="pb-10 md:pb-0">
+          <h3 className={`${styles.h3}`}>Aknowledgement</h3>
+          {termsAndConditions.acknowledgment}
+        </div>
       </div>
 
-     
-      </div>
-     
-     
+      {/* </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default TermAndCondition
+export default TermAndCondition;
