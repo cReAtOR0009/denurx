@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { privacyPolicy } from "../assets/text";
 import { styles } from "../styles";
+import { Link } from "react-router-dom";
+import { baseUrl } from "../../config";
 
 const Privacy = ({ showPrivacy, setShowPrivacy }) => {
   useEffect(() => {
@@ -75,14 +77,14 @@ const Privacy = ({ showPrivacy, setShowPrivacy }) => {
         <div>
           <h3 className={`${styles.h3}`}>Contact Us</h3>
           {privacyPolicy.contactUs}{" "}
-          <a
-            href="https://support@denurx.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to={`${baseUrl}/support@denurx.com`}
+            // target="_blank"
+            // rel="noopener noreferrer"
             className="underline"
           >
             support@denurx.com
-          </a>
+          </Link>
         </div>
         <div className="pb-10 md:pb-0">
           <h3 className={`${styles.h3}`}>Aknowledgement</h3>
