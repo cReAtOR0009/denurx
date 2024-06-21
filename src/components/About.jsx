@@ -74,7 +74,7 @@ const About = () => {
       className={`why  ${""} flex flex-col flex-wrap`}
     >
       {/* <div className="flex justify-center items-center flex-wrap md:flex-nowrap flex-1 py-8 gap-6 sm:gap-10"> */}
-      <div className="block sm:hidden w-[100%] h-[100%] md:w-[auto] magicpattern bg-120 rounded-2xl sm:rounded-[50px]">
+      <div className="block sm:hidden w-[100%] h-[100%] md:w-[auto] magicpattern bg-130 rounded-2xl sm:rounded-[50px]">
           <img
             src={whyDenurx}
             alt="Denurx logo"
@@ -106,7 +106,7 @@ const About = () => {
       </div>
 
       <div className=" flex justify-between items-center flex-wrap md:flex-nowrap gap-[5%]  md:pt-16">
-        <div className="hidden sm:block w-[100%] h-[100%] md:w-[auto] magicpattern bg-100 rounded-2xl sm:rounded-[50px]">
+        <div className="hidden sm:block w-[100%] h-[100%] md:w-[auto] magicpattern bg-130 sm:bg-120 rounded-2xl sm:rounded-[50px]">
           <img
             src={whyDenurx}
             alt="Denurx logo"

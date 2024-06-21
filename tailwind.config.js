@@ -136,7 +136,8 @@ module.exports = {
       24: "6rem", // 96px
       28: "12rem", // 192px
     },
-    extend: {
+    extend: 
+    {
       backgroundImage: {
         primaryBtn:
           "linear-gradient(to right, #B90000 50%, hsl(241.65deg 100% 50% / 100%) 0%)", //linear-gradient(to right, hsl(352deg 100% 61.66%) 30%, hsl(241.65deg 100% 50% / 61%) 100%)
@@ -163,6 +164,7 @@ module.exports = {
         'fullAuto':'auto 100%',
         '100':'100%',
         '120':'120%',
+        '130':'130%',
         '150':'150%',
         '200':'200%'
       },
