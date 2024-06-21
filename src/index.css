@@ -109,7 +109,7 @@ body {
 }
 .faq::after {
   position: absolute;
-  content: "Frequent Questions";
+  content: "Answers";
   /* line-height: 1; */
   top: -1%;
   color: #0048ff44;
@@ -459,19 +459,19 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
 /* Mobile Layout */
 @media (max-width: 767px) {
  .about::after {
-  font-size: 50px;
+  font-size: 40px;
   }
   .steps::after{
-    font-size: 50px;
+    font-size: 40px;
   }
   .why::after{
-    font-size: 50px;
+    font-size: 40px;
   }
   .services::after{
-    font-size: 50px;
+    font-size: 40px;
   }
   .faq::after {
-    font-size: 50px;
+    font-size: 40px;
   }
   .faq::before {
     position: absolute;
@@ -486,9 +486,9 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
 
   }
   .blog::after {
-    font-size: 50px;
+    font-size: 40px;
   }
   .register::after {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
