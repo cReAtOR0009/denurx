@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className={`${""}  bg-heroGradient bg-cover bg-no-repeat bg-center-center relative`}
+      className={`${""}  bg-heroGradient bg-cover bg-no-repeat bg-center-center dark:bg-heroGradientDark relative`}
     >
       <img
         src={nextArrow}
@@ -54,7 +54,7 @@ const Hero = () => {
 
       <div className="flex flex-col justify-center flex-1 w-full xl:pb-0 lg:pb-10 md:pb-8">
         <h1
-          className={`${styles.h1} py-4 md:py-2 lg:py-4 text-7xl sm:text-8xl md:text-6xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white mt-10 sm:mt-0`}
+          className={`${styles.h1} py-4 md:py-2 lg:py-4 text-7xl sm:text-8xl md:text-6xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white dark:text-dark-text mt-10 sm:mt-0`}
         >
           {HeroText[currentSlide].h1}
         </h1>

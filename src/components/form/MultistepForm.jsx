@@ -34,7 +34,7 @@ const MultiStepForm = ({displayForm, setDisplayForm}) => {
     <div
       className={`${
         displayForm ? "flex" : "flex"
-      } justify-center items-center  z-50 w-full sm:w-full inline  min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 p-2 rounded-md sm:rounded-xl text-[#000000] bg-white transition`}
+      } justify-center items-center  z-50 w-full sm:w-full inline  min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 p-2 rounded-md sm:rounded-xl text-[#000000] bg-white  dark:bg-dark-background3 transition`}
     >
       <div className=" sm:p-8 w-[100%] sm:min-w-[30vw] sm:max-w-[600px]">
         {step === 1 && (
@@ -63,7 +63,7 @@ const MultiStepForm = ({displayForm, setDisplayForm}) => {
 
 const StepOne = ({ onProviderSelection }) => (
   <div className={`animate-slide-in text-black text-center`}>
-    <h2 className="text-2xl font-bold mb-2">Are you a healthcare provider?</h2>
+    <h2 className="text-2xl font-bold mb-2 text-black dark:text-dark-text">Are you a healthcare provider?</h2>
     <div className="flex justify-center items-center gap-6 text-center">
       <button
         className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white border border-[transparent] sm:text-base font-medium  focus:border-white`}

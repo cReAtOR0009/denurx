@@ -30,14 +30,14 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
     };
   
     return (
-      <div id="" className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white border-[#cacaca] transition">
-        <h2 className={`${styles.h4} font-semibold  text-center`}>
+      <div id="" className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav border-[#cacaca] transition">
+        <h2 className={`${styles.h4}  font-semibold  text-center`}>
           Provider Registration
         </h2>
-        <form onSubmit={handleSubmit} className={`relative flex flex-col gap-2 p-4 w-[100%] min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2  text-[#000000] bg-white  animate-slide-in`}>
+        <form onSubmit={handleSubmit} className={`relative flex flex-col gap-2 p-4 w-[100%] min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2  text-[#000000] bg-white dark:bg-dark-backgroundNav  animate-slide-in`}>
           <div className="">
-            <label className="block text-gray-700" htmlFor="name">
-              Name
+            <label  className={`dark:text-white`} htmlFor="name">
+              Full Name
             </label>
             <input
               type="text"
@@ -47,11 +47,11 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
               placeholder="input your name here"
               value={providerData.name}
               onChange={handleChange}
-              className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-[#eaecf0a7]  focus:border-white"
+              className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
             />
           </div>
           <div className="">
-            <label className="block text-gray-700" htmlFor="gender">
+            <label  className={`text-black dark:text-white`} htmlFor="gender">
               Gender
             </label>
             <select
@@ -60,7 +60,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
               required
               value={providerData.gender}
               onChange={handleChange}
-              className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af]  sm:text-base p-2 outline-none border border-[transparent] bg-[#eaecf0a7]  focus:border-white"
+              className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav n  focus:border-white"
             >
               <option value="">select your Gender</option>
               <option value="male">male</option>
@@ -69,7 +69,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
           </div>
   
           <div className="">
-            <label className="block text-gray-700" htmlFor="professionalTitle">
+            <label className={`text-black dark:text-white`} htmlFor="professionalTitle">
               Professional Title
             </label>
             {!isOtherSelected && (
@@ -79,7 +79,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
                 required
                 value={providerData.professionalTitle}
                 onChange={handleChange}
-                className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] sm:text-base p-2 outline-none border border-[transparent] bg-[#eaecf0a7]  focus:border-white"
+                className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav n  focus:border-white"
               >
                 <option value="">Select your professional title</option>
                 <option value="doctor">Doctor</option>
@@ -102,13 +102,13 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
                 value={providerData.professionalTitle}
                 placeholder="Please input your professional title"
                 onChange={handleChange}
-                className="w-full my-4 p-2 border  rounded text-black"
+                className="w-full my-4 p-2 border  rounded text-black dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav"
               />
             )}
           </div>
   
           <div className="">
-            <label className="block text-gray-700" htmlFor="affiliations">
+            <label className={`text-black dark:text-white`} htmlFor="affiliations">
               Professional Affiliations
             </label>
             <input
@@ -119,12 +119,12 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
               placeholder="Medical Facility you work with"
               value={providerData.affiliations}
               onChange={handleChange}
-              className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-[#eaecf0a7]  focus:border-white"
+              className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav n  focus:border-white"
             />
           </div>
   
           <div className="">
-            <label className="block text-gray-700" htmlFor="email">
+            <label className={`text-black dark:text-white`} htmlFor="email">
               Email
             </label>
             <input
@@ -135,7 +135,7 @@ export const ProviderRegistrationForm = ({ onBack, onSubmit, showBack = false })
               placeholder="input your email here"
               value={providerData.email}
               onChange={handleChange}
-              className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-[#eaecf0a7]  focus:border-white"
+              className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
             />
           </div>
   

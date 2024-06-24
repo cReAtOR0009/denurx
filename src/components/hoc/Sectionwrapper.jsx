@@ -6,7 +6,7 @@ const Sectionwrapper = (Component, idName) =>
       return (
         <section
          
-          className={`${styles.container} relative`}
+          className={`${styles.container} relative dark:bg-dark-containerBg`}
         >
           <span className='hash-span' id={idName}>
             &nbsp;

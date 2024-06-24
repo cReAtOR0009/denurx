@@ -16,7 +16,7 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
   return (
     <div
       onClick={handleShowMore}
-      className={`flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xln border-2 p-2 sm:p-4 lg:p-6 pl-0 min-w-[250px] border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada]  text-black  group animate-slide-in  ${
+      className={`flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xln border-2 p-2 sm:p-4 lg:p-6 pl-0 min-w-[250px] border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada] dark:bg-dark-background3  text-black  group animate-slide-in  ${
         !showMore ? "hover:scale-[1.1] transition" : ""
       } `}
     >

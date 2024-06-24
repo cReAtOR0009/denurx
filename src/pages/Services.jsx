@@ -23,14 +23,14 @@ const ServiceCard = ({ icon, title, description, image }) => {
       <img
         src={image}
         alt=""
-        className="w-[100%] rounded-[20px] sm:rounded-[50px] "
+        className="w-[100%] rounded-[20px] sm:rounded-[50px] min-h-[auto] sm:max-h-[250px] sm:min-h-[300px] "
       />
       {/* <img   src={arrow} alt="" className="absolute top-0 right-0 z-10 w-[40px] sm:w-[80px] lg:w-[80px] xl:w-[80px] cursor-pointer rounded-full hover:scale-[1.1] transition" /> */}
       <div className="">
         <img
           src={icon}
           alt={`${title}`}
-          className="mt-[-12%] w-8 lg:w-20 md:w-20"
+          className="mt-[-12%] w-8 lg:w-20 md:w-20 "
         />
         <h3 className={`${styles.h3} text-black`}>{title}</h3>
         <p className={`${styles.paragraph} text-black`}>
@@ -63,7 +63,7 @@ const Services = () => {
     <div
       className={`  flex flex-col  gap-6 sm:gap-10 mt-10`}
     >
-      <h2 className={`${"styles.h2"} text-3xl sm:text-4xl md:text-4xl lg:text-6xl  leading-tight font-semibold`}>Our High Quality Service</h2>
+      <h2 className={`${"styles.h2"} text-3xl sm:text-4xl md:text-4xl lg:text-6xl text-white dark:text-dark  leading-tight font-semibold`}>Our High Quality Service</h2>
       <div className="service_grid  ">
         {servicesComplete.map((service) => {
           return <ServiceCard {...service} />;

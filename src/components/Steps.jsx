@@ -30,7 +30,7 @@ const StepsCard = ({
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`flex-1 flex flex-col gap-2 justify-between items-center border-2 border-[#87898c] rounded-2xl   p-2 sm:p-2 lg:p-4 h-[auto] min-w-[150px bg-[#eaecf0a7] text-left sm:hover:scale-[1.1] transition`}
+      className={`flex-1 flex flex-col gap-2 justify-between items-center border-2 border-[#87898c] rounded-2xl   p-2 sm:p-2 lg:p-4 h-[auto] min-w-[150px bg-[#eaecf0a7] dark:bg-dark-background3 text-left sm:hover:scale-[1.1] transition`}
     >
       <img src={icon} alt="" className="w-[40px] lg:w-[50px] h-[auto]" />
       <h4 className={`${styles.h4} leading-[0]`}>{step}</h4>

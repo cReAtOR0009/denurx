@@ -86,20 +86,20 @@ export const UserRegistrationForm = ({
   };
 
   return (
-    <div id="" className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white border-[#cacaca] transition">
+    <div id="" className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav  border-[#cacaca] transition">
       <h2 className={`${styles.h4} font-semibold mb-4 text-center`}>
         User Registration
       </h2>
       <form
         action="  POST"
-        className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[250px] sm:min-w-[30vw] sm:max-w-[600px] my-2 text-[#000000]  bg-white  animate-slide-in"
+        className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[250px] sm:min-w-[30vw] sm:max-w-[600px] my-2 text-[#000000]  bg-white dark:bg-dark-backgroundNav  animate-slide-in"
         onSubmit={handleSubmit}
       >
         {response.display && (
           <div
             className={`${
               response.error
-                ? "bg-secondary_100 text-white"
+                ? "bg-secondary_100 text-white "
                 : "transparentOverlay text-black"
             } relative p-4 sm:p-10 rounded-md animate-slide-in `}
           >
@@ -113,28 +113,28 @@ export const UserRegistrationForm = ({
           </div>
         )}
          <div className="flex flex-col justify-center items-start w-[auto]">
-          <label htmlFor="fullname">Full Name:</label>
+          <label htmlFor="fullname" className={`dark:text-white`}>Full Name:</label>
           <input
             type="text"
             name="fullname"
             id="fullname"
             required
             placeholder="Enter your full name"
-            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-[#eaecf0a7]  focus:border-white"
+           className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
             value={form.fullname}
             onChange={handleFormChange}
           />
         </div>
         
         <div className="flex flex-col justify-center items-start w-[auto]">
-          <label htmlFor="email">Email Address:</label>
+          <label htmlFor="email"  className={`dark:text-white`}>Email Address:</label>
           <input
             type="email"
             name="email"
             id="email"
             required
             placeholder="Enter your email address"
-            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-[#eaecf0a7]  focus:border-white"
+             className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
             value={form.email}
             onChange={handleFormChange}
           />

@@ -11,7 +11,7 @@ const Registration = () => {
   const {showJoinwaitlist, setShowJoinwaitlist} = useContext(WaitlistContext)
 
   return (
-    <div className={`${""} register`}>
+    <div className={`${""} register  dark:bg-dark-bg`}>
       <div className=" flex justify-center  md:justify-between  items-center flex-wrap sm:flex-nowrap ">
         <div  className=" order-2 sm:order-1 flex  flex-col gap-2 sm:w-1/2 text-left px-4 py-0 lg:px-10">
           <h3 className={`${styles.h2} `}>{aboutApp.titleProviders}</h3>

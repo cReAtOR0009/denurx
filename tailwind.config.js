@@ -102,6 +102,26 @@ module.exports = {
       "gray-100": "#f0f0f0",
       "gray-200": "#333333",
       black: "#000000",
+
+      dark: {
+        text: '#ffffff',
+        white: '#ffffff',
+        dark: '#000000',
+        containerBg:"#000000d4",
+        hoverbg:"#1e3e92",
+        inputbg:"#2a2b2ca7",
+        borderDark:"#eaeaea3b",
+        inputborder:"#eaeaeade",
+        background: '#eaecf0a7',
+        backgroundNav: '#46484b',
+        backgroundHero:"linear-gradient(153deg, rgb(60 60 64), rgb(45 44 47 / 71%)), url(/src/assets/doctor6.jpg)",
+        background2: '#0047ff1c',
+        background3: '#f3f3f438',
+        background4: '#1a202c',
+        primary: '#4a5568',
+        secondary: '#2d3748',
+        // Add more custom dark mode colors as needed
+      },
     },
     fontSize: {
       xxs: "0.625rem", // 10px
@@ -152,13 +172,20 @@ module.exports = {
           "linear-gradient(0deg, rgb(20 20 17 / 60%), rgb(35 44 57 / 90%)), url('/src/assets/scrollmodern.jpg')",
         heroGradient:
           "linear-gradient(340deg, rgb(27 39 106), rgb(29 0 233 / 0%)), url(/src/assets/doctor6.jpg)",
+          heroGradientDark:
+          "linear-gradient(153deg, rgb(60 60 64), rgb(45 44 47 / 71%)), url(/src/assets/doctor6.jpg)",
         waitList:
           "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/mockup_hero.png)",
         notFoundbg:
           "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/notfoundbg.jpg)", //footerBg.jpg//footerBg.jpg
         footerBg: "url(/src/assets/footerBg.jpg)",
-        mockupBg:"url(/src/assets/Mockups/magicpattern-starry-night-1717534673666.png)"
-      }, //notfoundbg.jpg
+        mockupBg:"url(/src/assets/Mockups/magicpattern-starry-night-1717534673666.png)",
+        "dark-bg":"#000000",
+
+        dark:{
+          heroGradient:"linear-gradient(153deg, rgb(60 60 64), rgb(45 44 47 / 71%)), url(/src/assets/doctor6.jpg)",
+        }
+      }, 
       backgroundSize: {
         'full': '100% 100%',
         'fullAuto':'auto 100%',

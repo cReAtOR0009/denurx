@@ -5,25 +5,25 @@ import { styles } from "../styles";
 import { aboutApp } from "../assets/text";
 import { doctor2, patient } from "../assets/images";
 
-
-
-
-
 const FeaturesCard = ({ text, mockup, description, index }) => {
   return (
     <div
       className={`feature${
         index + 1
-      } relative flex  justify-between items-center flex-wrap sm:flex-nowrap border border-[#eaeaea]  ${
+      } relative flex  justify-between items-center flex-wrap sm:flex-nowrap border border-[#eaeaea] dark:border-dark-borderDark  ${
         index + 1 == 2 ? "flex-col justify-center" : "flex-row"
       } 
       ${index + 1 == 3 ? "flex-wrap md:flex-wrap lg:flex-nowrap" : ""}
-      justify-between p-4 md:p-10 pb-0 sm:pb-0 md:pb-0 rounded-[50px] gap-4  h-[100%] w-[100%]  overflow-hidde bg-mockupB bg-[#eaecf0a7]`}
+      justify-between p-4 md:p-10 pb-0 sm:pb-0 md:pb-0 rounded-[30px] md:rounded-[50px] gap-4  h-[100%] w-[100%]  overflow-hidde bg-mockupB bg-[#eaecf0a7] dark:bg-dark-background2`}
     >
       <div
         className={`${
           // index + 1 == 2 ? "w-[auto] sm:w-[100%]" : "  w-[100%] sm:w-[50%]"
-          index + 1 == 2 ? "w-[auto] sm:w-[100%]" : ` ${index + 1 == 3 ?"w-[100%] sm:w-[100%]":"w-[100%] sm:w-[50%]"}`
+          index + 1 == 2
+            ? "w-[auto] sm:w-[100%]"
+            : ` ${
+                index + 1 == 3 ? "w-[100%] sm:w-[100%]" : "w-[100%] sm:w-[50%]"
+              }`
         } ${index + 1 == 3 ? "order-1 sm:order-2 w-[100%]" : ""}  
        
         flex flex-col justify-betwee gap-2 h-[]   overflow-hidden`}
@@ -43,8 +43,12 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
           //   index + 1 == 2 ? "h-[150px] sm:h-[auto]" : ""
           // } w-[auto] h-[100px] lg:h-[200px] xl:h-[200px]  max-w-[auto] `}
           className={`${
-            index + 1 == 2
+            index + 1 == 1
+              ? "w-[auto] h-[200px] lg:h-[200px] xl:h-[250px]  max-w-[auto]"
+              : index + 1 == 2
               ? "h-[200px] sm:h-[200px]  xl:h-[350px]"
+              : index + 1 == 3
+              ? "w-[auto] h-[200px] lg:h-[200px] xl:h-[250px] w-[300px md:w-[300px] lg:w-[300px] xl:w-[350px]   max-w-[auto]"
               : "w-[auto] h-[200px] lg:h-[200px] xl:h-[250px]  max-w-[auto]"
           }  `}
         />
@@ -61,7 +65,7 @@ const KeyFeatures = () => {
       className={`${""}about    z-1 text-black bg lg:h-[100vh overflow-hidden`} //bg-[#939191]_200
     >
       {/* <Registration /> */}
-     
+
       <div className=" flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-   ">
         <div className="flex flex-col gap-6 sm:gap-10">
           <div className="">

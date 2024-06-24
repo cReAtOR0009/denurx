@@ -17,7 +17,7 @@ const Footer = () => {
     setShowPrivacy(true)
   }
   return (
-    <footer  id="footer" className={`${styles.footer_container} px-4 py-4 sm:px-10 md:py-6  lg:p-6 xl:px-20 xl:py-10  max-w-[100%] text-black border-t-2 border-[#eaeaea] bg-[#eaecf0a7] font-bold flex flex-wrap justify-between items-center`}>
+    <footer  id="footer" className={`${styles.footer_container} ${styles.paragraph} px-4 py-4 sm:px-10 md:py-6  lg:p-6 xl:px-20 xl:py-10  max-w-[100%] text-black border-t-2 border-[#0048ff44] bg-[#eaecf0a7] dark:bg-dark-backgroundNav font-bold flex flex-wrap justify-between items-center`}>
       <div className="  flex justify-between items-center gap-6 w-screen md:w-[auto]" >
         <div id="logo_container">
         <img src="/logo.png" alt="Logo here" className="w-12 h-12 md:w-28 md:h-28" />

@@ -12,14 +12,14 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
   return (
     <HashLink
       className={`${
-        active === title ? " text-secondary" : "text-black" 
+        active === title ? " text-secondary " : "text-black dark:text-dark-text" 
       } ${
         mobile
           ? `mb-6  ${
               active === title ? "" : ""
             }`
           : "mr-4 md:mr-8"
-      }   inline-block uppercase  py-2 px-4 cursor-pointer   hover:text-secondary_100`}
+      }   inline-block uppercase  py-2 px-4 cursor-pointer   hover:text-secondary_100 `}
       // to={`${baseUrl}/#${title.toLowerCase()}`}
       to={
         title.toLowerCase() === "services"
@@ -29,7 +29,7 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
       onClick={() => handleClick(title)}
     >
       {title}
-      <li></li>
+      {/* <li></li> */}
     </HashLink>
   );
 };
@@ -93,7 +93,7 @@ const Nav = () => {
     onMouseLeave={() => handleMouseLeave()}
       className={`${styles.nav} ${
         isVisible ? "flex" : " hidden"
-      } fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white text-black font-bold border-b-2 border-[#0048ff44] animate-slide-in`}
+      } fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white dark:bg-dark-backgroundNav  text-black font-bold border-b-2 border-[#0048ff44] animate-slide-in`}
     >
       <HashLink to={`${baseUrl}/#home`}>
         <img
@@ -129,8 +129,8 @@ const Nav = () => {
         class="group flex lg:hidden  cursor-pointer items-center justify-center rounded-3xl bg-whit p-2 hover:bg-slate-200"
       >
         <div class="space-y-2 group-hover:scale-[1.1] select-none">
-          <span class="block  h-1 w-8 sm:h-1 sm:w-10 origin-center rounded-full bg-black transition-transform ease-in-out group-hover:bg-primary_100"></span>
-          <span class="block h-1 w-6 sm:h-1 sm:w-8  origin-center rounded-full bg-black transition-transform ease-in-out group-hover:bg-primary_100"></span>
+          <span class="block  h-1 w-8 sm:h-1 sm:w-10 origin-center rounded-full bg-black dark:bg-white transition-transform ease-in-out group-hover:bg-primary_100"></span>
+          <span class="block h-1 w-6 sm:h-1 sm:w-8  origin-center rounded-full bg-black dark:bg-white transition-transform ease-in-out group-hover:bg-primary_100"></span>
         </div>
       </div>
 
@@ -138,15 +138,15 @@ const Nav = () => {
       <aside
         className={`${
           activeMenu ? "flex" : "hidden"
-        } flex-col lg:hidden absolute top-0 w-[50%] h-screen right-0 p-4 bg-[#eaecf0] animate-slide-in-right`}
+        } flex-col lg:hidden absolute top-0 w-[50%] h-screen right-0 p-4 bg-[#eaecf0] border-l-2 border-[#0048ff44] dark:bg-dark-backgroundNav animate-slide-in-right`}
       >
         <div
           onClick={() => setActiveMenu(false)}
           class="group flex lg:hidden h-10 w-10 cursor-pointer items-center justify-center rounded-3xl bg-whit p-2"
         >
           <div class="space-y-2 group-hover:scale-[1.1] select-none">
-            <span class="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-black transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
-            <span class="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-black transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
+            <span class="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-black dark:bg-white transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
+            <span class="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-black dark:bg-white transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
           </div>
         </div>
         <ul className="flex flex-col mt-20">
