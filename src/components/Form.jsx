@@ -1,4 +1,4 @@
-import {useContext} from "react";
+import { useContext } from "react";
 import { WaitlistContext } from "../context/waitlistContext";
 import { ProviderRegistrationForm } from "./form/ProviderForm";
 import { UserRegistrationForm } from "./form/UserRegistrationForm";
@@ -7,44 +7,59 @@ import { Sectionwrapper } from "./hoc";
 import { styles } from "../styles";
 
 const Form = () => {
-  const {showJoinwaitlist, setShowJoinwaitlist} = useContext(WaitlistContext)
+  const { showJoinwaitlist, setShowJoinwaitlist } = useContext(WaitlistContext);
   return (
     <div className={`${""}  flex-wrap justify-between`}>
-      <div id="providerform"  className="flex py-6 justify-between items-center flex-wrap lg:flex-nowrap">
-        {/* <ProviderRegistrationForm /> */}
-        <div  className=" flex  flex-col gap-2 lg:w-1/2 text-left px-4 py-0 sm:px-6 md:px-6 lg:px-10 xl:px-16">
+      <div
+        id="providerform"
+        className="flex  py-10 justify-between items-center flex-wrap lg:flex-nowrap"
+      >
+        <div className=" flex  flex-col gap-2 lg:w-1/2 text-left px-4 py-0 sm:px-6 md:px-6 lg:px-10 xl:px-16">
           <h3 className={`${styles.h2} `}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt iste quasi assumenda.
+            Cost-Effective Healthcare Solutions.
           </h3>
-          {/* <p className={`${styles.paragraph}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p> */}
-          {/* <p className={`${styles.paragraph}`}>
-            Join Our Healthcare Providers Waiting list below
-          </p> */}
-          <article className={`${styles.paragraph}`}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque illo
-            laborum doloribus necessitatibus magni autem fugit amet! Vero quas
-            ad sit totam temporibus eveniet iste provident, labore ducimus non
-            et accusantium facere delectus voluptate, nam qui, dolorem expedita
-            excepturi quae repellat quod repellendus tempore officiis quidem!
-            Eum minima et ut.
+          
+          <article className={`${styles.paragraph} `}>
+            Denurx makes healthcare affordable and accessible by eliminating the
+            need for costly in-person visits. Save on travel expenses, reduce
+            time off work, and avoid long clinic waits. Virtual consultations
+            lower operational costs for providers, resulting in more competitive
+            pricing and lower consultation fees. Regular check-ups help catch
+            health issues early, saving on expensive treatments. Flexible
+            payment options and insurance plans ensure you get the care you need
+            without financial strain. Denurx is dedicated to providing
+            high-quality, cost-effective healthcare for everyone.
           </article>
-          <button  onClick={() => setShowJoinwaitlist(true)} className={`${styles.button_primary2} self-start`}>Join Us Now</button>
-
-        
+          <button
+            onClick={() => setShowJoinwaitlist(true)}
+            className={`${styles.button_primary2} self-start`}
+          >
+            Join Us Now
+          </button>
         </div>
-        <div className="w-1/2 hidden lg:flex">
-          <img src={doctor7} alt="" className="h-auto rounded-[20px] sm:rounded-[50px]" />
+        <div className="w-1/2 hidden overflow-hidden lg:flex rounded-[20px] sm:rounded-[50px]">
+          <img
+            src={doctor7}
+            alt=""
+            className="h-auto hover:scale-[1.2] transition duration-1000"
+          />
         </div>
       </div>
-      <div id="userform" className="flex py-6 justify-between items-center flex-wrap lg:flex-nowrap">
-        <div className="w-1/2 hidden lg:flex">
-        <img src={patient2} alt="" className="h-auto  rounded-[20px] sm:rounded-[50px]" />
+      <div className="w-full h-1 bg-[#eaecf0a7] rounded my-10"></div>
+      <div
+        id="userform"
+        className="flex py-10 justify-between items-center flex-wrap lg:flex-nowrap"
+      >
+        <div className="w-1/2 overflow-hidden hidden lg:flex rounded-[20px] sm:rounded-[50px]">
+          <img
+            src={patient2}
+            alt=""
+            className="h-auto hover:scale-[1.2] transition duration-1000"
+          />
         </div>
-        <div  className=" flex  flex-col gap-2 lg:w-1/2 text-left px-4 py-0 sm:px-6 md:px-6 lg:px-10 xl:px-16">
+        <div className=" flex flex-col gap-2 lg:w-1/2 text-left px-4 py-0 sm:px-6 md:px-6 lg:px-10 xl:px-16">
           <h3 className={`${styles.h2} `}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt iste quasi assumenda.
+          Verified and Qualified Professionals
           </h3>
           {/* <p className={`${styles.paragraph}`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -52,17 +67,23 @@ const Form = () => {
           {/* <p className={`${styles.paragraph}`}>
             Join Our Healthcare Providers Waiting list below
           </p> */}
-          <article className={`${styles.paragraph}`}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque illo
-            laborum doloribus necessitatibus magni autem fugit amet! Vero quas
-            ad sit totam temporibus eveniet iste provident, labore ducimus non
-            et accusantium facere delectus voluptate, nam qui, dolorem expedita
-            excepturi quae repellat quod repellendus tempore officiis quidem!
-            Eum minima et ut.
+          <article className={`${styles.paragraph} `}>
+            At Denurx, we prioritize your health by ensuring that all healthcare
+            professionals on our platform are verified and qualified. Each
+            practitioner undergoes rigorous screening and verification processes
+            to ensure they meet our high standards of competence and
+            professionalism. You can trust that your healthcare provider is
+            experienced and accredited in their field, providing you with
+            reliable medical advice and treatment. Our commitment to quality
+            ensures that you receive care from trusted professionals who are
+            dedicated to delivering the highest standards of healthcare.
           </article>
-          <button  onClick={() => setShowJoinwaitlist(true)} className={`${styles.button_primary2}  self-start`}>Join Us Now</button>
-
-        
+          <button
+            onClick={() => setShowJoinwaitlist(true)}
+            className={`${styles.button_primary2}  self-start`}
+          >
+            Join Us Now
+          </button>
         </div>
         {/* <UserRegistrationForm /> */}
       </div>

@@ -19,11 +19,12 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
       <div
         className={`${
           // index + 1 == 2 ? "w-[auto] sm:w-[100%]" : "  w-[100%] sm:w-[50%]"
-          index + 1 == 2
-            ? "w-[auto] sm:w-[100%]"
-            : ` ${
-                index + 1 == 3 ? "w-[100%] sm:w-[100%]" : "w-[100%] sm:w-[50%]"
-              }`
+          ""
+          // index + 1 == 2
+          //   ? "w-[auto] sm:w-[100%]"
+          //   : ` ${
+          //       index + 1 == 3 ? "w-[100%] sm:w-[100%]" : "w-[100%] sm:w-[50%]"
+          //     }`
         } ${index + 1 == 3 ? "order-1 sm:order-2 w-[100%]" : ""}  
        
         flex flex-col justify-betwee gap-2 h-[]   overflow-hidden`}
@@ -33,8 +34,8 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
       </div>
       <div
         className={` ${
-          index + 1 == 3 ? "order-2 sm:order-1" : ""
-        } w-[auto] overflow-hidden`}
+          index + 1 == 3 ? "order-2 sm:order-1" : "w-[70%]"
+        } w-[auto] overflow-hidde`}
       >
         <img
           src={mockup}
@@ -44,12 +45,12 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
           // } w-[auto] h-[100px] lg:h-[200px] xl:h-[200px]  max-w-[auto] `}
           className={`${
             index + 1 == 1
-              ? "w-[auto] h-[200px] lg:h-[200px] xl:h-[250px]  max-w-[auto]"
+              ? "w-[auto] h-[200px] bg lg:h-[200px] xl:h-[250px] sm:w-[400px] md:w-[500px] lg:w-[700px] xl:w-[600px]   max-w-[auto]"
               : index + 1 == 2
               ? "h-[200px] sm:h-[200px]  xl:h-[350px]"
               : index + 1 == 3
-              ? "w-[auto] h-[200px] lg:h-[200px] xl:h-[250px] w-[300px md:w-[300px] lg:w-[300px] xl:w-[350px]   max-w-[auto]"
-              : "w-[auto] h-[200px] lg:h-[200px] xl:h-[250px]  max-w-[auto]"
+              ? "w-[auto] h-[200px] bg lg:h-[200px] xl:h-[250px] w-[300px md:w-[300px] lg:w-[300px] xl:w-[350px]   max-w-[auto]"
+              : "w-[auto] h-[auto] lg:w-[200px] xl:w-[250px]  max-w-[auto] min-w-[200px] "
           }  `}
         />
       </div>

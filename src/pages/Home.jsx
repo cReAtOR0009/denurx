@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Hero from "../components/Hero";
 import KeyFeatures from "../components/KeyFeatures";
 import Steps from "../components/Steps";
@@ -16,6 +17,10 @@ import Form from "../components/Form";
 const Home = () => {
   return (
     <div>
+       <Helmet>
+       <title>Denurx - Your Clinic In Your Hands</title>
+        <meta name="description" content="Denurx - Your Clinic In Your Hands. Connect with doctors, book appointments, manage medications, and access home health services." />
+      </Helmet>
       {/* <div className="bg-heroGradient fullbg "> */}
         <Hero />
       {/* </div> */}

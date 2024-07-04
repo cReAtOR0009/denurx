@@ -5,6 +5,7 @@ import {
   RouterProvider,
   createRoutesFromChildren,
 } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 // import OneSignal from 'react-onesignal';
 import PageLayout from "./Layout/PageLayout";
 import { baseUrl } from "../config";
@@ -14,8 +15,6 @@ import NotFound from "./pages/404";
 import Services from "./pages/Services";
 
 function App() {
-
-
   const router = createBrowserRouter(
     createRoutesFromChildren(
       <Route path={baseUrl} element={<PageLayout />}>
@@ -26,7 +25,11 @@ function App() {
     )
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
+  );
 }
 
 export default App;

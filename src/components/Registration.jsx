@@ -22,12 +22,8 @@ const Registration = () => {
             Join Our Healthcare Providers Waiting list below
           </p> */}
           <article className={`${styles.paragraph}`}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque illo
-            laborum doloribus necessitatibus magni autem fugit amet! Vero quas
-            ad sit totam temporibus eveniet iste provident, labore ducimus non
-            et accusantium facere delectus voluptate, nam qui, dolorem expedita
-            excepturi quae repellat quod repellendus tempore officiis quidem!
-            Eum minima et ut.
+          Delivering virtual care as a Doctor is a game-changer. You can leverage out platform, and conduct secure video consultations, remote monitoring, and more. This approach enhances patient access and engagement, and helps you to expand reach and patient base. Virtual care also improves health outcomes and patient satisfaction. By adopting virtual care you can stay ahead in this digital age, grow your patient base, and deliver high-quality care conveniently and securely. Embrace this practice and improve patient care.
+
           </article>
           {/* <HashLink to={`${baseUrl}/#providerform`}> */}
 
@@ -40,19 +36,19 @@ const Registration = () => {
         </div>
         <div className="order-1 sm:order-2 relative magicpattern2 bg-150 mx-0 my-auto">
           <div
-            className={`${styles.h4} absolute  top-2 right-2 rounded-full p-[2px] sm:p-2  bg-[#939191] text-white`}
+            className={`${styles.h4} absolute  top-2 right-2 rounded-full p-[2px] sm:py-2 sm:px-4   bg-[#939191] text-white`}
           >
-            24/7
+            Manage
           </div>
           <div
-            className={`${styles.h4} absolute rounded-full left-2 top-1/3 md:-left-[20%] p-[2px] sm:p-2  bg-primary_100 text-white`}
+            className={`${styles.h4} absolute rounded-full left-2 top-1/3 md:-left-[20%] p-[2px] sm:py-2 sm:px-4   bg-primary_100 text-white`}
           >
-            Convinience
+            Engage
           </div>
           <div
-            className={`${styles.h4} absolute top-1/2 right-2 rounded-full p-[2px] sm:p-2  bg-[#939191] text-white`}
+            className={`${styles.h4} absolute top-1/2 right-2 rounded-full p-[2px] sm:py-2 sm:px-4   bg-primary_100 text-white`}
           >
-            Comfort
+            Leverage
           </div>
 
           <img
@@ -66,14 +62,19 @@ const Registration = () => {
       <div className="register2 flex justify-center  md:justify-between items-center  flex-wrap sm:flex-nowrap">
         <div className="  relative magicpattern bg-150">
           <div
-            className={`${styles.h4} absolute rounded-full right-2 top-1/3 sm:top-1/4 md:-right-[10%] p-[2px] sm:p-2 bg-primary_100 text-white`}
+            className={`${styles.h4} absolute rounded-full right-2 top-1/3 sm:top-1/4 md:-right-[10%] p-[2px] sm:py-2 sm:px-4 bg-primary_100 text-white`}
           >
-            Anywhere
+            Schedule
           </div>
           <div
-            className={`${styles.h4} absolute top-1/2 left-2 rounded-full p-[2px] sm:p-2  bg-[#939191] text-white`}
+            className={`${styles.h4} absolute top-1/2 left-2 rounded-full p-[2px] sm:py-2 sm:px-4   bg-primary_100 text-white`}
           >
-            Anytime
+            Connect
+          </div>
+          <div
+            className={`${styles.h4} absolute top-3/4 right-2 md:-right-[10%] rounded-full p-[2px] sm:py-2 sm:px-4   bg-[#939191] text-white`}
+          >
+            Anywhere
           </div>
           <img
             src={patient}
@@ -90,12 +91,8 @@ const Registration = () => {
             Join Our Patient Waiting list below
           </p> */}
           <article className={`${styles.paragraph}`}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque illo
-            laborum doloribus necessitatibus magni autem fugit amet! Vero quas
-            ad sit totam temporibus eveniet iste provident, labore ducimus non
-            et accusantium facere delectus voluptate, nam qui, dolorem expedita
-            excepturi quae repellat quod repellendus tempore officiis quidem!
-            Eum minima et ut.
+          With Denurx, you can access quality healthcare anytime, anywhere. No more waiting in line or traveling to a clinic. Whether you're at home, in the office, or on-the-go, you can connect with a healthcare professional and receive the care you need. We offer flexibility, convenience, and accessibility, making it easier than ever to prioritize your health and wellbeing. With our virtual care, you can receive schedule virtual appointments, receive medical advice, diagnosis, treatment, and support from the comfort of your own space via your smartphone. Get connected and take control of your health today!
+
           </article>
           {/* <HashLink to={`${baseUrl}/#userform`}> */}
           <button

@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-between flex-wrap gap-2 sm:gap-6 my-2">
             {socials.map((social, index) => (
-              <a href={`${social.link}`} key={index} className="flex flex-1 flex-col items-center  cursor-pointer">
+              <a href={`${social.link}`} target="_blank" key={index} className="flex flex-1 flex-col items-center  cursor-pointer">
                 <img src={social.image} alt="" className="w-4 md:w-8 rounded-full"  />
                 <p>{social.platform}</p>
               </a>

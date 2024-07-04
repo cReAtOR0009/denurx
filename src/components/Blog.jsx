@@ -7,7 +7,7 @@ import { blogs } from "../assets/text";
 const Blog = () => {
   const BlogCard = ({ title, content, summary, image, date, author }) => {
     return (
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="bg-white dark:bg-dark-background3 rounded-lg shadow-md overflow-hidden">
         <img src={image} alt={title} className="w-full h-48 object-cover" />
         <div className="p-2 sm:p-6">
           <h3 className={`${styles.h3} mb-2`}>{title}</h3>
@@ -15,7 +15,7 @@ const Blog = () => {
             {date} - {author}
           </p>
           <p className={`${styles.paragraph}  mb-4`}>{summary}</p>
-          <Link to="#" className="text-primary-500 hover:underline">
+          <Link to="#" className={`${styles.paragraph} text-pretty underline`}>
             Read more
           </Link>
         </div>

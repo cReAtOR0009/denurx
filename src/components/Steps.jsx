@@ -30,8 +30,23 @@ const StepsCard = ({
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`flex-1 flex flex-col gap-2 justify-between items-center border-2 border-[#87898c] rounded-2xl   p-2 sm:p-2 lg:p-4 h-[auto] min-w-[150px bg-[#eaecf0a7] dark:bg-dark-background3 text-left sm:hover:scale-[1.1] transition`}
-    >
+      className={`relative flex-1 flex flex-col gap-2 justify-between items-center border-2 border-[#87898c] rounded-2xl p-2 sm:p-2 lg:p-4 h-[auto] min-w-[150px] bg-[#eaecf0a7] dark:bg-dark-background3 text-left sm:hover:scale-[1.1] transition`}
+      >
+       {/* <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 animate-bounce">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-8 w-8 text-primary" // Increase size to h-6 w-6 and set color to text-primary
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm-.5-11.5a1.5 1.5 0 113 0V12a.5.5 0 01-1 0V7.5zm-.5 7a.5.5 0 011 0v-4a.5.5 0 01-1 0v4z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </div> */}
+      
       <img src={icon} alt="" className="w-[40px] lg:w-[50px] h-[auto]" />
       <h4 className={`${styles.h4} leading-[0]`}>{step}</h4>
       {displayContent === description && (
@@ -56,8 +71,8 @@ const Steps = () => {
   const [displayTipContent, setDisplayTipContent] = useState(null);
 
   return (
-    <section className={`${""} steps`}>
-      <div className="flex flex-wrap md:flex-nowrap items-center  ">
+    <section className={`${""} steps`}  >
+      <div className="flex flex-wrap md:flex-nowrap items-center  " title={"hover on each steps to get additional"}>
         <div className=" relative flex- grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 w-[100%] md:w-[50%] gap-2 sm:gap-6 p-0 sm:p-2 mt-4 sm:mt-0 ">
           {howItWorks.map((step, index) => (
             <StepsCard

@@ -21,7 +21,7 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
       } `}
     >
       <div className="flex justify-between items-center p-2 w-[100%] transition-all">
-        <h3 className={`${styles.h4}  lg:whitespace-nowrap `}>{title}</h3>
+        <h3 className={`${styles.h4}  lg:whitespace-nowrap dark:text-dark-text `}>{title}</h3>
         <img
           src={arrow}
           alt=""

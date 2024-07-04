@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { HashLink } from "react-router-hash-link";
 import { WaitlistContext } from "../context/waitlistContext";
 import { styles } from "../styles";
@@ -11,6 +12,10 @@ const NotFound = () => {
       id="notfound"
       className={`${styles.container} flex flex-col justify-center items-center bg-notFoundbg bg-cover  bg-no-repeat bg-center-center h-screen mt-20`}
     >
+       <Helmet>
+       <title>404 Not Found</title>
+        <meta name="description" content="Page not found." />
+      </Helmet>
       <h1
         className={`text-5xl md:text-6xl lg:7xl xl:text-7xl font-bold leading-tight  text-secondary_100`}
       >

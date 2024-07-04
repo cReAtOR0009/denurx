@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Service from "../components/Services";
 import { arrow } from "../assets/images";
 import { styles } from "../styles";
@@ -20,6 +21,12 @@ const ServiceCard = ({ icon, title, description, image }) => {
       className=" relative rounded-[20px] sm:rounded-[50px] p-4 border-2 border-[#cacaca]  cursor-pointer hover:transition-colors transition:border"
       onClick={() => setReadMore(!readMore)}
     >
+      {readMore && (
+        <Helmet>
+          <title>{`Services- ${title}`}</title>{" "}
+          <meta name="description" content={`${description}`}/>
+        </Helmet>
+      )}
       <img
         src={image}
         alt=""
@@ -42,7 +49,6 @@ const ServiceCard = ({ icon, title, description, image }) => {
                 ? "text-secondary_100 group-hover:underline"
                 : "text-primary "
             } text-black underline inline-block text-xxs md:text-sm  cursor-pointer p-2 underline-offset-2 sm:underline-offset-4`}
-          
           >
             {readMore ? "Read less" : "Read more"}
           </button>
@@ -58,12 +64,17 @@ const Services = () => {
     window.scrollTo(0, 0);
   }, []);
 
-
   return (
-    <div
-      className={`  flex flex-col  gap-6 sm:gap-10 mt-10`}
-    >
-      <h2 className={`${"styles.h2"} text-3xl sm:text-4xl md:text-4xl lg:text-6xl text-white dark:text-dark  leading-tight font-semibold`}>Our High Quality Service</h2>
+    <div className={`  flex flex-col  gap-6 sm:gap-10 mt-10`}>
+      <Helmet>
+        <title>Denurx Services</title>
+        <meta name="description" content="Services offered by Denurx" />
+      </Helmet>
+      <h2
+        className={`${"styles.h2"} text-3xl sm:text-4xl md:text-4xl lg:text-6xl text-white dark:text-dark  leading-tight font-semibold`}
+      >
+        Our High Quality Service
+      </h2>
       <div className="service_grid  ">
         {servicesComplete.map((service) => {
           return <ServiceCard {...service} />;

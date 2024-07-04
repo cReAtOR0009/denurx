@@ -37,19 +37,19 @@ export const aboutApp = {
     keyFeatures:[{
       mockup:mockup1,
         text:"Virtual Appointment Scheduling",
-        description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora sit, voluptatum quibusdam nobis dolores unde."
+        description:"Transform your practice with secure video consultations and remote monitoring. Enhance patient access, expand reach, and improve outcomes. Stay ahead with high-quality, convenient, and secure virtual care."
     },{
       mockup:  mockup2,
       text:"Secure Messaging and Video Consultations",
-      description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora sit, voluptatum quibusdam nobis dolores unde."
+      description:"Experience secure, 24/7 messaging and video consultations. Connect with healthcare professionals from home, sharing medical information and receiving face-to-face care securely."
   }, {
       mockup:mockup3,
         text:"Electronic health Records Access",
-        description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora sit, voluptatum quibusdam nobis dolores unde."
+        description:"Access your health records securely and digitally. View your medical history, diagnoses, medications, and test results in one place. Share information easily with healthcare providers for better care."
     },{
       mockup:mockup4,
         text:"Personalized patient engagement tools",
-        description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora sit, voluptatum quibusdam nobis dolores unde."
+        description:"Denurx provides personalized tools to help patients proactively manage their health. Set health goals, receive reminders, track progress, and monitor health metrics. Access personalized care plans and secure communication with healthcare providers. Denurx enhances the overall patient experience by promoting active participation and personalized engagement, setting a new standard for patient-centered care."
     }
     //  , {
     //   mockup:mockup2,
@@ -327,10 +327,12 @@ export const benefits =
 
 
 export const socials = [
-    {platform:"facebook", image:facebook ,link:"#"},
-    {platform:"linkdn", image:linkedin ,link:"#"},
-    {platform:"twitter", image:twitter ,link:"#"},
-    {platform:"whatsapp", image:whatsapp ,link:"#"},
+    {platform:"facebook", image:facebook ,link:" https://www.facebook.com/profile.php?id=100087267245999"},
+    {platform:"instagram", image:linkedin ,link:"https://www.instagram.com/denurx_tech"},
+    {platform:"twitter", image:twitter ,link:"https://www.twitter.com/@denurx001"},
+    {platform:"youtube", image:twitter ,link:"https://www.youtube.com/@Denurx"},
+    {platform:"whatsapp", image:whatsapp ,link:"https://wa.me/2348076091961"},
+    // {platform:"linkdn", image:linkedin ,link:"#"},
 ]
 
 export const faqs = [
