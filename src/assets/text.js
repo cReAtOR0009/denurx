@@ -3,7 +3,9 @@ import { mockup, profileImage,profileImage2, doctors, doctors2, onlineConsult, c
  doctor4,
  headerDenurx,
  patient,
- patientcare2
+ patientcare2,
+ youtube,
+ instagram
  } from "./images"
 
 
@@ -328,9 +330,9 @@ export const benefits =
 
 export const socials = [
     {platform:"facebook", image:facebook ,link:" https://www.facebook.com/profile.php?id=100087267245999"},
-    {platform:"instagram", image:linkedin ,link:"https://www.instagram.com/denurx_tech"},
+    {platform:"instagram", image:instagram ,link:"https://www.instagram.com/denurx_tech"},
     {platform:"twitter", image:twitter ,link:"https://www.twitter.com/@denurx001"},
-    {platform:"youtube", image:twitter ,link:"https://www.youtube.com/@Denurx"},
+    {platform:"youtube", image:youtube ,link:"https://www.youtube.com/@Denurx"},
     {platform:"whatsapp", image:whatsapp ,link:"https://wa.me/2348076091961"},
     // {platform:"linkdn", image:linkedin ,link:"#"},
 ]
