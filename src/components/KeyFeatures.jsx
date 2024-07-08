@@ -14,10 +14,10 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
         index + 1 == 2 ? "lg:flex-col justify-center" : "flex-row"
       } 
       ${index + 1 == 3 ? "flex-row flex-wrap md:flex-nowrap" : ""}
-      justify-between p-4 md:p-10 pb-0 sm:pb-0 md:pb-0 rounded-[30px] lg:rounded-[50px] gap-4  h-[100%] w-[100%]  overflow-hidde bg-mockupB `}
+      justify-between p-4 md:p-10 pb-0 sm:pb-0 md:pb-0 rounded-[30px] lg:rounded-[50px] gap-4  h-[100%] w-[100%]  overflow-hidde bg-mockupB bg-[#eaecf0a7] dark:bg-dark-background2`}
     >
       <div
-      //bg-[#eaecf0a7] dark:bg-dark-background2
+      
         className={`${
           // index + 1 == 2 ? "w-[auto] sm:w-[100%]" : "  w-[100%] sm:w-[50%]"
           ""
@@ -36,7 +36,7 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
       <div
         className={` ${
           index + 1 == 3 ? "order-2 sm:order-1" : index + 1 ==1?"order-1 sm:order-1 md:order-1 lg:order-2": "w-[70%]"
-        } ${index + 1 !==2?"self-end":""} w-[auto]  overflow-hidden `}
+        } ${index + 1 !==2?"self-end":""} w-[auto]   `}
       >
         <img
           src={mockup}
