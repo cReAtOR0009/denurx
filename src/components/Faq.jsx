@@ -42,7 +42,7 @@ const Faq = () => {
           ))}
         </div>
         {/* <img src={doctors} alt="" className="flex1 h-[fit-content" /> */}
-        <div className="hidden md:block text-[50vw] text-primary font-[poppi] leading-[0]">
+        <div className="hidden lg:block text-[50vw] text-primary font-[poppi] leading-[0]">
           ?
         </div>
       </div>
