@@ -105,12 +105,12 @@ const About = () => {
         </article>
       </div>
 
-      <div className=" flex justify-between items-center flex-wrap md:flex-nowrap gap-[5%]  md:pt-16">
+      <div className=" flex justify-center lg:justify-between items-center flex-wrap lg:flex-nowrap gap-[5%]  md:pt-16">
         <div className="hidden sm:block w-[100%] h-[100%] md:w-[auto] magicpattern bg-130 sm:bg-120 rounded-2xl sm:rounded-[50px]">
           <img
             src={whyDenurx}
             alt="Denurx logo"
-            className="w-[100%] h-auto"
+            className="w-[100%] h-[400px] lg:h-[auto]"
           />
         </div>
         <div
