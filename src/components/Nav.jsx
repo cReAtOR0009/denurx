@@ -38,35 +38,11 @@ const Nav = () => {
   const [active, setActive] = useState(nav[0].title);
   const [activeMenu, setActiveMenu] = useState(false);
   const { showJoinwaitlist, setShowJoinwaitlist } = useContext(WaitlistContext);
-  const [isVisible, setIsVisible] = useState(true);
-  const [time, setTime] = useState(activeMenu? 5000:2000)
-  let timeoutId = null;
-  // let time = activeMenu? 5000:2000
   
 
-  const handleScroll = () => {
-    setIsVisible(true);
 
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
 
-    timeoutId = setTimeout(() => {
-      setIsVisible(false);
-      setTime(2000)
-    }, time); 
-  };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [ activeMenu, time]);
 
 
   const handleClick = (value) => {
@@ -74,26 +50,11 @@ const Nav = () => {
     
   };
   
-  const handleMouseEnter = () => {
-    setIsVisible(true)
-    setTime(10000)
-    // console.log("mouse entered")
-  }
-
-  const handleMouseLeave = () => {
-    // setIsVisible(true)
-    setTime(2000)
-    // console.log("mouse leave")
-  }
 
   return (
     <>
     <nav
-    onMouseEnter={() => handleMouseEnter()}
-    onMouseLeave={() => handleMouseLeave()}
-      className={`${styles.nav} ${
-        isVisible ? "flex" : " hidden"
-      } fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white dark:bg-dark-backgroundNav  text-black font-bold border-b-2 border-[#0048ff44] animate-slide-in`}
+      className={`${styles.nav} flex fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white dark:bg-dark-backgroundNav  text-black font-bold border-b-2 border-[#0048ff44] animate-slide-in`}
     >
       <HashLink to={`${baseUrl}/#home`}>
         <img
