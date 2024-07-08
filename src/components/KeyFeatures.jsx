@@ -35,8 +35,8 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
       </div>
       <div
         className={` ${
-          index + 1 == 3 ? "order-2 sm:order-1" : index + 1 ==1?"order-1 sm:order-2 md:order-1 lg:order-2": "w-[70%]"
-        } w-[auto]  overflow-hidde self-end`}
+          index + 1 == 3 ? "order-2 sm:order-1" : index + 1 ==1?"order-1 sm:order-1 md:order-1 lg:order-2": "w-[70%]"
+        } ${index + 1 !==2?"self-end":""} w-[auto]  overflow-hidden `}
       >
         <img
           src={mockup}
@@ -48,7 +48,7 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
             index + 1 == 1
               ? "w-[auto] h-[200px] bg lg:h-[200px] xl:h-[250px] sm:w-[400px] md:w-[500px] lg:w-[700px] xl:w-[600px]   max-w-[auto]"
               : index + 1 == 2
-              ? "w-[auto] h-[200px] bg lg:h-[300px] xl:h-[350px] sm:w-[400px] md:w-[450px] lg:w-[300px] xl:w-[300px]   max-w-[auto]"
+              ? "w-[auto] h-[200px] bg lg:h-[300px] xl:h-[350px] sm:w-[400px] md:w-[450px] lg:w-[200px] xl:w-[240px]  max-w-[auto]"
               : index + 1 == 3
               ? "w-[auto] h-[200px] bg lg:h-[200px] xl:h-[250px] w-[300px md:w-[300px] lg:w-[300px] xl:w-[350px]   max-w-[auto]"
               : "h-[400px] w-[auto] sm:w-[auto] sm:h-[auto] lg:w-[200px] xl:w-[250px]  max-w-[auto] min-w-[200px] "
