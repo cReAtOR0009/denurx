@@ -1,12 +1,13 @@
 import React from 'react'
 import { styles } from '../../styles';
 
-const Sectionwrapper = (Component, idName) =>
+const Sectionwrapper = (Component, idName, background) =>
     function HOC(props) {
+    // let  background = `bg-${background}`
       return (
         <section
          
-          className={`${styles.container} relative dark:bg-dark-containerBg`}
+          className={`${styles.container} relative dark:bg-dark-containerBg bg-${background}`}
         >
           <span className='hash-span' id={idName}>
             &nbsp;
