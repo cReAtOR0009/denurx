@@ -406,10 +406,10 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   /* background: #000; */
   gap: 30px;
   grid-template-areas:
-    "feature1  feature1 feature1 feature1"
-    "feature2 feature2  feature2 feature3"
-    /* "feature2 feature2  feature2 feature3" */
-    "feature4 feature4 feature4 feature3";
+  "feature1  feature1 feature1 feature1"
+  "feature2 feature2 feature2 feature2"
+  "feature3 feature3 feature3 feature3"
+  "feature4 feature4 feature4 feature4";
   }
 }
 
@@ -454,6 +454,19 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   .faq::after {
     font-size: 72px;
   }
+  .faq::before {
+    position: absolute;
+    content: "?";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Mullish;
+    color: #0048ff44;
+    z-index: -1;
+    font-size: 400px;
+
+  }
+
 }
 
 /* Mobile Layout */
@@ -473,19 +486,7 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   .faq::after {
     font-size: 40px;
   }
-  .faq::before {
-    position: absolute;
-    content: "?";
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Mullish;
-    color: #0048ff44;
-    z-index: -1;
-    font-size: 400px;
-
-  }
-  .blog::after {
+    .blog::after {
     font-size: 40px;
   }
   .register::after {
