@@ -39,7 +39,6 @@ const Nav = () => {
   const [activeMenu, setActiveMenu] = useState(false);
   const { showJoinwaitlist, setShowJoinwaitlist } = useContext(WaitlistContext);
   
-
   const handleClick = (value) => {
     setActive(value);
     
