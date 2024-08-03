@@ -40,11 +40,6 @@ const Nav = () => {
   const { showJoinwaitlist, setShowJoinwaitlist } = useContext(WaitlistContext);
   
 
-
-
-
-
-
   const handleClick = (value) => {
     setActive(value);
     
