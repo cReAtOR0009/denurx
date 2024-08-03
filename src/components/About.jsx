@@ -16,7 +16,7 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
   return (
     <div
       onClick={handleShowMore}
-      className={`flex-1 rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xln border-2 p-2 sm:p-4 lg:p-6 pl-0 min-w-[250px] border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada] dark:bg-dark-background3  text-black  group animate-slide-in  ${
+      className={`flex-1 group rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xln border-2 p-2 sm:p-4 lg:p-6 pl-0 min-w-[250px] border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada] dark:bg-dark-background3  text-black  group animate-slide-in  ${
         !showMore ? "hover:scale-[1.1] transition" : ""
       } `}
     >
@@ -25,7 +25,7 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
         <img
           src={arrow}
           alt=""
-          className="inline-block w-[30px] sm:w-[40px] lg:w-[40px] xl:w-[50px] cursor-pointer rounded-full hover:scale-[1.1] transition"
+          className="inline-block w-[30px] sm:w-[40px] lg:w-[40px] xl:w-[50px] cursor-pointer rounded-full group-hover:scale-[1.1] group-hover:animate-spin anima transition"
         />
       </div>
       {showMore === text ? (
