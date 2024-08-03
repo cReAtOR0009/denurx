@@ -26,16 +26,12 @@
 }
 
 body {
-  /* position: relative; */
   color: black;
-  /* background-color: rgba(0, 0, 0, 0.43); */
   padding: 0;
   margin: 0;
   height: 100%;
   box-sizing: border-box;
-  /* font-family: "Public Sans", sans-serif; */
   font-family: "Mulish", sans-serif; 
-  /* font-family: "Poppins", sans-serif;  */
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -48,7 +44,7 @@ body {
   position: absolute;
   content: "Key Features";
   top: 0%;
-  color: #0048ff44;
+  color: #0048ff20;
   z-index: -1;
   /* right: 50%; */
   /* text-align: center; */
@@ -61,7 +57,7 @@ body {
   content: "Steps To Better Health";
   /* line-height: 1; */
   top: -0%;
-  color: #0048ff44;
+  color: #0048ff20;
   z-index: -1;
   /* right: 50%; */
   /* text-align: left; */
@@ -72,7 +68,7 @@ body {
   content: "About Denurx";
   /* line-height: 1; */
   top: -1%;
-  color: #0048ff44;
+  color: #0048ff20;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -83,7 +79,7 @@ body {
   content: "Our Quality Services";
   /* line-height: 1; */
   top: -1%;
-  color: #0048ff44;
+  color: #0048ff20;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -92,7 +88,7 @@ body {
   position: absolute;
   content: "Blog";
   top: -1%;
-  color: #0048ff44;
+  color: #0048ff20;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -102,7 +98,7 @@ body {
   content: "Join Us Now";
   /* line-height: 1; */
   top: -1%;
-  color: #0048ff44;
+  color: #0048ff20;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -112,7 +108,7 @@ body {
   content: "Answers";
   /* line-height: 1; */
   top: -1%;
-  color: #0048ff44;
+  color: #0048ff20;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -255,7 +251,7 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   position: absolute;
   content: "Words From Others";
   top: -1%;
-  color: #0048ff44;
+  color: #0048ff20;
   z-index: -1;
   /* right: 50%; */
   font-size: 100px;
@@ -461,7 +457,7 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Mullish;
-    color: #0048ff44;
+    color: #0048ff20;
     z-index: -1;
     font-size: 400px;
 
