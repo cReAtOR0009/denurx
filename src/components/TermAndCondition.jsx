@@ -33,7 +33,7 @@ const TermAndCondition = ({ showTerms, setShowTerms  }) => {
       >
         TERMS AND CONDITIONS
       </h1>
-      <div className="w-full h-1 bg-[#eaecf0a7] rounded my-1"></div>
+      <div className="w-full h-1 bg-secondary_100 rounded my-1"></div>
       </div>
       <div
         className={`${styles.container}  w-full   overflow-y-auto max-h-[100vh] min-h-[100vh] py-10 `}

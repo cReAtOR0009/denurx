@@ -34,7 +34,7 @@ const Privacy = ({ showPrivacy, setShowPrivacy }) => {
         >
           PRIVACY POLICY
         </h1>
-        <div className="w-full h-1 bg-[#eaecf0a7] rounded my-1"></div>
+        <div className="w-full h-1 bg-secondary_100 rounded my-1"></div>
       </div>
       <div
         className={`${styles.container}  w-full   overflow-y-auto max-h-[100vh] min-h-[100vh] py-10 `}
@@ -78,7 +78,7 @@ const Privacy = ({ showPrivacy, setShowPrivacy }) => {
           <h3 className={`${styles.h3}`}>Contact Us</h3>
           {privacyPolicy.contactUs}{" "}
           <Link
-            to={`${baseUrl}/support@denurx.com`}
+            to={`mailto:denurx@gmail.com`}
             // target="_blank"
             // rel="noopener noreferrer"
             className="underline"
