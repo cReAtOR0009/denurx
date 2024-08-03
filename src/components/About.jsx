@@ -55,7 +55,7 @@ const About = () => {
   const totalPages = Math.ceil(items.length / cardPerDisp);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const trimmedContent = `${benefits.paragraph.slice(0, 400)}...`;
+  const trimmedContent = `${benefits.paragraph.slice(0, 399)}...`;
   const [readMore, setReadMore] = useState(false);
   const [showMore, setShowMore] = useState(null);
   const [animationKey, setAnimationKey] = useState(0);
