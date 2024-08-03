@@ -7,7 +7,7 @@ import { Sectionwrapper } from "./hoc";
 import { styles } from "../styles";
 
 const Form = () => {
-  const { showJoinwaitlist, setShowJoinwaitlist } = useContext(WaitlistContext);
+  const { setShowJoinwaitlist } = useContext(WaitlistContext);
   return (
     <div className={`${""}  flex-wrap justify-between`}>
       <div
@@ -18,8 +18,8 @@ const Form = () => {
           <h3 className={`${styles.h2} `}>
             Cost-Effective Healthcare Solutions.
           </h3>
-          
-          <article className={`${styles.paragraph} `}>
+
+          <article className={`${styles.paragraph} text-justify`}>
             Denurx makes healthcare affordable and accessible by eliminating the
             need for costly in-person visits. Save on travel expenses, reduce
             time off work, and avoid long clinic waits. Virtual consultations
@@ -59,15 +59,9 @@ const Form = () => {
         </div>
         <div className=" flex flex-col gap-2 lg:w-1/2 text-left px-4 py-0 sm:px-6 md:px-6 lg:px-10 xl:px-16">
           <h3 className={`${styles.h2} `}>
-          Verified and Qualified Professionals
+            Verified and Qualified Professionals
           </h3>
-          {/* <p className={`${styles.paragraph}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p> */}
-          {/* <p className={`${styles.paragraph}`}>
-            Join Our Healthcare Providers Waiting list below
-          </p> */}
-          <article className={`${styles.paragraph} `}>
+          <article className={`${styles.paragraph} text-justify`}>
             At Denurx, we prioritize your health by ensuring that all healthcare
             professionals on our platform are verified and qualified. Each
             practitioner undergoes rigorous screening and verification processes
