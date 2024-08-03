@@ -160,14 +160,14 @@ module.exports = {
     {
       backgroundImage: {
         primaryBtn:
-          "linear-gradient(to right, #B90000 50%, hsl(241.65deg 100% 50% / 100%) 0%)", //linear-gradient(to right, hsl(352deg 100% 61.66%) 30%, hsl(241.65deg 100% 50% / 61%) 100%)
+          "linear-gradient(to right, #B90000 50%, hsl(241.65deg 100% 50% / 100%) 0%)",
         navSidebar: "rgba(187, 190, 207, 0.2)",
         secondaryBtn:
           "linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)",
         heroImage: 'url("/src/assets/doctors.png")',
         heroMockup: 'url("/src/assets/mockup_hero.png")',
-        stepBlob: 'url("/src/assets/stepblob2.png")', //2493.jpg
-        bg: 'url("/src/assets/2493.jpg")', //2493.jpg
+        stepBlob: 'url("/src/assets/stepblob2.png")', 
+        bg: 'url("/src/assets/2493.jpg")',
         scrollmodern:
           "linear-gradient(0deg, rgb(20 20 17 / 60%), rgb(35 44 57 / 90%)), url('/src/assets/scrollmodern.jpg')",
         heroGradient:
@@ -177,7 +177,7 @@ module.exports = {
         waitList:
           "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/mockup_hero.png)",
         notFoundbg:
-          "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/notfoundbg.jpg)", //footerBg.jpg//footerBg.jpg
+          "linear-gradient(91deg, rgb(255 255 255 / 90%), rgb(235 234 248 / 80%)), url(/src/assets/notfoundbg.jpg)", 
         footerBg: "url(/src/assets/footerBg.jpg)",
         mockupBg:"url(/src/assets/Mockups/magicpattern-starry-night-1717534673666.png)",
         "dark-bg":"#000000",

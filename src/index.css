@@ -209,16 +209,13 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   /* grid-template-rows: minmax(auto, 1fr); */
   gap: 20px;
-  /* place-items: center;
-  place-self: center;
-  place-content: center;
-  align-content: center; */
   align-items: center;
   justify-items: baseline;
   justify-content: center;
   grid-auto-columns: auto;
   /* margin: 0 auto; */
 }
+
 
 .serciveCard::after{
   content: "";
@@ -318,7 +315,7 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
 @media (max-width: 767px) {
   .service_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-template-rows: minmax(auto, 1fr);
     gap: 20px;
   }
