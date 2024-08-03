@@ -64,7 +64,7 @@ const Hero = () => {
         <p className={`${styles.paragraph} text-white`}>
           {HeroText[currentSlide].description}
         </p>
-        <div className="flex gap-6 sm:gap-8 my-2">
+        <div className="flex gap-6 sm:gap-8 my-2 sm:my-8">
           <HashLink to={`${baseUrl}/#start`}>
             <button className={`${styles.button_secondary}  hover:bg-[transparent] hover:border-white`}>
               Learn More
@@ -72,7 +72,7 @@ const Hero = () => {
           </HashLink>
           <button
             onClick={() => setShowJoinwaitlist(true)}
-            className={`${styles.button_primary2} rounded-[15px] bg-primary px-4 py-2 sm:px-4 sm:py-0 text-xxs text-white sm:text-base font-medium uppercase leading-[0]  text-primary-700 animate-pulse hover:animate-pop-up-infinite focus:border-white transition duration-150 hover:bg-primary_100`}
+            className={`${styles.button_primary2} rounded-[15px] bg-primary px-4 py-2 sm:px-4 sm:py-0 text-xxs text-white sm:text-base font-medium uppercase leading-[0]  text-primary-700  hover:animate-pop-up-infinite focus:border-white transition duration-150 hover:bg-primary_100`}
           >
             Join Waitlist
           </button>
