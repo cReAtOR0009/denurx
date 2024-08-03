@@ -144,7 +144,7 @@ export const UserRegistrationForm = ({
           {showBack && (
             <button
               type="button"
-              className={`${styles.button_secondary2} hover:border-black hover:text-black`}
+              className={`${styles.button_secondary2}  hover:border-black hover:text-black`}
               onClick={onBack}
             >
               Back
