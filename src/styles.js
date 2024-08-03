@@ -1,4 +1,5 @@
 export const styles = {
+  //container styles
   headerContainer:"px-4 py-6 pb-0 sm:px-10 md:py-10  lg:p-20 xl:p-20 pb-0 sm:pb-0 xl:pb-2 lg:pb-2 md:pb-0",
   serviceContainer:"px-4 py-6 pb-0 sm:px-10 md:py-10  lg:p-20 xl:p-20 pb-0 sm:pb-0 xl:pb-2 lg:pb-2 md:pb-0",
   container: "px-4 py-6 sm:px-10 md:py-10  lg:p-20 lg:py-24 xl:p-20 xl:py-28", //
@@ -7,15 +8,16 @@ export const styles = {
   introTextContainer:"px-4 py-6 sm:py-10 sm:px-16 lg:px-20  xl:px-28 md:py-20 gap-6",
   nav: "px-4 md:px-10 lg:px-20 xl:px-20",
   contentPadding: "p-4 md:p-6 lg:-p-8",
-  // Specific Heading Styles
+
+  // text  Styles
   h1: "py-4 md:py-2 lg:py-6 text-7xl sm:text-8xl md:text-6xl lg:text-6xl xl:text-8xl  font-bold leading-tight dark:text-dark-text",
   h2: "text-2xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold leading-none sm:leading-snug dark:text-dark-text",
   h3: "text-xl md:text-2xl lg:text-2xl xl:text-2xl font-semibold leading-none sm:leading-normal dark:text-dark-text",
   h4: "text-base md:text-lg lg:text-lg xl:text-xl font-medium leading-normal dark:text-dark-text",
-
-  // Paragraph Style
   paragraph: "text-sm md:text-base lg:text-lg xl:text-lg dark:text-dark-text",
   tip:"text-xs md:text-sm lg:text-base xl:text-base leading-tight ",
+
+   // button Styles
   button_primary:
     "rounded-[15px] bg-primary px-4 py-4 sm:px-4 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-none  text-primary-700 animate-pulse hover:animate-pop-up-infinite focus:border-white transition duration-150",
     button_primary2:
