@@ -4,6 +4,7 @@ import { ProviderRegistrationForm } from "./ProviderForm";
 import { UserRegistrationForm } from "./UserRegistrationForm";
 import MailChimp from "./MailChimp";
 import MailChimp2 from "./Mailchimp2";
+import { styles } from "../../styles";
 
 const MultiStepForm = ({displayForm, setDisplayForm}) => {
   const [step, setStep] = useState(1);
@@ -66,13 +67,13 @@ const StepOne = ({ onProviderSelection }) => (
     <h2 className="text-2xl font-bold mb-2 text-black dark:text-dark-text">Are you a healthcare provider?</h2>
     <div className="flex justify-center items-center gap-6 text-center">
       <button
-        className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-primary outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white border border-[transparent] sm:text-base font-medium  focus:border-white`}
+        className={`${styles.button_secondary2} hover:border-black hover:text-black`}
         onClick={() => onProviderSelection(true)}
       >
         Yes
       </button>
       <button
-        className={`inline-block md:text-sm rounded-full cursor-pointer p-2 bg-secondary_100 outline-none  px-4 py-2 sm:px-4 sm:py-2 text-xxs text-white border border-[transparent] sm:text-base font-medium  focus:border-white`}
+        className={`${styles.button_primary2}`}
         onClick={() => onProviderSelection(false)}
       >
         No
