@@ -1,11 +1,4 @@
-import { mockup, profileImage,profileImage2, doctors, doctors2, onlineConsult, chronicDisease, drugstore, gps_location, lab_equipment, medicalrecord,online_consult, online, online_service, patient_record, payment_wallet, signupMock, pills, pill_bottle, heart_disease, health_record, health_tips, calendar, lab_test,feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified, home_service, service_onlineConsultaions,service_onlineCare,service_chronic_disease, service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, mockup_check_profile, mockup_choose_use, mockup_choose_user, mockup_confirm_appointment, mockupe_search_service, mockupe_select_action, mockupe_signup, light1, light2, light3,light4,light5, facebook, linkedin, twitter, whatsapp,
- mockup1,mockup2,mockup3,mockup4, signup, findDoctor, prescription,consultations, managehealth,
- doctor4,
- headerDenurx,
- patient,
- patientcare2,
- youtube,
- instagram
+import { profileImage2, doctors,online_consult, online, pill_bottle, health_record, health_tips, calendar, lab_test,feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified, home_service, service_onlineConsultaions,service_onlineCare, service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, facebook, twitter, whatsapp, mockup1,mockup2,mockup3,mockup4, signup, findDoctor, prescription,consultations, managehealth,patientcare2, youtube, instagram
  } from "./images"
 
 
@@ -202,31 +195,31 @@ export const servicesComplete =[
     // },
     {
       name: "Jessica Brown",
-      image: profileImage,
+      image: "profileImage",
       testament: "Managing my medications has never been easier thanks to Denurx. The app's e-wallet and home delivery features ensure I never miss a dose.",
       role: "Patient"
     },
     {
       name: "Dr. Olivia Black",
-      image: profileImage2,
+      image: "profileImage2",
       testament: "Denurx's integrated lab test features allow me to quickly order and review results for my patients. It’s an invaluable tool for providing timely and accurate diagnoses.",
       role: "Doctor"
     },
     {
       name: "Nurse Tom Harris",
-      image:profileImage,
+      image:"profileImage",
       testament: "With Denurx, I can easily manage my schedule and provide high-quality care to patients at home. The app’s convenience is unparalleled.",
       role: "Nurse"
     },
     {
       name: "Laura Wilson",
-      image: profileImage,
+      image: "profileImage",
       testament: "Denurx has transformed the way I manage my chronic condition. The app’s reminders and easy access to healthcare professionals give me peace of mind.",
       role: "Patient"
     },
     {
       name: "Dr. Christopher Evans",
-      image: profileImage2,
+      image: "profileImage2",
       testament: "Denurx’s telemedicine platform has streamlined my workflow and improved patient care. The ability to access patient records and lab results on the go is fantastic.",
       role: "Doctor"
     },
@@ -240,42 +233,32 @@ export const servicesComplete =[
   
 export const howItWorks = [
     {
-        mockup: mockupe_signup,
         icon:signup,
         step: "Sign Up",
-        illustration: mockup,
         description: "Create an account by providing your basic information and completing your profile.",
         tip: "Tip: Ensure to verify your email and phone number for a secure experience."
       },
       {
-        mockup: mockupe_search_service,
         icon:findDoctor,
         step: "Find a Doctor or Service",
-        illustration: mockup,
         description: "Use the app's search and GPS locator to find doctors, labs, or pharmacies near your location.",
         tip: "Tip: Filter search results based on specialties, services, and user ratings."
       },
       {
-        mockup: mockup_confirm_appointment,
         icon:consultations,
         step: "Consult & Book",
-        illustration: mockup,
         description: "Schedule a consultation or home visit with the healthcare provider of your choice. Choose between video call, chat, or in-person appointments.",
         tip: "Tip: Check provider profiles and availability before booking."
       },
       {
-        mockup: mockup_confirm_appointment,
         icon:prescription,
         step: "Get Prescriptions & Lab Tests",
-        illustration: mockup,
         description: "During the consultation, doctors can prescribe medications and order lab tests. Receive your prescriptions and test orders directly in the app.",
         tip: "Tip: Use the app to locate nearby pharmacies and labs to fulfill your prescriptions and test orders."
       },
       {
-        mockup: mockupe_select_action,
         icon:managehealth,
         step: "Manage Your Health",
-        illustration: mockup,
         description: "Track your medical history, set drug reminders, and manage chronic conditions. View lab results, treatment plans, and more in one place.",
         tip: "Tip: Regularly update your health information and set reminders for medication and follow-up appointments."
       }
