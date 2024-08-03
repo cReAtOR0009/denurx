@@ -30,25 +30,29 @@ const Footer = () => {
         </button>
       </div>
         <div className="flex flex-col w-screen md:w-[auto] my-2">
+          <div className="flex"></div>
           <div className="flex justify-between  sm:flex-row gap-4 sm:gap-6">
-            <a href="tel:+234 00000000" className="flex flex-col items-center p-2 sm:p-4 flex-1 text-center">
-              <img src={telephone} alt="" className="w-6 md:w-12 rounded-full"  />  +234 00000000
+            <a href="tel:+234 00000000" className="flex flex-col items-center p-2 sm:p-4 flex-1 text-center hover:scale-[1.2] transition-all">
+              <img src={telephone} alt="" className="w-6 md:w-12 rounded-full"  />  +234 8076091961
             </a>
-            <a  href="mailto:creator@gmail.com" className="flex flex-col items-center p-2 sm:p-4 flex-1 text-center">
-              <img src={mail} alt="" className="w-6 md:w-12 rounded-full" />Denurx@gmail.com
+            <a  href="mailto:creator@gmail.com" className="flex flex-col items-center p-2 sm:p-4 flex-1 text-center hover:scale-[1.2] transition-all">
+              <img src={mail} alt="" className="w-6 md:w-12 rounded-full" />denurx@gmail.com
             </a>
           </div>
+          <div className="flex flex-col items-center">
+            {/* <h5 className={`${styles.h5} my-2`}>Join us On Our Social Handles!</h5> */}
           <div className="flex justify-between flex-wrap gap-2 sm:gap-6 my-2">
             {socials.map((social, index) => (
-              <a href={`${social.link}`} target="_blank" key={index} className="flex flex-1 flex-col items-center  cursor-pointer">
+              <a href={`${social.link}`} target="_blank" key={index} className="flex flex-1 flex-col items-center  cursor-pointer hover:scale-[1.2] transition-all">
                 <img src={social.image} alt="" className="w-4 md:w-8 rounded-full"  />
                 <p>{social.platform}</p>
               </a>
             ))}
           </div>
+          </div>
           <div>
-            <div className="flex">
-            <p onClick={() =>setShowTerms(true)} className={`hover:underline transition`}>Terms and Conditions &nbsp;</p> |
+            <div className="flex justify-between">
+            <p onClick={() =>setShowTerms(true)} className={`hover:underline transition`}>Terms and Conditions &nbsp;</p> 
             <p onClick={() => setShowPrivacy(true)} className={`hover:underline transition`}> &nbsp; Privacy Policy</p>
             </div>
             Copyright &copy; 2024 Denurx
