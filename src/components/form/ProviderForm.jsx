@@ -150,7 +150,7 @@ export const ProviderRegistrationForm = ({
             placeholder="input your name here"
             value={providerData.name}
             onChange={handleChange}
-            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-black dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
           />
         </div>
         <div className="">
@@ -165,7 +165,7 @@ export const ProviderRegistrationForm = ({
             placeholder="input your email here"
             value={providerData.email}
             onChange={handleChange}
-            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-black dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
           />
         </div>
         <div className="">
