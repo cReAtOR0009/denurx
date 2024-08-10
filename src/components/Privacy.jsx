@@ -78,7 +78,7 @@ const Privacy = ({ showPrivacy, setShowPrivacy }) => {
           <h3 className={`${styles.h3}`}>Contact Us</h3>
           {privacyPolicy.contactUs}{" "}
           <Link
-            to={`mailto:denurx@gmail.com`}
+            to={`mailto:mailto:denurxco@denurx`}
             // target="_blank"
             // rel="noopener noreferrer"
             className="underline"

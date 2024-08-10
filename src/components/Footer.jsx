@@ -33,10 +33,10 @@ const Footer = () => {
           <div className="flex xl:flex-row flex-wrap justify-center lg:justify-between items-center">
 
           <div className="flex flex-wrap justify-between  sm:flex-row gap-4 sm:gap-6">
-            <a href="tel:+234 8076091961" className="flex flex-col items-center p-2 sm:p-4 flex-1 text-center hover:scale-[1.2] transition-all">
+            <a href="tel:+234 8076091961" className="flex flex-col items-center p-2 sm:p-4 sm:pb-0 sm:self-end flex-1 text-center hover:scale-[1.2] transition-all">
               <img src={telephone} alt="" className="w-6 md:w-12 rounded-full"  />  +234 8076091961
             </a>
-            <a  href="mailto:denurx@gmail.com" className="flex flex-col items-center p-2 sm:p-4 flex-1 text-center hover:scale-[1.2] transition-all">
+            <a  href="mailto:denurxco@denurx.com" className="flex flex-col items-center p-2 sm:p-4 sm:pb-0 sm:self-end flex-1 text-center hover:scale-[1.2] transition-all">
               <img src={mail} alt="" className="w-6 md:w-12 rounded-full" />denurx@gmail.com
             </a>
           </div>
