@@ -53,7 +53,6 @@ const CustomForm = ({ status, message, onValidated }) => {
             EMAIL: form.email,
             FULLNAME: form.fullname,
           });
-        // console.log("result:", result)
       }
     } catch (error) {
       setLoading(false);

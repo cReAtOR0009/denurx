@@ -20,8 +20,6 @@ export const UserRegistrationForm = ({
     fullname: "",
     email: "",
   });
-  console.log("showback:", showBack);
-  console.log("text:", text);
 
   const handleFormChange = (event) => {
     const { name, value } = event.target;
@@ -30,6 +28,8 @@ export const UserRegistrationForm = ({
       [name]: value,
     });
   };
+
+  
 
   useEffect(() => {
     if (status === "success") {
@@ -54,13 +54,15 @@ export const UserRegistrationForm = ({
         error: true,
         display: true,
       });
-      setLoading(false);
+      setLoading(false);  
       setTimeout(() => {
         closeResponse();
         setResponse({ message: ``, error: false, display: false });
       }, 5000);
+    } else if (status === "sending") {
+      setLoading(true);
     }
-  }, [status, message]);
+  }, [status]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -70,10 +72,9 @@ export const UserRegistrationForm = ({
       } else {
         setLoading(true);
         onValidated({
-          EMAIL: form.email,
-          FULLNAME: form.fullname,
+          MERGE0: form.email,
+          MERGE1: form.fullname,
         });
-        // console.log("result:", result)
       }
     } catch (error) {
       setLoading(false);
@@ -86,7 +87,10 @@ export const UserRegistrationForm = ({
   };
 
   return (
-    <div id="" className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav  border-[#cacaca] transition">
+    <div
+      id=""
+      className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav  border-[#cacaca] transition"
+    >
       <h2 className={`${styles.h4} font-semibold mb-4 text-center`}>
         User Registration
       </h2>
@@ -112,36 +116,40 @@ export const UserRegistrationForm = ({
             </span>
           </div>
         )}
-         <div className="flex flex-col justify-center items-start w-[auto]">
-          <label htmlFor="fullname" className={`dark:text-white`}>Full Name:</label>
+        <div className="flex flex-col justify-center items-start w-[auto]">
+          <label htmlFor="fullname" className={`dark:text-white`}>
+            Full Name:
+          </label>
           <input
             type="text"
             name="fullname"
             id="fullname"
             required
             placeholder="Enter your full name"
-           className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
             value={form.fullname}
             onChange={handleFormChange}
           />
         </div>
-        
+
         <div className="flex flex-col justify-center items-start w-[auto]">
-          <label htmlFor="email"  className={`dark:text-white`}>Email Address:</label>
+          <label htmlFor="email" className={`dark:text-white`}>
+            Email Address:
+          </label>
           <input
             type="email"
             name="email"
             id="email"
             required
             placeholder="Enter your email address"
-             className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
             value={form.email}
             onChange={handleFormChange}
           />
         </div>
-       
+
         <div className="flex justify-center items-center gap-6">
-          {showBack && (
+          {!loading && showBack && (
             <button
               type="button"
               className={`${styles.button_secondary2}  hover:border-black hover:text-black`}

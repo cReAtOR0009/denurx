@@ -6,11 +6,10 @@ import MailChimp from "./MailChimp";
 import MailChimp2 from "./Mailchimp2";
 import { styles } from "../../styles";
 
-const MultiStepForm = ({displayForm, setDisplayForm}) => {
+const MultiStepForm = ({ displayForm, setDisplayForm }) => {
   const [step, setStep] = useState(1);
   const [isProvider, setIsProvider] = useState(null);
   // const [close, setClose] = useState(false);
-
 
   const handleProviderSelection = (selection) => {
     setIsProvider(selection);
@@ -42,29 +41,30 @@ const MultiStepForm = ({displayForm, setDisplayForm}) => {
           <StepOne onProviderSelection={handleProviderSelection} />
         )}
         {step === 2 && isProvider === true && (
-          <ProviderRegistrationForm
+          <MailChimp2
             onBack={handleBack}
             onSubmit={handleProviderSubmit}
             showBack={true}
           />
         )}
         {step === 2 && isProvider === false && (
-          <UserRegistrationForm
+          <MailChimp
             onBack={handleBack}
             onSubmit={handleUserSubmit}
             showBack={true}
-              text={true}
+            text={true}
           />
         )}
       </div>
-
     </div>
   );
 };
 
 const StepOne = ({ onProviderSelection }) => (
   <div className={`animate-slide-in text-black text-center`}>
-    <h2 className="text-2xl font-bold mb-2 text-black dark:text-dark-text">Are you a healthcare provider?</h2>
+    <h2 className="text-2xl font-bold mb-2 text-black dark:text-dark-text">
+      Are you a healthcare provider?
+    </h2>
     <div className="flex justify-center items-center gap-6 text-center">
       <button
         className={`${styles.button_secondary2} hover:border-black hover:text-black`}
@@ -81,6 +81,5 @@ const StepOne = ({ onProviderSelection }) => (
     </div>
   </div>
 );
-
 
 export default MultiStepForm;
