@@ -85,4 +85,4 @@ const Form = () => {
   );
 };
 
-export default Sectionwrapper(Form, "form");
+export default Sectionwrapper(Form, "form", "scrollmodern");
