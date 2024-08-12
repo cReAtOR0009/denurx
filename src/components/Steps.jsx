@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { Sectionwrapper } from "./hoc";
 import { styles } from "../styles";
 import { howItWorks } from "../assets/text";
 import { doctor5, tipIcon } from "../assets/images";
-import { Sectionwrapper } from "./hoc";
 
 const StepsCard = ({
   icon,
@@ -30,10 +30,10 @@ const StepsCard = ({
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={` flex-1 flex flex-col gap-2 justify-between items-center border-2 border-[#87898c] rounded-2xl p-2 sm:p-2 lg:p-4 h-[auto] min-w-[150px bg-[#eaecf0a7] dark:bg-dark-background3 text-left sm:hover:scale-[1.1] transition`}
+      className={` flex-1 flex flex-col gap-2 justify-between items-center border-2 border-grey_500  rounded-2xl p-2 sm:p-2 lg:p-4 h-[auto] min-w-[150px bg-grey_300 dark:bg-dark-background3 text-left sm:hover:scale-[1.1] transition`}
       >
      
-      <img src={icon} alt="" className="w-[40px] lg:w-[50px] h-[auto]" />
+      <img src={icon} alt={`${step} icon`} className="w-[40px] lg:w-[50px] h-[auto]" />
       <h4 className={`"${styles.h4}" text-base md:text-lg lg:text-sm xl:text-xl font-medium dark:text-dark-text leading-[0]`}>{step}</h4>
       {displayContent === description && (
         <div className="absolute flex sm:hidden flex-col items-center justify-center gap-2 p-4 h-[100%] rounded-2xl w-[100%] inset-0 bg-black bg-opacity-80 animate-slide-in-up text-left">
@@ -75,7 +75,7 @@ const Steps = () => {
         <div className="order- sm:order-[-1] lg:order-2 hidden sm:block relative flex- rounded-2xl lg:rounded-[50px] magicpattern2 bg-100 w-[100%] lg:w-[50%]">
           <img
             src={doctor5}
-            alt=""
+            alt="Doctor Engaging Patients from Phone leveraging Denurx app to Mange and connect with patients Virtually"
             className="w-[100%] h-[400px]"
           />
           

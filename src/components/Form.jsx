@@ -1,15 +1,13 @@
 import { useContext } from "react";
 import { WaitlistContext } from "../context/waitlistContext";
-import { ProviderRegistrationForm } from "./form/ProviderForm";
-import { UserRegistrationForm } from "./form/UserRegistrationForm";
-import { doctor4, doctor7, patient2 } from "../assets/images";
 import { Sectionwrapper } from "./hoc";
+import {doctor7, patient2 } from "../assets/images";
 import { styles } from "../styles";
 
 const Form = () => {
   const { setShowJoinwaitlist } = useContext(WaitlistContext);
   return (
-    <div className={`${""}  flex-wrap justify-between`}>
+    <div className={`${""}  flex-wrap justify-between `}>
       <div
         id="providerform"
         className="flex  py-10 justify-between items-center flex-wrap lg:flex-nowrap"
@@ -40,12 +38,12 @@ const Form = () => {
         <div className="w-1/2 hidden overflow-hidden lg:flex rounded-[20px] sm:rounded-[50px]">
           <img
             src={doctor7}
-            alt=""
+            alt="Doctor meeting with a patient online using Denurx Virtual Appointment Scheduling feature"
             className="h-auto hover:scale-[1.2] transition duration-1000"
           />
         </div>
       </div>
-      <div className="w-full h-1 bg-[#eaecf0a7] rounded my-10"></div>
+      <div className="w-full h-1 bg-grey_300 rounded my-10"></div>
       <div
         id="userform"
         className="flex py-10 justify-between items-center flex-wrap lg:flex-nowrap"
@@ -53,7 +51,7 @@ const Form = () => {
         <div className="w-1/2 overflow-hidden hidden lg:flex rounded-[20px] sm:rounded-[50px]">
           <img
             src={patient2}
-            alt=""
+            alt="patients using Denurx Secure medical virtual Consultations feature to Get prescription"
             className="h-auto hover:scale-[1.2] transition duration-1000"
           />
         </div>
@@ -85,4 +83,4 @@ const Form = () => {
   );
 };
 
-export default Sectionwrapper(Form, "form", "scrollmodern");
+export default Sectionwrapper(Form, "form", "bg-scrollmodern");

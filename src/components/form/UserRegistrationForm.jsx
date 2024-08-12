@@ -89,14 +89,14 @@ export const UserRegistrationForm = ({
   return (
     <div
       id=""
-      className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav  border-[#cacaca] transition"
+      className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav  border-grey_100 transition"
     >
       <h2 className={`${styles.h4} font-semibold mb-4 text-center`}>
         User Registration
       </h2>
       <form
         action="  POST"
-        className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[250px] sm:min-w-[30vw] sm:max-w-[600px] my-2 text-[#000000]  bg-white dark:bg-dark-backgroundNav  animate-slide-in"
+        className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[250px] sm:min-w-[30vw] sm:max-w-[600px] my-2 text-black  bg-white dark:bg-dark-backgroundNav  animate-slide-in"
         onSubmit={handleSubmit}
       >
         {response.display && (
@@ -126,7 +126,7 @@ export const UserRegistrationForm = ({
             id="fullname"
             required
             placeholder="Enter your full name"
-            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-grey_500 dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav  focus:border-white"
             value={form.fullname}
             onChange={handleFormChange}
           />
@@ -142,7 +142,7 @@ export const UserRegistrationForm = ({
             id="email"
             required
             placeholder="Enter your email address"
-            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-grey_500 dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav  focus:border-white"
             value={form.email}
             onChange={handleFormChange}
           />

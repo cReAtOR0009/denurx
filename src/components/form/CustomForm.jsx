@@ -68,7 +68,7 @@ const CustomForm = ({ status, message, onValidated }) => {
   return (
     <form
       action="POST"
-      className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl text-[#000000] border-2 bg-white border-[#cacaca] transition"
+      className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl text-black border-2 bg-white border-grey_100 transition"
       onSubmit={handleSubmit}
     >
       {response.display && (
@@ -94,7 +94,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           id="email"
           required
           placeholder="Enter your email address"
-          className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-[#939191] placeholder-white focus:border-white"
+          className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-black sm:text-base p-2 outline-none border border-[transparent] bg-grey_400 placeholder-white focus:border-white"
           value={form.email}
           onChange={handleFormChange}
         />
@@ -107,7 +107,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           id="fullname"
           required
           placeholder="Enter your full name"
-          className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#000000] sm:text-base p-2 outline-none border border-[transparent] bg-[#939191] placeholder-white focus:border-white"
+          className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-black sm:text-base p-2 outline-none border border-[transparent] bg-grey_400 placeholder-white focus:border-white"
           value={form.fullname}
           onChange={handleFormChange}
         />

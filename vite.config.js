@@ -1,17 +1,7 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// console.log("env base url:", process.env.VITE_BASE_URL)
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_BASE_URL,
-  build: {
-    target: 'esnext', // Set the target to esnext for modern JavaScript support
-    outDir: 'dist',   // Output directory
-    rollupOptions: {
-      output: {
-        format: 'esm', // Set the output format to ES modules
-      },
-    },
-  },
-});
+})

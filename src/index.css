@@ -25,6 +25,19 @@
   background: #b40105;
 }
 
+details summary {
+  /* Basic styling */
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none; 
+  /* background-image: url('your-marker-image.png'); */
+  /* background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;  */
+}
 body {
   color: black;
   padding: 0;

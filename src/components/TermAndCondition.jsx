@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { termsAndConditions } from "../assets/text";
 import { styles } from "../styles";
+import { termsAndConditions } from "../assets/text";
 
 const TermAndCondition = ({ showTerms, setShowTerms  }) => {
   useEffect(() => {
@@ -17,7 +17,7 @@ const TermAndCondition = ({ showTerms, setShowTerms  }) => {
 
   return (
     <div
-      className={`mb-10 h-[100vh] fixed top-0 left-0 bottom-0 right-0 z-[100] pt-[2% flex flex-col justify-center items-center my-0 mx-[auto]  w-[100%]  bg-[#cacacaf0] animate-pop-up `}
+      className={`mb-10 h-[100vh] fixed top-0 left-0 bottom-0 right-0 z-[100] pt-[2% flex flex-col justify-center items-center my-0 mx-[auto]  w-[100%]  bg-grey_200 animate-pop-up `}
     >
       <div
         onClick={() => setShowTerms(false)}

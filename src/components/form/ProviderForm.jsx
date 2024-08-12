@@ -112,14 +112,14 @@ export const ProviderRegistrationForm = ({
   return (
     <div
       id=""
-      className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav border-[#cacaca] transition"
+      className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav border-grey_100 transition"
     >
       <h2 className={`${styles.h4}  font-semibold  text-center`}>
         Provider Registration
       </h2>
       <form
         onSubmit={handleSubmit}
-        className={`relative flex flex-col gap-2 p-4 w-[100%] min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2  text-[#000000] bg-white dark:bg-dark-backgroundNav  animate-slide-in`}
+        className={`relative flex flex-col gap-2 p-4 w-[100%] min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2  text- bg-white dark:bg-dark-backgroundNav  animate-slide-in`}
       >
         {response.display && (
           <div
@@ -150,7 +150,7 @@ export const ProviderRegistrationForm = ({
             placeholder="input your name here"
             value={providerData.name}
             onChange={handleChange}
-            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-black dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-black dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav  focus:border-white"
           />
         </div>
         <div className="">
@@ -165,7 +165,7 @@ export const ProviderRegistrationForm = ({
             placeholder="input your email here"
             value={providerData.email}
             onChange={handleChange}
-            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-black dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav  focus:border-white"
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-black dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav  focus:border-white"
           />
         </div>
         <div className="">
@@ -178,7 +178,7 @@ export const ProviderRegistrationForm = ({
             required
             value={providerData.gender}
             onChange={handleChange}
-            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav n  focus:border-white"
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-grey_500 dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav n  focus:border-white"
           >
             <option value="">select your Gender</option>
             <option value="Male">Male</option>
@@ -200,7 +200,7 @@ export const ProviderRegistrationForm = ({
               required
               value={providerData.professionalTitle}
               onChange={handleChange}
-              className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav n  focus:border-white"
+              className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-grey_500 dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav n  focus:border-white"
             >
               <option value="">Select your professional title</option>
               <option value="doctor">Doctor</option>
@@ -223,7 +223,7 @@ export const ProviderRegistrationForm = ({
               value={providerData.professionalTitle}
               placeholder="Please input your professional title"
               onChange={handleChange}
-              className="w-full my-4 p-2 border  rounded text-black dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav"
+              className="w-full my-4 p-2 border  rounded text-black dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav"
             />
           )}
         </div>
@@ -243,7 +243,7 @@ export const ProviderRegistrationForm = ({
             placeholder="Medical Facility you work with"
             value={providerData.affiliations}
             onChange={handleChange}
-            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-[#9ca3af] dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-[#eaecf0a7] dark:bg-dark-backgroundNav n  focus:border-white"
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-grey_500 dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav n  focus:border-white"
           />
         </div>
 

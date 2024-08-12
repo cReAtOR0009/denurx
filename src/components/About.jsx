@@ -16,7 +16,7 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
   return (
     <div
       onClick={handleShowMore}
-      className={`flex-1 group rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xln border-2 p-2 sm:p-4 lg:p-6 pl-0 min-w-[250px] border-[#cacaca] border-l-8 border-r-8 border-b-2 rounded-[10px] bg-[#dadada] dark:bg-dark-background3  text-black  group animate-slide-in  ${
+      className={`flex-1 group rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xln border-2 p-2 sm:p-4 lg:p-6 pl-0 min-w-[250px] border-grey_100 border-l-8 border-r-8 border-b-2 rounded-[10px] bg-grey_200 dark:bg-dark-background3  text-black  group animate-slide-in  ${
         !showMore ? "hover:scale-[1.1] transition" : ""
       } `}
     >
@@ -77,7 +77,7 @@ const About = () => {
       <div className="block sm:hidden w-[100%] h-[100%] md:w-[auto] magicpattern bg-130 rounded-2xl sm:rounded-[50px]">
           <img
             src={whyDenurx}
-            alt="Denurx logo"
+            alt="doctor smiling as she uses Denurx App for Health Service on her phone"
             className="w-[100%] h-auto"
           />
         </div>
@@ -109,7 +109,7 @@ const About = () => {
         <div className="hidden sm:block w-[100%] h-[100%] md:w-[auto] magicpattern bg-130 sm:bg-120 rounded-2xl sm:rounded-[50px]">
           <img
             src={whyDenurx}
-            alt="Denurx logo"
+            alt="doctor with ok hand signal, depicting Denurx is a good Telemedicine app to consider "
             className="w-[100%] h-[400px] lg:h-[auto]"
           />
         </div>
@@ -135,7 +135,7 @@ const About = () => {
                 onClick={() => updateDisplayItem(index)}
                 className={`${
                   currentIndex === index
-                    ? " scale-[1.3] w-6"
+                    ? " scale-[1.3] w-6 bg-secondary_100"
                     : "hover:scale-[1.3]"
                 } bg-primary p-1 my-6 w-4 h-2 rounded-full animate-slide-in`}
               >

@@ -1,6 +1,6 @@
 import React from "react";
-import { Sectionwrapper } from "./hoc";
 import { Link } from "react-router-dom";
+import { Sectionwrapper } from "./hoc";
 import { styles } from "../styles";
 import { blogs } from "../assets/text";
 
@@ -11,7 +11,7 @@ const Blog = () => {
         <img src={image} alt={title} className="w-full h-48 object-cover" />
         <div className="p-2 sm:p-6">
           <h3 className={`${styles.h3} mb-2`}>{title}</h3>
-          <p className={`${styles.paragraph} text-[#939191] mb-4`}>
+          <p className={`${styles.paragraph} text-grey_300 mb-4`}>
             {date} - {author}
           </p>
           <p className={`${styles.paragraph}  mb-4`}>{summary}</p>

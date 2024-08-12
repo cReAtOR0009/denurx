@@ -1,20 +1,18 @@
 import { useState } from "react";
 import { Sectionwrapper } from "./hoc";
-import Registration from "./Registration";
 import { styles } from "../styles";
 import { aboutApp } from "../assets/text";
-import { doctor2, patient } from "../assets/images";
 
 const FeaturesCard = ({ text, mockup, description, index }) => {
   return (
     <div
       className={`feature${
         index + 1
-      } relative flex  justify-between items-center flex-wrap sm:flex-nowrap border border-[#eaeaea] dark:border-dark-borderDark  ${
+      } relative flex  justify-between items-center flex-wrap sm:flex-nowrap border border-grey_50 dark:border-dark-borderDark  ${
         index + 1 == 2 ? "lg:flex-col justify-center" : "flex-row"
       } 
       ${index + 1 == 3 ? "flex-row flex-wrap md:flex-nowrap" : ""}
-      justify-between p-4 md:p-10 pb-0 sm:pb-0 md:pb-0 rounded-[30px] lg:rounded-[50px] gap-4  h-[100%] w-[100%]  overflow-hidde bg-mockupB bg-[#eaecf0a7] dark:bg-dark-background2`}
+      justify-between p-4 md:p-10 pb-0 sm:pb-0 md:pb-0 rounded-[30px] lg:rounded-[50px] gap-4  h-[100%] w-[100%]  overflow-hidde bg-mockupB bg-grey_300 dark:bg-dark-background2`}
     >
       <div
       
@@ -40,10 +38,7 @@ const FeaturesCard = ({ text, mockup, description, index }) => {
       >
         <img
           src={mockup}
-          alt=""
-          // className={`${
-          //   index + 1 == 2 ? "h-[150px] sm:h-[auto]" : ""
-          // } w-[auto] h-[100px] lg:h-[200px] xl:h-[200px]  max-w-[auto] `}
+          alt={`phone mockup: ${text}`}
           className={`${
             index + 1 == 1
               ? "w-[auto] h-[200px] bg lg:h-[200px] xl:h-[250px] sm:w-[400px] md:w-[500px] lg:w-[700px] xl:w-[600px]   max-w-[auto]"
@@ -64,7 +59,7 @@ const KeyFeatures = () => {
 
   return (
     <section
-      className={`${""}about    z-1 text-black bg lg:h-[100vh overflow-hidden`} //bg-[#939191]_200
+      className={`${""}about    z-1 text-black bg lg:h-[100vh overflow-hidden`} 
     >
       {/* <Registration /> */}
 

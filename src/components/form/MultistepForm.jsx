@@ -34,7 +34,7 @@ const MultiStepForm = ({ displayForm, setDisplayForm }) => {
     <div
       className={`${
         displayForm ? "flex" : "flex"
-      } justify-center items-center  z-50 w-full sm:w-full inline  min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 p-2 rounded-md sm:rounded-xl text-[#000000] bg-white  dark:bg-dark-background3 transition`}
+      } justify-center items-center  z-50 w-full sm:w-full inline  min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 p-2 rounded-md sm:rounded-xl text-black bg-white  dark:bg-dark-background3 transition`}
     >
       <div className=" sm:p-8 w-[100%] sm:min-w-[30vw] sm:max-w-[600px]">
         {step === 1 && (

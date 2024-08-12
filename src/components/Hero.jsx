@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
-import { HeroText } from "../assets/text";
-import { nextArrow } from "../assets/images";
+import { useContext, useEffect, useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import { WaitlistContext } from "../context/waitlistContext";
 import { styles } from "../styles";
-import { HashLink } from "react-router-hash-link";
-import { useContext, useEffect, useState } from "react";
-import { baseUrl } from "../../config";
+import { HeroText } from "../assets/text";
+import { nextArrow } from "../assets/images";
 
 const Hero = () => {
   const { showJoinwaitlist, setShowJoinwaitlist } = useContext(WaitlistContext);
@@ -40,13 +38,13 @@ const Hero = () => {
     >
       <img
         src={nextArrow}
-        alt="prev arrow"
+        alt="previous arrow to show previous image"
         onClick={handlePrev}
         className="absolute animate-pulse top-1/2  lg:top-1/2 left-0 rounded-[30px] border bg-primary border-primary p-2 rotate-180 text-white cursor-pointer"
       />
       <img
         src={nextArrow}
-        alt="next arrow"
+        alt="next arrow to show next image"
         onClick={handleNext}
         className="absolute animate-pulse top-1/2 right-0 rounded-[30px] border bg-primary border-primary p-2 text-white cursor-pointer"
       />
@@ -65,7 +63,7 @@ const Hero = () => {
           {HeroText[currentSlide].description}
         </p>
         <div className="flex gap-6 sm:gap-8 my-2 sm:my-8">
-          <HashLink to={`${baseUrl}/#start`}>
+          <HashLink to={`/#start`}>
             <button className={`${styles.button_secondary}  hover:bg-[transparent] hover:border-white`}>
               Learn More
             </button>
@@ -81,7 +79,7 @@ const Hero = () => {
       <div className="flex-1 bg-heroMockup bg-full bg-no-repeat bg-center-center hidden md:flex lg:items-end w-full h-full mt-2">
         <img
           src={HeroText[currentSlide].image}
-          alt="Telemedicine App"
+          alt={HeroText[currentSlide].tagLine}
           className="max-h-[90vh]"
         />
       </div>

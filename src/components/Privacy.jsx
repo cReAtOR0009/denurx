@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import { privacyPolicy } from "../assets/text";
-import { styles } from "../styles";
 import { Link } from "react-router-dom";
-import { baseUrl } from "../../config";
+import { styles } from "../styles";
+import { privacyPolicy } from "../assets/text";
 
 const Privacy = ({ showPrivacy, setShowPrivacy }) => {
   useEffect(() => {
@@ -19,7 +18,7 @@ const Privacy = ({ showPrivacy, setShowPrivacy }) => {
 
   return (
     <div
-      className={`mb-10 h-[100vh] fixed top-0 left-0 bottom-0 right-0 z-[100] pt-[2% flex flex-col justify-center items-center my-0 mx-[auto]  w-[100%]  bg-[#cacacaf0] animate-pop-up `}
+      className={`mb-10 h-[100vh] fixed top-0 left-0 bottom-0 right-0 z-[100] pt-[2% flex flex-col justify-center items-center my-0 mx-[auto]  w-[100%]  bg-grey_200 animate-pop-up `}
     >
       <div
         onClick={() => setShowPrivacy(false)}

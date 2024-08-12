@@ -1,17 +1,17 @@
-import { testimonials } from "../assets/text";
-import { styles } from "../styles";
 import { Sectionwrapper } from "./hoc";
+import { styles } from "../styles";
+import { testimonials } from "../assets/text";
 
 
 const TestimonialCard = ({ image, name, role, testament, gridPosition }) => {
 
   return (
-    <li className={`${gridPosition} testimonialsContainer relative flex flex-col gap-4 text-sm leading-6 p-4 bg-primary_20  rounded-lg text-white bg-primary opacity0 border-2 border-[#cacaca] hover:bg-primary hover:text-white`}>
+    <li className={`${gridPosition} testimonialsContainer relative flex flex-col gap-4 text-sm leading-6 p-4 bg-primary_20  rounded-lg text-white bg-primary opacity0 border-2 border-grey_100 hover:bg-primary hover:text-white`}>
       <div className="fle items-center gap-2 md:gap-4">
        
         <div className="flex flex-col">
           <h4 className={`${styles.h4} `}>{name}</h4>
-          <span className="text-[#8b8989]">{role}</span>
+          <span className="text-grey_500">{role}</span>
         </div>
       </div>
       <p>{testament}</p>

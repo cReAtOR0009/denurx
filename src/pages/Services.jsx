@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import Service from "../components/Services";
-import { arrow } from "../assets/images";
 import { styles } from "../styles";
 import { servicesComplete } from "../assets/text";
-import MultiStepForm from "../components/form/MultistepForm";
-import { baseUrl } from "../../config";
 import { Sectionwrapper } from "../components/hoc";
 
 const ServiceCard = ({ icon, title, description, image }) => {
@@ -13,12 +9,12 @@ const ServiceCard = ({ icon, title, description, image }) => {
   const [readMore, setReadMore] = useState(false);
 
   return (
-    // <HashLink to={`${baseUrl}/services/#${title}`}>
+    // <HashLink to={`/services/#${title}`}>
 
     <div
       key={title}
       id={`${title}`}
-      className=" relative rounded-[26px] lg:rounded-[46px] p-4 border-2 border-[#cacaca]  cursor-pointer hover:transition-colors transition:border"
+      className=" relative rounded-[26px] lg:rounded-[46px] p-4 border-2 border-grey_100  cursor-pointer hover:transition-colors transition:border"
       onClick={() => setReadMore(!readMore)}
     >
       {readMore && (
@@ -28,15 +24,14 @@ const ServiceCard = ({ icon, title, description, image }) => {
         </Helmet>
       )}
       <img
-        src={image}
-        alt=""
+        src={`${image}`}
+        alt={title}
         className="w-[100%] rounded-[10px] lg:rounded-[30px] min-h-[auto] sm:max-h-[250px] sm:min-h-[300px] "
       />
-      {/* <img   src={arrow} alt="" className="absolute top-0 right-0 z-10 w-[40px] sm:w-[80px] lg:w-[80px] xl:w-[80px] cursor-pointer rounded-full hover:scale-[1.1] transition" /> */}
       <div className="">
         <img
           src={icon}
-          alt={`${title}`}
+          alt={`${title} icon`}
           className="mt-[-12%] w-8 lg:w-20 md:w-20 "
         />
         <h3 className={`${styles.h3} text-black`}>{title}</h3>
@@ -68,7 +63,7 @@ const Services = () => {
     <div className={`  flex flex-col  gap-6 sm:gap-10 mt-10`}>
       <Helmet>
         <title> Services Offered By Denurx</title>
-        <meta name="description" content="Services offered by Denurx" />
+        <meta name="description" content="Access top healthcare professionals anytime, anywhere with our telemedicine app. Book virtual doctor consultations,Appointment Booking, Home Health Services, virtual Lab Test scheduling and result Requests,Medication Management and prescription, Health Records Management, manage prescriptions, and get quality medical advice from the comfort of your home. Monetize your Medical service, Engage Patients, Manage Patients, Stay healthy with our secure, user-friendly telehealth platform. Download now for convenient, on-demand medical care." />
       </Helmet>
       <h2
         className={` text-3xl sm:text-4xl md:text-4xl lg:text-6xl  dark:text-dark  leading-tight font-semibold`}

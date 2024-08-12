@@ -87,8 +87,10 @@ module.exports = {
       primary_100: "#1e3e92", //#1e3e9
       primary_200: "#007bff80", //007bff80
 
+      primary_300:"#0048ff44",
+
       // Complementary Colors
-      secondary: "#B90000", //#dd4b4f
+      secondary: "#fe0000", //#dd4b4f
       secondary_100: "#dd4b4f", //#dd4b4f
       secondary2: "#310092", //007bff80
       secondary3: "#230438",
@@ -96,6 +98,15 @@ module.exports = {
 
       //container Background
       aboutBg: "#c8d5f9",
+
+      //grey
+      grey_30:"#eaecf0",
+      grey_50:"#eaeaea",
+      grey_100:"#cacaca",
+      grey_200:"#cacacaf0",
+      grey_300:"#eaecf0a7",
+      grey_400:"#939191",
+      grey_500:"#9ca3af",
 
       // Neutral Colors
       white: "#ffffff",
@@ -169,7 +180,7 @@ module.exports = {
         stepBlob: 'url("/src/assets/stepblob2.png")', 
         bg: 'url("/src/assets/2493.jpg")',
         scrollmodern:
-          "linear-gradient(0deg, rgb(20 20 17 / 60%), rgb(35 44 57 / 90%)), url('/src/assets/scrollmodern.jpg')",
+          "linear-gradient(to right, #efefbb, #d4d3dd)",
         heroGradient:
           "linear-gradient(340deg, rgb(27 39 106), rgb(29 0 233 / 0%)), url(/src/assets/doctor6.jpg)",
           heroGradientDark:
