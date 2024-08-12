@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 import { HashLink } from "react-router-hash-link";
 import { WaitlistContext } from "../context/waitlistContext";
 import { styles } from "../styles";
-import { baseUrl } from "../../config";
 
 const NotFound = () => {
   const { showJoinwaitlist, setShowJoinwaitlist } = useContext(WaitlistContext);
@@ -27,7 +26,7 @@ const NotFound = () => {
         Opps!, you seem to be Looking in The Wrong Direction{" "}
       </h2>
       <div className=" flex gap-6 sm:gap-8 sm:py-4 md:py-4 my-4">
-        <HashLink to={`${baseUrl}`}>
+        <HashLink to={`/`}>
           <button
             className={` rounded-[30px] bg-primary px-6 py-4 sm:px-6 sm:py-4 text-xxs text-white sm:text-base font-medium uppercase leading-normal text-primary-700 border border-[transparent] hover:bg-primary_200 focus:border-white transition duration-150`}
           >
