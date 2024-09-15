@@ -20,7 +20,7 @@ const Registration = () => {
             Join Our Healthcare Providers Waiting list below
           </p> */}
           <article className={`${styles.paragraph} sm:text-justify`}>
-          Delivering virtual care as a Doctor is a game-changer. You can leverage out platform, and conduct secure video consultations, remote monitoring, and more. This approach enhances patient access and engagement, and helps you to expand reach and patient base. Virtual care also improves health outcomes and patient satisfaction. By adopting virtual care you can stay ahead in this digital age, grow your patient base, and deliver high-quality care conveniently and securely. Embrace this practice and improve patient care.
+          Delivering virtual care as a Doctor is a game-changer. You can leverage our platform, and conduct secure video consultations, remote monitoring, and more. This approach enhances patient access and engagement, and helps you to expand reach and patient base. Virtual care also improves health outcomes and patient satisfaction. By adopting virtual care you can stay ahead in this digital age, grow your patient base, and deliver high-quality care conveniently and securely. Embrace this practice and improve patient care.
 
           </article>
           {/* <HashLink to={`/#providerform`}> */}
@@ -105,4 +105,4 @@ const Registration = () => {
   );
 };
 
-export default Sectionwrapper(Registration, "start", "bg-scrollmodern");
+export default Sectionwrapper(Registration, "start", "bg-scrollmoder ");
