@@ -7,13 +7,6 @@ import Faq from "../components/Faq";
 import Registration from "../components/Registration";
 import Form from "../components/Form";
 
-import Services from "../components/Services";
-import { services } from "../assets/text";
-import Testimonials from "../components/Testimonials";
-import MultiStepForm from "../components/form/MultistepForm";
-import Blog from "../components/Blog";
-import { ProviderRegistrationForm } from "../components/form/ProviderForm";
-import { UserRegistrationForm } from "../components/form/UserRegistrationForm";
 
 const Home = () => {
   return (
