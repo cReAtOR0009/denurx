@@ -81,7 +81,7 @@ export const services = [
     },
     {
       title: "Home Health Services",
-      description: "Request home visits from nurses for treatments and chronic disease management. Our professional nursing team provides a range of services, including wound care, injections, and ongoing support for chronic conditions.  Receive medical care at home, perfect for those with mobility issues or chronic conditions. Enjoy the comfort and privacy of your home while receiving high-quality medical care.",
+      description: "Request home visits from nurses for treatments and disease management. Our professional nursing team provides a range of services, including wound care, injections, and ongoing support for persisting Health conditions.  Receive medical care at home, perfect for those with mobility issues or persisting Health conditions. Enjoy the comfort and privacy of your home while receiving high-quality medical care.",
       icon: home_service,         
       image: service_home_service      
     },
@@ -102,7 +102,7 @@ export const servicesComplete =[
   },
   {
     title: "Home Health Services",
-    description: "Request home visits from nurses for treatments and chronic disease management. Our professional nursing team provides a range of services, including wound care, injections, and ongoing support for chronic conditions.  Receive medical care at home, perfect for those with mobility issues or chronic conditions. Enjoy the comfort and privacy of your home while receiving high-quality medical care.",
+    description: "Request home visits from nurses for treatments and disease management. Our professional nursing team provides a range of services, including wound care, injections, and ongoing support for persisting Health conditions.  Receive medical care at home, perfect for those with mobility issues orpersisting Health conditions. Enjoy the comfort and privacy of your home while receiving high-quality medical care.",
     icon: home_service,         
     image: service_home_service      
   },
@@ -214,7 +214,7 @@ export const servicesComplete =[
     {
       name: "Laura Wilson",
       image: "profileImage",
-      testament: "Denurx has transformed the way I manage my chronic condition. The app’s reminders and easy access to healthcare professionals give me peace of mind.",
+      testament: "Denurx has transformed the way I manage my health condition. The app’s reminders and easy access to healthcare professionals gives me peace of mind.",
       role: "Patient"
     },
     {
@@ -259,18 +259,18 @@ export const howItWorks = [
       {
         icon:managehealth,
         step: "Manage Your Health",
-        description: "Track your medical history, set drug reminders, and manage chronic conditions. View lab results, treatment plans, and more in one place.",
+        description: "Track your medical history, set drug reminders, manage health conditions. View lab results, treatment plans, and many more in one place.",
         tip: "Tip: Regularly update your health information and set reminders for medication and follow-up appointments."
       }
     
 ]
 
 export const benefits = 
-    {title:"About Denurx", paragraph:"Discover the unique advantages of our telemedicine app. Denurx provides comprehensive, convenient, and secure healthcare services to ensure you receive the best care possible.  With Denurx, you can connect with experienced healthcare professionals from the comfort of your home, saving time and avoiding the hassle of traveling to a clinic. Our app offers a wide range of services, including virtual doctor consultations, home health visits, lab test requests, and medication management. We prioritize your privacy and security, ensuring that your medical data is protected at all times. Whether you need ongoing support forchronic conditions or quick access to a healthcare provider for an acute issue, Denurx is here to make quality healthcare accessible and affordable. Join the many users who trust Denurx for their healthcare needs and experience the future of medicine today. Here are some reasons why you need us", benefits:[
+    {title:"About Denurx", paragraph:"Discover the unique advantages of our telemedicine app-Denurx. Denurx provides comprehensive, convenient, and secure healthcare services to ensure you receive the best Healthcare possible through your Phone.  With Denurx, you can connect with experienced healthcare professionals from the comfort of your home, saving time and avoiding the hassle of traveling to a clinic. Our app, Denurx, offers a wide range of services, including virtual doctor consultations, home health visits, lab test requests, and medication management. We prioritize your privacy and security, ensuring that your medical data is protected at all times. Whether you need ongoing support for a health condition or quick access to a healthcare provider for an health issue, Denurx is here to make quality healthcare accessible and affordable from the comfort of your Space through your Phone. Join the many users and Healthcare Providers who trust Denurx for their healthcare needs and Professional Service delivery and experience the future of medicine today. Here are some reasons why you need us:", benefits:[
         {
           icon: feature_comprehensive,
           title: "Comprehensive Healthcare Services",
-          text: "Denurx provides an all-in-one solution for your healthcare needs. From consultations and prescription management to lab tests and chronic disease management, everything is available in one place. Users can save time and hassle by accessing a wide range of services without needing multiple apps or visits to different providers."
+          text: "Denurx provides an all-in-one solution for your healthcare needs. From consultations and prescription management to lab tests and disease management, everything is available in one place. Users can save time and hassle by accessing a wide range of services without needing multiple apps or visits to different providers."
         },
         {
           icon: online_consult,
@@ -295,12 +295,12 @@ export const benefits =
         {
           icon: feature_security,
           title: "Secure and Private",
-          text: "We prioritize your privacy and security. with Denurx,  All your medical data and consultations are securely stored and encrypted, ensuring your personal information remains confidential. Users can trust that their sensitive health information is safe and secure."
+          text: "We prioritize your privacy and security. with Denurx,  All your medical data and consultations are securely stored and encrypted, ensuring your personal information remains confidential. Users can trust that their sensitive health information is safe and secure with us."
         },
         {
           icon: feature_user,
           title: "User-Friendly Interface",
-          text: "The app is designed with a focus on ease of use. Whether you are tech-savvy or not, you will find the app intuitive and easy to navigate. Users of all ages and technical abilities can easily use the app to access healthcare services."
+          text: "The app is designed with a focus on ease of use. Whether you are tech-savvy or not, you will find the app intuitive and easy to navigate. Users of all ages and technical abilities can easily use the app to access healthcare services and also provide healthcare Services as an Healthcare provider."
         },
         {
           icon: feature_cost,
@@ -339,7 +339,7 @@ export const faqs = [
   },
   {
     question: "What types of services does Denurx offer?",
-    answer: "Denurx offers a wide range of services, including online doctor consultations, home health services, lab test requests, medication management, chronic disease management, and health records management."
+    answer: "Denurx offers a wide range of services, including online doctor consultations, home health services, lab test requests, medication management, disease management, and health records management."
   },
   {
     question: "How can I request a home visit from a nurse?",
