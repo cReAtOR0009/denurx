@@ -90,7 +90,9 @@ body {
 .services::after {
   position: absolute;
   content: "Our Quality Services";
-  /* line-height: 1; */
+  /* margin-top: 28px; */
+  /* line-height: 2.5; */
+  white-space: nowrap;
   top: -1%;
   color: #0048ff20;
   z-index: -1;
@@ -109,6 +111,18 @@ body {
 .register::after {
   position: absolute;
   content: "Join Us Now";
+  /* line-height: 2.5; */
+  top: -1%;
+  color: #0048ff20;
+  z-index: -1;
+  /* right: 50%; */
+  font-size: 100px;
+}
+
+/* domore */
+.domore::after {
+  position: absolute;
+  content: "More with Denurx";
   /* line-height: 1; */
   top: -1%;
   color: #0048ff20;
@@ -116,6 +130,8 @@ body {
   /* right: 50%; */
   font-size: 100px;
 }
+
+
 .faq::after {
   position: absolute;
   content: "Answers";
@@ -164,6 +180,12 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("pattern2.svg");;
+}
+
+@media (prefers-color-scheme:dark) {
+  .why::after, .about::after, .steps::after, .services::after, .blog::after, .register::after, .faq::after, .domore::after {
+    color: #0048ff73;
+  }
 }
 
 
@@ -267,15 +289,7 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   font-size: 100px;
 }
 
-/* .testimonial_card {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
-  gap: 20px;
-  grid-template-areas:
-    "question1 question2 question2 question2"
-    "question3 question3 question3 question4"
-    "question5 question5 question5 question5";
-} */
+
 .question1 {
   grid-area: question1;
   position: relative;
@@ -301,34 +315,11 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   position: relative;
 }
 
-/* Tablet Layout */
-/* @media (min-width: 768px) and (max-width: 1023px) {
-  .testimonial_card {
-    grid-template-areas:
-      "question1 question2"
-      "question3 question4"
-      "question5 question3";
-  }
-} */
-
-/* Mobile Layout */
-/* @media (max-width: 767px) {
-  .testimonial_card {
-    grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
-    grid-template-areas:
-      "question1 question1"
-      "question2 question2"
-      "question3 question3"
-      "question4 question4"
-      "question5 question5";
-  }
-} */
-
 /* Mobile Layout */
 @media (max-width: 767px) {
   .service_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-template-rows: minmax(auto, 1fr);
     gap: 20px;
   }
@@ -472,6 +463,9 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
     font-size: 400px;
 
   }
+  .domore::after {
+    font-size: 72px;
+  }
 
 }
 
@@ -488,6 +482,8 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   }
   .services::after{
     font-size: 40px;
+    margin-top: 28px;
+    text-wrap: wrap;
   }
   .faq::after {
     font-size: 40px;
@@ -497,5 +493,37 @@ filter: drop-shadow(0 0 20px rgb(56, 53, 53));
   }
   .register::after {
     font-size: 40px;
+    line-height: 1.5;
+  }
+  .domore::after {
+    font-size: 40px;
   }
 }
+
+/* Small Mobile Layout */
+@media (max-width: 350px) {
+  .about::after {
+   font-size: 28px;
+   }
+   .steps::after{
+     font-size: 28px;
+   }
+   .why::after{
+     font-size: 28px;
+   }
+   .services::after{
+     font-size: 28px;
+   }
+   .faq::after {
+     font-size: 28px;
+   }
+     .blog::after {
+     font-size: 28px;
+   }
+   .register::after {
+     font-size: 28px;
+   }
+   .domore::after {
+     font-size: 28px;
+   }
+  }
