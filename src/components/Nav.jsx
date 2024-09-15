@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import { WaitlistContext } from "../context/waitlistContext";
 import JoinWaitlist from "./form/JoinWaitlist";
@@ -32,14 +32,26 @@ const NavItem = ({ title, active, handleClick, mobile, index }) => {
 };
 
 const Nav = () => {
-  const [active, setActive] = useState(nav[0].title);
+  const [active, setActive] = useState(() => {
+    // Initialize state from localStorage or default to a starting item
+    return localStorage.getItem('activeNavItem') || nav[0].title;
+  });
   const [activeMenu, setActiveMenu] = useState(false);
   const { showJoinwaitlist, setShowJoinwaitlist } = useContext(WaitlistContext);
   
   const handleClick = (value) => {
     setActive(value);
+    localStorage.setItem('activeNavItem', value);
     
   };
+
+  useEffect(() => {
+    // Restore active item from localStorage on component mount
+    const storedItem = localStorage.getItem('activeNavItem');
+    if (storedItem) {
+      setActive(storedItem);
+    }
+  }, []);
   
 
   return (
