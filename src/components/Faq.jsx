@@ -45,7 +45,6 @@ const FaqCard = ({ question, answer }) => {
 };
 
 const Faq = () => {
-  const [animationKey, setAnimationKey] = useState(0);
 
   return (
     <section className={`${""} faq flex flex-col gap-6 sm:gap-10 `}>
@@ -62,7 +61,7 @@ const Faq = () => {
             />
           ))}
         </div>
-        <div className="hidden lg:block text-[50vw] text-primary font-[poppi] leading-[0]">
+        <div className="hidden lg:block text-[50vw] text-primary font-[poppi] leading-[0] animate-pulse">
           ?
         </div>
       </div>
