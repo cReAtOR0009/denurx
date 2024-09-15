@@ -15,6 +15,7 @@ export const ProviderRegistrationForm = ({
     professionalTitle: "",
     affiliations: "",
     email: "",
+    healthcareProvider: "yes",
   });
   const [isOtherSelected, setIsOtherSelected] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -39,6 +40,7 @@ export const ProviderRegistrationForm = ({
 
 
   useEffect(() => {
+    let displayTimer
     if (status === "success") {
       setProviderData({
         name: "",
@@ -46,6 +48,7 @@ export const ProviderRegistrationForm = ({
         professionalTitle: "",
         affiliations: "",
         email: "",
+        healthcareProvider:"yes"
       });
       setResponse({
         message: `Thank you ${providerData.name} for Joining the Revolution, We'd keep you Updated!`,
@@ -65,42 +68,45 @@ export const ProviderRegistrationForm = ({
         display: true,
       });
       setLoading(false);
-      setTimeout(() => {
+      displayTimer = setTimeout(() => {
         closeResponse();
         setResponse({ message: ``, error: false, display: false });
       }, 5000);
     } else if (status === "sending") {
       setLoading(true);
     }
-  }, [status, message]);
+
+    return () => {
+      clearTimeout(displayTimer)
+    }
+  }, [status]);
 
   const closeResponse = () => {
     setResponse({ message: "", error: false, display: false });
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   onSubmit(providerData);
-  // };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
       if (
         !providerData.name ||
         !providerData.email ||
         !providerData.affiliations ||
         !providerData.gender ||
-        !providerData.professionalTitle
+        !providerData.professionalTitle ||
+        !providerData.healthcareProvider
       ) {
         throw new Error("Ensure all fields are properly filled");
       } else {
         onValidated({
           MERGE0: providerData.email,
           MERGE1: providerData.name,
-          MERGE2: providerData.gender,
-          MERGE3: providerData.professionalTitle,
-          MERGE4: providerData.affiliations,
-          MERGE5: providerData.affiliations,
+          MERGE2: providerData.professionalTitle,
+          MERGE3: providerData.affiliations,
+          MERGE4: providerData.gender,
+          MERGE5: providerData.healthcareProvider,
         });
       }
     } catch (error) {
@@ -112,9 +118,9 @@ export const ProviderRegistrationForm = ({
   return (
     <div
       id=""
-      className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav border-grey_100 transition"
+      className="min-w-[200px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-6 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav border-grey_100 transition"
     >
-      <h2 className={`${styles.h4}  font-semibold  text-center`}>
+      <h2 className={`${styles.h4} leading-loose font-semibold  text-center`}>
         Provider Registration
       </h2>
       <form
@@ -185,6 +191,25 @@ export const ProviderRegistrationForm = ({
             <option value="Female">Female</option>
           </select>
         </div>
+        <div className="hidden">
+          <label
+            className={`text-black dark:text-white`}
+            htmlFor="healthcareProvider"
+          >
+            Healthcare Provider
+          </label>
+          <input
+            type="text"
+            id="healthcareProvider"
+            name="healthcareProvider"
+            required
+            value={providerData.healthcareProvider}
+            onChange={handleChange}
+            readOnly={true}
+            hidden
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-grey_500 dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav n  focus:border-white"
+          />
+        </div>
 
         <div className="">
           <label
@@ -209,7 +234,7 @@ export const ProviderRegistrationForm = ({
               <option value="pharmacist">Pharmacist</option>
               <option value="dentist">Dentist</option>
               <option value="optometrist">Optometrist</option>
-              <option value="physicianAssistant">Physician Assistant</option>
+              <option value="physician Assistant">Physician Assistant</option>
               <option value="chiropractor">Chiropractor</option>
               <option value="other">Other</option>
             </select>
@@ -246,6 +271,7 @@ export const ProviderRegistrationForm = ({
             className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-grey_500 dark:text-dark-white  sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav n  focus:border-white"
           />
         </div>
+       
 
         <div className="flex justify-center items-center gap-6">
           {!loading && showBack && (

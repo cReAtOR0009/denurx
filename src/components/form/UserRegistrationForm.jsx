@@ -16,15 +16,16 @@ export const UserRegistrationForm = ({
     error: false,
     display: false,
   });
-  const [form, setForm] = useState({
+  const [userForm, setForm] = useState({
     fullname: "",
     email: "",
+    healthcareProvider:"no"
   });
 
   const handleFormChange = (event) => {
     const { name, value } = event.target;
     setForm({
-      ...form,
+      ...userForm,
       [name]: value,
     });
   };
@@ -36,9 +37,10 @@ export const UserRegistrationForm = ({
       setForm({
         fullname: "",
         email: "",
+        healthcareProvider:"no"
       });
       setResponse({
-        message: `Thank you ${form.fullname} for Joining the Revolution, We'd keep you Updated!`,
+        message: `Thank you ${userForm.fullname} for Joining the Revolution, We'd keep you Updated!`,
         error: false,
         display: true,
       });
@@ -62,18 +64,20 @@ export const UserRegistrationForm = ({
     } else if (status === "sending") {
       setLoading(true);
     }
-  }, [status]);
+
+  }, [status]); 
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      if (!form.fullname || !form.email) {
+      if (!userForm.fullname || !userForm.email) {
         throw new Error("Email and Full name are both required");
       } else {
         setLoading(true);
         onValidated({
-          MERGE0: form.email,
-          MERGE1: form.fullname,
+          MERGE0: userForm.email,
+          MERGE1: userForm.fullname,
+          MERGE5:userForm.healthcareProvider
         });
       }
     } catch (error) {
@@ -89,14 +93,14 @@ export const UserRegistrationForm = ({
   return (
     <div
       id=""
-      className="min-w-[250px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav  border-grey_100 transition"
+      className="min-w-[200px]  self-center animate-slide-in text-black w-[100%] sm:min-w-[30vw] sm:max-w-[600px] my-2 rounded-md sm:rounded-xl  border-2 bg-white dark:bg-dark-backgroundNav  border-grey_100 transition"
     >
       <h2 className={`${styles.h4} font-semibold mb-4 text-center`}>
         User Registration
       </h2>
       <form
         action="  POST"
-        className="relative flex flex-col gap-6 p-4 w-[100%] min-w-[250px] sm:min-w-[30vw] sm:max-w-[600px] my-2 text-black  bg-white dark:bg-dark-backgroundNav  animate-slide-in"
+        className="relative flex flex-col gap-6 p-4 w-[100%]  min-w-[80vw] sm:min-w-[30vw] sm:max-w-[600px] my-2 text-black  bg-white dark:bg-dark-backgroundNav  animate-slide-in"
         onSubmit={handleSubmit}
       >
         {response.display && (
@@ -127,7 +131,7 @@ export const UserRegistrationForm = ({
             required
             placeholder="Enter your full name"
             className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-grey_500 dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav  focus:border-white"
-            value={form.fullname}
+            value={userForm.fullname}
             onChange={handleFormChange}
           />
         </div>
@@ -143,8 +147,28 @@ export const UserRegistrationForm = ({
             required
             placeholder="Enter your email address"
             className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-grey_500 dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav  focus:border-white"
-            value={form.email}
+            value={userForm.email}
             onChange={handleFormChange}
+          />
+        </div>
+
+        <div className=" hidden flex-col justify-center items-start w-[auto]">
+          <label
+            className={`text-black dark:text-white`}
+            htmlFor="healthcareProvider"
+          >
+            Healthcare Provider
+          </label>
+          <input
+            type="text"
+            id="healthcareProvider"
+            name="healthcareProvider"
+            required
+            hidden
+            value={userForm.healthcareProvider}
+            onChange={handleFormChange}
+            readOnly={true}
+            className="w-[100%] h-10 rounded-md sm:rounded-sm text-sm text-grey_500 dark:text-dark-white sm:text-base p-2 outline-none border border-[transparent] dark:border-dark-inputborder bg-grey_300 dark:bg-dark-backgroundNav  focus:border-white"
           />
         </div>
 

@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
-import { ProviderRegistrationForm } from "./ProviderForm";
-import { UserRegistrationForm } from "./UserRegistrationForm";
 import MailChimp from "./MailChimp";
 import MailChimp2 from "./Mailchimp2";
 import { styles } from "../../styles";
