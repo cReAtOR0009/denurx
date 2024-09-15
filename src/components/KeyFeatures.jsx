@@ -59,14 +59,14 @@ const KeyFeatures = () => {
 
   return (
     <section
-      className={`${""}about    z-1 text-black bg lg:h-[100vh overflow-hidden`} 
+      className={`${""} about    z-1 text-black bg lg:h-[100vh overflow-hidden`} 
     >
       {/* <Registration /> */}
 
       <div className=" flex flex-col md:flex-row justify-between item flex-wrap  gap-4 p-   ">
         <div className="flex flex-col gap-6 sm:gap-10">
           <div className="">
-            <div className="features_card  py-4 ">
+            <div className="features_card  py-4 sm:py-10 ">
               {aboutApp.keyFeatures.map((feature, index) => (
                 <FeaturesCard key={index} index={index} {...feature} />
               ))}

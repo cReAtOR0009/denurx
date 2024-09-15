@@ -5,6 +5,7 @@ import TermAndCondition from "./TermAndCondition";
 import { styles } from "../styles";
 import { socials } from "../assets/text";
 import { telephone, mail } from "../assets/images";
+import { Sectionwrapper } from "./hoc";
 
 const Footer = () => {
   const {showJoinwaitlist, setShowJoinwaitlist} = useContext(WaitlistContext)
@@ -12,7 +13,7 @@ const Footer = () => {
   const [showTerms, setShowTerms] = useState(false)
 
   return (
-    <footer  id="footer" className={`${styles.footer_container} ${styles.paragraph}  max-w-[100%] text-black border-t-2 border-primary_300 bg-grey_300 dark:bg-dark-backgroundNav font-bold flex flex-col xl:flex-row  flex-wrap justify-between items-stretch`}>
+    <footer  id="footer" className={` ${styles.paragraph}  max-w-[100%]   font-bold flex flex-col xl:flex-row  flex-wrap justify-between items-stretch`}>
       <div className="flex justify-between items-center gap-6  md:w-[auto]" >
         <div id="logo_container">
         <img src="/logo.png" alt="Denurc logo" className="w-12 h-12 md:w-28 md:h-28" />
@@ -34,7 +35,7 @@ const Footer = () => {
             </a>
             <a  href="mailto:denurxco@denurx.com" className="flex flex-col items-center p-2 sm:p-4 sm:pb-0 sm:self-end flex-1 text-center hover:scale-[1.2] transition-all">
             <p>Mail Us</p>
-              <img src={mail} alt="mail icon" className="w-8 md:w-12 rounded-full" />denurx@gmail.com
+              <img src={mail} alt="mail icon" className="w-6 md:w-12 rounded-full" />denurx@denurx.com
             </a>
           </div>
           
@@ -53,8 +54,8 @@ const Footer = () => {
           <div className="w-full h-[2px] bg-primary_300 rounded my-1"></div>
           <div>
             <div className="flex justify-between">
-            <p onClick={() =>setShowTerms(true)} className={`hover:underline transition`}>Terms and Conditions &nbsp;</p> 
-            <p onClick={() => setShowPrivacy(true)} className={`hover:underline transition`}> &nbsp; Privacy Policy</p>
+            <p onClick={() =>setShowTerms(true)} className={`underline cursor-pointer hover:text-secondary_100 transition`}>Terms and Conditions &nbsp;</p> 
+            <p onClick={() => setShowPrivacy(true)} className={`underline cursor-pointer hover:text-secondary_100 transition`}> &nbsp; Privacy Policy</p>
             </div>
             <span className="float-right">Copyright &copy; 2024 Denurx</span> 
           </div>
@@ -65,4 +66,5 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+// export default Footer;
+export default Sectionwrapper(Footer, "contact-us", "bg-grey_300 dark:bg-dark-backgroundNav", true);

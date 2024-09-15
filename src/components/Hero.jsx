@@ -37,12 +37,14 @@ const Hero = () => {
       className={`${""}  bg-heroGradient bg-cover bg-no-repeat bg-center-center dark:bg-heroGradientDark relative`}
     >
       <img
+      role="button"
         src={nextArrow}
         alt="previous arrow to show previous image"
         onClick={handlePrev}
         className="absolute animate-pulse top-1/2  lg:top-1/2 left-0 rounded-[30px] border bg-primary border-primary p-2 rotate-180 text-white cursor-pointer"
       />
       <img
+      role="button"
         src={nextArrow}
         alt="next arrow to show next image"
         onClick={handleNext}

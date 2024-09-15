@@ -17,14 +17,14 @@ const TermAndCondition = ({ showTerms, setShowTerms  }) => {
 
   return (
     <div
-      className={`mb-10 h-[100vh] fixed top-0 left-0 bottom-0 right-0 z-[100] pt-[2% flex flex-col justify-center items-center my-0 mx-[auto]  w-[100%]  bg-grey_200 animate-pop-up `}
+      className={`mb-20 h-[100vh] fixed top-0 left-0 bottom-0 right-0 z-[100] pt-[2% flex flex-col justify-center items-center my-0 mx-[auto]  w-[100%]  bg-grey_200 dark:bg-dark-termprivacyBg animate-pop-up `}
     >
       <div
         onClick={() => setShowTerms(false)}
         className="fixed z-50 right-0 top-2 p-2  mr-0 sm:mr-4 space-y-2 group group-hover:scale-[1.1] select-none cursor-pointer"
       >
-        <span className="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-black transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
-        <span className="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-black transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
+        <span className="block h-1 w-6 sm:h-1 sm:w-10 origin-center rounded-full bg-black dark:bg-white transition-transform ease-in-out rotate-45 translate-y-1.5 group-hover:bg-primary_100"></span>
+        <span className="block h-1 w-6 sm:h-1 sm:w-10  origin-center rounded-full bg-black dark:bg-white transition-transform ease-in-out -rotate-45  -translate-y-1.5 group-hover:bg-primary_100"></span>
       </div>
       <div className="pt-20 ">
 
@@ -36,7 +36,7 @@ const TermAndCondition = ({ showTerms, setShowTerms  }) => {
       <div className="w-full h-1 bg-secondary_100 rounded my-1"></div>
       </div>
       <div
-        className={`${styles.container}  w-full   overflow-y-auto max-h-[100vh] min-h-[100vh] py-10 `}
+        className={`${styles.container}  w-full   overflow-y-auto max-h-[100vh] min-h-[100vh] pt-10 pb-20 `}
       >
         {/* <div></div */}
         <div>

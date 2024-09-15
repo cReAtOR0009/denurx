@@ -16,9 +16,9 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
   return (
     <div
       onClick={handleShowMore}
-      className={`flex-1 group rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xln border-2 p-2 sm:p-4 lg:p-6 pl-0 min-w-[250px] border-grey_100 border-l-8 border-r-8 border-b-2 rounded-[10px] bg-grey_200 dark:bg-dark-background3  text-black  group animate-slide-in  ${
+      className={`flex-1 group rounded-tl-[12px] rounded-tr-[12px] sm:rounded-xln border-2 p-2 sm:p-4 lg:p-6 pl-0 max-sm:min-w-[auto] min-w-[250px] border-grey_100 border-l-8 border-r-8 border-b-2 rounded-[10px] bg-grey_200 dark:bg-dark-background3  text-black  group animate-slide-in  ${
         !showMore ? "hover:scale-[1.1] transition" : ""
-      } `}
+      } cursor-pointer`}
     >
       <div className="flex justify-between items-center p-2 w-[100%] transition-all">
         <h3 className={`${styles.h4}  lg:whitespace-nowrap dark:text-dark-text `}>{title}</h3>
@@ -29,7 +29,7 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
         />
       </div>
       {showMore === text ? (
-        <div className="absolute z-10 flex flex-col items-center justify-center p-4 h-[100%] rounded-2xl inset-0 bg-black bg-opacity-80 animate-slide-in-up">
+        <div className="absolute z-10 flex flex-col items-center justify-center p-4 h-[100%] rounded-2xl inset-0 bg-black bg-opacity-90 animate-slide-in-up">
           <span
             className="font-semibold absolute top-0 right-0 z-20 w-5 h-5 sm:w-10 sm:h-10 p-1 sm:p-2 rounded-full m-1 cursor-pointer text-white text-center transition"
             onClick={handleClose}
@@ -74,7 +74,7 @@ const About = () => {
       className={`why  ${""} flex flex-col flex-wrap`}
     >
       {/* <div className="flex justify-center items-center flex-wrap md:flex-nowrap flex-1 py-8 gap-6 sm:gap-10"> */}
-      <div className="block sm:hidden w-[100%] h-[100%] md:w-[auto] magicpattern bg-130 rounded-2xl sm:rounded-[50px]">
+      <div className="block sm:hidden w-[100%] h-[100%] md:w-[auto] magicpattern bg-130 rounded-2xl sm:rounded-[50px] py-4">
           <img
             src={whyDenurx}
             alt="doctor smiling as she uses Denurx App for Health Service on her phone"

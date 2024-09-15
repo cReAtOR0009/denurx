@@ -7,7 +7,7 @@ import { styles } from "../styles";
 const Form = () => {
   const { setShowJoinwaitlist } = useContext(WaitlistContext);
   return (
-    <div className={`${""}  flex-wrap justify-between `}>
+    <div className={`domore  flex-wrap justify-between `}>
       <div
         id="providerform"
         className="flex  py-10 justify-between items-center flex-wrap lg:flex-nowrap"
@@ -83,4 +83,4 @@ const Form = () => {
   );
 };
 
-export default Sectionwrapper(Form, "form", "bg-scrollmodern");
+export default Sectionwrapper(Form, "form", "bg-scrollmoder");
