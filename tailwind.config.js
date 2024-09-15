@@ -119,6 +119,7 @@ module.exports = {
         white: '#ffffff',
         dark: '#000000',
         containerBg:"#000000d4",
+        termprivacyBg:"#2b2b2b",
         hoverbg:"#1e3e92",
         inputbg:"#2a2b2ca7",
         borderDark:"#eaeaea3b",
@@ -182,7 +183,7 @@ module.exports = {
         scrollmodern:
           "linear-gradient(to right, #efefbb, #d4d3dd)",
         heroGradient:
-          "linear-gradient(340deg, rgb(27 39 106), rgb(29 0 233 / 0%)), url(/src/assets/doctor6.jpg)",
+          "linear-gradient(340deg, rgb(0 0 0), rgb(29 0 233 / 23%)), url(/src/assets/doctor6.jpg)",
           heroGradientDark:
           "linear-gradient(153deg, rgb(60 60 64), rgb(45 44 47 / 71%)), url(/src/assets/doctor6.jpg)",
         waitList:
