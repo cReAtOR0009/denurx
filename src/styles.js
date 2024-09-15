@@ -1,9 +1,9 @@
 export const styles = {
   //container styles
   headerContainer:"px-4 py-6 pb-0 sm:px-10 md:py-10  lg:p-20 xl:p-20 pb-0 sm:pb-0 xl:pb-2 lg:pb-2 md:pb-0",
-  serviceContainer:"px-4 py-6 pb-0 sm:px-10 md:py-10  lg:p-20 xl:p-20 pb-0 sm:pb-0 xl:pb-2 lg:pb-2 md:pb-0",
-  container: "px-4 py-6 sm:px-10 md:py-10  lg:p-20 lg:py-24 xl:p-20 xl:py-28", //
-  footer_container: "px-4 py-4 sm:px-10 md:py-8  lg:p-10 xl:pt-20 ",
+  serviceContainer:" py-6 pb-0 sm:py-10 md:py-10  lg:py-40 xl:py-40",
+  container: "px-4 py-6 sm:px-10 md:py-10  lg:p-20 lg:py-24 xl:px-20 xl:py-28", //
+  footer_container: "px-4 py-4 sm:px-10 md:py-8 xl:px-20 lg:p-10 xl:pt-20 ",
   waitlist_container: "px-4 py-6 sm:p-6  md:p-6 lg:p-20 xl:p-6",
   introTextContainer:"px-4 py-6 sm:py-10 sm:px-16 lg:px-20  xl:px-28 md:py-20 gap-6",
   nav: "px-4 md:px-10 lg:px-20 xl:px-20",
