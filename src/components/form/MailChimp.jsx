@@ -1,5 +1,4 @@
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import CustomForm from "./CustomForm";
 import { UserRegistrationForm } from "./UserRegistrationForm";
 
 const MailChimp = ({
@@ -11,7 +10,7 @@ const MailChimp = ({
   showBack,
   // text,
 }) => {
-  const postUrl = `https://dotcirclelabs.us8.list-manage.com/subscribe/post?u=${
+  const postUrl = `https://denurx.us11.list-manage.com/subscribe/post?u=${
     import.meta.env.VITE_APP_MAILCHIMP
   }&id=${import.meta.env.VITE_APP_MAILCHIMP_ID}`;
   return (
