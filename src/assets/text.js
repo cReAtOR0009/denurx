@@ -1,4 +1,4 @@
-import { profileImage2, doctors,online_consult, online, pill_bottle, health_record, health_tips, calendar, lab_test,feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified, home_service, service_onlineConsultaions,service_onlineCare, service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, facebook, twitter, whatsapp, mockup1,mockup2,mockup3,mockup4, signup, findDoctor, prescription,consultations, managehealth,patientcare2, youtube, instagram
+import { profileImage2, doctors,online_consult, online, pill_bottle, health_record, health_tips, calendar, lab_test,feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified, home_service, service_onlineConsultaions,service_onlineCare,service_medical_record, service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, facebook, twitter, whatsapp, mockup1,mockup2,mockup3,mockup4, signup, findDoctor, prescription,consultations, managehealth,patientcare2, youtube, instagram
  } from "./images"
 
 
@@ -128,7 +128,7 @@ export const servicesComplete =[
     title: "Health Records Management",
     description: "Securely store and access your medical history, lab results, prescriptions, and more. Easily share your records with healthcare providers and keep track of your health journey. Keep all your health information in one place for easy access and sharing with healthcare providers. Stay organized and ensure your medical history is always available when you need it.",
     icon: health_record,       
-    image: service_record      
+    image: service_medical_record      
   },
   {
     title: "Health Tips & Education",

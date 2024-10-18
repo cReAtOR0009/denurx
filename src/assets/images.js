@@ -41,6 +41,7 @@ import service_home_service from "./service_home_service.jpg"
 import service_health_tip from "./service_health_tip.jpg" 
 import service_onlineCare from "./service_onlineCare.jpg" 
 import tipIcon from "./tip.png"
+import service_medical_record from "./medical-report-record.jpg"
 
 //steps
 import signup from "./signup.png"
@@ -76,4 +77,4 @@ import youtube from "./youtube.jpg"
 import DenurxLogo from "./DenurxLogoSvg.svg"
 
 
-export  {profileImage2, doctors,online_consult, online, patient_record, payment_wallet, pills, pill_bottle, heart_disease, health_record, health_tips,tipIcon, calendar, feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified,mockup1,mockup2,mockup3,mockup4,arrow, lab_test, home_service, service_onlineConsultaions, service_onlineCare,service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, telephone, mail, facebook, linkedin, twitter, whatsapp,instagram, youtube, DenurxLogo, whyDenurx, signup, findDoctor, prescription,consultations, managehealth, doctor2,doctor3,doctor4,doctor5,doctor7, patient,patient2, nextArrow, patientcare2}
+export  {profileImage2, doctors,online_consult, online, patient_record, payment_wallet, pills, pill_bottle, heart_disease, health_record, health_tips,tipIcon, calendar, feature_advanced, feature_comprehensive, feature_cost, feature_security, feature_user, feature_verified,mockup1,mockup2,mockup3,mockup4,arrow, lab_test, home_service, service_onlineConsultaions, service_onlineCare,service_medical_record,service_health_tip, service_home_service, service_lab_test, service_medic_management, service_record, telephone, mail, facebook, linkedin, twitter, whatsapp,instagram, youtube, DenurxLogo, whyDenurx, signup, findDoctor, prescription,consultations, managehealth, doctor2,doctor3,doctor4,doctor5,doctor7, patient,patient2, nextArrow, patientcare2}
