@@ -4,89 +4,105 @@ import { styles } from "../styles";
 import { howItWorks } from "../assets/text";
 import { doctor5, tipIcon } from "../assets/images";
 
+// Card for each step
 const StepsCard = ({
   icon,
   step,
   description,
   tip,
-  displayContent,
-  setDisplayContent,
-  displayDescription,
-  setDisplayDescription,
-  setDisplayTipContent
+  isActive,
+  onClick,
 }) => {
-  const handleMouseEnter = () => {
-    setDisplayDescription(true);
-    setDisplayContent(description);
-    setDisplayTipContent(tip);
-  };
-
-  const handleMouseLeave = () => {
-    setDisplayDescription(false);
-    setDisplayContent(null);
-  };
 
   return (
     <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className={` flex-1 flex flex-col gap-2 justify-between items-center border-2 border-grey_500  rounded-2xl p-2 sm:p-2 lg:p-4 h-[auto] min-w-[150px bg-grey_300 dark:bg-dark-background3 text-left cursor-pointer sm:hover:scale-[1.1] transition `}
-      >
-     
-      <img src={icon} alt={`${step} icon`} className="w-[40px] lg:w-[50px] h-[auto]" />
-      <h4 className={`"${styles.h4}" text-base md:text-lg lg:text-sm xl:text-xl font-medium dark:text-dark-text leading-[0]`}>{step}</h4>
-      {displayContent === description && (
-        <div className="absolute flex sm:hidden flex-col items-center justify-center gap-2 p-4 h-[100%] rounded-2xl w-[100%] inset-0 bg-black bg-opacity-90 animate-slide-in-up text-left">
+      onClick={onClick}
+      className={`${
+        isActive ? "bg-[#0048ff20] dark:bg-[#161616cb]" : "bg-grey_300 dark:bg-[#0048ff20]"
+      } flex-1 flex flex-col gap-2 justify-between items-center border-2 border-grey_500 rounded-2xl p-4 h-auto min-w-[150px] text-left cursor-pointer sm:hover:scale-110 transition`}
+    >
+      <img src={icon} alt={`${step} icon`} className="w-[50px] h-auto" />
+      <h4 className={`text-lg lg:text-sm xl:text-xl font-medium dark:text-dark-text`}>
+        {step}
+      </h4>
+      {isActive && (
+        <div className="absolute flex sm:hidden flex-col items-center justify-center gap-2 p-4 h-[100%] rounded-2xl w-[100%] inset-0 bg-black dark:bg-[#161616cb] bg-opacity-90 animate-slide-in-up">
           <span
-            className="font-semibold absolute top-0 right-0 z-20 w-5 h-5 sm:w-10 sm:h-10 p-1 sm:p-2 rounded-full m-1 cursor-pointer text-white text-center transition"
-            onClick={handleMouseLeave}
+            className="font-semibold text-3xl absolute top-0 right-0 z-20 w-5 h-5 p-1 rounded-full m-1 cursor-pointer text-white text-center hover:text-primary_100 "
+            onClick={() => onClick(null)}
           >
             X
           </span>
-          <p className={`text-white ${styles.tip} text-left`}>{description}</p>
-          <p className={`${styles.tip} text-primary`}> <span><img src={tipIcon} alt="glowing knowledge bulb icon"  className="w-6"/></span>{tip}</p>
+          <p className={`text-white ${styles.tip}`}>{description}</p>
+          <p className={`${styles.tip} text-primary flex items-center gap-2`}>
+            <img src={tipIcon} alt="tip icon" className="w-6" />
+            {tip}
+          </p>
         </div>
       )}
     </div>
   );
 };
 
+// Main steps component
 const Steps = () => {
-  const [displayDescription, setDisplayDescription] = useState(false);
-  const [displayContent, setDisplayContent] = useState(null);
-  const [displayTipContent, setDisplayTipContent] = useState(null);
+  const [activeStep, setActiveStep] = useState(null);
+  const [animationKey, setAnimationKey] = useState(0);
+
+  const handleStepClick = (description) => {
+    if (activeStep === description) {
+      setActiveStep(null); // Toggle off
+    } else {
+      setActiveStep(description); // Toggle on
+      setAnimationKey((prevKey) => prevKey + 1); // Force re-render for animation
+    }
+  };
 
   return (
-    <section className={`${""} steps`}>
-      <div className="flex flex-wrap flex-col lg:flex-row md:flex-nowrap items-center gap-4 py-4 sm:py-10 " title={"hover on each steps to get additional information for each steps card"}>
-        <div className=" relative flex-1 grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 w-[100%] lg:w-[50%] gap-2 sm:gap-6 p-0 sm:p-2 mt-4 sm:mt-0 ">
+    <section className="steps">
+      <div className="flex flex-wrap flex-col lg:flex-row md:flex-nowrap items-center gap-4 py-10">
+        <div className="relative flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-2 w-full lg:w-1/2">
           {howItWorks.map((step, index) => (
             <StepsCard
               key={index}
-              {...step}
-              displayContent={displayContent}
-              setDisplayContent={setDisplayContent}
-              displayDescription={displayDescription}
-              setDisplayDescription={setDisplayDescription}
-              setDisplayTipContent={setDisplayTipContent}
+              icon={step.icon}
+              step={step.step}
+              description={step.description}
+              tip={step.tip}
+              isActive={activeStep === step.description}
+              onClick={() => handleStepClick(step.description)}
             />
           ))}
         </div>
-        <div className="order- sm:order-[-1] lg:order-2 hidden sm:block relative flex- rounded-2xl lg:rounded-[50px] magicpattern2 bg-100 w-[100%] lg:w-[50%]">
+
+        {/* Right Side Image and Info */}
+        <div className="hidden sm:block relative  rounded-2xl lg:rounded-[50px] magicpattern2 w-full lg:w-1/2">
           <img
             src={doctor5}
-            alt="Doctor Engaging Patients from Phone leveraging Denurx app to Mange and connect with patients Virtually"
-            className="w-[100%] h-[400px]"
+            alt="Doctor Engaging Patients"
+            className="w-full h-auto rounded-2xl"
           />
-          
-          {displayDescription && (
-            <div className="absolute hidden sm:flex flex-col justify-center gap-2 p-4 h-[100%] w-[100%] inset-0 rounded-2xl lg:rounded-[50px] bg-black bg-opacity-90 animate-slide-in-up text-left">
-              <p className={`text-white ${styles.paragraph} text-left`}>
-                {displayContent}
-              </p>
-              <p className={`${styles.tip} flex  items-center gap-2 text-left text-primary `}>
-              <span><img src={tipIcon} alt="glowing knowledge bulb icon"  className="w-6"/></span>  {displayTipContent}
-              </p>
+
+          {activeStep && (
+            <div
+              key={animationKey}
+              className="absolute flex flex-col justify-center items-center gap-2 p-4 h-full w-full inset-0 rounded-2xl lg:rounded-[50px] bg-black dark:bg-[#161616cb] bg-opacity-90 animate-slide-in-up"
+            >
+              <span
+                className="font-bold text-4xl absolute top-0 right-8 w-8 h-8 p-1 rounded-full cursor-pointer text-secondary_100 hover:text-primary_100 text-center"
+                onClick={() => setActiveStep(null)}
+              >
+                X
+              </span>
+              <div className="relative ">
+                <p className={`text-white ${styles.paragraph}`}>
+                  {howItWorks.find((step) => step.description === activeStep)?.description}
+                </p>
+                <p className={`${styles.tip} flex items-center gap-2 text-primary`}>
+                  <img src={tipIcon} alt="Tip icon" className="w-6" />
+                  {howItWorks.find((step) => step.description === activeStep)?.tip}
+                </p>
+              </div>
             </div>
           )}
         </div>
