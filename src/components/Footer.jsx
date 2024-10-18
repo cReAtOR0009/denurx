@@ -39,7 +39,7 @@ const Footer = () => {
             </a>
           </div>
           
-          <div className="flex flex-col items-center self-end ">
+          <div className="flex flex-col items-center justify-between gap-5 md:gap-10 ">
             <h5 className={`${styles.h5}`}>Join us On Our Social Handles!</h5>
           <div className="flex justify-between flex-wrap gap-4 sm:gap-6 my-2">
             {socials.map((social, index) => (
