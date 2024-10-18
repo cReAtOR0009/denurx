@@ -57,7 +57,7 @@ const Nav = () => {
   return (
     <>
     <nav
-      className={`${styles.nav} flex fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white dark:bg-dark-backgroundNav  text-black font-bold border-b-2 border-primary_300 animate-slide-in`}
+      className={`${styles.nav} flex fixed top-0 z-20 h-20 w-screen px-4 md:px-10 lg:px-20 xl:px-20  justify-between items-center bg-white dark:bg-dark-backgroundNav  text-black font-bold border-b-2 border-primary_300 animate-slide-in max-w-[2500px]`}
     >
       <HashLink to={`/#home`}>
         <img
