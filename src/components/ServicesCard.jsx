@@ -23,7 +23,7 @@ const ServiceCard = ({ icon, title, description, image }) => {
         <img
           src={`${image}`}
           alt={title}
-          className="w-[100%] rounded-[10px] lg:rounded-[30px] min-h-[auto] sm:max-h-[250px] sm:min-h-[300px] "
+          className="w-[100%] rounded-[10px] lg:rounded-[30px] min-h-[auto]  object-contain "
         />
         <div className="">
           <img
