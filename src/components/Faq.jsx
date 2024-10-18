@@ -61,7 +61,7 @@ const Faq = () => {
             />
           ))}
         </div>
-        <div className="hidden lg:block text-[50vw] text-primary font-[poppi] leading-[0] animate-pulse">
+        <div className="hidden lg:block text-[42vw] text-primary font-[poppi] leading-[0] animate-pulse">
           ?
         </div>
       </div>
