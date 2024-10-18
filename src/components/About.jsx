@@ -29,7 +29,7 @@ const FeaturesCard = ({ icon, text, title, index, showMore, setShowMore }) => {
         />
       </div>
       {showMore === text ? (
-        <div className="absolute z-10 flex flex-col items-center justify-center p-4 h-[100%] rounded-2xl inset-0 bg-black bg-opacity-90 animate-slide-in-up">
+        <div className="absolute z-10 flex flex-col items-center justify-center p-4 h-[100%] rounded-2xl inset-0 bg-black dark:bg-[#0f0f0f] bg-opacity-90 animate-slide-in-up">
           <span
             className="font-semibold absolute top-0 right-0 z-20 w-5 h-5 sm:w-10 sm:h-10 p-1 sm:p-2 rounded-full m-1 cursor-pointer text-white text-center transition"
             onClick={handleClose}
